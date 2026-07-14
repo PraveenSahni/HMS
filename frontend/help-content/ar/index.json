@@ -1,0 +1,234 @@
+[
+  {
+    "id": "help-overview",
+    "title": "نظرة عامة على مركز المساعدة",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "help",
+      "start",
+      "overview"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "wf-register-patient",
+    "title": "سير العمل: تسجيل مريض",
+    "roles": [
+      "Receptionist",
+      "Physician",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/patients"
+    ],
+    "keywords": [
+      "patient",
+      "register",
+      "create",
+      "demographics"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-book-appointment",
+    "title": "سير العمل: حجز موعد",
+    "roles": [
+      "Receptionist",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/appointments"
+    ],
+    "keywords": [
+      "appointment",
+      "schedule",
+      "booking"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-lab-order",
+    "title": "سير العمل: طلب مختبر",
+    "roles": [
+      "Physician",
+      "LabTech"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory"
+    ],
+    "keywords": [
+      "lab",
+      "order",
+      "LIMS"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-prescribe",
+    "title": "سير العمل: وصف دواء",
+    "roles": [
+      "Physician",
+      "Pharmacist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/medications"
+    ],
+    "keywords": [
+      "pharmacy",
+      "prescription",
+      "medication"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-admit",
+    "title": "سير العمل: إدخال للتنويم",
+    "roles": [
+      "Physician",
+      "Nurse",
+      "Receptionist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds"
+    ],
+    "keywords": [
+      "admit",
+      "bed",
+      "inpatient"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "admin-users",
+    "title": "إدارة المستخدمين والمجموعات",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "ITSupport"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/users",
+      "/groups"
+    ],
+    "keywords": [
+      "users",
+      "groups",
+      "acl",
+      "rbac"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "uae-hie-readiness",
+    "title": "جاهزية تبادل المعلومات الصحية في الإمارات",
+    "roles": [
+      "Compliance",
+      "SystemAdmin",
+      "Executive"
+    ],
+    "countries": [
+      "AE"
+    ],
+    "routes": [
+      "/help",
+      "/settings"
+    ],
+    "keywords": [
+      "NABIDH",
+      "Malaffi",
+      "Riayati",
+      "HL7",
+      "FHIR"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "qatar-privacy",
+    "title": "قائمة خصوصية قطر (PDPPL)",
+    "roles": [
+      "Compliance",
+      "FacilityAdmin",
+      "Executive"
+    ],
+    "countries": [
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "PDPPL",
+      "privacy",
+      "consent",
+      "Qatar"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "synthetic-policy",
+    "title": "سياسة البيانات الاصطناعية",
+    "roles": [
+      "*",
+      "Compliance",
+      "ITSupport"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "synthetic",
+      "PII",
+      "demo",
+      "IST-P"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  }
+]

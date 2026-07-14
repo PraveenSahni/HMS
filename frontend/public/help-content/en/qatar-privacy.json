@@ -1,0 +1,24 @@
+{
+  "id": "qatar-privacy",
+  "title": "Qatar privacy checklist (PDPPL)",
+  "roles": [
+    "Compliance",
+    "FacilityAdmin",
+    "Executive"
+  ],
+  "countries": [
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "PDPPL",
+    "privacy",
+    "consent",
+    "Qatar"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "Health data is special-nature under Law 13/2016 summaries — obtain legal confirmation for permits, DPIA, and retention before processing real PHI."
+}

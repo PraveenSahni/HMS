@@ -1,0 +1,26 @@
+{
+  "id": "admin-users",
+  "title": "Administer users and groups",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "ITSupport"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "acl",
+    "rbac"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "Create users, assign groups, review model access summaries. Deep record-rule editing remains in SAO."
+}

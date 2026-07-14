@@ -1,0 +1,29 @@
+{
+  "id": "wf-book-appointment",
+  "title": "Workflow: Book an appointment",
+  "roles": [
+    "Receptionist",
+    "Physician"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/appointments"
+  ],
+  "keywords": [
+    "appointment",
+    "schedule",
+    "booking"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "Appointments map to gnuhealth.appointment.",
+  "steps": [
+    "Open Appointments.",
+    "Create appointment; select patient and health professional.",
+    "Set date/time and state (confirmed).",
+    "Save and confirm on day list."
+  ]
+}

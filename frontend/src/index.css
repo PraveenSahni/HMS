@@ -1,0 +1,70 @@
+@import "./styles/ist-health.css";
+
+/* App-specific overrides (login footer, contact block) */
+.ist-contact-block {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: var(--hairline-width) solid var(--color-divider);
+}
+
+.ist-contact-block__legal {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.ist-contact-block address {
+  font-style: normal;
+}
+
+.ist-app-footer {
+  margin-top: var(--space-8);
+  padding: var(--space-5) var(--space-8);
+  border-top: var(--hairline-width) solid var(--color-divider);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+}
+
+.ist-app-footer__legal {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.ist-notice {
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  border: var(--hairline-width) solid var(--color-divider);
+  background: var(--color-bg-subtle);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text);
+}
+
+.ist-notice--error {
+  border-color: var(--color-danger, #c0392b);
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 8%, var(--color-bg));
+  color: var(--color-text);
+}
+
+.ist-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-10);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.ist-header__user {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+#root {
+  min-height: 100vh;
+}

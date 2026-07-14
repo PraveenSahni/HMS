@@ -1,0 +1,1282 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8"/>
+<meta name="ProgId" content="Word.Document"/>
+<meta name="Generator" content="IST Health Review Generator"/>
+<title>IST Health — Partner Feature Review</title>
+<!--[if gte mso 9]><xml>
+<w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+  <w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml><![endif]-->
+<style>
+@page { size: 8.5in 11in; margin: 1in; }
+body { font-family: Calibri, sans-serif; font-size: 11pt; color: #1a1a19; line-height: 1.45; }
+h1 { font-size: 22pt; color: #0F6E56; margin-bottom: 6pt; }
+.box { border: 1px solid #999; padding: 10pt; margin-bottom: 12pt; background: #f7f6f3; }
+.instructions ol { margin: 6pt 0 0 18pt; }
+table { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+</style>
+</head>
+<body>
+
+<h1>IST Health — Partner Feature Review</h1>
+<p style="font-size:11pt;color:#444;">Interactive scope document for clinic / hospital management platform implementation.<br/>
+Please review each module, mark features to include, and add comments where needed. Return the completed document to the sender.</p>
+
+<div class="box">
+<p style="font-size:12pt;font-weight:bold;margin:0 0 8pt 0;color:#185FA5;">Partner information</p>
+<table border="0" width="100%" style="font-family:Calibri,sans-serif;font-size:11pt;">
+<tr>
+  <td width="18%"><b>Partner name:</b></td>
+  <td width="32%" style="border-bottom:1px solid #999;">&nbsp;</td>
+  <td width="18%"><b>Organization:</b></td>
+  <td width="32%" style="border-bottom:1px solid #999;">&nbsp;</td>
+</tr>
+<tr><td colspan="4" style="height:8pt;"></td></tr>
+<tr>
+  <td><b>Email:</b></td>
+  <td style="border-bottom:1px solid #999;">&nbsp;</td>
+  <td><b>Review date:</b></td>
+  <td style="border-bottom:1px solid #999;">&nbsp;</td>
+</tr>
+</table>
+<p style="margin:10pt 0 4pt 0;font-weight:bold;">Overall comments</p>
+<p style="border:1px solid #999;padding:8pt;min-height:48pt;margin:0;">&nbsp;</p>
+</div>
+
+<div class="box instructions">
+<p style="font-size:12pt;font-weight:bold;margin:0 0 6pt 0;">How to complete this review</p>
+<ol style="font-size:11pt;">
+  <li>Fill in your name, organization, email, and review date above.</li>
+  <li>For each module, tick <b>Include</b> (&#9744;) for every feature you want in scope — or type <b>Yes</b> in the comment column.</li>
+  <li>Add comments on any feature where you need clarification, changes, or have questions.</li>
+  <li>Save this document and return it to the sender.</li>
+</ol>
+<p style="font-size:10pt;color:#666;margin:8pt 0 0 0;">Tip: In Word, click a checkbox cell and type <b>X</b> or use Insert &gt; Symbol to mark &#9745; included.</p>
+</div>
+
+
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">1. Patient Registration &amp; EMR Core</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health, health_history, health_profile, health_archives, health_qrcodes</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient demographics and administrative information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Electronic medical record / clinical evaluations</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Health conditions, medicaments and vaccinations</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Health professionals and health center records</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Legacy or paper-based health record tracking</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Enhanced medical history reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">QR codes for patient, appointment, newborn and lab reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Modern web/mobile registration workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Emirates ID / passport OCR capture</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Duplicate patient detection</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Consent management and document upload</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">AI-assisted patient summary</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">2. Appointments, Calendar &amp; Doctor Scheduling</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_calendar, health_caldav, health_webdav3_server</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient appointment handling</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Work schedules for health professionals</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Calendar view of professional appointments</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Calendar linking with health professionals</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Calendar events from patient appointments</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">CalDAV / WebDAV calendar connectivity</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient self-booking portal</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">WhatsApp/SMS appointment reminders</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">No-show tracking and waitlist</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Doctor room allocation</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Insurance eligibility check before visit</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">3. Billing, Accounting, Services &amp; Insurance</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_accounting, health_services, health_services_lab, health_services_imaging, health_insurance</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Billing and invoice handling</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Chart of accounts, general ledger and journals</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Grouping of patient services from evaluation, prescription or hospitalization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Invoice specific service lines</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Insurance policies, plans and product/category-based discounts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Lab and imaging service extensions</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">UAE/GCC insurance e-claim workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pre-authorization / approval tracking</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Copay, deductible and package pricing</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">TPA integration</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Doctor incentive / revenue-share reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">4. Inpatient, Admission, Bed &amp; Discharge Management</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_inpatient, health_inpatient_calendar</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient registration for hospitalization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Bed management</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Hospitalization record and history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Nursing plan</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Discharge plan</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Admission administrative data</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Nutrition, medication plan and care plan tabs</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Hospitalization calendar events</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Bed dashboard / occupancy board</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Ward transfer workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient discharge checklist</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Inpatient billing automation</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Care team task assignment</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">5. Nursing, Roundings &amp; Ambulatory Care</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST module: health_nursing</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Nursing functionality for outpatient and inpatient settings</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient roundings</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Nursing procedures</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Ambulatory care sessions</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Nursing task board</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Medication administration checklist</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Vitals charting dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Escalation alerts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Mobile nurse workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">6. ICU / Critical Care</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST module: health_icu</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Critical patient information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Glasgow Coma Scale support</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">APACHE II scoring</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">ICU patient roundings</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">System-wise rounding: neurological, respiratory, cardiovascular, blood/skin and digestive</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">ICU dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Device/vitals integration</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Early warning score alerts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Critical medication protocols</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">ICU occupancy and acuity analytics</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">7. Laboratory / LIMS</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_lab, health_crypto_lab</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Laboratory test types</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Analytes and analyte attributes</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Lab test orders</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Labels and workflow handling</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Validation of laboratory tests</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Laboratory reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Interfaces with laboratories and LIMS</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Cryptographic methods for lab package</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Barcode sample tracking</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Lab machine integration</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient report portal</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Abnormal result alerts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Package-based lab billing</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">8. Imaging, Radiology &amp; PACS</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_imaging, health_services_imaging, health_orthanc</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Diagnostic imaging test types and results</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Imaging worklist support</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Orthanc PACS integration</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Orthanc patient and study synchronization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Uploaded DICOM file handling</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Imaging services for billing/service grouping</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Radiology order and report workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">AI radiology report summarization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">DICOM viewer embedding</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Referral doctor sharing portal</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Imaging package pricing</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">9. Pharmacy, Stock &amp; Inventory</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_stock, health_stock_surgery, health_who_essential_medicines</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Stock management and stock moves</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Medicaments, vaccines and medical supplies</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Prescription-based pharmacy stock moves</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Stock movements for ambulatory care and hospitalization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgery-related stock moves</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">WHO essential medicines list package</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pharmacy POS / dispensing workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Batch, expiry and controlled-drug tracking</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Supplier purchase order workflow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Insurance formulary mapping</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Low-stock and expiry alerts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">10. Surgery &amp; Operating Room</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_surgery, health_surgery_protocols, health_stock_surgery</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgery management and surgery history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Preoperative assessment and evaluations</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgery team records</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">RCRI support</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgery protocols</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Complications and postoperative directions</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Operating room scheduler</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Default protocol fields such as anesthesia, laterality, urgency, positioning and discharge instructions</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">OT utilization dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgical checklist and consent forms</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Implant and consumable traceability</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Anesthesia notes</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Surgery package billing</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">11. Pediatrics &amp; Neonatology</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_pediatrics, health_pediatrics_growth_charts, health_pediatrics_growth_charts_who</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pediatric and neonatal information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Newborn examination</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">APGAR scores</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Congenital conditions</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Metabolic screening tests</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pediatric psychosocial assessments</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Newborn identification</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">WHO pediatric growth percentile and z-score charts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Vaccination schedule alerts</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Parent portal</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">School medical report</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pediatric package workflows</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Growth trend visualization</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">12. Gynecology &amp; Obstetrics</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST module: health_gyneco</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Gynecological history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Obstetric history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Prenatal assessment and history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Perinatal and intrapartum information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Puerperium assessment and history</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Breast and cervix cancer screening</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Pregnancy care pathway</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Antenatal appointment bundle</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Ultrasound/lab package mapping</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Maternity package billing</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient education reminders</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">13. Dental, Ophthalmology &amp; Other Specialties</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_dentistry, health_ophthalmology</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Dentistry procedures</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Dental treatments</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Dental reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Odontogram generation</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Basic ophthalmology and optometry functionality</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Dental treatment planning</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Dental chair scheduling</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Optical prescription flow</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Specialty-specific billing packages</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Before/after image attachment</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">14. Public Health, Community &amp; Social Medicine</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_contact_tracing, health_disability, health_iss, health_lifestyle, health_mdg6, health_ntd, health_ntd_chagas, health_ntd_dengue</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Socioeconomic and domiciliary unit information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Lifestyle: diet, sleep, addiction, exercise, sexuality and safety</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">ICF-based disability and functioning assessment</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Contact tracing for transmissible diseases and epidemics</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Injury surveillance with violence/accident/self-harm/domestic violence context</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">NTD packages such as Chagas and Dengue</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">MDG6 support for HIV/AIDS, malaria and tuberculosis</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Community outreach mobile app</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Population health dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">School/worker health screening campaigns</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Epidemic alerting and reporting</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Government/public-health data exports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+<h2 style="font-family:Calibri,sans-serif;font-size:14pt;color:#0F6E56;margin:18pt 0 6pt 0;">15. Reporting, Federation, Standards &amp; Security</h2>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;color:#555;margin:0 0 8pt 0;"><b>Module included?</b> &#9744; Yes &nbsp; &#9744; No &nbsp;&nbsp;|&nbsp;&nbsp; Main IST modules: health_reporting, health_federation, health_crypto, health_icd10, health_icd11, health_icd9procs, health_icd10pcs, health_icpm, health_genetics, health_genetics_uniprot</p>
+<p style="font-family:Calibri,sans-serif;font-size:10pt;margin:0 0 4pt 0;"><b>Module comments:</b></p>
+<p style="font-family:Calibri,sans-serif;font-size:11pt;border:1px solid #999;padding:8pt;min-height:28pt;margin:0 0 10pt 0;">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-family:Calibri,sans-serif;">
+<tr style="background:#E1F5EE;">
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Include</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Type</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Feature</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:10pt;font-weight:bold;">Partner comment</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Demographics and population pyramid reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Patient evaluations and top diseases reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Epidemic reports and injury surveillance registration reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Federated health network integration</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Digital signatures, document digest and integrity checks</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">ICD-10, ICD-11, ICD-10-PCS, ICD-9 procedures and ICPM classifications</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">IST Health</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Genetic, UniProt, family history and phenotype information</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Executive KPI dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Doctor / department profitability reports</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">FHIR/API integration layer</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">Role-based access and audit dashboard</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+<tr>
+  <td width="8%" align="center" style="border:1px solid #999;padding:6px;font-size:11pt;">&#9744;</td>
+  <td width="10%" style="border:1px solid #999;padding:6px;font-size:10pt;color:#555;">Extension</td>
+  <td width="42%" style="border:1px solid #999;padding:6px;font-size:11pt;">AI analytics: disease trends, revenue leakage, operational bottlenecks</td>
+  <td width="40%" style="border:1px solid #999;padding:6px;font-size:11pt;height:36px;">&nbsp;</td>
+</tr>
+</table>
+
+<p style="margin-top:24pt;font-size:10pt;color:#888;border-top:1px solid #ccc;padding-top:8pt;">
+IST Health Partner Feature Review &mdash; generated for partner scope discussion
+</p>
+
+</body>
+</html>

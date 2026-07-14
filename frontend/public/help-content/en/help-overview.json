@@ -1,0 +1,22 @@
+{
+  "id": "help-overview",
+  "title": "Help Centre overview",
+  "roles": [
+    "*"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "help",
+    "start",
+    "overview"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "Use search, filters by role and country, and guided workflows. Content is loaded from help-content files — not hardcoded in UI components."
+}

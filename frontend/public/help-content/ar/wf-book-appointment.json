@@ -1,0 +1,29 @@
+{
+  "id": "wf-book-appointment",
+  "title": "سير العمل: حجز موعد",
+  "roles": [
+    "Receptionist",
+    "Physician"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/appointments"
+  ],
+  "keywords": [
+    "appointment",
+    "schedule",
+    "booking"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "ترتبط المواعيد بنموذج gnuhealth.appointment.",
+  "steps": [
+    "افتح المواعيد.",
+    "أنشئ موعداً؛ اختر المريض والمهني الصحي.",
+    "حدد التاريخ/الوقت والحالة.",
+    "احفظ وتحقق من قائمة اليوم."
+  ]
+}

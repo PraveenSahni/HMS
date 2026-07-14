@@ -1,0 +1,47 @@
+﻿# Dependencies & build
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+dist.tgz
+*.tgz
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Secrets & local config
+.env
+.env.*
+!.env.example
+!**/.env.example
+config.yaml
+*.pem
+*.key
+credentials.json
+**/credentials*
+
+# Logs & temp
+*.log
+tmp-*
+_t64.txt
+.cache/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# Archives / local dumps
+*.sql.gz
+
+# Local evidence / probe dumps
+docs/testing/evidence/_prod_cfg.yaml
+frontend/db-login.json
+frontend/db-list.json

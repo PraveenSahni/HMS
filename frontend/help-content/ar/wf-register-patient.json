@@ -1,0 +1,31 @@
+{
+  "id": "wf-register-patient",
+  "title": "سير العمل: تسجيل مريض",
+  "roles": [
+    "Receptionist",
+    "Physician",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/patients"
+  ],
+  "keywords": [
+    "patient",
+    "register",
+    "create",
+    "demographics"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "يقوم الاستقبال بإنشاء سجل الطرف والمريض عبر نموذج React المرتبط بـ gnuhealth.patient.",
+  "steps": [
+    "افتح المرضى (/patients).",
+    "اختر إنشاء وأدخل البيانات الديموغرافية.",
+    "استخدم معرفات اصطناعية فقط خارج الإنتاج.",
+    "احفظ وتحقق من ظهور المريض في القائمة."
+  ]
+}

@@ -1,0 +1,245 @@
+/**
+ * Tryton-like collapsible menu tree (IST colors).
+ * Hardened for Chromium/Chrome: explicit row height, no gap-only spacing,
+ * isolated flex items so chevrons/transforms cannot collapse sibling rows.
+ */
+
+.ist-sidebar {
+  width: var(--layout-sidebar-width);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - var(--layout-header-height));
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+.ist-sidebar__logo {
+  flex-shrink: 0;
+}
+
+.ist-menu-tree {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  font-family: var(--font-sans);
+  position: relative;
+}
+
+.ist-menu-tree__quick {
+  flex-shrink: 0;
+  margin-bottom: var(--space-2);
+}
+
+/* Favorites keep existing .ist-nav link styles — do not share tree row rules */
+.ist-menu-tree__favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.ist-menu-tree__favorites .ist-nav__link {
+  padding: var(--space-2) var(--space-6);
+  font-size: 0.72rem;
+}
+
+.ist-menu-tree__nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: var(--space-6);
+}
+
+.ist-menu-tree__list,
+.ist-menu-tree__children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.ist-menu-tree__item {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* Prevent collapsed/overlapping line boxes in Chrome */
+  min-height: 0;
+}
+
+.ist-menu-tree__children {
+  margin: 0;
+  padding: 0;
+}
+
+.ist-menu-tree__row {
+  /* Reset UA button styles that differ between Chrome and Edge */
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  width: 100%;
+  min-height: 34px;
+  margin: 0;
+  /* Prefer padding-block over gap for Chromium flex reliability */
+  padding-block: 0.4rem;
+  padding-inline-end: var(--space-3);
+  padding-inline-start: var(--space-3);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+  text-align: start;
+  cursor: pointer;
+  line-height: 1.35;
+  overflow: hidden;
+}
+
+.ist-menu-tree__row:hover {
+  background: color-mix(in srgb, var(--color-text-accent) 8%, transparent);
+  color: var(--color-text);
+}
+
+.ist-menu-tree__row:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: -2px;
+}
+
+.ist-menu-tree__row--leaf .ist-menu-tree__label {
+  font-weight: var(--font-weight-normal);
+}
+
+.ist-menu-tree__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  flex: 0 0 16px;
+  margin-inline-end: 0.35rem;
+  opacity: 0.55;
+  transition: transform 0.15s ease;
+  transform-origin: center;
+  /* Contain rotate so it never spills into adjacent rows */
+  overflow: visible;
+  pointer-events: none;
+}
+
+.ist-menu-tree__chevron svg {
+  display: block;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+.ist-menu-tree__chevron.is-open {
+  transform: rotate(90deg);
+  opacity: 0.85;
+}
+
+[dir="rtl"] .ist-menu-tree__chevron {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .ist-menu-tree__chevron.is-open {
+  transform: scaleX(-1) rotate(90deg);
+}
+
+.ist-menu-tree__chevron--spacer {
+  visibility: hidden;
+}
+
+.ist-menu-tree__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  flex: 0 0 16px;
+  margin-inline-end: 0.4rem;
+  opacity: 0.5;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.ist-menu-tree__icon svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.ist-menu-tree__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.35;
+}
+
+.ist-menu-tree__status {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.ist-menu-tree__status--error {
+  color: var(--color-danger, #c0392b);
+}
+
+.ist-menu-tree__pending {
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-sidebar);
+}
+
+.ist-model-browser {
+  overflow-x: auto;
+}
+
+.ist-model-browser .ist-patient-list__head,
+.ist-model-browser .ist-patient-list__row {
+  min-width: 480px;
+}
+
+@media (max-width: 768px) {
+  .ist-sidebar {
+    position: static;
+    max-height: 42vh;
+    width: 100%;
+  }
+
+  .ist-menu-tree__favorites {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+}

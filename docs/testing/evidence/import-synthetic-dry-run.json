@@ -1,0 +1,7 @@
+{
+  "command": "import_synthetic",
+  "dry_run": true,
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
+  "timestamp": "2026-07-14T10:27:58.730221+00:00",
+  "status": "dry-run-ok"
+}

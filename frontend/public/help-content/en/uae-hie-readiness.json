@@ -1,0 +1,26 @@
+{
+  "id": "uae-hie-readiness",
+  "title": "UAE HIE readiness (NABIDH / Malaffi / Riayati)",
+  "roles": [
+    "Compliance",
+    "SystemAdmin",
+    "Executive"
+  ],
+  "countries": [
+    "AE"
+  ],
+  "routes": [
+    "/help",
+    "/settings"
+  ],
+  "keywords": [
+    "NABIDH",
+    "Malaffi",
+    "Riayati",
+    "HL7",
+    "FHIR"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "HIE connectors are not implemented in IST yet. Confirm facility obligations with DHA/DoH/MOHAP before go-live. See docs/integration/interoperability-assessment.md."
+}

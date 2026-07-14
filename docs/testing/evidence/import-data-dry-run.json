@@ -1,0 +1,13 @@
+{
+  "command": "import_data",
+  "dry_run": true,
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
+  "plan": {
+    "entities": 3,
+    "facilities": 2,
+    "patients": 50,
+    "staff": 12
+  },
+  "writes": 0,
+  "timestamp": "2026-07-14T10:27:58.586610+00:00"
+}

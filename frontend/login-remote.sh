@@ -1,0 +1,1 @@
+curl -s -w "\nHTTP:%{http_code}\n" -X POST http://127.0.0.1/api/tryton/gnuhealth/ -H "Content-Type: application/json" -d "{\"id\":2,\"method\":\"common.db.login\",\"params\":[\"admin\",{\"password\":\"IstHealth@2026!Admin\"},\"en\"]}"

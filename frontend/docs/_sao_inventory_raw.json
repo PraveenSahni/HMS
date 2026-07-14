@@ -1,0 +1,196 @@
+﻿{
+    "collected_at":  "2026-07-13T21:12:55.4495728+04:00",
+    "host":  "gnuhealth-his-01",
+    "zone":  "me-central1-a",
+    "project":  "isthealth",
+    "database":  "gnuhealth",
+    "public_ip":  "34.18.116.146",
+    "activated_modules":  [
+                              {
+                                  "state":  "activated",
+                                  "name":  "company"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "country"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "currency"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "health"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "ir"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "party"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "product"
+                              },
+                              {
+                                  "state":  "activated",
+                                  "name":  "res"
+                              }
+                          ],
+    "activated_module_count":  8,
+    "menus_top_level":  [
+                            {
+                                "parent":  null,
+                                "name":  "Administration",
+                                "id":  1
+                            },
+                            {
+                                "parent":  null,
+                                "name":  "Currency",
+                                "id":  58
+                            },
+                            {
+                                "parent":  null,
+                                "name":  "Party",
+                                "id":  61
+                            },
+                            {
+                                "parent":  null,
+                                "name":  "Companies",
+                                "id":  71
+                            },
+                            {
+                                "parent":  null,
+                                "name":  "Product",
+                                "id":  74
+                            },
+                            {
+                                "parent":  null,
+                                "name":  "Health",
+                                "id":  84
+                            }
+                        ],
+    "jsonrpc":  {
+                    "baseUrl":  "http://34.18.116.146/gnuhealth/",
+                    "ok":  true,
+                    "error":  null,
+                    "models":  [
+                                   {
+                                       "error":  null,
+                                       "model":  "party.party",
+                                       "count":  4301,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.patient",
+                                       "count":  50,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.appointment",
+                                       "count":  1,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.healthprofessional",
+                                       "count":  299,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.institution",
+                                       "count":  1,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.specialty",
+                                       "count":  75,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.patient.lab.test\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.patient.lab.test",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.lab.test_type\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.lab.test_type",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.prescription\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.prescription",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.prescription.order",
+                                       "count":  0,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.medicament",
+                                       "count":  0,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.patient.evaluation",
+                                       "count":  0,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.surgery\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.surgery",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.inpatient.registration\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.inpatient.registration",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.hospital.bed",
+                                       "count":  0,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027gnuhealth.imaging.test.request\\u0027\",\"\"]",
+                                       "model":  "gnuhealth.imaging.test.request",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  "[\"\\u0027account.invoice\\u0027\",\"\"]",
+                                       "model":  "account.invoice",
+                                       "count":  null,
+                                       "exists":  false
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "gnuhealth.patient.medication",
+                                       "count":  0,
+                                       "exists":  true
+                                   },
+                                   {
+                                       "error":  null,
+                                       "model":  "product.template",
+                                       "count":  8,
+                                       "exists":  true
+                                   }
+                               ]
+                }
+}

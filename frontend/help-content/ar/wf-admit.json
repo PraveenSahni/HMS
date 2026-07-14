@@ -1,0 +1,30 @@
+{
+  "id": "wf-admit",
+  "title": "سير العمل: إدخال للتنويم",
+  "roles": [
+    "Physician",
+    "Nurse",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds"
+  ],
+  "keywords": [
+    "admit",
+    "bed",
+    "inpatient"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "نماذج health_inpatient.",
+  "steps": [
+    "افتح الأسرّة.",
+    "أكد توفر سرير.",
+    "أنشئ تسجيل تنويم.",
+    "يوثق التمريض الجولات تحت التمريض."
+  ]
+}

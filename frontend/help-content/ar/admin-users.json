@@ -1,0 +1,26 @@
+{
+  "id": "admin-users",
+  "title": "إدارة المستخدمين والمجموعات",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "ITSupport"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "acl",
+    "rbac"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "أنشئ المستخدمين وعيّن المجموعات. تحرير قواعد السجلات المتقدم يبقى في SAO."
+}

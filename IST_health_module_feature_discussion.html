@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IST Health — Partner Feature Review</title>
+  <style>
+    /* Interactive dashboard style — aligned with reference template */
+    :root {
+      --bg: #fff;
+      --bg2: #f7f6f3;
+      --bg3: #efede8;
+      --tx: #1a1a19;
+      --tx2: #6b6a66;
+      --tx3: #9c9a92;
+      --bd: #e0dfd9;
+      --t1: #0F6E56;
+      --t1bg: #E1F5EE;
+      --t1bd: #5DCAA5;
+      --t2: #854F0B;
+      --t2bg: #FAEEDA;
+      --t2bd: #EF9F27;
+      --t3: #534AB7;
+      --t3bg: #EEEDFE;
+      --t3bd: #AFA9EC;
+      --v0: #185FA5;
+      --v0bg: #E6F1FB;
+      --v0bd: #85B7EB;
+      --tg: #0F6E56;
+      --tgbg: #E1F5EE;
+      --tr: #A32D2D;
+      --trbg: #FCEBEB;
+      --trbd: #F09595;
+      --to: #854F0B;
+      --tobg: #FAEEDA;
+      --tb: #185FA5;
+      --tbbg: #E6F1FB;
+      --trm: #888780;
+      --trmbg: #F1EFE8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a19;
+        --bg2: #2c2c2a;
+        --bg3: #3d3d3a;
+        --tx: #e8e6de;
+        --tx2: #9c9a92;
+        --tx3: #6b6a66;
+        --bd: #444441;
+        --t1: #9FE1CB;
+        --t1bg: #04342C;
+        --t1bd: #1D9E75;
+        --t2: #FAC775;
+        --t2bg: #412402;
+        --t2bd: #BA7517;
+        --t3: #CECBF6;
+        --t3bg: #26215C;
+        --t3bd: #7F77DD;
+        --v0: #B5D4F4;
+        --v0bg: #042C53;
+        --v0bd: #378ADD;
+        --tg: #9FE1CB;
+        --tgbg: #04342C;
+        --tr: #F7C1C1;
+        --trbg: #501313;
+        --trbd: #F09595;
+        --to: #FAC775;
+        --tobg: #412402;
+        --tb: #B5D4F4;
+        --tbbg: #042C53;
+        --trm: #B4B2A9;
+        --trmbg: #2C2C2A;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Calibri, 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #525659;
+      color: var(--tx);
+      padding: 0;
+      line-height: 1.5;
+      font-size: 11pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .doc-canvas { padding: 24px 12px 40px; }
+
+    .w { max-width: 816px; margin: 0 auto; }
+
+    .doc-page {
+      background: #fff;
+      color: #1a1a19;
+      padding: 56px 64px 64px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+      min-height: 400px;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .doc-canvas { padding: 0; }
+      .doc-page { box-shadow: none; padding: 0; max-width: none; }
+      .toolbar, .toast, .filter-chips, .toolbar-actions .no-print { display: none !important; }
+      .feature-comment, .module-comment, .review-field { border: 1px solid #ccc !important; }
+    }
+
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #1a1a19;
+      font-family: Calibri, 'Segoe UI', sans-serif;
+    }
+
+    .sub {
+      font-size: 11pt;
+      color: #444;
+      margin: 0 0 16px;
+      line-height: 1.55;
+    }
+
+    .doc-cover {
+      border: 1px solid var(--bd);
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      background: var(--bg2);
+    }
+
+    .doc-cover-label {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--v0);
+      margin-bottom: 8px;
+    }
+
+    .doc-instructions {
+      font-size: 10.5pt;
+      color: var(--tx2);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      background: var(--v0bg);
+      border: 1px solid var(--v0bd);
+      border-radius: 5px;
+    }
+
+    .doc-instructions ol {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    .doc-instructions li { margin: 4px 0; }
+
+    .reviewer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+      margin-bottom: 12px;
+    }
+
+    .review-field {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--tx2);
+    }
+
+    .review-field span { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .review-field input,
+    .review-field textarea {
+      font-family: inherit;
+      font-size: 10.5pt;
+      font-weight: 400;
+      padding: 7px 10px;
+      border: 1px solid var(--bd);
+      border-radius: 4px;
+      background: #fff;
+      color: var(--tx);
+    }
+
+    .review-field-full { grid-column: 1 / -1; }
+
+    .review-field textarea { resize: vertical; min-height: 56px; }
+
+    .sec {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--tx2);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin: 12px 0 6px;
+      padding: 0 0 3px;
+      border-bottom: 1px solid var(--bd);
+    }
+
+    /* Toolbar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr 160px auto;
+      gap: 8px;
+      padding: 10px 16px;
+      background: #2b2b2b;
+      border-bottom: 1px solid #444;
+      align-items: center;
+      color: #eee;
+    }
+
+    .toolbar input,
+    .toolbar select {
+      background: #3a3a3a;
+      border-color: #555;
+      color: #eee;
+    }
+
+    .toolbar input::placeholder { color: #999; }
+
+    .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    input, select, button, textarea { font-family: inherit; font-size: 11px; }
+
+    input, select {
+      width: 100%;
+      padding: 7px 10px;
+      border: 1px solid var(--bd);
+      border-radius: 5px;
+      background: var(--bg2);
+      color: var(--tx);
+      outline: none;
+      transition: all 0.15s;
+    }
+
+    input::placeholder { color: var(--tx3); }
+
+    input:hover, select:hover { background: var(--bg3); }
+
+    input:focus-visible, select:focus-visible {
+      border-color: var(--v0bd);
+      background: var(--bg);
+    }
+
+    /* Buttons — choice style */
+    .btn {
+      padding: 7px 14px;
+      border-radius: 5px;
+      border: 1px solid var(--bd);
+      font-size: 11px;
+      cursor: pointer;
+      background: var(--bg2);
+      color: var(--tx);
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .btn:hover { background: var(--bg3); }
+
+    .btn-primary {
+      background: var(--t1bg) !important;
+      border-color: var(--t1bd) !important;
+      color: var(--t1) !important;
+    }
+
+    .btn-primary:hover { background: var(--tgbg); filter: brightness(0.97); }
+
+    .btn-danger {
+      background: var(--trbg) !important;
+      border-color: var(--trbd) !important;
+      color: var(--tr) !important;
+    }
+
+    .btn-danger:hover { filter: brightness(0.97); }
+
+    main { padding: 0; }
+
+    .notice {
+      background: var(--t2bg);
+      border: 1px solid var(--t2bd);
+      border-radius: 5px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      font-size: 10px;
+      line-height: 1.7;
+      color: var(--tx);
+    }
+
+    .notice strong { color: var(--t2); font-weight: 600; }
+
+    /* Metrics — r-stat style */
+    .summary-grid {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .metric {
+      background: var(--bg);
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 9px;
+      border: 1px solid var(--bd);
+      flex: 1;
+      min-width: 120px;
+      transition: all 0.15s;
+    }
+
+    .metric:hover { background: var(--bg2); }
+
+    .metric.highlight {
+      background: var(--t1bg);
+      border-color: var(--t1bd);
+    }
+
+    .metric .num {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--tx);
+      line-height: 1.2;
+    }
+
+    .metric.highlight .num { color: var(--t1); }
+
+    .metric .label {
+      margin-top: 2px;
+      color: var(--tx3);
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    /* Scope panel */
+    .selection-panel {
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      transition: all 0.15s;
+    }
+
+    .selection-panel:has(.sel-tag) {
+      border-color: var(--t1bd);
+      background: var(--t1bg);
+    }
+
+    .selection-panel h3 {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--tx2);
+      margin: 0 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .selection-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      min-height: 20px;
+    }
+
+    .selection-tags .empty {
+      color: var(--tx3);
+      font-size: 10px;
+      font-style: italic;
+    }
+
+    .sel-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 7px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+      background: var(--tgbg);
+      color: var(--tg);
+    }
+
+    /* Filter chips — choice style */
+    .filter-chips {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .filter-chip {
+      padding: 7px 14px;
+      border-radius: 5px;
+      border: 1px solid var(--bd);
+      font-size: 11px;
+      cursor: pointer;
+      background: var(--bg2);
+      color: var(--tx);
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+
+    .filter-chip:hover { background: var(--bg3); }
+
+    .filter-chip.active {
+      background: var(--t1bg) !important;
+      border-color: var(--t1bd) !important;
+      color: var(--t1) !important;
+    }
+
+    /* Section titles & badges */
+    .section-title {
+      margin: 12px 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 0 3px;
+      border-bottom: 1px solid var(--bd);
+    }
+
+    .section-title h2 {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--tx2);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 7px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+      background: var(--trmbg);
+      color: var(--trm);
+    }
+
+    .badge.enabled {
+      background: var(--tgbg);
+      color: var(--tg);
+    }
+
+    /* Module cards — step style */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.15s;
+    }
+
+    .card:not(.enabled) { opacity: 0.85; background: var(--bg2); }
+
+    .card:not(.enabled):hover { opacity: 1; background: var(--bg); }
+
+    .card.enabled {
+      opacity: 1;
+      background: var(--t1bg);
+      border: 1.5px dashed var(--t1bd);
+    }
+
+    .card-head {
+      padding: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid var(--bd);
+      transition: background 0.15s;
+    }
+
+    .card:not(.enabled) .card-head { background: var(--bg2); }
+
+    .card.enabled .card-head {
+      background: var(--t1bg);
+      border-bottom-color: var(--t1bd);
+    }
+
+    .card-head:hover { background: var(--bg3); }
+
+    .card.enabled .card-head:hover { background: var(--t1bg); filter: brightness(0.98); }
+
+    .card-head-main { flex: 1; min-width: 0; }
+
+    .card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tx);
+      margin: 0 0 2px;
+      line-height: 1.3;
+    }
+
+    .card:not(.enabled) h3 { color: var(--tx2); }
+
+    .card .subtitle {
+      font-size: 10px;
+      color: var(--tx2);
+      margin-top: 2px;
+      line-height: 1.45;
+    }
+
+    .card-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 7px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+      background: var(--trmbg);
+      color: var(--trm);
+    }
+
+    .card.enabled .status-pill {
+      background: var(--tgbg);
+      color: var(--tg);
+    }
+
+    /* Toggle */
+    .toggle {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+      padding: 0;
+      border: none;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      background: var(--bg3);
+      border: 1px solid var(--bd);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .toggle-slider::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: 2px;
+      top: 2px;
+      background: var(--bg);
+      border-radius: 50%;
+      transition: transform 0.15s;
+    }
+
+    .toggle input:checked + .toggle-slider {
+      background: var(--t1);
+      border-color: var(--t1bd);
+    }
+
+    .toggle input:checked + .toggle-slider::before {
+      transform: translateX(16px);
+      background: var(--bg);
+    }
+
+    /* Enable button — choice style */
+    .enable-btn {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid var(--bd);
+      font-size: 10px;
+      cursor: pointer;
+      background: var(--bg2);
+      color: var(--tx);
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+
+    .enable-btn:hover { background: var(--bg3); }
+
+    .card.enabled .enable-btn {
+      background: var(--t1bg);
+      border-color: var(--t1bd);
+      color: var(--t1);
+    }
+
+    /* Card body */
+    .card-body {
+      padding: 12px;
+      max-height: 2000px;
+      overflow: hidden;
+      transition: max-height 0.35s, padding 0.22s, opacity 0.22s;
+    }
+
+    .card.collapsed .card-body {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .mini-title {
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--v0);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 4px;
+    }
+
+    ul.feature-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.feature-list li.feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      margin: 4px 0;
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-size: 10.5pt;
+      color: var(--tx2);
+      line-height: 1.5;
+      border: 1px solid var(--bd);
+      transition: all 0.15s;
+      cursor: default;
+      background: #fff;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-status {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--tx3);
+      white-space: nowrap;
+      min-width: 58px;
+      text-align: right;
+    }
+
+    .feature-item.enabled .feature-status { color: var(--t1); }
+
+    .feature-comment,
+    .module-comment {
+      width: 100%;
+      margin-top: 8px;
+      padding: 7px 10px;
+      border: 1px solid var(--bd);
+      border-radius: 4px;
+      font-family: Calibri, 'Segoe UI', sans-serif;
+      font-size: 10pt;
+      line-height: 1.45;
+      resize: vertical;
+      min-height: 40px;
+      background: #fafafa;
+      color: var(--tx);
+    }
+
+    .feature-comment:focus,
+    .module-comment:focus {
+      outline: none;
+      border-color: var(--v0bd);
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(24, 95, 165, 0.12);
+    }
+
+    .feature-item.has-comment,
+    .module-comment-block.has-comment {
+      border-color: var(--v0bd);
+    }
+
+    .feature-item.has-comment .feature-comment,
+    .module-comment-block.has-comment .module-comment {
+      background: var(--v0bg);
+      border-color: var(--v0bd);
+    }
+
+    .module-comment-block {
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--bd);
+      border-radius: 5px;
+      background: var(--bg2);
+    }
+
+    .module-comment-block .mini-title { margin-bottom: 6px; color: var(--tx2); }
+
+    ul.feature-list li.feature-item:hover {
+      background: var(--bg2);
+      border-color: var(--bd);
+    }
+
+    ul.feature-list li.feature-item.enabled {
+      background: var(--t1bg);
+      border-color: var(--t1bd);
+    }
+
+    ul.feature-list li.feature-item.enabled .feature-label {
+      color: var(--t1);
+      font-weight: 500;
+    }
+
+    .feature-label {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .toggle-sm {
+      width: 30px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .toggle-sm .toggle-slider::before {
+      width: 11px;
+      height: 11px;
+    }
+
+    .toggle-sm input:checked + .toggle-slider::before {
+      transform: translateX(13px);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--bd);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: 7px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+      background: var(--trmbg);
+      color: var(--trm);
+    }
+
+    .card.enabled .chip {
+      background: var(--tgbg);
+      color: var(--tg);
+    }
+
+    /* Phase cards — result card style */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .phase-card {
+      border-radius: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--bd);
+      background: var(--bg);
+      font-size: 9px;
+      line-height: 1.6;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .phase-card:hover { background: var(--bg2); }
+
+    .phase-card.enabled {
+      background: var(--t1bg);
+      border: 1.5px dashed var(--t1bd);
+    }
+
+    .phase-card h4 {
+      font-size: 10px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      color: var(--tx);
+    }
+
+    .phase-card.enabled h4 { color: var(--t1); }
+
+    .phase-card .phase-meta {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--v0);
+      margin-bottom: 6px;
+    }
+
+    .phase-card p {
+      margin: 0;
+      font-size: 9px;
+      color: var(--tx2);
+      line-height: 1.5;
+    }
+
+    .phase-card p + p { margin-top: 4px; }
+
+    .priority {
+      display: inline-flex;
+      align-items: center;
+      font-size: 7px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+      background: var(--tobg);
+      color: var(--to);
+    }
+
+    .phase-card.enabled .priority {
+      background: var(--tgbg);
+      color: var(--tg);
+    }
+
+    /* Table — aps-tbl style */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      background: var(--bg);
+      border: 1px solid var(--v0bd);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 6px 6px;
+      border-bottom: 0.5px solid var(--bd);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      font-size: 8px;
+      color: var(--tx3);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      font-weight: 600;
+      border-bottom: 2px solid var(--bd);
+    }
+
+    tbody tr:hover td { background: var(--bg2); }
+
+    tr:last-child td { border-bottom: none; }
+
+    tr.phase-enabled td { background: var(--t1bg); }
+
+    tr.phase-enabled:hover td { background: var(--t1bg); filter: brightness(0.98); }
+
+    td.priority {
+      font-weight: 600;
+      color: var(--to);
+      white-space: nowrap;
+    }
+
+    tr.phase-enabled td.priority { color: var(--t1); }
+
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 14px;
+      right: 14px;
+      padding: 8px 12px;
+      background: var(--t1bg);
+      color: var(--t1);
+      border: 1px solid var(--t1bd);
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 600;
+      transform: translateY(60px);
+      opacity: 0;
+      transition: transform 0.35s, opacity 0.22s;
+      z-index: 100;
+      pointer-events: none;
+      max-width: min(360px, calc(100vw - 28px));
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .hidden-input { display: none; }
+
+    @media (max-width: 960px) {
+      .doc-page { padding: 28px 20px 32px; }
+      .reviewer-grid { grid-template-columns: 1fr; }
+      .toolbar { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+      .toast { left: 14px; right: 14px; max-width: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search module or feature…" />
+    <select id="filter">
+      <option value="all">All module groups</option>
+      <option value="core">Core EMR & Patient</option>
+      <option value="operations">Hospital Operations</option>
+      <option value="clinical">Clinical Specialties</option>
+      <option value="diagnostics">Diagnostics</option>
+      <option value="public-health">Public Health</option>
+      <option value="integration">Integration & Security</option>
+      <option value="reporting">Reporting</option>
+    </select>
+    <div class="toolbar-actions">
+      <button type="button" class="btn btn-primary no-print" id="exportWord">Export Word</button>
+      <button type="button" class="btn no-print" id="exportReview">Export completed review</button>
+      <button type="button" class="btn no-print" id="importReview">Import review</button>
+      <input type="file" id="importFile" class="hidden-input" accept=".json,application/json" />
+      <button type="button" class="btn btn-primary" id="enableMvp">Enable MVP</button>
+      <button type="button" class="btn" id="enableVisible">Enable Visible</button>
+      <button type="button" class="btn btn-danger" id="resetAll">Reset All</button>
+    </div>
+  </div>
+
+  <div class="doc-canvas">
+  <div class="w doc-page">
+  <h1>IST Health — Partner Feature Review</h1>
+  <p class="sub">Interactive scope document for clinic / hospital management platform — enable features and add comments, then return the completed review to the sender.</p>
+
+  <div class="doc-cover">
+    <div class="doc-cover-label">Partner review information</div>
+    <div class="doc-instructions">
+      <strong>How to complete this review</strong>
+      <ol>
+        <li>Fill in your name and organization below.</li>
+        <li>For each module, toggle <strong>Include</strong> on features you want in scope.</li>
+        <li>Add a comment on any feature where you need clarification, changes, or notes.</li>
+        <li>Click <strong>Export completed review</strong> and send the JSON file back to the sender.</li>
+      </ol>
+    </div>
+    <div class="reviewer-grid">
+      <label class="review-field"><span>Partner name</span><input type="text" id="partnerName" placeholder="Your name" /></label>
+      <label class="review-field"><span>Organization</span><input type="text" id="partnerOrg" placeholder="Company / clinic name" /></label>
+      <label class="review-field"><span>Email</span><input type="email" id="partnerEmail" placeholder="email@example.com" /></label>
+      <label class="review-field"><span>Review date</span><input type="date" id="reviewDate" /></label>
+      <label class="review-field review-field-full"><span>Overall comments</span><textarea id="overallComments" placeholder="General feedback, priorities, constraints, or questions for the full scope…"></textarea></label>
+    </div>
+  </div>
+
+  <div class="sec">Document summary</div>
+  <main>
+    <div class="notice">
+      <strong>For reviewers:</strong> Toggle each feature to mark it <em>Included</em> or leave off. Use the comment box under any feature to note requirements, gaps, or questions. Your progress is saved automatically in this browser. Use <strong>Export completed review</strong> to save and send your responses.
+    </div>
+
+    <section class="summary-grid">
+      <div class="metric highlight" id="metricEnabled">
+        <div class="num" id="enabledCount">0</div>
+        <div class="label">Modules enabled</div>
+      </div>
+      <div class="metric">
+        <div class="num">15</div>
+        <div class="label">Functional discussion groups</div>
+      </div>
+      <div class="metric">
+        <div class="num">40+</div>
+        <div class="label">IST Health HIS packages considered</div>
+      </div>
+      <div class="metric">
+        <div class="num" id="extCount">0</div>
+        <div class="label">Features selected for discussion</div>
+      </div>
+      <div class="metric">
+        <div class="num" id="commentCount">0</div>
+        <div class="label">Partner comments added</div>
+      </div>
+    </section>
+
+    <div class="selection-panel">
+      <h3>Your enabled scope</h3>
+      <div class="selection-tags" id="selectionTags"><span class="empty">No modules enabled yet — click toggles or Enable MVP to begin</span></div>
+    </div>
+
+    <div class="sec">Filter by module group</div>
+    <div class="filter-chips" id="categoryChips">
+      <button type="button" class="filter-chip active" data-filter="all">All groups</button>
+      <button type="button" class="filter-chip" data-filter="core">Core EMR</button>
+      <button type="button" class="filter-chip" data-filter="operations">Operations</button>
+      <button type="button" class="filter-chip" data-filter="clinical">Clinical</button>
+      <button type="button" class="filter-chip" data-filter="diagnostics">Diagnostics</button>
+      <button type="button" class="filter-chip" data-filter="public-health">Public Health</button>
+      <button type="button" class="filter-chip" data-filter="integration">Integration</button>
+    </div>
+
+    <div class="section-title">
+      <h2>Module groups</h2>
+      <span class="badge" id="countBadge">15 groups</span>
+    </div>
+
+    <section class="cards" id="cards">
+
+      <article class="card" data-id="mod-1" data-group="core" data-keywords="patient registration demographics emr ehr evaluation appointment health archive history profile qrcode">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>1. Patient Registration & EMR Core</h3>
+            <div class="subtitle">Main IST modules: health, health_history, health_profile, health_archives, health_qrcodes</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Patient Registration and EMR Core" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Patient demographics and administrative information</li>
+                <li>Electronic medical record / clinical evaluations</li>
+                <li>Health conditions, medicaments and vaccinations</li>
+                <li>Health professionals and health center records</li>
+                <li>Legacy or paper-based health record tracking</li>
+                <li>Enhanced medical history reports</li>
+                <li>QR codes for patient, appointment, newborn and lab reports</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Modern web/mobile registration workflow">Modern web/mobile registration workflow</li>
+                <li class="ext-item" data-ext="Emirates ID / passport OCR capture">Emirates ID / passport OCR capture</li>
+                <li class="ext-item" data-ext="Duplicate patient detection">Duplicate patient detection</li>
+                <li class="ext-item" data-ext="Consent management and document upload">Consent management and document upload</li>
+                <li class="ext-item" data-ext="AI-assisted patient summary">AI-assisted patient summary</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Core</span><span class="chip">MVP priority</span><span class="chip">Patient 360</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-2" data-group="core operations" data-keywords="appointment scheduling calendar caldav webdav doctor schedule professional events">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>2. Appointments, Calendar & Doctor Scheduling</h3>
+            <div class="subtitle">Main IST modules: health_calendar, health_caldav, health_webdav3_server</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Appointments and Scheduling" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Patient appointment handling</li>
+                <li>Work schedules for health professionals</li>
+                <li>Calendar view of professional appointments</li>
+                <li>Calendar linking with health professionals</li>
+                <li>Calendar events from patient appointments</li>
+                <li>CalDAV / WebDAV calendar connectivity</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Patient self-booking portal">Patient self-booking portal</li>
+                <li class="ext-item" data-ext="WhatsApp/SMS appointment reminders">WhatsApp/SMS appointment reminders</li>
+                <li class="ext-item" data-ext="No-show tracking and waitlist">No-show tracking and waitlist</li>
+                <li class="ext-item" data-ext="Doctor room allocation">Doctor room allocation</li>
+                <li class="ext-item" data-ext="Insurance eligibility check before visit">Insurance eligibility check before visit</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Scheduling</span><span class="chip">Clinic MVP</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-3" data-group="operations" data-keywords="billing accounting finance invoice chart accounts general ledger journals service invoicing insurance policies discounts">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>3. Billing, Accounting, Services & Insurance</h3>
+            <div class="subtitle">Main IST modules: health_accounting, health_services, health_services_lab, health_services_imaging, health_insurance</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Billing and Insurance" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Billing and invoice handling</li>
+                <li>Chart of accounts, general ledger and journals</li>
+                <li>Grouping of patient services from evaluation, prescription or hospitalization</li>
+                <li>Invoice specific service lines</li>
+                <li>Insurance policies, plans and product/category-based discounts</li>
+                <li>Lab and imaging service extensions</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="UAE/GCC insurance e-claim workflow">UAE/GCC insurance e-claim workflow</li>
+                <li class="ext-item" data-ext="Pre-authorization / approval tracking">Pre-authorization / approval tracking</li>
+                <li class="ext-item" data-ext="Copay, deductible and package pricing">Copay, deductible and package pricing</li>
+                <li class="ext-item" data-ext="TPA integration">TPA integration</li>
+                <li class="ext-item" data-ext="Doctor incentive / revenue-share reports">Doctor incentive / revenue-share reports</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Revenue cycle</span><span class="chip">High priority</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-4" data-group="operations" data-keywords="inpatient hospitalization admission bed discharge nursing plan nutrition medication care plan">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>4. Inpatient, Admission, Bed & Discharge Management</h3>
+            <div class="subtitle">Main IST modules: health_inpatient, health_inpatient_calendar</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Inpatient Management" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Patient registration for hospitalization</li>
+                <li>Bed management</li>
+                <li>Hospitalization record and history</li>
+                <li>Nursing plan</li>
+                <li>Discharge plan</li>
+                <li>Admission administrative data</li>
+                <li>Nutrition, medication plan and care plan tabs</li>
+                <li>Hospitalization calendar events</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Bed dashboard / occupancy board">Bed dashboard / occupancy board</li>
+                <li class="ext-item" data-ext="Ward transfer workflow">Ward transfer workflow</li>
+                <li class="ext-item" data-ext="Patient discharge checklist">Patient discharge checklist</li>
+                <li class="ext-item" data-ext="Inpatient billing automation">Inpatient billing automation</li>
+                <li class="ext-item" data-ext="Care team task assignment">Care team task assignment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Hospital HIS</span><span class="chip">Bed management</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-5" data-group="clinical operations" data-keywords="nursing outpatient inpatient rounding procedures ambulatory care sessions">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>5. Nursing, Roundings & Ambulatory Care</h3>
+            <div class="subtitle">Main IST module: health_nursing</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Nursing" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Nursing functionality for outpatient and inpatient settings</li>
+                <li>Patient roundings</li>
+                <li>Nursing procedures</li>
+                <li>Ambulatory care sessions</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Nursing task board">Nursing task board</li>
+                <li class="ext-item" data-ext="Medication administration checklist">Medication administration checklist</li>
+                <li class="ext-item" data-ext="Vitals charting dashboard">Vitals charting dashboard</li>
+                <li class="ext-item" data-ext="Escalation alerts">Escalation alerts</li>
+                <li class="ext-item" data-ext="Mobile nurse workflow">Mobile nurse workflow</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Nursing</span><span class="chip">Ward workflow</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-6" data-group="clinical" data-keywords="icu intensive care critical care glasgow coma scale gcs apache ii rounding neurological respiratory cardiovascular digestive">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>6. ICU / Critical Care</h3>
+            <div class="subtitle">Main IST module: health_icu</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable ICU" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Critical patient information</li>
+                <li>Glasgow Coma Scale support</li>
+                <li>APACHE II scoring</li>
+                <li>ICU patient roundings</li>
+                <li>System-wise rounding: neurological, respiratory, cardiovascular, blood/skin and digestive</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="ICU dashboard">ICU dashboard</li>
+                <li class="ext-item" data-ext="Device/vitals integration">Device/vitals integration</li>
+                <li class="ext-item" data-ext="Early warning score alerts">Early warning score alerts</li>
+                <li class="ext-item" data-ext="Critical medication protocols">Critical medication protocols</li>
+                <li class="ext-item" data-ext="ICU occupancy and acuity analytics">ICU occupancy and acuity analytics</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Critical care</span><span class="chip">Hospital phase</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-7" data-group="diagnostics" data-keywords="laboratory lab lims test types analytes orders labels workflow validation reports interfaces">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>7. Laboratory / LIMS</h3>
+            <div class="subtitle">Main IST modules: health_lab, health_crypto_lab</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Laboratory" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Laboratory test types</li>
+                <li>Analytes and analyte attributes</li>
+                <li>Lab test orders</li>
+                <li>Labels and workflow handling</li>
+                <li>Validation of laboratory tests</li>
+                <li>Laboratory reports</li>
+                <li>Interfaces with laboratories and LIMS</li>
+                <li>Cryptographic methods for lab package</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Barcode sample tracking">Barcode sample tracking</li>
+                <li class="ext-item" data-ext="Lab machine integration">Lab machine integration</li>
+                <li class="ext-item" data-ext="Patient report portal">Patient report portal</li>
+                <li class="ext-item" data-ext="Abnormal result alerts">Abnormal result alerts</li>
+                <li class="ext-item" data-ext="Package-based lab billing">Package-based lab billing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">LIMS</span><span class="chip">Diagnostics</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-8" data-group="diagnostics integration" data-keywords="imaging radiology medical diagnostic imaging orthanc pacs dicom worklist studies patients synchronization">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>8. Imaging, Radiology & PACS</h3>
+            <div class="subtitle">Main IST modules: health_imaging, health_services_imaging, health_orthanc</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Imaging and PACS" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Diagnostic imaging test types and results</li>
+                <li>Imaging worklist support</li>
+                <li>Orthanc PACS integration</li>
+                <li>Orthanc patient and study synchronization</li>
+                <li>Uploaded DICOM file handling</li>
+                <li>Imaging services for billing/service grouping</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Radiology order and report workflow">Radiology order and report workflow</li>
+                <li class="ext-item" data-ext="AI radiology report summarization">AI radiology report summarization</li>
+                <li class="ext-item" data-ext="DICOM viewer embedding">DICOM viewer embedding</li>
+                <li class="ext-item" data-ext="Referral doctor sharing portal">Referral doctor sharing portal</li>
+                <li class="ext-item" data-ext="Imaging package pricing">Imaging package pricing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Radiology</span><span class="chip">PACS</span><span class="chip">DICOM</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-9" data-group="operations" data-keywords="pharmacy stock inventory medicines medicaments vaccines prescription stock moves supplies products supplier shipment inventory">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>9. Pharmacy, Stock & Inventory</h3>
+            <div class="subtitle">Main IST modules: health_stock, health_stock_surgery, health_who_essential_medicines</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Pharmacy and Stock" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Stock management and stock moves</li>
+                <li>Medicaments, vaccines and medical supplies</li>
+                <li>Prescription-based pharmacy stock moves</li>
+                <li>Stock movements for ambulatory care and hospitalization</li>
+                <li>Surgery-related stock moves</li>
+                <li>WHO essential medicines list package</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Pharmacy POS / dispensing workflow">Pharmacy POS / dispensing workflow</li>
+                <li class="ext-item" data-ext="Batch, expiry and controlled-drug tracking">Batch, expiry and controlled-drug tracking</li>
+                <li class="ext-item" data-ext="Supplier purchase order workflow">Supplier purchase order workflow</li>
+                <li class="ext-item" data-ext="Insurance formulary mapping">Insurance formulary mapping</li>
+                <li class="ext-item" data-ext="Low-stock and expiry alerts">Low-stock and expiry alerts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Pharmacy</span><span class="chip">Inventory</span><span class="chip">High priority</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-10" data-group="clinical operations" data-keywords="surgery operating room preoperative postoperative rcri anesthesia protocol scheduler complications discharge instructions">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>10. Surgery & Operating Room</h3>
+            <div class="subtitle">Main IST modules: health_surgery, health_surgery_protocols, health_stock_surgery</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Surgery" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Surgery management and surgery history</li>
+                <li>Preoperative assessment and evaluations</li>
+                <li>Surgery team records</li>
+                <li>RCRI support</li>
+                <li>Surgery protocols</li>
+                <li>Complications and postoperative directions</li>
+                <li>Operating room scheduler</li>
+                <li>Default protocol fields such as anesthesia, laterality, urgency, positioning and discharge instructions</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="OT utilization dashboard">OT utilization dashboard</li>
+                <li class="ext-item" data-ext="Surgical checklist and consent forms">Surgical checklist and consent forms</li>
+                <li class="ext-item" data-ext="Implant and consumable traceability">Implant and consumable traceability</li>
+                <li class="ext-item" data-ext="Anesthesia notes">Anesthesia notes</li>
+                <li class="ext-item" data-ext="Surgery package billing">Surgery package billing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Surgery</span><span class="chip">OT</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-11" data-group="clinical" data-keywords="pediatrics neonatology newborn apgar congenital metabolic screening psychosocial growth charts who percentile z-score">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>11. Pediatrics & Neonatology</h3>
+            <div class="subtitle">Main IST modules: health_pediatrics, health_pediatrics_growth_charts, health_pediatrics_growth_charts_who</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Pediatrics" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Pediatric and neonatal information</li>
+                <li>Newborn examination</li>
+                <li>APGAR scores</li>
+                <li>Congenital conditions</li>
+                <li>Metabolic screening tests</li>
+                <li>Pediatric psychosocial assessments</li>
+                <li>Newborn identification</li>
+                <li>WHO pediatric growth percentile and z-score charts</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Vaccination schedule alerts">Vaccination schedule alerts</li>
+                <li class="ext-item" data-ext="Parent portal">Parent portal</li>
+                <li class="ext-item" data-ext="School medical report">School medical report</li>
+                <li class="ext-item" data-ext="Pediatric package workflows">Pediatric package workflows</li>
+                <li class="ext-item" data-ext="Growth trend visualization">Growth trend visualization</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Pediatrics</span><span class="chip">Neonatal</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-12" data-group="clinical" data-keywords="gynecology obstetrics prenatal perinatal puerperium pregnancy breast cancer cervical screening">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>12. Gynecology & Obstetrics</h3>
+            <div class="subtitle">Main IST module: health_gyneco</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Gynecology" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Gynecological history</li>
+                <li>Obstetric history</li>
+                <li>Prenatal assessment and history</li>
+                <li>Perinatal and intrapartum information</li>
+                <li>Puerperium assessment and history</li>
+                <li>Breast and cervix cancer screening</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Pregnancy care pathway">Pregnancy care pathway</li>
+                <li class="ext-item" data-ext="Antenatal appointment bundle">Antenatal appointment bundle</li>
+                <li class="ext-item" data-ext="Ultrasound/lab package mapping">Ultrasound/lab package mapping</li>
+                <li class="ext-item" data-ext="Maternity package billing">Maternity package billing</li>
+                <li class="ext-item" data-ext="Patient education reminders">Patient education reminders</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Women health</span><span class="chip">Maternity</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-13" data-group="clinical" data-keywords="dentistry dental odontogram ophthalmology optometry procedures treatments eye vision">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>13. Dental, Ophthalmology & Other Specialties</h3>
+            <div class="subtitle">Main IST modules: health_dentistry, health_ophthalmology</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Dental and Ophthalmology" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Dentistry procedures</li>
+                <li>Dental treatments</li>
+                <li>Dental reports</li>
+                <li>Odontogram generation</li>
+                <li>Basic ophthalmology and optometry functionality</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Dental treatment planning">Dental treatment planning</li>
+                <li class="ext-item" data-ext="Dental chair scheduling">Dental chair scheduling</li>
+                <li class="ext-item" data-ext="Optical prescription flow">Optical prescription flow</li>
+                <li class="ext-item" data-ext="Specialty-specific billing packages">Specialty-specific billing packages</li>
+                <li class="ext-item" data-ext="Before/after image attachment">Before/after image attachment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Specialty clinics</span><span class="chip">Dental</span><span class="chip">Eye care</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-14" data-group="public-health" data-keywords="socioeconomics lifestyle disability social medicine contact tracing injury surveillance ntd dengue chagas public health demographics epidemic">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>14. Public Health, Community & Social Medicine</h3>
+            <div class="subtitle">Main IST modules: health_contact_tracing, health_disability, health_iss, health_lifestyle, health_mdg6, health_ntd, health_ntd_chagas, health_ntd_dengue</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Public Health" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Socioeconomic and domiciliary unit information</li>
+                <li>Lifestyle: diet, sleep, addiction, exercise, sexuality and safety</li>
+                <li>ICF-based disability and functioning assessment</li>
+                <li>Contact tracing for transmissible diseases and epidemics</li>
+                <li>Injury surveillance with violence/accident/self-harm/domestic violence context</li>
+                <li>NTD packages such as Chagas and Dengue</li>
+                <li>MDG6 support for HIV/AIDS, malaria and tuberculosis</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Community outreach mobile app">Community outreach mobile app</li>
+                <li class="ext-item" data-ext="Population health dashboard">Population health dashboard</li>
+                <li class="ext-item" data-ext="School/worker health screening campaigns">School/worker health screening campaigns</li>
+                <li class="ext-item" data-ext="Epidemic alerting and reporting">Epidemic alerting and reporting</li>
+                <li class="ext-item" data-ext="Government/public-health data exports">Government/public-health data exports</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Public health</span><span class="chip">Community medicine</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-id="mod-15" data-group="reporting integration" data-keywords="reporting analytics demographics pyramid evaluations top diseases epidemics federation thalamus crypto security digital signature classification icd10 icd11 icpm">
+        <div class="card-head">
+          <div class="card-head-main">
+            <h3>15. Reporting, Federation, Standards & Security</h3>
+            <div class="subtitle">Main IST modules: health_reporting, health_federation, health_crypto, health_icd10, health_icd11, health_icd9procs, health_icd10pcs, health_icpm, health_genetics, health_genetics_uniprot</div>
+          </div>
+          <div class="card-controls">
+            <span class="status-pill">Disabled</span>
+            <label class="toggle" title="Enable module" onclick="event.stopPropagation()">
+              <input type="checkbox" class="module-toggle" aria-label="Enable Reporting and Security" />
+              <span class="toggle-slider"></span>
+            </label>
+            <button type="button" class="enable-btn">Enable</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p class="mini-title">Available in IST Health — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li>Demographics and population pyramid reports</li>
+                <li>Patient evaluations and top diseases reports</li>
+                <li>Epidemic reports and injury surveillance registration reports</li>
+                <li>Federated health network integration</li>
+                <li>Digital signatures, document digest and integrity checks</li>
+                <li>ICD-10, ICD-11, ICD-10-PCS, ICD-9 procedures and ICPM classifications</li>
+                <li>Genetic, UniProt, family history and phenotype information</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-title">Extension opportunity — toggle &amp; comment</p>
+              <ul class="feature-list">
+                <li class="ext-item" data-ext="Executive KPI dashboard">Executive KPI dashboard</li>
+                <li class="ext-item" data-ext="Doctor / department profitability reports">Doctor / department profitability reports</li>
+                <li class="ext-item" data-ext="FHIR/API integration layer">FHIR/API integration layer</li>
+                <li class="ext-item" data-ext="Role-based access and audit dashboard">Role-based access and audit dashboard</li>
+                <li class="ext-item" data-ext="AI analytics: disease trends, revenue leakage, operational bottlenecks">AI analytics: disease trends, revenue leakage, operational bottlenecks</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip">Analytics</span><span class="chip">Security</span><span class="chip">Standards</span></div>
+        </div>
+      </article>
+    </section>
+
+    <div class="section-title">
+      <h2>Product build matrix</h2>
+      <span class="badge" id="phaseBadge">Click phases to enable</span>
+    </div>
+
+    <div class="phase-grid" id="phaseGrid">
+      <div class="phase-card" data-phase="1" data-modules="mod-1,mod-2,mod-3,mod-9" tabindex="0" role="button">
+        <h4>Phase 1 <span class="priority">High</span></h4>
+        <div class="phase-meta">Clinic MVP</div>
+        <p><strong>Base IST Health modules:</strong> health, health_calendar, health_services, health_accounting, health_stock</p>
+        <p><strong>Demo focus:</strong> Patient registration, appointment, doctor consultation, prescription, service billing, basic pharmacy stock</p>
+      </div>
+      <div class="phase-card" data-phase="2" data-modules="mod-7,mod-8" tabindex="0" role="button">
+        <h4>Phase 2 <span class="priority">High</span></h4>
+        <div class="phase-meta">Diagnostics</div>
+        <p><strong>Base IST Health modules:</strong> health_lab, health_imaging, health_orthanc, health_services_lab, health_services_imaging</p>
+        <p><strong>Demo focus:</strong> Lab orders, sample workflow, reports, imaging order, Orthanc/PACS integration</p>
+      </div>
+      <div class="phase-card" data-phase="3" data-modules="mod-4,mod-5,mod-6,mod-10" tabindex="0" role="button">
+        <h4>Phase 3 <span class="priority">Medium</span></h4>
+        <div class="phase-meta">Hospital operations</div>
+        <p><strong>Base IST Health modules:</strong> health_inpatient, health_nursing, health_icu, health_surgery</p>
+        <p><strong>Demo focus:</strong> Admission, bed management, nursing plan, ICU rounding, operating room scheduler, discharge</p>
+      </div>
+      <div class="phase-card" data-phase="4" data-modules="mod-11,mod-12,mod-13" tabindex="0" role="button">
+        <h4>Phase 4 <span class="priority">Medium</span></h4>
+        <div class="phase-meta">Specialty clinics</div>
+        <p><strong>Base IST Health modules:</strong> health_gyneco, health_pediatrics, health_dentistry, health_ophthalmology</p>
+        <p><strong>Demo focus:</strong> Maternity, pediatrics, dental and eye clinic workflows</p>
+      </div>
+      <div class="phase-card" data-phase="5" data-modules="mod-14,mod-15" tabindex="0" role="button">
+        <h4>Phase 5 <span class="priority">Later</span></h4>
+        <div class="phase-meta">Public health / large network</div>
+        <p><strong>Base IST Health modules:</strong> health_federation, health_reporting, health_contact_tracing, health_iss, health_ntd</p>
+        <p><strong>Demo focus:</strong> Network reporting, population health, epidemic tracking, community health programs</p>
+      </div>
+    </div>
+
+    <table id="buildTable">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Build focus</th>
+          <th>Base IST Health modules</th>
+          <th>What to demo/discuss</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-phase-row="1">
+          <td>Phase 1</td>
+          <td>Clinic MVP</td>
+          <td>health, health_calendar, health_services, health_accounting, health_stock</td>
+          <td>Patient registration, appointment, doctor consultation, prescription, service billing, basic pharmacy stock</td>
+          <td class="priority">High</td>
+        </tr>
+        <tr data-phase-row="2">
+          <td>Phase 2</td>
+          <td>Diagnostics</td>
+          <td>health_lab, health_imaging, health_orthanc, health_services_lab, health_services_imaging</td>
+          <td>Lab orders, sample workflow, reports, imaging order, Orthanc/PACS integration</td>
+          <td class="priority">High</td>
+        </tr>
+        <tr data-phase-row="3">
+          <td>Phase 3</td>
+          <td>Hospital operations</td>
+          <td>health_inpatient, health_nursing, health_icu, health_surgery</td>
+          <td>Admission, bed management, nursing plan, ICU rounding, operating room scheduler, discharge</td>
+          <td class="priority">Medium</td>
+        </tr>
+        <tr data-phase-row="4">
+          <td>Phase 4</td>
+          <td>Specialty clinics</td>
+          <td>health_gyneco, health_pediatrics, health_dentistry, health_ophthalmology</td>
+          <td>Maternity, pediatrics, dental and eye clinic workflows</td>
+          <td class="priority">Medium</td>
+        </tr>
+        <tr data-phase-row="5">
+          <td>Phase 5</td>
+          <td>Public health / large network</td>
+          <td>health_federation, health_reporting, health_contact_tracing, health_iss, health_ntd</td>
+          <td>Network reporting, population health, epidemic tracking, community health programs</td>
+          <td class="priority">Later</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const STORAGE_KEY = 'ist-health-partner-review-v3';
+    const MVP_MODULES = ['mod-1', 'mod-2', 'mod-3', 'mod-9'];
+
+    const search = document.getElementById('search');
+    const filter = document.getElementById('filter');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const countBadge = document.getElementById('countBadge');
+    const enabledCountEl = document.getElementById('enabledCount');
+    const extCountEl = document.getElementById('extCount');
+    const commentCountEl = document.getElementById('commentCount');
+    const selectionTags = document.getElementById('selectionTags');
+    const toast = document.getElementById('toast');
+    const phaseCards = Array.from(document.querySelectorAll('.phase-card'));
+    const categoryChips = document.getElementById('categoryChips');
+    const metaFields = {
+      partnerName: document.getElementById('partnerName'),
+      partnerOrg: document.getElementById('partnerOrg'),
+      partnerEmail: document.getElementById('partnerEmail'),
+      reviewDate: document.getElementById('reviewDate'),
+      overallComments: document.getElementById('overallComments')
+    };
+
+    let state = loadState();
+    let toastTimer;
+
+    function emptyState() {
+      return {
+        meta: {},
+        modules: {},
+        extensions: {},
+        features: {},
+        comments: {},
+        moduleComments: {},
+        phases: {}
+      };
+    }
+
+    function loadState() {
+      if (window.__REVIEW_STATE__) return normalizeState(window.__REVIEW_STATE__);
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return normalizeState(JSON.parse(raw));
+        const legacy = localStorage.getItem('ist-health-dashboard-v2') || localStorage.getItem('ist-health-dashboard-v1');
+        if (legacy) return normalizeState(JSON.parse(legacy));
+      } catch (e) { /* ignore */ }
+      return emptyState();
+    }
+
+    function normalizeState(data) {
+      return {
+        meta: data.meta || {},
+        modules: data.modules || {},
+        extensions: data.extensions || {},
+        features: data.features || {},
+        comments: data.comments || {},
+        moduleComments: data.moduleComments || {},
+        phases: data.phases || {}
+      };
+    }
+
+    function saveState() {
+      saveMetaFromForm();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function normalize(v) { return (v || '').toLowerCase().trim(); }
+
+    function commentKey(isExt, key) { return `${isExt ? 'ext' : 'ist'}:${key}`; }
+
+    function debounce(fn, ms) {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), ms);
+      };
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    function saveMetaFromForm() {
+      state.meta = {
+        partnerName: metaFields.partnerName.value.trim(),
+        partnerOrg: metaFields.partnerOrg.value.trim(),
+        partnerEmail: metaFields.partnerEmail.value.trim(),
+        reviewDate: metaFields.reviewDate.value,
+        overallComments: metaFields.overallComments.value.trim()
+      };
+    }
+
+    function restoreMetaToForm() {
+      const m = state.meta || {};
+      metaFields.partnerName.value = m.partnerName || '';
+      metaFields.partnerOrg.value = m.partnerOrg || '';
+      metaFields.partnerEmail.value = m.partnerEmail || '';
+      metaFields.reviewDate.value = m.reviewDate || new Date().toISOString().slice(0, 10);
+      metaFields.overallComments.value = m.overallComments || '';
+    }
+
+    function updateFeatureStatus(li, enabled) {
+      const status = li.querySelector('.feature-status');
+      if (status) status.textContent = enabled ? 'Included' : 'Excluded';
+    }
+
+    function initModuleComments() {
+      cards.forEach(card => {
+        const body = card.querySelector('.card-body');
+        if (!body || body.querySelector('.module-comment-block')) return;
+
+        const block = document.createElement('div');
+        block.className = 'module-comment-block';
+        block.innerHTML = '<p class="mini-title">Module comments (partner)</p>';
+
+        const textarea = document.createElement('textarea');
+        textarea.className = 'module-comment';
+        textarea.rows = 2;
+        textarea.placeholder = 'General comments for this module — priorities, gaps, or questions…';
+        textarea.dataset.modId = card.dataset.id;
+
+        const saveModuleComment = debounce(() => {
+          const modId = card.dataset.id;
+          const text = textarea.value.trim();
+          if (!state.moduleComments[modId]) state.moduleComments[modId] = '';
+          state.moduleComments[modId] = text;
+          block.classList.toggle('has-comment', !!text);
+          saveState();
+          updateDashboard();
+        }, 350);
+
+        textarea.addEventListener('input', saveModuleComment);
+        block.appendChild(textarea);
+        body.prepend(block);
+      });
+    }
+
+    function initFeatureToggles() {
+      cards.forEach(card => {
+        card.querySelectorAll('.feature-list li').forEach(li => {
+          if (li.classList.contains('feature-item')) return;
+
+          const isExt = li.classList.contains('ext-item');
+          const key = isExt ? (li.dataset.ext || li.textContent.trim()) : li.textContent.trim();
+
+          li.classList.add('feature-item');
+          if (isExt) li.dataset.ext = key;
+
+          const row = document.createElement('div');
+          row.className = 'feature-row';
+
+          const toggleWrap = document.createElement('label');
+          toggleWrap.className = 'toggle toggle-sm feature-toggle-wrap';
+          toggleWrap.title = 'Include in scope';
+
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.className = 'feature-toggle';
+          input.dataset.kind = isExt ? 'ext' : 'ist';
+          input.dataset.key = key;
+          input.setAttribute('aria-label', `Include ${key}`);
+
+          const slider = document.createElement('span');
+          slider.className = 'toggle-slider';
+          toggleWrap.append(input, slider);
+
+          const label = document.createElement('span');
+          label.className = 'feature-label';
+          label.textContent = key;
+
+          const status = document.createElement('span');
+          status.className = 'feature-status';
+          status.textContent = 'Excluded';
+
+          row.append(toggleWrap, label, status);
+
+          const comment = document.createElement('textarea');
+          comment.className = 'feature-comment';
+          comment.rows = 2;
+          comment.placeholder = 'Partner comment for this feature…';
+          comment.dataset.kind = isExt ? 'ext' : 'ist';
+          comment.dataset.key = key;
+
+          li.replaceChildren(row, comment);
+
+          input.addEventListener('change', () => setFeatureToggle(card, key, isExt, input.checked));
+
+          const saveComment = debounce(() => {
+            setFeatureComment(card.dataset.id, key, isExt, comment.value.trim());
+          }, 350);
+
+          comment.addEventListener('input', saveComment);
+          comment.addEventListener('click', e => e.stopPropagation());
+        });
+      });
+    }
+
+    function setFeatureToggle(card, key, isExt, enabled, silent) {
+      const modId = card.dataset.id;
+      const storeKey = isExt ? 'extensions' : 'features';
+      if (!state[storeKey][modId]) state[storeKey][modId] = {};
+      state[storeKey][modId][key] = enabled;
+
+      const li = findFeatureItem(card, key, isExt);
+      if (li) {
+        li.classList.toggle('enabled', enabled);
+        const input = li.querySelector('.feature-toggle');
+        if (input) input.checked = enabled;
+        updateFeatureStatus(li, enabled);
+      }
+
+      if (!silent) showToast(enabled ? `Included: ${key}` : `Excluded: ${key}`);
+      saveState();
+      updateDashboard();
+    }
+
+    function setFeatureComment(modId, key, isExt, text) {
+      if (!state.comments[modId]) state.comments[modId] = {};
+      state.comments[modId][commentKey(isExt, key)] = text;
+
+      const card = document.querySelector(`.card[data-id="${modId}"]`);
+      const li = card ? findFeatureItem(card, key, isExt) : null;
+      if (li) li.classList.toggle('has-comment', !!text);
+
+      saveState();
+      updateDashboard();
+    }
+
+    function findFeatureItem(card, key, isExt) {
+      return Array.from(card.querySelectorAll('.feature-toggle')).find(
+        inp => inp.dataset.key === key && inp.dataset.kind === (isExt ? 'ext' : 'ist')
+      )?.closest('li') || null;
+    }
+
+    function restoreFeatureState() {
+      cards.forEach(card => {
+        const modId = card.dataset.id;
+
+        card.querySelectorAll('.feature-toggle').forEach(input => {
+          const key = input.dataset.key;
+          const isExt = input.dataset.kind === 'ext';
+          const store = isExt ? state.extensions : state.features;
+          const enabled = !!(store[modId] && store[modId][key]);
+          const li = input.closest('li');
+          input.checked = enabled;
+          li.classList.toggle('enabled', enabled);
+          updateFeatureStatus(li, enabled);
+        });
+
+        card.querySelectorAll('.feature-comment').forEach(comment => {
+          const key = comment.dataset.key;
+          const isExt = comment.dataset.kind === 'ext';
+          const text = (state.comments[modId] && state.comments[modId][commentKey(isExt, key)]) || '';
+          comment.value = text;
+          comment.closest('li').classList.toggle('has-comment', !!text);
+        });
+
+        const modComment = card.querySelector('.module-comment');
+        if (modComment) {
+          const text = state.moduleComments[modId] || '';
+          modComment.value = text;
+          modComment.closest('.module-comment-block').classList.toggle('has-comment', !!text);
+        }
+      });
+    }
+
+    function countComments() {
+      let n = 0;
+      if (state.meta && state.meta.overallComments) n++;
+      Object.values(state.moduleComments || {}).forEach(t => { if (t && t.trim()) n++; });
+      Object.values(state.comments || {}).forEach(group => {
+        Object.values(group).forEach(t => { if (t && t.trim()) n++; });
+      });
+      return n;
+    }
+
+    function collectFullState() {
+      saveMetaFromForm();
+      return {
+        version: 3,
+        document: 'IST Health Partner Feature Review',
+        exportedAt: new Date().toISOString(),
+        meta: state.meta,
+        modules: state.modules,
+        features: state.features,
+        extensions: state.extensions,
+        comments: state.comments,
+        moduleComments: state.moduleComments,
+        phases: state.phases
+      };
+    }
+
+    function applyFullState(data) {
+      state = normalizeState(data);
+      restoreMetaToForm();
+      cards.forEach(card => {
+        setModuleEnabled(card, !!state.modules[card.dataset.id], true);
+      });
+      restoreFeatureState();
+      syncPhasesFromModules();
+      saveState();
+      updateDashboard();
+    }
+
+    function downloadBlob(content, filename, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function exportPartnerReview() {
+      const payload = collectFullState();
+      const name = (payload.meta.partnerName || 'Partner').replace(/[^\w\-]+/g, '_');
+      const date = (payload.meta.reviewDate || new Date().toISOString().slice(0, 10));
+      downloadBlob(JSON.stringify(payload, null, 2), `IST_Health_Review_${name}_${date}.json`, 'application/json');
+      showToast('Review exported — send this JSON file back to the sender');
+    }
+
+    function escapeHtml(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function exportToWord() {
+      saveMetaFromForm();
+      const m = state.meta || {};
+      let body = `<h1>IST Health — Partner Feature Review</h1>
+        <p><b>Partner:</b> ${escapeHtml(m.partnerName)} &nbsp;|&nbsp; <b>Organization:</b> ${escapeHtml(m.partnerOrg)}<br>
+        <b>Email:</b> ${escapeHtml(m.partnerEmail)} &nbsp;|&nbsp; <b>Review date:</b> ${escapeHtml(m.reviewDate)}</p>`;
+
+      if (m.overallComments) {
+        body += `<h2>Overall comments</h2><p>${escapeHtml(m.overallComments).replace(/\n/g, '<br>')}</p>`;
+      }
+
+      cards.forEach(card => {
+        const modId = card.dataset.id;
+        const title = card.querySelector('h3').textContent.trim();
+        const modOn = !!state.modules[modId];
+        body += `<h2>${escapeHtml(title)} ${modOn ? '(Module included)' : '(Module excluded)'}</h2>`;
+
+        const modComment = state.moduleComments[modId];
+        if (modComment) {
+          body += `<p><b>Module comments:</b> ${escapeHtml(modComment).replace(/\n/g, '<br>')}</p>`;
+        }
+
+        card.querySelectorAll('.feature-item').forEach(li => {
+          const key = li.querySelector('.feature-label').textContent;
+          const toggle = li.querySelector('.feature-toggle');
+          const isExt = toggle.dataset.kind === 'ext';
+          const included = toggle.checked ? 'Yes' : 'No';
+          const kind = isExt ? 'Extension' : 'IST Health';
+          const comment = li.querySelector('.feature-comment').value.trim();
+          body += `<table border="1" cellpadding="6" cellspacing="0" width="100%" style="margin-bottom:8px;border-collapse:collapse;">
+            <tr><td width="18%"><b>Include</b></td><td>${included}</td></tr>
+            <tr><td><b>Type</b></td><td>${kind}</td></tr>
+            <tr><td><b>Feature</b></td><td>${escapeHtml(key)}</td></tr>
+            <tr><td><b>Partner comment</b></td><td>${comment ? escapeHtml(comment).replace(/\n/g, '<br>') : '—'}</td></tr>
+          </table>`;
+        });
+      });
+
+      const wordHtml = `<html xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta charset="utf-8"><title>IST Health Partner Review</title>
+        <!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View></w:WordDocument></xml><![endif]-->
+        <style>body{font-family:Calibri,sans-serif;font-size:11pt;line-height:1.4}h1{font-size:18pt}h2{font-size:13pt;margin-top:16px}</style>
+        </head><body>${body}</body></html>`;
+
+      const name = (m.partnerName || 'Partner').replace(/[^\w\-]+/g, '_');
+      const date = (m.reviewDate || new Date().toISOString().slice(0, 10));
+      downloadBlob(wordHtml, `IST_Health_Review_${name}_${date}.doc`, 'application/msword');
+      showToast('Word document downloaded');
+    }
+
+    function importPartnerReview(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          applyFullState(data);
+          showToast('Partner review imported successfully');
+        } catch (e) {
+          showToast('Could not read review file — use exported JSON');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function setModuleEnabled(card, enabled, silent) {
+      const id = card.dataset.id;
+      state.modules[id] = enabled;
+      card.classList.toggle('enabled', enabled);
+      const toggle = card.querySelector('.module-toggle');
+      const pill = card.querySelector('.status-pill');
+      const btn = card.querySelector('.enable-btn');
+      if (toggle) toggle.checked = enabled;
+      if (pill) pill.textContent = enabled ? 'Enabled' : 'Disabled';
+      if (btn) btn.textContent = enabled ? 'Disable' : 'Enable';
+      if (!silent) {
+        const title = card.querySelector('h3').textContent.trim();
+        showToast(enabled ? `Enabled: ${title}` : `Disabled: ${title}`);
+      }
+      saveState();
+      updateDashboard();
+      syncPhasesFromModules();
+    }
+
+    function updateDashboard() {
+      const enabledModules = cards.filter(c => state.modules[c.dataset.id]);
+      enabledCountEl.textContent = enabledModules.length;
+
+      let featureTotal = 0;
+      document.querySelectorAll('.feature-item.enabled').forEach(() => featureTotal++);
+      extCountEl.textContent = featureTotal;
+      commentCountEl.textContent = countComments();
+
+      if (enabledModules.length === 0) {
+        selectionTags.innerHTML = '<span class="empty">No modules enabled yet — click toggles or Enable MVP to begin</span>';
+      } else {
+        selectionTags.innerHTML = enabledModules.map(c => {
+          const name = c.querySelector('h3').textContent.replace(/^\d+\.\s*/, '');
+          return `<span class="sel-tag">${name}</span>`;
+        }).join('');
+      }
+
+      applyFilters();
+    }
+
+    function syncPhasesFromModules() {
+      phaseCards.forEach(pc => {
+        const mods = (pc.dataset.modules || '').split(',');
+        const allOn = mods.every(id => state.modules[id]);
+        pc.classList.toggle('enabled', allOn);
+        state.phases[pc.dataset.phase] = allOn;
+        const row = document.querySelector(`tr[data-phase-row="${pc.dataset.phase}"]`);
+        if (row) row.classList.toggle('phase-enabled', allOn);
+      });
+      const enabledPhases = phaseCards.filter(p => p.classList.contains('enabled')).length;
+      document.getElementById('phaseBadge').textContent = enabledPhases
+        ? `${enabledPhases} phase${enabledPhases === 1 ? '' : 's'} active`
+        : 'Click phases to enable';
+    }
+
+    function enablePhase(phaseCard) {
+      const mods = (phaseCard.dataset.modules || '').split(',');
+      mods.forEach(id => {
+        const card = document.querySelector(`.card[data-id="${id}"]`);
+        if (card) setModuleEnabled(card, true, true);
+      });
+      showToast(`Enabled ${phaseCard.querySelector('h4').textContent.trim()} modules`);
+    }
+
+    function applyFilters() {
+      const q = normalize(search.value);
+      const f = filter.value;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const group = card.dataset.group || '';
+        const text = normalize(card.innerText + ' ' + (card.dataset.keywords || ''));
+        const matchesFilter = f === 'all' || group.includes(f);
+        const matchesSearch = !q || text.includes(q);
+        const show = matchesFilter && matchesSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      countBadge.textContent = `${visible} group${visible === 1 ? '' : 's'}`;
+    }
+
+    function enableModules(ids) {
+      ids.forEach(id => {
+        const card = document.querySelector(`.card[data-id="${id}"]`);
+        if (card && card.style.display !== 'none') setModuleEnabled(card, true, true);
+        else if (card) setModuleEnabled(card, true, true);
+      });
+      showToast(`Enabled ${ids.length} module${ids.length === 1 ? '' : 's'}`);
+    }
+
+    function resetAll() {
+      if (!confirm('Reset all module selections, feature toggles, and partner comments?')) return;
+      state = emptyState();
+      restoreMetaToForm();
+      metaFields.reviewDate.value = new Date().toISOString().slice(0, 10);
+      cards.forEach(card => {
+        setModuleEnabled(card, false, true);
+        card.querySelectorAll('.feature-item').forEach(li => {
+          li.classList.remove('enabled', 'has-comment');
+          const input = li.querySelector('.feature-toggle');
+          const comment = li.querySelector('.feature-comment');
+          if (input) input.checked = false;
+          if (comment) comment.value = '';
+          updateFeatureStatus(li, false);
+        });
+        const modBlock = card.querySelector('.module-comment-block');
+        const modComment = card.querySelector('.module-comment');
+        if (modComment) modComment.value = '';
+        if (modBlock) modBlock.classList.remove('has-comment');
+      });
+      phaseCards.forEach(pc => {
+        pc.classList.remove('enabled');
+        const row = document.querySelector(`tr[data-phase-row="${pc.dataset.phase}"]`);
+        if (row) row.classList.remove('phase-enabled');
+      });
+      saveState();
+      updateDashboard();
+      showToast('All selections reset');
+    }
+
+    cards.forEach(card => {
+      const toggle = card.querySelector('.module-toggle');
+      const btn = card.querySelector('.enable-btn');
+      const head = card.querySelector('.card-head');
+
+      toggle.addEventListener('change', () => setModuleEnabled(card, toggle.checked));
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setModuleEnabled(card, !card.classList.contains('enabled'));
+      });
+      head.addEventListener('click', () => card.classList.toggle('collapsed'));
+    });
+
+    initModuleComments();
+    initFeatureToggles();
+    restoreMetaToForm();
+    restoreFeatureState();
+
+    phaseCards.forEach(pc => {
+      pc.addEventListener('click', () => enablePhase(pc));
+    });
+
+    document.getElementById('enableMvp').addEventListener('click', () => enableModules(MVP_MODULES));
+    document.getElementById('enableVisible').addEventListener('click', () => {
+      const visible = cards.filter(c => c.style.display !== 'none').map(c => c.dataset.id);
+      enableModules(visible);
+    });
+    document.getElementById('resetAll').addEventListener('click', resetAll);
+    document.getElementById('exportReview').addEventListener('click', exportPartnerReview);
+    document.getElementById('exportWord').addEventListener('click', exportToWord);
+    document.getElementById('importReview').addEventListener('click', () => document.getElementById('importFile').click());
+    document.getElementById('importFile').addEventListener('change', (e) => {
+      if (e.target.files[0]) importPartnerReview(e.target.files[0]);
+      e.target.value = '';
+    });
+
+    Object.values(metaFields).forEach(el => {
+      el.addEventListener('input', debounce(() => { saveState(); updateDashboard(); }, 350));
+    });
+
+    search.addEventListener('input', applyFilters);
+    filter.addEventListener('change', (e) => {
+      const val = e.target.value;
+      categoryChips.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.filter === val || (val === 'all' && chip.dataset.filter === 'all'));
+      });
+      applyFilters();
+    });
+
+    categoryChips.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const val = chip.dataset.filter;
+        filter.value = val;
+        categoryChips.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c === chip));
+        applyFilters();
+      });
+    });
+
+    cards.forEach(card => {
+      const id = card.dataset.id;
+      if (state.modules[id]) setModuleEnabled(card, true, true);
+    });
+
+    updateDashboard();
+    syncPhasesFromModules();
+  </script>
+</body>
+</html>

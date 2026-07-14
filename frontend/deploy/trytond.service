@@ -1,0 +1,21 @@
+[Unit]
+Description=GNU Health / Tryton Server (trytond)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=sahni_ps
+Group=sahni_ps
+WorkingDirectory=/opt/gnuhealth/his-50
+ExecStart=/opt/gnuhealth/his-50/start_gnuhealth
+Restart=on-failure
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=30
+Environment=HOME=/home/sahni_ps
+StandardOutput=append:/opt/gnuhealth/his-50/log/trytond-systemd.log
+StandardError=append:/opt/gnuhealth/his-50/log/trytond-systemd.err.log
+
+[Install]
+WantedBy=multi-user.target

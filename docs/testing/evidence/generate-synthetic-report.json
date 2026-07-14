@@ -1,0 +1,100 @@
+{
+  "command": "generate_synthetic",
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
+  "seed": 42,
+  "counts": {
+    "patients": 50,
+    "staff": 12
+  },
+  "sample_patients": [
+    {
+      "code": "IST-P-00001",
+      "national_id_synthetic": "SYN-QA-00000001",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00002",
+      "national_id_synthetic": "SYN-AE-00000002",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00003",
+      "national_id_synthetic": "SYN-QA-00000003",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00004",
+      "national_id_synthetic": "SYN-AE-00000004",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00005",
+      "national_id_synthetic": "SYN-QA-00000005",
+      "synthetic_data": true,
+      "country": "QA"
+    }
+  ],
+  "sample_staff": [
+    {
+      "code": "IST-ST-0001",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0002",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0003",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0004",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0005",
+      "synthetic_data": true
+    }
+  ],
+  "entities": [
+    {
+      "code": "IST-GRP",
+      "name": "IST Health Group",
+      "country": "AE",
+      "type": "Group"
+    },
+    {
+      "code": "IST-AE",
+      "name": "IST Health UAE LLC",
+      "country": "AE",
+      "type": "LegalEntity",
+      "parent": "IST-GRP"
+    },
+    {
+      "code": "IST-QA",
+      "name": "IST Health Qatar LLC",
+      "country": "QA",
+      "type": "LegalEntity",
+      "parent": "IST-GRP"
+    }
+  ],
+  "facilities": [
+    {
+      "code": "FAC-DXB-01",
+      "name": "IST Dubai Clinic",
+      "country": "AE",
+      "entity": "IST-AE"
+    },
+    {
+      "code": "FAC-DOH-01",
+      "name": "IST Doha Clinic",
+      "country": "QA",
+      "entity": "IST-QA"
+    }
+  ],
+  "timestamp": "2026-07-14T10:27:57.449313+00:00"
+}

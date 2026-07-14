@@ -1,0 +1,22 @@
+{
+  "id": "help-overview",
+  "title": "نظرة عامة على مركز المساعدة",
+  "roles": [
+    "*"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "help",
+    "start",
+    "overview"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "استخدم البحث والتصفية حسب الدور والدولة وسير العمل الإرشادي. يتم تحميل المحتوى من ملفات help-content وليس مضمّناً في مكونات الواجهة."
+}

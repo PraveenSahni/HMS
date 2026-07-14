@@ -1,0 +1,29 @@
+{
+  "id": "wf-prescribe",
+  "title": "سير العمل: وصف دواء",
+  "roles": [
+    "Physician",
+    "Pharmacist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/pharmacy",
+    "/medications"
+  ],
+  "keywords": [
+    "pharmacy",
+    "prescription",
+    "medication"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "يستخدم gnuhealth.prescription.order.",
+  "steps": [
+    "افتح الصيدلية أو ملف المريض.",
+    "أنشئ وصفة للمريض.",
+    "يراجع الصيدلي ويصرف وفق إعدادات المخزون."
+  ]
+}

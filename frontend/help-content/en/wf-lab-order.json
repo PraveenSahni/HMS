@@ -1,0 +1,29 @@
+{
+  "id": "wf-lab-order",
+  "title": "Workflow: Place a lab order",
+  "roles": [
+    "Physician",
+    "LabTech"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/laboratory"
+  ],
+  "keywords": [
+    "lab",
+    "order",
+    "LIMS"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "Requires health_lab models; UI shows module-missing if absent.",
+  "steps": [
+    "Ensure health_lab is activated (Modules page / SAO).",
+    "Open Laboratory.",
+    "Create request for patient and test type.",
+    "Lab tech completes result entry (SAO if needed)."
+  ]
+}

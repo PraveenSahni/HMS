@@ -1,0 +1,234 @@
+[
+  {
+    "id": "help-overview",
+    "title": "Help Centre overview",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "help",
+      "start",
+      "overview"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "wf-register-patient",
+    "title": "Workflow: Register a patient",
+    "roles": [
+      "Receptionist",
+      "Physician",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/patients"
+    ],
+    "keywords": [
+      "patient",
+      "register",
+      "create",
+      "demographics"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-book-appointment",
+    "title": "Workflow: Book an appointment",
+    "roles": [
+      "Receptionist",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/appointments"
+    ],
+    "keywords": [
+      "appointment",
+      "schedule",
+      "booking"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-lab-order",
+    "title": "Workflow: Place a lab order",
+    "roles": [
+      "Physician",
+      "LabTech"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory"
+    ],
+    "keywords": [
+      "lab",
+      "order",
+      "LIMS"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-prescribe",
+    "title": "Workflow: Prescribe medication",
+    "roles": [
+      "Physician",
+      "Pharmacist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/medications"
+    ],
+    "keywords": [
+      "pharmacy",
+      "prescription",
+      "medication"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "wf-admit",
+    "title": "Workflow: Inpatient admission",
+    "roles": [
+      "Physician",
+      "Nurse",
+      "Receptionist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds"
+    ],
+    "keywords": [
+      "admit",
+      "bed",
+      "inpatient"
+    ],
+    "version": "1.0.0",
+    "guided": true
+  },
+  {
+    "id": "admin-users",
+    "title": "Administer users and groups",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "ITSupport"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/users",
+      "/groups"
+    ],
+    "keywords": [
+      "users",
+      "groups",
+      "acl",
+      "rbac"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "uae-hie-readiness",
+    "title": "UAE HIE readiness (NABIDH / Malaffi / Riayati)",
+    "roles": [
+      "Compliance",
+      "SystemAdmin",
+      "Executive"
+    ],
+    "countries": [
+      "AE"
+    ],
+    "routes": [
+      "/help",
+      "/settings"
+    ],
+    "keywords": [
+      "NABIDH",
+      "Malaffi",
+      "Riayati",
+      "HL7",
+      "FHIR"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "qatar-privacy",
+    "title": "Qatar privacy checklist (PDPPL)",
+    "roles": [
+      "Compliance",
+      "FacilityAdmin",
+      "Executive"
+    ],
+    "countries": [
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "PDPPL",
+      "privacy",
+      "consent",
+      "Qatar"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  },
+  {
+    "id": "synthetic-policy",
+    "title": "Synthetic data policy",
+    "roles": [
+      "*",
+      "Compliance",
+      "ITSupport"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "synthetic",
+      "PII",
+      "demo",
+      "IST-P"
+    ],
+    "version": "1.0.0",
+    "guided": false
+  }
+]

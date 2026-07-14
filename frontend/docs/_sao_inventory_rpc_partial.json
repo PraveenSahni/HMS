@@ -1,0 +1,121 @@
+﻿{
+    "ok":  true,
+    "baseUrl":  "http://34.18.116.146/gnuhealth/",
+    "error":  null,
+    "models":  [
+                   {
+                       "model":  "party.party",
+                       "exists":  true,
+                       "count":  4301,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.patient",
+                       "exists":  true,
+                       "count":  50,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.appointment",
+                       "exists":  true,
+                       "count":  1,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.healthprofessional",
+                       "exists":  true,
+                       "count":  299,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.institution",
+                       "exists":  true,
+                       "count":  1,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.specialty",
+                       "exists":  true,
+                       "count":  75,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.patient.lab.test",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.patient.lab.test\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.lab.test_type",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.lab.test_type\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.prescription",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.prescription\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.prescription.order",
+                       "exists":  true,
+                       "count":  0,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.medicament",
+                       "exists":  true,
+                       "count":  0,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.patient.evaluation",
+                       "exists":  true,
+                       "count":  0,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.surgery",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.surgery\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.inpatient.registration",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.inpatient.registration\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.hospital.bed",
+                       "exists":  true,
+                       "count":  0,
+                       "error":  null
+                   },
+                   {
+                       "model":  "gnuhealth.imaging.test.request",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027gnuhealth.imaging.test.request\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "account.invoice",
+                       "exists":  false,
+                       "count":  null,
+                       "error":  "[\"\\u0027account.invoice\\u0027\",\"\"]"
+                   },
+                   {
+                       "model":  "gnuhealth.patient.medication",
+                       "exists":  true,
+                       "count":  0,
+                       "error":  null
+                   },
+                   {
+                       "model":  "product.template",
+                       "exists":  true,
+                       "count":  8,
+                       "error":  null
+                   }
+               ]
+}

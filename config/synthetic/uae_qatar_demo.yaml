@@ -1,0 +1,90 @@
+# Synthetic demo profile for UAE + Qatar — small deterministic volume for evidence.
+# Full-scale loads continue to use root config.yaml (e.g. 4000 patients).
+
+synthetic_data: true
+environment: test  # dev | test | uat | production
+seed: 42
+idempotent: true
+
+company:
+  name: "IST Health Demo Group"
+  legal_name: "IRISSTAR Technologies"
+  name_ar: "مجموعة آي إس تي الصحية التجريبية"
+  code: "IST"
+  city: "Doha"
+  country: "Qatar"
+  country_code: "QA"
+  phone_prefix: "+974"
+  facility_type: "Multi-specialty Clinic"
+
+entities:
+  - code: IST-GRP
+    name: IST Health Group
+    country: AE
+    type: Group
+  - code: IST-AE
+    name: IST Health UAE LLC
+    country: AE
+    type: LegalEntity
+    parent: IST-GRP
+  - code: IST-QA
+    name: IST Health Qatar LLC
+    country: QA
+    type: LegalEntity
+    parent: IST-GRP
+
+facilities:
+  - code: FAC-DXB-01
+    name: IST Dubai Clinic
+    country: AE
+    entity: IST-AE
+  - code: FAC-DOH-01
+    name: IST Doha Clinic
+    country: QA
+    entity: IST-QA
+
+server:
+  # Prefer local dry-run; override for VM import
+  url: "https://health.irisstar.tech"
+  database: "isthealth"
+  username: "admin"
+  password: "CHANGE_ME"
+  language: "en"
+  production_hosts:
+    - "health.irisstar.tech"
+    - "34.18.116.146"
+
+data:
+  patients: 50
+  staff: 12
+  appointment_months: 1
+  languages: ["en", "ar"]
+  batch_size: 25
+  staff_mix:
+    doctors: 4
+    nurses: 3
+    admin: 1
+    reception: 1
+    lab: 2
+    pharmacy: 1
+  modules:
+    outpatient: true
+    laboratory: true
+    pharmacy: true
+    inpatient: true
+    evaluations: true
+
+options:
+  create_appointments_per_patient: 2
+  lab_orders_ratio: 0.3
+  prescription_ratio: 0.4
+  evaluation_ratio: 0.5
+  inpatient_beds: 4
+  inpatient_ratio: 0.1
+  refuse_production_without_override: true
+
+id_formats:
+  patient: "IST-P-{seq:05d}"
+  national_id_qa: "SYN-QA-{seq:08d}"
+  national_id_ae: "SYN-AE-{seq:08d}"
+  note: "Synthetic only — never real Emirates/Qatar ID values"

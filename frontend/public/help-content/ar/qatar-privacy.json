@@ -1,0 +1,24 @@
+{
+  "id": "qatar-privacy",
+  "title": "قائمة خصوصية قطر (PDPPL)",
+  "roles": [
+    "Compliance",
+    "FacilityAdmin",
+    "Executive"
+  ],
+  "countries": [
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "PDPPL",
+    "privacy",
+    "consent",
+    "Qatar"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "بيانات الصحة ذات طبيعة خاصة — احصل على تأكيد قانوني قبل معالجة بيانات حقيقية."
+}

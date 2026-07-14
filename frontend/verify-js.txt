@@ -1,0 +1,5 @@
+help-launcher=True
+Help Centre=True
+help-content=True
+ist-help-launcher=True
+path help=False

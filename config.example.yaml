@@ -1,0 +1,54 @@
+# Example: copy to config.yaml and edit company name
+company:
+  name: "IST Technologies LLC"          # Health app display name
+  legal_name: "IRISSTAR Technologies"   # Legal / footer name
+  name_ar: "IST Technologies LLC"
+  code: "IST"
+  city: "Doha"
+  country: "Qatar"
+  country_code: "QA"
+  phone_prefix: "+974"
+  facility_type: "Multi-specialty Clinic"
+  address_en: "Office 214/215, 2nd Floor, Regus D-Ring Building no 65, D-Ring Road, Old Airport, Doha, Qatar"
+  address_ar: "مكتب 214/215، الطابق الثاني، مبنى ريجس D-Ring رقم 65، طريق D-Ring، المطار القديم، الدوحة، قطر"
+  email: "info@isttechnologies.qa"
+  website: "https://www.isttechnologies.qa"
+  offices:
+    qatar:
+      primary: true
+      address_lines:
+        - "Office 214/215"
+        - "2nd Floor, Regus D-Ring Building no 65, D-Ring Road"
+        - "Old Airport"
+      po_box: "32522"
+      city: "Doha"
+      country: "Qatar"
+    uae:
+      phones:
+        - "+971 4 518 2632"
+        - "+971 4 238 6786"
+      address_lines:
+        - "Level 20, 48, Burj Gate Tower, Downtown Dubai"
+      po_box: "22061"
+      city: "Dubai"
+      country: "U.A.E"
+    india:
+      phones:
+        - "+91 44 4028 2542"
+      address_lines:
+        - "Prestige Polygon, 3rd Floor, 471 Anna Salai, Teynampet"
+      city: "Chennai"
+      state: "Tamil Nadu"
+      postal_code: "600 035"
+      country: "India"
+
+server:
+  url: "http://34.18.116.146"
+  database: "gnuhealth"
+  username: "admin"
+  password: "IstHealth@2026!Admin"
+
+data:
+  patients: 100        # Use small count for testing first
+  staff: 20
+  appointment_months: 1

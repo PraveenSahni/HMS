@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — IST Health</title>
+  <link rel="stylesheet" href="/styles/ist-health.css" />
+  <style>
+    .ist-legal-banner {
+      background: var(--color-navy);
+      color: var(--color-bg);
+      padding: var(--space-3) var(--space-8);
+      font-size: var(--font-size-sm);
+      text-align: center;
+      line-height: var(--line-height-relaxed);
+    }
+    .ist-legal-banner strong { font-weight: var(--font-weight-semibold); }
+    .ist-legal-page {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: var(--space-10) var(--space-8) var(--space-16);
+    }
+    .ist-legal-page__meta {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-8);
+    }
+    .ist-legal-page h1 { margin-bottom: var(--space-4); }
+    .ist-legal-page h2 {
+      margin-top: var(--space-10);
+      margin-bottom: var(--space-4);
+      font-size: var(--font-size-lg);
+    }
+    .ist-legal-page p,
+    .ist-legal-page li {
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+      margin-bottom: var(--space-4);
+    }
+    .ist-legal-page ul { padding-inline-start: var(--space-6); }
+    .ist-legal-page hr.ist-divider { margin: var(--space-8) 0; }
+    .ist-legal-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-8);
+      padding-bottom: var(--space-6);
+      border-bottom: var(--hairline-width) solid var(--color-divider);
+    }
+    .ist-legal-nav__links {
+      display: flex;
+      gap: var(--space-5);
+      font-size: var(--font-size-sm);
+    }
+    .ist-legal-footer {
+      margin-top: var(--space-12);
+      padding-top: var(--space-6);
+      border-top: var(--hairline-width) solid var(--color-divider);
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+      line-height: var(--line-height-relaxed);
+    }
+    html[lang="ar"] .ist-legal-page { /* RTL content styles via rtl.css */ }
+  </style>
+</head>
+<body>
+  <div class="ist-legal-banner" role="status">
+    <strong>DRAFT</strong> — For review by legal counsel only. Not for production use until approved.
+  </div>
+
+  <div class="ist-legal-page">
+    <nav class="ist-legal-nav" aria-label="Legal">
+      <a href="../design/preview.html" class="ist-logo ist-logo--compact" aria-label="IST Health">
+        <img class="ist-logo__img" src="../design/assets/logo-irisstar.svg" alt="" />
+        <span class="ist-logo__compact-text" aria-hidden="true">IST</span>
+      </a>
+      <div class="ist-legal-nav__links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+      </div>
+    </nav>
+
+    <p class="ist-tagline">IST Technologies LLC</p>
+    <h1>Terms of Service</h1>
+    <p class="ist-legal-page__meta">
+      <strong>Effective date:</strong> 13 July 2026 &nbsp;·&nbsp;
+      <strong>Last updated:</strong> 13 July 2026
+    </p>
+    <hr class="ist-divider" />
+
+    <section id="acceptance">
+      <h2>1. Agreement to Terms</h2>
+      <p>These Terms govern access to and use of the <strong>IST Health</strong> platform (“Service”), operated by <strong>IRISSTAR Technologies</strong> (“IST”). The application is presented as <strong>IST Technologies LLC / IST Health</strong>.</p>
+      <p>By signing in or using the Service, you agree to these Terms. If you do not agree, do not use the Platform.</p>
+    </section>
+
+    <section id="service">
+      <h2>2. Description of Service</h2>
+      <p>IST Health is a hospital and clinic management platform built on <strong>GNU Health</strong>, supporting patient records, appointments, laboratory, pharmacy, and administrative workflows for multi-specialty clinics in Qatar.</p>
+      <p>Demo and UAT environments may contain synthetic test data and are not intended for live clinical decision-making. <strong>Clinical decisions remain the responsibility of licensed healthcare professionals and the healthcare facility.</strong></p>
+    </section>
+
+    <section id="accounts">
+      <h2>3. User Accounts</h2>
+      <p>Access is limited to authorized healthcare staff, administrators, and—where enabled—patients. You must provide accurate information, keep credentials confidential, and notify your administrator of suspected unauthorized access.</p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2>4. Acceptable Use</h2>
+      <p>You agree to use the Service only for lawful healthcare and administrative purposes. You must not:</p>
+      <ul>
+        <li>Access or disclose patient or staff data except as authorized for your role</li>
+        <li>Attempt unauthorized access or interfere with Platform integrity</li>
+        <li>Use the Service to provide public medical advice or replace professional judgment</li>
+        <li>Use demo/UAT environments for real patient care without written authorization</li>
+      </ul>
+    </section>
+
+    <section id="facility">
+      <h2>5. Healthcare Facility Responsibilities</h2>
+      <p>Deploying organizations are generally responsible for lawful processing of patient data, required consents, privacy notices, role configuration, staff training, and compliance with applicable healthcare regulations in Qatar and other jurisdictions.</p>
+    </section>
+
+    <section id="ip">
+      <h2>6. Intellectual Property</h2>
+      <p><strong>IST / IRISSTAR:</strong> IST Health branding, custom interfaces, and proprietary configurations are owned by or licensed to IRISSTAR Technologies.</p>
+      <p><strong>GNU Health:</strong> Core functionality is provided through GNU Health and related open-source software under the <strong>GNU GPL</strong>. Patient and operational data entered by authorized users remains the property of the healthcare facility or as otherwise agreed.</p>
+    </section>
+
+    <section id="availability">
+      <h2>7. Availability</h2>
+      <p>We strive for reliable service but do not guarantee uninterrupted operation. Downtime may occur due to maintenance, security updates, infrastructure issues, or third-party provider outages.</p>
+    </section>
+
+    <section id="disclaimers">
+      <h2>8. Disclaimers</h2>
+      <p>To the maximum extent permitted by law, the Service is provided <strong>“as is”</strong> without warranties. The Platform is <strong>not a medical device</strong> and does not provide medical advice, diagnosis, or treatment. Demo/UAT environments are for testing and training only.</p>
+    </section>
+
+    <section id="liability">
+      <h2>9. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, IST shall not be liable for indirect, incidental, special, consequential, or punitive damages. Total aggregate liability shall not exceed fees paid in the twelve months preceding a claim, or QAR 1,000 for demo access, unless otherwise agreed in writing.</p>
+    </section>
+
+    <section id="termination">
+      <h2>10. Termination</h2>
+      <p>Access may be suspended or terminated for Terms violations, security concerns, or loss of authorization. Surviving provisions include disclaimers, limitation of liability, and governing law.</p>
+    </section>
+
+    <section id="governing-law">
+      <h2>11. Governing Law</h2>
+      <p>These Terms are governed by the <strong>laws of the State of Qatar</strong>. Disputes are subject to the <strong>exclusive jurisdiction of the courts of Doha, Qatar</strong>, unless mandatory law provides otherwise.</p>
+    </section>
+
+    <section id="modifications">
+      <h2>12. Modifications</h2>
+      <p>We may update these Terms. The “Last updated” date reflects material changes. Continued use after changes become effective constitutes acceptance where permitted.</p>
+    </section>
+
+    <section id="contact">
+      <h2>13. Contact</h2>
+      <p><strong>IRISSTAR Technologies</strong> · IST Health</p>
+      <p>Office 214/215, 2nd Floor, Regus D-Ring Building no 65, D-Ring Road, Old Airport, PO Box 32522, Doha, Qatar</p>
+      <p><strong>Email:</strong> <a href="mailto:info@isttechnologies.qa">info@isttechnologies.qa</a><br />
+      <strong>Contact:</strong> <a href="mailto:sahni.ps@gmail.com">sahni.ps@gmail.com</a><br />
+      <strong>Website:</strong> <a href="https://www.isttechnologies.qa" rel="noopener">www.isttechnologies.qa</a></p>
+    </section>
+
+    <section id="disclaimer">
+      <h2>14. Disclaimer</h2>
+      <p>These Terms are a <strong>draft for legal counsel review</strong> before production deployment. They do not represent a commitment to compliance with any specific regulatory framework until formally approved.</p>
+    </section>
+
+    <footer class="ist-legal-footer">
+      <p><strong>IRISSTAR Technologies</strong> · IST Health</p>
+      <p>Office 214/215, 2nd Floor, Regus D-Ring Building no 65, D-Ring Road, Old Airport, PO Box 32522, Doha, Qatar</p>
+      <p><a href="mailto:info@isttechnologies.qa">info@isttechnologies.qa</a> · <a href="https://www.isttechnologies.qa">www.isttechnologies.qa</a></p>
+    </footer>
+  </div>
+</body>
+</html>

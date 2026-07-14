@@ -1,0 +1,29 @@
+{
+  "id": "wf-lab-order",
+  "title": "سير العمل: طلب مختبر",
+  "roles": [
+    "Physician",
+    "LabTech"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/laboratory"
+  ],
+  "keywords": [
+    "lab",
+    "order",
+    "LIMS"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "يتطلب نماذج health_lab.",
+  "steps": [
+    "تأكد من تفعيل health_lab.",
+    "افتح المختبر.",
+    "أنشئ طلباً للمريض ونوع الفحص.",
+    "يكمل فني المختبر النتيجة (SAO عند الحاجة)."
+  ]
+}

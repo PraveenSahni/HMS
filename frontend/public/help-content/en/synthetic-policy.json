@@ -1,0 +1,25 @@
+{
+  "id": "synthetic-policy",
+  "title": "Synthetic data policy",
+  "roles": [
+    "*",
+    "Compliance",
+    "ITSupport"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "synthetic",
+    "PII",
+    "demo",
+    "IST-P"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "body": "Non-production must use synthetic markers only. Production imports require CAB and --allow-production."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "wf-admit",
+  "title": "Workflow: Inpatient admission",
+  "roles": [
+    "Physician",
+    "Nurse",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds"
+  ],
+  "keywords": [
+    "admit",
+    "bed",
+    "inpatient"
+  ],
+  "version": "1.0.0",
+  "guided": true,
+  "body": "health_inpatient models.",
+  "steps": [
+    "Open Beds.",
+    "Confirm free bed.",
+    "Create inpatient registration (SAO wizard if React limited).",
+    "Nurse documents rounding under Nursing."
+  ]
+}

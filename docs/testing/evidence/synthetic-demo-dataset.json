@@ -1,0 +1,355 @@
+{
+  "patients": [
+    {
+      "code": "IST-P-00001",
+      "national_id_synthetic": "SYN-QA-00000001",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00002",
+      "national_id_synthetic": "SYN-AE-00000002",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00003",
+      "national_id_synthetic": "SYN-QA-00000003",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00004",
+      "national_id_synthetic": "SYN-AE-00000004",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00005",
+      "national_id_synthetic": "SYN-QA-00000005",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00006",
+      "national_id_synthetic": "SYN-AE-00000006",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00007",
+      "national_id_synthetic": "SYN-QA-00000007",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00008",
+      "national_id_synthetic": "SYN-AE-00000008",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00009",
+      "national_id_synthetic": "SYN-QA-00000009",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00010",
+      "national_id_synthetic": "SYN-AE-00000010",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00011",
+      "national_id_synthetic": "SYN-QA-00000011",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00012",
+      "national_id_synthetic": "SYN-AE-00000012",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00013",
+      "national_id_synthetic": "SYN-QA-00000013",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00014",
+      "national_id_synthetic": "SYN-AE-00000014",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00015",
+      "national_id_synthetic": "SYN-QA-00000015",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00016",
+      "national_id_synthetic": "SYN-AE-00000016",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00017",
+      "national_id_synthetic": "SYN-QA-00000017",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00018",
+      "national_id_synthetic": "SYN-AE-00000018",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00019",
+      "national_id_synthetic": "SYN-QA-00000019",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00020",
+      "national_id_synthetic": "SYN-AE-00000020",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00021",
+      "national_id_synthetic": "SYN-QA-00000021",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00022",
+      "national_id_synthetic": "SYN-AE-00000022",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00023",
+      "national_id_synthetic": "SYN-QA-00000023",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00024",
+      "national_id_synthetic": "SYN-AE-00000024",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00025",
+      "national_id_synthetic": "SYN-QA-00000025",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00026",
+      "national_id_synthetic": "SYN-AE-00000026",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00027",
+      "national_id_synthetic": "SYN-QA-00000027",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00028",
+      "national_id_synthetic": "SYN-AE-00000028",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00029",
+      "national_id_synthetic": "SYN-QA-00000029",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00030",
+      "national_id_synthetic": "SYN-AE-00000030",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00031",
+      "national_id_synthetic": "SYN-QA-00000031",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00032",
+      "national_id_synthetic": "SYN-AE-00000032",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00033",
+      "national_id_synthetic": "SYN-QA-00000033",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00034",
+      "national_id_synthetic": "SYN-AE-00000034",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00035",
+      "national_id_synthetic": "SYN-QA-00000035",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00036",
+      "national_id_synthetic": "SYN-AE-00000036",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00037",
+      "national_id_synthetic": "SYN-QA-00000037",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00038",
+      "national_id_synthetic": "SYN-AE-00000038",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00039",
+      "national_id_synthetic": "SYN-QA-00000039",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00040",
+      "national_id_synthetic": "SYN-AE-00000040",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00041",
+      "national_id_synthetic": "SYN-QA-00000041",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00042",
+      "national_id_synthetic": "SYN-AE-00000042",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00043",
+      "national_id_synthetic": "SYN-QA-00000043",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00044",
+      "national_id_synthetic": "SYN-AE-00000044",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00045",
+      "national_id_synthetic": "SYN-QA-00000045",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00046",
+      "national_id_synthetic": "SYN-AE-00000046",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00047",
+      "national_id_synthetic": "SYN-QA-00000047",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00048",
+      "national_id_synthetic": "SYN-AE-00000048",
+      "synthetic_data": true,
+      "country": "AE"
+    },
+    {
+      "code": "IST-P-00049",
+      "national_id_synthetic": "SYN-QA-00000049",
+      "synthetic_data": true,
+      "country": "QA"
+    },
+    {
+      "code": "IST-P-00050",
+      "national_id_synthetic": "SYN-AE-00000050",
+      "synthetic_data": true,
+      "country": "AE"
+    }
+  ],
+  "staff": [
+    {
+      "code": "IST-ST-0001",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0002",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0003",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0004",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0005",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0006",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0007",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0008",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0009",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0010",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0011",
+      "synthetic_data": true
+    },
+    {
+      "code": "IST-ST-0012",
+      "synthetic_data": true
+    }
+  ],
+  "seed": 42
+}
