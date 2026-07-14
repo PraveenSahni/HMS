@@ -7,46 +7,44 @@
 
 | Kind | URL |
 |------|-----|
-| RST / Sphinx source | https://codeberg.org/gnuhealth/documentation (branch main, path his/source/) |
-| Rendered HTML | https://codeberg.org/gnuhealth/pages (branch main, his/ tree) |
+| RST / Sphinx source | https://codeberg.org/gnuhealth/documentation (branch `main`, path `his/source/`) |
+| Rendered HTML | https://codeberg.org/gnuhealth/pages (branch `main`, `his/` tree) |
 | Published site (reference) | https://docs.gnuhealth.org/his/ |
+
+Documentation repo has no release tags matching HIS 5.0.6; official published tree (`pages` / docs.gnuhealth.org) plus Codeberg `documentation` `main` were used. Existing immutable RST under `original/` was retained where SHA-256 differed from `main` (add-only policy).
 
 ## File counts
 
 | Metric | Before | After |
 |--------|--------|-------|
-| RST under docs/upstream/original/ | 106 | 106 |
-| Images under docs/upstream/original/ | 119 | 119 |
-| HTML under docs/upstream/generated-reference/html/ | 6 | 107 |
-| Total files under original/ (manifest ile_count) | 229 | 229 |
+| RST under `docs/upstream/original/` | 106 | 106 |
+| Images under `docs/upstream/original/` | 119 | 119 |
+| HTML under `docs/upstream/generated-reference/html/` | 6 | 107 |
+| Total files under `original/` (manifest `file_count`) | 229 | 229 |
+
+RST path coverage vs official `his/source`: **105/105** (plus 1 HIS release-notes `README.rst`). Toctree from `index.rst` fully closed. Zero missing RST paths to add.
 
 ## Immutable copy policy
 
-- RST/images from Codeberg documentation **main**: add missing only; **0** files added.
-- **107** existing paths skipped because on-disk SHA-256 differed from upstream main (immutable store preserved; matches prior 5.0.6-aligned RST pin).
-- 
-elease-notes/ from HIS v5.0.6 retained.
+- RST/images from Codeberg documentation `main`: add missing only; **0** files added (tree already complete).
+- **107** existing paths skipped because on-disk SHA-256 differed from upstream `main` (immutable store preserved; prior 5.0.6-aligned RST pin kept).
+- `release-notes/` from HIS v5.0.6 retained.
 
 ## Generated reference
 
-- HTML pages copied from gnuhealth/pages: **107** .html files (includes _static, _images as published).
-- Optional _sources mirror under generated-reference/_sources/: **8** .txt files present.
+- HTML pages from `gnuhealth/pages`: **107** `.html` files (full toctree including userguide/, techguide/, plugins/, appendix/, plus `_static` / `_images` / `_sources` as published).
+- Browse: `docs/upstream/generated-reference/html/index.html`
 
 ## Verification
 
-`
-OK 229 files
-`
+```
+python -m docs_sync.verify_checksums
+→ OK 229 files
 
-`
-........                                                                 [100%]
-8 passed in 2.30s
-C:\Users\PraveenSAHNI\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest_asyncio\plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
-The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
-
-  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
-`
+pytest tests/upstream -q
+→ 8 passed
+```
 
 ## Hash conflicts (not overwritten)
 
-Total: **107** — see docs/upstream/_acq_skip.json for paths.
+Total: **107** — see `docs/upstream/_acq_skip.json` for paths.
