@@ -61,6 +61,8 @@ class PatientGenerator:
                 else self.generator.dob_adult()
             )
 
+            # dob lives on party.party in GNU Health; gnuhealth.patient.dob is
+            # a related/Function field without a setter.
             party_batch.append({
                 "name": name["full_en"],
                 "code": code,
@@ -69,6 +71,7 @@ class PatientGenerator:
                 "fed_country": self.generator.fed_country,
                 "create_target": False,
                 "gender": "m" if name.get("gender") == "male" else "f",
+                "dob": dob.isoformat(),
             })
             patient_meta.append({**name, "code": code, "dob": dob, "is_child": is_child})
 
@@ -104,8 +107,16 @@ class PatientGenerator:
         if existing:
             return existing[0]
         vals: dict[str, Any] = {"party": party_id}
+        # Do not set dob here — it is not a writable column on gnuhealth.patient.
         if meta and meta.get("dob"):
-            vals["dob"] = meta["dob"].isoformat()
+            try:
+                self.client.write(
+                    "party.party",
+                    [party_id],
+                    {"dob": meta["dob"].isoformat()},
+                )
+            except Exception as exc:
+                logger.debug("Could not set party.dob for %s: %s", party_id, exc)
         try:
             return self.client.create("gnuhealth.patient", vals)
         except Exception as exc:
@@ -130,10 +141,8 @@ class PatientGenerator:
         for party_id, meta in zip(party_ids, patient_meta):
             if self.client.search("gnuhealth.patient", [("party", "=", party_id)], limit=1):
                 continue
-            vals: dict[str, Any] = {"party": party_id}
-            if meta.get("dob"):
-                vals["dob"] = meta["dob"].isoformat()
-            gh_records.append(vals)
+            # party.dob already set at party create; only link patient record
+            gh_records.append({"party": party_id})
 
         try:
             gh_ids = self.client.batch_create(
@@ -143,5 +152,10 @@ class PatientGenerator:
                 return [gh_ids]
             return party_ids
         except Exception as exc:
-            logger.warning("gnuhealth.patient batch create failed: %s — parties created only", exc)
+            logger.warning(
+                "gnuhealth.patient batch create failed: %s — creating one-by-one",
+                exc,
+            )
+            for party_id in party_ids:
+                self._ensure_gh_patient(party_id)
             return party_ids
