@@ -20,5 +20,5 @@
   "version": "1.1.0",
   "guided": false,
   "published": true,
-  "body": "Use search, role/country filters, guided workflows, onboarding checklist, and feedback. Content loads from help-content JSON — not hardcoded in UI."
+  "body": "Use search, role/country filters, guided workflows, onboarding checklist, and feedback. Start system configuration at Setup Hub (/setup) and guided workflow wf-system-setup. Content loads from help-content JSON — not hardcoded in UI."
 }

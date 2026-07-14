@@ -1,0 +1,31 @@
+{
+  "id": "setup-financial",
+  "title": "Setup: Financial",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial",
+    "/companies",
+    "/currency",
+    "/setup"
+  ],
+  "keywords": [
+    "finance",
+    "CoA",
+    "invoice",
+    "fiscal",
+    "tax"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Company, Currency, Party; Product account categories preferred. Steps: /financial checklist; SAO CoA/FY/journals/taxes; draft stub then post/pay in SAO. Impacts: billing and Health services invoicing. Tax rates needs confirmation. See financial-setup.md and wf-finance-setup."
+}

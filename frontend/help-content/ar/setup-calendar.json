@@ -1,0 +1,26 @@
+{
+  "id": "setup-calendar",
+  "title": "الإعداد: التقويم",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/calendar",
+    "/setup",
+    "/appointments"
+  ],
+  "keywords": [
+    "calendar",
+    "events",
+    "schedule"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: المستخدمون/الأطراف. الخطوات: /calendar؛ SAO لإنشاء التقويمات. المواعيد السريرية تبقى في /appointments."
+}

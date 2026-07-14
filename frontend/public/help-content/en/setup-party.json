@@ -1,0 +1,28 @@
+{
+  "id": "setup-party",
+  "title": "Setup: Party",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "Finance",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/parties",
+    "/setup"
+  ],
+  "keywords": [
+    "party",
+    "supplier",
+    "insurer",
+    "patient"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Companies, Currency. Steps: list/create parties on /parties; synthetic IST-*/SYN-* in non-prod. SAO: categories; receivable/payable after CoA. Impacts: patients, invoice parties, suppliers. Related: /patients, /financial."
+}

@@ -61,6 +61,7 @@ flowchart LR
 | G-14 | Claims / insurance e-submission | UAE | eClaim / DHA schemes | **Needs confirmation** | `health_insurance` local only | No e-claim connector | Partner integration |
 | G-15 | DICOM / PACS | Both | Clinical ops | Optional unless imaging | Orthanc package exists | Not wired in IST React | Optional Orthanc deploy |
 | G-16 | Financial / GL setup per legal entity | Both | Finance / ops | Required for posting invoices | Tryton `account_*` + `health_accounting` | React `/financial` is stub; CoA/FY/journals/taxes SAO-only; tax rates **needs confirmation** | Follow `docs/implementation/financial-setup.md`; Help `wf-finance-setup` |
+| G-17 | Cross-module setup order & operator UX | Both | Ops / admins | Required for new deployments | Menus exist; Setup Hub added | Operators may start Health/Financial before Company/Currency/CoA | Follow `docs/implementation/module-setup-dependencies.md`; React `/setup`; Help `wf-system-setup` |
 
 ## Priority remediation
 
@@ -69,7 +70,8 @@ flowchart LR
 3. **Integration service:** External HL7/FHIR adapter (do not upgrade GH core).  
 4. **Data controls:** Enforce synthetic-only demos; production import gates.  
 5. **Evidence:** VM module activation report.  
-6. **Finance:** Complete CoA / fiscal / journals per company via SAO before UAT billing.
+6. **Finance:** Complete CoA / fiscal / journals per company via SAO before UAT billing.  
+7. **Module setup order:** Use Setup Hub `/setup` and `module-setup-dependencies.md` so Company/Currency/Admin precede Party/Product/Stock/Financial/Health.
 
 ## What is already strong
 

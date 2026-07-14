@@ -1334,6 +1334,8 @@ export function FinancialPage() {
           <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepSmoke')}</li>
         </ol>
         <p className="ist-subtitle" style={{ marginBottom: 0 }}>
+          <Link to="/setup">{t('setup.title')}</Link>
+          {' · '}
           <Link to="/help?topic=wf-finance-setup">{t('ops.financial.setupHelpLink')}</Link>
           {' · '}
           <Link to="/help?topic=wf-close-period">{t('ops.financial.setupCloseLink')}</Link>

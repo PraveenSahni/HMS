@@ -1,0 +1,49 @@
+{
+  "id": "wf-system-setup",
+  "title": "سير العمل: ترتيب إعداد النظام الكامل",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin",
+    "FacilityAdmin",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/setup",
+    "/companies",
+    "/currency",
+    "/users",
+    "/parties",
+    "/products",
+    "/stock",
+    "/calendar",
+    "/financial",
+    "/patients"
+  ],
+  "keywords": [
+    "setup",
+    "onboarding",
+    "order",
+    "UAE",
+    "Qatar",
+    "modules"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "الترتيب الرئيسي لنشر الإمارات/قطر. التفاصيل في docs/implementation/module-setup-dependencies.md.",
+  "steps": [
+    "افتح مركز الإعداد (/setup) وموضوع setup-order.",
+    "1 الشركات: أنشئ كيانات الإمارات (AED) و/أو قطر (QAR).",
+    "2 العملات: أكد AED/QAR (أنشئ في SAO إن نقصت).",
+    "3 الإدارة: المستخدمون والمجموعات والتسلسلات والوحدات.",
+    "4 الأطراف ← 5 المنتجات ← 6 المخزون ← 7 التقويم.",
+    "8 المالية: دليل الحسابات والسنة المالية والدفاتر في SAO؛ مسودة فاتورة في /financial.",
+    "9 الصحة: المؤسسة والمرضى والمواعيد؛ المختبر/الصيدلية/الأسرة حسب النطاق.",
+    "لا تخترع معدلات ضريبية أو قواعد HIE — علّم يحتاج تأكيداً."
+  ]
+}

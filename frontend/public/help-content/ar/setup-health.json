@@ -1,0 +1,37 @@
+{
+  "id": "setup-health",
+  "title": "الإعداد: الصحة",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "CountryAdmin",
+    "Physician",
+    "Nurse",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings",
+    "/patients",
+    "/appointments",
+    "/laboratory",
+    "/pharmacy",
+    "/beds",
+    "/setup"
+  ],
+  "keywords": [
+    "health",
+    "patients",
+    "appointments",
+    "lab",
+    "pharmacy",
+    "beds"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركات والإدارة والأطراف والمنتجات؛ المخزون للصيدلية؛ المالية إن وُجدت فوترة. الخطوات: المؤسسة والمرضى والمواعيد والمختبر والصيدلية والأسرة. لا يغني عن دليل الحسابات."
+}

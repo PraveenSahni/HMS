@@ -1,0 +1,29 @@
+{
+  "id": "setup-product",
+  "title": "Setup: Product",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "Procurement",
+    "Pharmacist",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/products",
+    "/setup"
+  ],
+  "keywords": [
+    "product",
+    "catalog",
+    "pharmacy",
+    "service"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Company, Party. Steps: /products list; SAO for templates/UoM/account category after CoA. Impacts: stock moves, pharmacy, invoice lines, lab catalogs. Related: /stock, /pharmacy, /financial."
+}

@@ -9,16 +9,18 @@
     "QA"
   ],
   "routes": [
-    "/help"
+    "/help",
+    "/setup"
   ],
   "keywords": [
     "onboarding",
     "checklist",
     "training",
-    "new user"
+    "new user",
+    "setup"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "guided": false,
   "published": true,
-  "body": "Complete: (1) Sign in and set language EN/AR. (2) Set Help role + country filters. (3) Open Patients and find a synthetic IST-P-* record. (4) Open Appointments day list. (5) Run one guided workflow for your role. (6) Review synthetic-data policy. Track progress in the Help Centre onboarding panel."
+  "body": "System setup order (also in Setup Hub /setup): (1) Companies UAE AED / Qatar QAR. (2) Currency AED/QAR. (3) Administration users/groups/sequences. (4) Party. (5) Product. (6) Inventory & Stock. (7) Calendar. (8) Financial — CoA/FY in SAO then draft invoice smoke. (9) Health — institution, patients, appointments, lab/pharmacy/beds. Also: sign in EN/AR, Help role/country filters, find IST-P-* patient, run wf-system-setup, read synthetic-data policy. Track checkboxes in the Help Centre onboarding panel."
 }

@@ -1,0 +1,30 @@
+{
+  "id": "setup-order",
+  "title": "Setup order overview",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin",
+    "FacilityAdmin",
+    "Finance",
+    "*"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/setup",
+    "/help"
+  ],
+  "keywords": [
+    "setup",
+    "order",
+    "dependencies",
+    "modules"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Recommended order: Companies → Currency → Administration → Party → Product → Inventory & Stock → Calendar → Financial → Health. Setup Hub: /setup. Guided: wf-system-setup. Impact: Companies enable currency, party scope, CoA, stock, and Health institutions. Financial CoA/FY/journals are SAO-only. Tax/HIE: needs confirmation. See module-setup-dependencies.md and financial-setup.md."
+}

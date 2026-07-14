@@ -1,0 +1,49 @@
+{
+  "id": "wf-system-setup",
+  "title": "Workflow: Full system setup order",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin",
+    "FacilityAdmin",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/setup",
+    "/companies",
+    "/currency",
+    "/users",
+    "/parties",
+    "/products",
+    "/stock",
+    "/calendar",
+    "/financial",
+    "/patients"
+  ],
+  "keywords": [
+    "setup",
+    "onboarding",
+    "order",
+    "UAE",
+    "Qatar",
+    "modules"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Master order for new UAE/Qatar deployments. Details: docs/implementation/module-setup-dependencies.md. Financial deep steps: docs/implementation/financial-setup.md.",
+  "steps": [
+    "Open Setup Hub (/setup) and Help topic setup-order.",
+    "1 Companies: create UAE (AED) and/or Qatar (QAR) legal entities on /companies.",
+    "2 Currency: confirm AED/QAR on /currency (create in SAO if missing).",
+    "3 Administration: users, groups, sequences, modules on /users /groups /sequences /modules.",
+    "4 Party → 5 Product → 6 Stock → 7 Calendar using list screens and SAO for deep fields.",
+    "8 Financial: CoA, fiscal year, journals in SAO; draft invoice on /financial (see financial-setup.md).",
+    "9 Health: institution (/settings), patients, appointments; lab/pharmacy/beds as in scope.",
+    "Do not invent tax rates or HIE rules — mark needs confirmation."
+  ]
+}

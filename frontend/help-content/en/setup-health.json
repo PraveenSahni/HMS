@@ -1,0 +1,37 @@
+{
+  "id": "setup-health",
+  "title": "Setup: Health",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "CountryAdmin",
+    "Physician",
+    "Nurse",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings",
+    "/patients",
+    "/appointments",
+    "/laboratory",
+    "/pharmacy",
+    "/beds",
+    "/setup"
+  ],
+  "keywords": [
+    "health",
+    "patients",
+    "appointments",
+    "lab",
+    "pharmacy",
+    "beds"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Companies, Admin users, Party, Product; Stock for pharmacy; Financial if charging. Steps: institution /settings; patients; appointments; lab; pharmacy/medications; beds. Impacts: clinical ops; may drive service invoices. Does not replace CoA. Claims e-submit is gap G-14 (needs confirmation). Related: wf-admit, wf-book-appointment, wf-lab-results, wf-dispense."
+}

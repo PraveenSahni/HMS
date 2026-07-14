@@ -1,0 +1,29 @@
+{
+  "id": "setup-product",
+  "title": "الإعداد: المنتجات",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "Procurement",
+    "Pharmacist",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/products",
+    "/setup"
+  ],
+  "keywords": [
+    "product",
+    "catalog",
+    "pharmacy",
+    "service"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركة والأطراف. الخطوات: /products؛ SAO للقوالب. التأثير: المخزون والصيدلية وبنود الفواتير."
+}

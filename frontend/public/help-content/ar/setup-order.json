@@ -1,0 +1,30 @@
+{
+  "id": "setup-order",
+  "title": "نظرة عامة على ترتيب الإعداد",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin",
+    "FacilityAdmin",
+    "Finance",
+    "*"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/setup",
+    "/help"
+  ],
+  "keywords": [
+    "setup",
+    "order",
+    "dependencies",
+    "modules"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "الترتيب: الشركات ← العملات ← الإدارة ← الأطراف ← المنتجات ← المخزون ← التقويم ← المالية ← الصحة. مركز الإعداد: /setup. الإرشادي: wf-system-setup. دليل الحسابات في SAO فقط. الضرائب/HIE تحتاج تأكيداً."
+}

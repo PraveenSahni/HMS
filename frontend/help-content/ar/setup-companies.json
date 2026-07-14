@@ -1,0 +1,27 @@
+{
+  "id": "setup-companies",
+  "title": "الإعداد: الشركات",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/companies",
+    "/setup"
+  ],
+  "keywords": [
+    "company",
+    "legal entity",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: دخول مسؤول. الخطوات: /companies؛ أنشئ كيان الإمارات و/أو قطر؛ عيّن AED أو QAR. التأثير: يفعّل العملات ونطاق الأطراف/المخزون ودليل الحسابات والمؤسسات. SAO للخيارات المتقدمة."
+}

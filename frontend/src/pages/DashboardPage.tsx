@@ -194,6 +194,12 @@ export function DashboardPage() {
 
         </Link>
 
+        <Link to="/setup" className="ist-btn ist-btn--outline">
+
+          {t('dashboard.btnSetup')}
+
+        </Link>
+
       </div>
 
 

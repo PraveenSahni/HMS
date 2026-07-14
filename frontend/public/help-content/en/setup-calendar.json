@@ -1,0 +1,26 @@
+{
+  "id": "setup-calendar",
+  "title": "Setup: Calendar",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/calendar",
+    "/setup",
+    "/appointments"
+  ],
+  "keywords": [
+    "calendar",
+    "events",
+    "schedule"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Users/parties. Steps: /calendar list; SAO to create calendars if empty. Impacts: calendar UI; clinical appointments still use /appointments (gnuhealth.appointment). Related: wf-book-appointment."
+}

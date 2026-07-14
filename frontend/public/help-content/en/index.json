@@ -33,15 +33,339 @@
       "QA"
     ],
     "routes": [
-      "/help"
+      "/help",
+      "/setup"
     ],
     "keywords": [
       "onboarding",
       "checklist",
       "training",
-      "new user"
+      "new user",
+      "setup"
+    ],
+    "version": "1.2.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "wf-system-setup",
+    "title": "Workflow: Full system setup order",
+    "roles": [
+      "SystemAdmin",
+      "GroupAdmin",
+      "CountryAdmin",
+      "FacilityAdmin",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/setup",
+      "/companies",
+      "/currency",
+      "/users",
+      "/parties",
+      "/products",
+      "/stock",
+      "/calendar",
+      "/financial",
+      "/patients"
+    ],
+    "keywords": [
+      "setup",
+      "onboarding",
+      "order",
+      "UAE",
+      "Qatar",
+      "modules"
     ],
     "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "setup-order",
+    "title": "Setup order overview",
+    "roles": [
+      "SystemAdmin",
+      "GroupAdmin",
+      "CountryAdmin",
+      "FacilityAdmin",
+      "Finance",
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/setup",
+      "/help"
+    ],
+    "keywords": [
+      "setup",
+      "order",
+      "dependencies",
+      "modules"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-companies",
+    "title": "Setup: Companies",
+    "roles": [
+      "SystemAdmin",
+      "GroupAdmin",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/companies",
+      "/setup"
+    ],
+    "keywords": [
+      "company",
+      "legal entity",
+      "AED",
+      "QAR"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-currency",
+    "title": "Setup: Currency",
+    "roles": [
+      "SystemAdmin",
+      "GroupAdmin",
+      "Finance",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/currency",
+      "/setup"
+    ],
+    "keywords": [
+      "currency",
+      "AED",
+      "QAR"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-admin",
+    "title": "Setup: Administration",
+    "roles": [
+      "SystemAdmin",
+      "GroupAdmin",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/users",
+      "/groups",
+      "/sequences",
+      "/modules",
+      "/setup"
+    ],
+    "keywords": [
+      "users",
+      "groups",
+      "sequences",
+      "modules",
+      "ACL"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-party",
+    "title": "Setup: Party",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "Finance",
+      "Receptionist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/parties",
+      "/setup"
+    ],
+    "keywords": [
+      "party",
+      "supplier",
+      "insurer",
+      "patient"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-product",
+    "title": "Setup: Product",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "Procurement",
+      "Pharmacist",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/products",
+      "/setup"
+    ],
+    "keywords": [
+      "product",
+      "catalog",
+      "pharmacy",
+      "service"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-stock",
+    "title": "Setup: Inventory & Stock",
+    "roles": [
+      "SystemAdmin",
+      "Warehouse",
+      "Procurement",
+      "Pharmacist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock",
+      "/setup"
+    ],
+    "keywords": [
+      "stock",
+      "warehouse",
+      "location",
+      "lot"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-calendar",
+    "title": "Setup: Calendar",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/calendar",
+      "/setup",
+      "/appointments"
+    ],
+    "keywords": [
+      "calendar",
+      "events",
+      "schedule"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-financial",
+    "title": "Setup: Financial",
+    "roles": [
+      "Finance",
+      "SystemAdmin",
+      "GroupAdmin",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial",
+      "/companies",
+      "/currency",
+      "/setup"
+    ],
+    "keywords": [
+      "finance",
+      "CoA",
+      "invoice",
+      "fiscal",
+      "tax"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "setup-health",
+    "title": "Setup: Health",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "CountryAdmin",
+      "Physician",
+      "Nurse",
+      "Receptionist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings",
+      "/patients",
+      "/appointments",
+      "/laboratory",
+      "/pharmacy",
+      "/beds",
+      "/setup"
+    ],
+    "keywords": [
+      "health",
+      "patients",
+      "appointments",
+      "lab",
+      "pharmacy",
+      "beds"
+    ],
+    "version": "1.0.0",
     "guided": false,
     "published": true
   },
@@ -659,31 +983,6 @@
     "published": true
   },
   {
-    "id": "wf-close-period",
-    "title": "Workflow: Closing an accounting period",
-    "roles": [
-      "Finance",
-      "SystemAdmin",
-      "Auditor"
-    ],
-    "countries": [
-      "AE",
-      "QA"
-    ],
-    "routes": [
-      "/financial"
-    ],
-    "keywords": [
-      "period",
-      "close",
-      "accounting",
-      "fiscal"
-    ],
-    "version": "1.1.0",
-    "guided": true,
-    "published": true
-  },
-  {
     "id": "wf-finance-setup",
     "title": "Workflow: Company financial setup",
     "roles": [
@@ -710,6 +1009,31 @@
       "tax",
       "AED",
       "QAR"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-close-period",
+    "title": "Workflow: Closing an accounting period",
+    "roles": [
+      "Finance",
+      "SystemAdmin",
+      "Auditor"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "period",
+      "close",
+      "accounting",
+      "fiscal"
     ],
     "version": "1.1.0",
     "guided": true,

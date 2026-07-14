@@ -1,0 +1,28 @@
+{
+  "id": "setup-stock",
+  "title": "Setup: Inventory & Stock",
+  "roles": [
+    "SystemAdmin",
+    "Warehouse",
+    "Procurement",
+    "Pharmacist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock",
+    "/setup"
+  ],
+  "keywords": [
+    "stock",
+    "warehouse",
+    "location",
+    "lot"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Company, Product. Steps: /stock locations/moves; SAO for warehouse structure. Impacts: pharmacy dispense, transfers (wf-receive-stock, wf-transfer-inventory). Do not share warehouses across AE/QA without legal approval."
+}

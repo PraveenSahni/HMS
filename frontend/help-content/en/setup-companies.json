@@ -1,0 +1,27 @@
+{
+  "id": "setup-companies",
+  "title": "Setup: Companies",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/companies",
+    "/setup"
+  ],
+  "keywords": [
+    "company",
+    "legal entity",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: admin login. Steps: Open /companies; create UAE and/or Qatar legal entity; set currency AED or QAR. Impacts: enables Currency assignment, Party/stock company scope, Financial CoA, Health institutions. SAO: deep company options. Related: /setup, wf-create-company, module-setup-dependencies.md."
+}

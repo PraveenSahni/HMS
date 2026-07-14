@@ -147,9 +147,39 @@ export function contextualHelp(
 export const ONBOARDING_ITEMS = [
   { id: 'login-lang', label_en: 'Sign in and set language EN/AR', label_ar: 'تسجيل الدخول وتعيين اللغة' },
   { id: 'help-filters', label_en: 'Set Help role and country filters', label_ar: 'تعيين دور ودولة المساعدة' },
+  { id: 'setup-hub', label_en: 'Open Setup Hub (/setup) and review order', label_ar: 'فتح مركز الإعداد ومراجعة الترتيب' },
+  {
+    id: 'setup-companies',
+    label_en: '1. Companies — UAE AED and/or Qatar QAR entity',
+    label_ar: '1. الشركات — كيان الإمارات AED و/أو قطر QAR',
+  },
+  {
+    id: 'setup-currency',
+    label_en: '2. Currency — confirm AED / QAR',
+    label_ar: '2. العملات — تأكيد AED / QAR',
+  },
+  {
+    id: 'setup-admin',
+    label_en: '3. Administration — users, groups, sequences',
+    label_ar: '3. الإدارة — المستخدمون والمجموعات والتسلسلات',
+  },
+  { id: 'setup-party', label_en: '4. Party — master parties (synthetic in non-prod)', label_ar: '4. الأطراف — بيانات رئيسية اصطناعية خارج الإنتاج' },
+  { id: 'setup-product', label_en: '5. Product — catalogs for services/pharmacy', label_ar: '5. المنتجات — كتالوجات الخدمات/الصيدلية' },
+  { id: 'setup-stock', label_en: '6. Inventory & Stock — locations under company', label_ar: '6. المخزون — مواقع تحت الشركة' },
+  { id: 'setup-calendar', label_en: '7. Calendar — calendars if module used', label_ar: '7. التقويم — إن كان مفعّلاً' },
+  {
+    id: 'setup-financial',
+    label_en: '8. Financial — CoA/FY in SAO; draft invoice smoke',
+    label_ar: '8. المالية — دليل الحسابات في SAO واختبار مسودة فاتورة',
+  },
+  {
+    id: 'setup-health',
+    label_en: '9. Health — institution, patients, appointments (+ lab/Rx/beds)',
+    label_ar: '9. الصحة — المؤسسة والمرضى والمواعيد (+ مختبر/صيدلية/أسرة)',
+  },
   { id: 'find-patient', label_en: 'Find a synthetic IST-P-* patient', label_ar: 'العثور على مريض اصطناعي' },
   { id: 'appointments', label_en: 'Open Appointments day list', label_ar: 'فتح قائمة المواعيد' },
-  { id: 'guided-wf', label_en: 'Complete one guided workflow for your role', label_ar: 'إكمال سير عمل إرشادي' },
+  { id: 'guided-wf', label_en: 'Complete guided workflow wf-system-setup', label_ar: 'إكمال سير العمل الإرشادي لإعداد النظام' },
   { id: 'synthetic-policy', label_en: 'Read synthetic data policy', label_ar: 'قراءة سياسة البيانات الاصطناعية' },
 ] as const
 

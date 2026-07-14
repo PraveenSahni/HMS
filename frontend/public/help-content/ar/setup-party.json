@@ -1,0 +1,28 @@
+{
+  "id": "setup-party",
+  "title": "الإعداد: الأطراف",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "Finance",
+    "Receptionist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/parties",
+    "/setup"
+  ],
+  "keywords": [
+    "party",
+    "supplier",
+    "insurer",
+    "patient"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركات والعملات. الخطوات: /parties؛ اصطناعي خارج الإنتاج. التأثير: المرضى وأطراف الفواتير."
+}

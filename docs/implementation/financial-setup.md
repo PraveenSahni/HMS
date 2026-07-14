@@ -141,10 +141,11 @@ Extending React with full CoA wizards is **out of scope** unless product priorit
 ## 8. Related artefacts
 
 - Help: `wf-finance-setup`, `wf-create-invoice`, `wf-receive-payment`, `wf-close-period`  
+- Full module order: `docs/implementation/module-setup-dependencies.md` · Setup Hub `/setup` · `wf-system-setup`  
 - Guide: `docs/implementation/UAE_Qatar_Implementation_Guide.md`  
 - Role: `docs/user-guides/roles/finance.md`  
 - SAO map: `frontend/docs/SAO_MIGRATION.md`  
-- Gaps: `docs/research/gap-analysis-uae-qatar.md` (claims G-14; finance config operational)
+- Gaps: `docs/research/gap-analysis-uae-qatar.md` (claims G-14; finance config G-16; setup order G-17)
 
 ## 9. Exit criteria
 

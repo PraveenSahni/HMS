@@ -1,0 +1,27 @@
+{
+  "id": "setup-currency",
+  "title": "الإعداد: العملات",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "Finance",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/currency",
+    "/setup"
+  ],
+  "keywords": [
+    "currency",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: تخطيط الشركات. الخطوات: أكد AED/QAR في /currency؛ أنشئ في SAO إن لزم. التأثير: عملة الشركة والفواتير."
+}

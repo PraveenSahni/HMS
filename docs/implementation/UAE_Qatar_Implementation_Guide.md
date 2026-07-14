@@ -74,6 +74,11 @@ Taxes and healthcare exemptions: **needs confirmation** — do not invent rates.
 Runbook: `docs/implementation/financial-setup.md`. React `/financial` is invoice stub; deep accounting is SAO.  
 Help guided workflow: `wf-finance-setup`.
 
+### Phase 5c — Full module setup order
+Sidebar Menus (Companies → Currency → Administration → Party → Product → Stock → Calendar → Financial → Health) and cross-module impacts:  
+`docs/implementation/module-setup-dependencies.md`.  
+React **Setup Hub**: `/setup`. Help: `wf-system-setup`, `setup-order`, per-area `setup-*` topics.
+
 ### Phase 6
 Master data collection via Excel template + questionnaire.
 

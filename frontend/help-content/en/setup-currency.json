@@ -1,0 +1,27 @@
+{
+  "id": "setup-currency",
+  "title": "Setup: Currency",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "Finance",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/currency",
+    "/setup"
+  ],
+  "keywords": [
+    "currency",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: Companies planned. Steps: /currency confirm AED/QAR; create in SAO if missing. Impacts: company currency and invoices. Exchange-rate source needs confirmation if multi-currency. Related: /companies, /financial."
+}

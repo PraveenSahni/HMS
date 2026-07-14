@@ -1,0 +1,28 @@
+{
+  "id": "setup-stock",
+  "title": "الإعداد: المخزون",
+  "roles": [
+    "SystemAdmin",
+    "Warehouse",
+    "Procurement",
+    "Pharmacist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock",
+    "/setup"
+  ],
+  "keywords": [
+    "stock",
+    "warehouse",
+    "location",
+    "lot"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركة والمنتجات. الخطوات: /stock؛ SAO لهيكل المستودع. التأثير: الصرف والتحويلات. لا تشارك المستودعات عبر الإمارات/قطر دون موافقة."
+}

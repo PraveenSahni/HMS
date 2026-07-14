@@ -1,0 +1,31 @@
+{
+  "id": "setup-admin",
+  "title": "Setup: Administration",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups",
+    "/sequences",
+    "/modules",
+    "/setup"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "sequences",
+    "modules",
+    "ACL"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "Prerequisites: company if users are company-scoped. Steps: /users /groups /sequences /modules /countries /languages. SAO: apply module activate/upgrade. Impacts: Menus ACL; document numbering; health/account modules available. Related: admin-users, /setup."
+}

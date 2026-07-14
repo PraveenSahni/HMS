@@ -37,6 +37,7 @@ import {
 import { ModelBrowserPage } from './pages/ModelBrowserPage'
 import { HelpCentrePage } from './pages/help/HelpCentrePage'
 import { HelpAdminPage } from './pages/help/HelpAdminPage'
+import { SetupHubPage } from './pages/SetupHubPage'
 
 export default function App() {
   return (
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="currency" element={<CurrencyPage />} />
             <Route path="calendar" element={<CalendarPage />} />
             <Route path="companies" element={<CompaniesPage />} />
+            <Route path="setup" element={<SetupHubPage />} />
             <Route path="users" element={<UsersPage />} />
             <Route path="groups" element={<GroupsPage />} />
             <Route path="modules" element={<ModulesPage />} />

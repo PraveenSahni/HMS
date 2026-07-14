@@ -1,0 +1,31 @@
+{
+  "id": "setup-financial",
+  "title": "الإعداد: المالية",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial",
+    "/companies",
+    "/currency",
+    "/setup"
+  ],
+  "keywords": [
+    "finance",
+    "CoA",
+    "invoice",
+    "fiscal",
+    "tax"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركة والعملة والأطراف. الخطوات: قائمة /financial؛ دليل الحسابات في SAO؛ مسودة ثم ترحيل. معدلات الضرائب تحتاج تأكيداً. انظر financial-setup.md."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "setup-admin",
+  "title": "الإعداد: الإدارة",
+  "roles": [
+    "SystemAdmin",
+    "GroupAdmin",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups",
+    "/sequences",
+    "/modules",
+    "/setup"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "sequences",
+    "modules",
+    "ACL"
+  ],
+  "version": "1.0.0",
+  "guided": false,
+  "published": true,
+  "body": "المتطلبات: الشركة إن لزم. الخطوات: المستخدمون والمجموعات والتسلسلات والوحدات. SAO لتطبيق تفعيل الوحدات. التأثير: قوائم ACL والترقيم."
+}
