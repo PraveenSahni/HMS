@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Command Line" href="commandline.html" />
+    <link rel="prev" title="Procedures" href="coremodule/procedures.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">The Basics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="firststeps.html">First Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coremodule/index.html">The core module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-configuration-section-in-gnu-health">The Configuration Section in GNU Health</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#diseases">Diseases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genetics">Genetics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imaging">Imaging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedures">Procedures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#laboratory">Laboratory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#institutions">Institutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#people">People</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#health-professionals">Health Professionals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#medicaments">Medicaments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#immunization-schedule">Immunization Schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#misc">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="commandline.html">Command Line</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">The Basics</a></li>
+      <li class="breadcrumb-item active">Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/basics/configuration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration">
+<span id="userguide-basics-configuration-configuration"></span><h1>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h1>
+<section id="the-configuration-section-in-gnu-health">
+<span id="userguide-basics-configuration-configuration-the-configuration-section-in-gnu-health"></span><h2>The Configuration Section in GNU Health<a class="headerlink" href="#the-configuration-section-in-gnu-health" title="Link to this heading"></a></h2>
+<p>In most databases – and GNU Health is no different here – there are two categories of data: Some data is created and updated permanently, while other data, once entered into the system, remains quite static. For example, during a working day in a hospital many new patients, evaluations, prescriptions and hospitalizations are stored in GNU Health. On the other hand, the staff of health professionals, the medicaments available in the pharmacy, the medical procedures provided or the hospital infrastructure (buildings, beds, operating rooms) will not change very much during a day, a week or even a month.</p>
+<p>The second type of data is grouped in the <em>Health → Configuration</em> section, and this chapter provides an overview for this section. Since most configuration options are easier to understand in their context, you won’t find too many details here but links to other chapters of this book where data from the <em>Configuration</em> section will be used.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>The subsections available under the <em>Health → Configuration</em> section will vary depending on the modules installed in your system. This chapter describes the configuration options whith all GNU Health modules installed.</p></li>
+<li><p>There are configuration options on a more technical level too, relevant only to system administrators. These are not covered in this chapters since they are not part of the <em>Health → Configuration</em> section.</p></li>
+</ul>
+</section>
+<section id="diseases">
+<span id="userguide-basics-configuration-configuration-diseases"></span><h2>Diseases<a class="headerlink" href="#diseases" title="Link to this heading"></a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add Basics - Configuration - Diseases</p>
+</div>
+</section>
+<section id="genetics">
+<span id="userguide-basics-configuration-configuration-genetics"></span><h2>Genetics<a class="headerlink" href="#genetics" title="Link to this heading"></a></h2>
+<p>In the <em>Genetics</em> subsection you define genetic traits of diseases and thair variants. Configuration can be done in four submenus:</p>
+<p><em>Desease Genes (genetic traits of diseases)
+*Natural Variants (map a phenotype to a variant of a disease)
+*Variant Phenotypes (configure the phenotype for variant)
+*Protein related diseases (cofigure traits and information of diseases)
+For this configuration option to show the *health_genetics</em> module must be activated in the <em>Andministration</em> section.</p>
+</section>
+<section id="imaging">
+<span id="userguide-basics-configuration-configuration-imaging"></span><h2>Imaging<a class="headerlink" href="#imaging" title="Link to this heading"></a></h2>
+<p>In the <em>Medical Imaging</em> subsection you can define imaging types and create different imaging studys.
+For this configuration option to show the <em>health_imaging</em> module must be activated in the <em>Andministration</em> section.</p>
+</section>
+<section id="procedures">
+<span id="userguide-basics-configuration-configuration-procedures"></span><h2>Procedures<a class="headerlink" href="#procedures" title="Link to this heading"></a></h2>
+<p>In the <em>Procedures</em> subsection you define procedures as a text and map it to a code for reference.</p>
+</section>
+<section id="laboratory">
+<span id="userguide-basics-configuration-configuration-laboratory"></span><h2>Laboratory<a class="headerlink" href="#laboratory" title="Link to this heading"></a></h2>
+<p>In the <em>Laboratory</em> subsection you define the <em>Lab Test Types</em>, i.e. all tests a laboratory can provide, including all parameters to be analyzed during that test. You can also configure the <em>Lab Test Units</em> used in the laboratory. For this configuration option to show the <em>health_lab</em> module must be activated in the <em>Andministration</em> section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details, please refer to the <a class="reference internal" href="../modules/laboratory.html#userguide-modules-laboratory-laboratory"><span class="std std-ref">Laboratory</span></a> chapter.</p>
+</div>
+</section>
+<section id="institutions">
+<span id="userguide-basics-configuration-configuration-institutions"></span><h2>Institutions<a class="headerlink" href="#institutions" title="Link to this heading"></a></h2>
+<p>In the <em>Institutions</em> subsection you define the organisational structure and physical assets of your health institution. This includes the following data:</p>
+<ul class="simple">
+<li><p>Buildings</p></li>
+<li><p>Units</p></li>
+<li><p>Wards</p></li>
+<li><p>Beds</p></li>
+<li><p>Operation Rooms</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details, please refer to the <a class="reference internal" href="coremodule/healthinstitutions.html#userguide-basics-coremodule-healthinstitutions-health-institutions"><span class="std std-ref">Health Institutions</span></a> chapter.</p>
+</div>
+</section>
+<section id="people">
+<span id="userguide-basics-configuration-configuration-people"></span><h2>People<a class="headerlink" href="#people" title="Link to this heading"></a></h2>
+<p>To create <em>People</em>, that represent any given person in the system follow <em>Party-&gt;Parties-&gt;People</em>. Ceating a new entry or double clicking on an entry, will lead you to the form with all the basic information about the person.</p>
+<p>To create a person some fields are manditory to fill out:</p>
+<ul class="simple">
+<li><p><em>Name</em>: Given or chosen names.</p></li>
+<li><p><em>Family names</em>: names usualy inherited from the parents or legal partner.</p></li>
+<li><p><em>PUID</em>: identifier in the system.</p></li>
+</ul>
+<p>(The entry can also be marked as <em>Active</em> to be accessible in other views.)</p>
+<p>Within this form some field of the health tab are manditory:</p>
+<ul class="simple">
+<li><p><em>DoB</em>: Date of Birth. (Age is automaticaly calculated.)</p></li>
+<li><p><em>Gender</em>: Social and cultural related internal identity differentiated of biological sex.</p></li>
+</ul>
+<a class=""
+               data-lightbox="group-e6472dba-d012-449d-ae9e-cc868d90594b"
+               href="../../_images/GNU_Health_party_person1.png"
+               title="Person form with only mandatory data fields filled."
+               data-title="Person form with only mandatory data fields filled."
+               
+               ><img src="../../_images/GNU_Health_party_person1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>People can have any combination of atributes checkt of being a:</p>
+<ul class="simple">
+<li><p>Person</p></li>
+<li><p>Patient</p></li>
+<li><p>Health professional</p></li>
+<li><p>Insurance</p></li>
+<li><p>Institution</p></li>
+<li><p>Pharmacy</p></li>
+</ul>
+<p>Those atributes are inherited from Party.
+(Example: For a Person only Patient and Health Professional are usefull combinations.)</p>
+<p>There are different tabs int the form, being:</p>
+<ul class="simple">
+<li><p><em>Health</em>: Basic information of the person.</p></li>
+<li><p><em>General</em>: Additional general information like workplace or school.</p></li>
+<li><p><em>Identifiers</em>: Names ore Ids to identify the person.</p></li>
+<li><p><em>Accounting</em>: Personal Accounting information.</p></li>
+</ul>
+</section>
+<section id="health-professionals">
+<span id="userguide-basics-configuration-configuration-health-professionals"></span><h2>Health Professionals<a class="headerlink" href="#health-professionals" title="Link to this heading"></a></h2>
+<p>In the <em>Health Professionals</em> subsection you manage the staff of a health institution. A <em>Health Professionals</em> record contains mainly the professional qualifications, while the personal information (like name, date of birth, home address and so on) is stored in the associated <em>Party</em> record. The following fields are available in a <em>Health Professionals</em> record:</p>
+<ul class="simple">
+<li><p><em>Health Professional</em>: Link to a <em>Party</em> record. You can either select an existing record or create a new one. (Please note that only party records with the <em>Health Professional</em> flag can be found when searching. So if you can’t find a party that exists already in your system, please check this flag before unintentionally creating a duplicate record.)</p></li>
+<li><p><em>Licence ID</em></p></li>
+<li><p><em>Specialities</em>: One or more <em>Health Professional Specialites</em> that health professional has experience in. You can select from the list of existing specialities (which will be the standard procedure) or create a new one if necessary.</p></li>
+<li><p><em>Extra Info</em></p></li>
+<li><p><em>Institution</em>: Link to a <em>Health Institution</em> record.</p></li>
+<li><p><em>Main Specialty</em>: Link to one of the entries in the <em>Specialties</em> list of this health professional (see above). Please note that you must save the <em>Health Professionals</em> record first for being able to edit this field.</p></li>
+<li><p><em>PUID</em>: Identifier from the <em>Party</em> record. Filled in automatically.</p></li>
+</ul>
+<p>Note: In GNU Health, one health professional can only work for one health institution at a time. If you try to create a second <em>Health Professionals</em> record linking to the same <em>Party</em> record, you will get an error message.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details, please refer to the <a class="reference internal" href="coremodule/healthprofessionals.html#userguide-basics-coremodule-healthprofessionals-health-professionals"><span class="std std-ref">Health Professionals</span></a> chapter.</p>
+</div>
+</section>
+<section id="medicaments">
+<span id="userguide-basics-configuration-configuration-medicaments"></span><h2>Medicaments<a class="headerlink" href="#medicaments" title="Link to this heading"></a></h2>
+<p>In the <em>Medicaments</em> you can create and configure different kinds of medication. The <em>Medicaments</em> view in the <em>Medicaments</em> can be used to configure or create a medicament. To configure the traits wich define the Medicament can be configured in the following views:</p>
+<ul class="simple">
+<li><p><strong>Medication Frequencies</strong> define intervals between medication</p></li>
+<li><p><strong>Drug Dose Units</strong> configure units used for medication</p></li>
+<li><p><strong>Drug Administration Routes</strong> configure possible ways to take medicine</p></li>
+<li><p><strong>Drug Forms</strong> configure the kinds of medicine: pills, enema, lotion, etc.</p></li>
+<li><p><strong>Medicament categories</strong> configure categorization</p></li>
+</ul>
+</section>
+<section id="immunization-schedule">
+<span id="userguide-basics-configuration-configuration-immunization-schedule"></span><h2>Immunization Schedule<a class="headerlink" href="#immunization-schedule" title="Link to this heading"></a></h2>
+<p>In the <em>Immunisation Schedule</em> subsection you can configure vaccine schedules and doses.</p>
+</section>
+<section id="misc">
+<span id="userguide-basics-configuration-configuration-misc"></span><h2>Misc<a class="headerlink" href="#misc" title="Link to this heading"></a></h2>
+<p>Here you can find more configuration options. Those are commands, different traits used for some forms and entities as well as the cofiguration of insurances.</p>
+<section id="occupations">
+<span id="userguide-basics-configuration-configuration-misc-occupations"></span><h3>Occupations<a class="headerlink" href="#occupations" title="Link to this heading"></a></h3>
+<p>Configure a list of occupations a patient can have.</p>
+</section>
+<section id="ethnicities">
+<span id="userguide-basics-configuration-configuration-misc-ethnicities"></span><h3>Ethnicities<a class="headerlink" href="#ethnicities" title="Link to this heading"></a></h3>
+<p>Configure a list of Ethicities.</p>
+</section>
+<section id="medical-specialities">
+<span id="userguide-basics-configuration-configuration-misc-medical-specialities"></span><h3>Medical Specialities<a class="headerlink" href="#medical-specialities" title="Link to this heading"></a></h3>
+<p>Configure a list of medical fields a health proffessional can specialize in.</p>
+</section>
+<section id="recreational-drugs">
+<span id="userguide-basics-configuration-configuration-misc-recreational-drugs"></span><h3>Recreational Drugs<a class="headerlink" href="#recreational-drugs" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Add Basics - Configuration - Recreational Drugs</p>
+</div>
+</section>
+<section id="pediatrics-growth-charts-who">
+<span id="userguide-basics-configuration-configuration-misc-pediatrics-growth-charts-who"></span><h3>Pediatrics Growth Charts WHO<a class="headerlink" href="#pediatrics-growth-charts-who" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Add Basics - Configuration - Pediatric Growth Charts WHO</p>
+</div>
+</section>
+<section id="insurances">
+<span id="userguide-basics-configuration-configuration-misc-insurances"></span><h3>Insurances<a class="headerlink" href="#insurances" title="Link to this heading"></a></h3>
+<p>In this subsection within <em>Misc</em> you can configure insurance companies and insurance plans in three configuration views:</p>
+<ul class="simple">
+<li><p><strong>Insurances</strong></p></li>
+<li><p><strong>Insurance Plans</strong></p></li>
+<li><p><strong>Insurance Company</strong></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="coremodule/procedures.html" class="btn btn-neutral float-left" title="Procedures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="commandline.html" class="btn btn-neutral float-right" title="Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

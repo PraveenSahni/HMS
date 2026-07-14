@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inpatient Management &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Intensive Care Unit" href="icu.html" />
+    <link rel="prev" title="Imaging" href="imaging.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Inpatient Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-inpatient-management">Introduction to Inpatient Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admission-process">Admission Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#administrative-data-tab"><em>Administrative Data</em> Tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nutrition-tab"><em>Nutrition</em> Tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#medication-plan-tab"><em>Medication Plan</em> Tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#care-plan-tab"><em>Care Plan</em> Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Inpatient Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/inpatientmanagement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="inpatient-management">
+<span id="userguide-modules-inpatientmanagement-inpatient-management"></span><h1>Inpatient Management<a class="headerlink" href="#inpatient-management" title="Link to this heading"></a></h1>
+<section id="introduction-to-inpatient-management">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-introduction-to-inpatient-management"></span><h2>Introduction to Inpatient Management<a class="headerlink" href="#introduction-to-inpatient-management" title="Link to this heading"></a></h2>
+<p>If a patient is not only seeing a doctor (outpatient) but staying at the hospital (inpatient), you have to manage a lot more information about this patient. This information is stored in <em>Hospitalizations</em> records which can be found in the <em>Health → Hospitalizations</em> section of GNU Health. For each stay at the hospital you create a separate <em>Hospitalizations</em> record.</p>
+<p>Note: To use the functionality described in this chapter you must have the modules <code class="code docutils literal notranslate"><span class="pre">health_inpatient</span></code> and <code class="code docutils literal notranslate"><span class="pre">health_inpatient_calendar</span></code> installed. (<a class="reference internal" href="../../techguide/development/modules.html#techguide-development-modules-modules"><span class="std std-ref">More information about modules.</span></a>)</p>
+</section>
+<section id="admission-process">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-admission-process"></span><h2>Admission Process<a class="headerlink" href="#admission-process" title="Link to this heading"></a></h2>
+<p>At the moment a patient is becoming an inpatient you basically need two things to handle the admission in GNU Health: a <em>Patients</em> record and a <em>Hospitalizations</em> record. If the <em>Patients</em> record does not exist already, create one first (for more information see the <a class="reference internal" href="../patientmanagement/patientmanagement.html#userguide-patientmanagement-patientmanagement-introduction-to-patient-management"><span class="std std-ref">Introduction to Patient Management</span></a> chapter). Then, create a <em>Hospitalizations</em> record.</p>
+</section>
+<section id="administrative-data-tab">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-administrative-data-tab"></span><h2><em>Administrative Data</em> Tab<a class="headerlink" href="#administrative-data-tab" title="Link to this heading"></a></h2>
+<p>In the <em>Administrative Data</em> tab you can store the following data:</p>
+<ul class="simple">
+<li><p><em>Registration Code</em></p></li>
+<li><p><em>Patient</em>: A link to a <em>Patients</em> record (mandatory).</p></li>
+<li><p><em>Hospital Bed</em>: A link to a bed (mandatory). For details, see the “Assigning a Bed” section below.</p></li>
+<li><p><em>Hospitalization Date</em>: mandatory</p></li>
+<li><p><em>Expected Discharge Date</em>: mandatory</p></li>
+<li><p><em>Calendar Event</em></p></li>
+<li><p><em>Attending Physician</em></p></li>
+<li><p><em>Operating Physician</em></p></li>
+<li><p><em>Admission Type</em>: mandatory</p></li>
+<li><p><em>Reason for Admission</em></p></li>
+<li><p><em>Extra Info</em></p></li>
+<li><p><em>Transfer History</em></p></li>
+</ul>
+<section id="assigning-a-bed">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-administrative-data-tab-assigning-a-bed"></span><h3>Assigning a Bed<a class="headerlink" href="#assigning-a-bed" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-745f7574-ec91-4918-a9d0-bea7a0e51555"
+               href="../../_images/The_Beds_list_in_GNU_Health1.png"
+               title="The Beds list in GNU Health"
+               data-title="The Beds list in GNU Health"
+               
+               ><img src="../../_images/The_Beds_list_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>For obvious reasons you can not hospitalize a patient without assigning him a free bed. This happens in the <em>Hospital Bed</em> field, where you link the <em>Hospitalization</em> record to a <em>Bed</em> record. (For more information about how to configure beds in your system, please refer to <a class="reference internal" href="../basics/coremodule/healthinstitutions.html#userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-beds"><span class="std std-ref">Health Institutions: Beds</span></a>.)</p>
+<p>There are mainly two ways to do this:</p>
+<a class=""
+               data-lightbox="group-55554dba-c8c5-4ab9-a2f8-c78db5fd8a7a"
+               href="../../_images/The_dialog_box_to_confirm_the_assignment_of_a_patient_to_a_bed1.png"
+               title="The dialog box to confirm the assignment of a patient to a bed"
+               data-title="The dialog box to confirm the assignment of a patient to a bed"
+               
+               ><img src="../../_images/The_dialog_box_to_confirm_the_assignment_of_a_patient_to_a_bed1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><ul class="simple">
+<li><p>If you already know the ID of the bed for this patient, then you can simply type this ID. As soon as you type, the system will offer you matching IDs to choose from.</p></li>
+<li><p>If you don’t know the bed ID already and want to check for available beds first, click the button on the right hand side. This will present you a list with all beds including their availability status (free, occupied, reserved).</p></li>
+</ul>
+<p>Once the bed is chosen the system will give you the option to confirm the admission and, if there is no error, the status will change to “confirmed”.</p>
+<p>It is important to emphasize that at this point if we check the beds section, this particular bed we just assigned will have a status of “reserved” and that it will change into “occupied” at the moment that we confirm the admission.</p>
+</section>
+</section>
+<section id="nutrition-tab">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-nutrition-tab"></span><h2><em>Nutrition</em> Tab<a class="headerlink" href="#nutrition-tab" title="Link to this heading"></a></h2>
+<p>In the <em>Nutrition</em> tab you can find all information about eating habits and diets the patient must follow:</p>
+<ul class="simple">
+<li><p><em>Belief</em>: Some religions have specific rules regarding the consumption of food. For example, Jews and Muslims are not allowed to eat pork meat. Therefore it may be helpful to indicate the belief of the patient here. Please note that this is a lookup field where you can select existing entries or create a new entry.</p></li>
+<li><p><em>Vegetarian</em>: Choose from “None”, “Vegetarian”, “Lacto-Vegetarian”, “Lacto-Ovo-Vegetarian”, “Pescetarian”, or “Vegan”.</p></li>
+<li><p><em>Meals / Diet Program</em>: Add any number of diets. Please note that the <em>Diet</em> field is a lookup field for a <em>Therapeutic Diet</em> record where you can select existing entries or create a new entry.</p></li>
+<li><p><em>Other Nutrition Notes / Directions</em></p></li>
+</ul>
+<section id="managing-beliefes">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-nutrition-tab-managing-beliefes"></span><h3>Managing Beliefes<a class="headerlink" href="#managing-beliefes" title="Link to this heading"></a></h3>
+<p>A <em>Belief</em> record stores the following information:</p>
+<ul class="simple">
+<li><p><em>Belief</em>: The name.</p></li>
+<li><p><em>Code</em>: A code you might use in your health institution.</p></li>
+<li><p><em>Description</em>: Information about any food related rules for this belief.</p></li>
+</ul>
+</section>
+<section id="managing-therapeutic-diets">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-nutrition-tab-managing-therapeutic-diets"></span><h3>Managing Therapeutic Diets<a class="headerlink" href="#managing-therapeutic-diets" title="Link to this heading"></a></h3>
+<p>A <em>Therapeutic Diet</em> record stores the following information:</p>
+<ul class="simple">
+<li><p><em>Diet Type</em></p></li>
+<li><p><em>Code</em></p></li>
+<li><p><em>Diet Description and Indications</em></p></li>
+</ul>
+</section>
+</section>
+<section id="medication-plan-tab">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-medication-plan-tab"></span><h2><em>Medication Plan</em> Tab<a class="headerlink" href="#medication-plan-tab" title="Link to this heading"></a></h2>
+<p>In the <em>Medication Plan</em> tab there is a list with all medications (i.e. the application of medicaments) for a patient during his or her hospitalization. Each entry in this list is a <em>Inpatient Medication</em> record, consisting of the following data:</p>
+<p><em>General Info</em> tab:</p>
+<ul class="simple">
+<li><p><em>Medicament</em></p></li>
+<li><p><em>Indication</em></p></li>
+<li><p><em>Treatment Period Start</em> and <em>Treatment Period End</em></p></li>
+<li><p><em>Administration Form</em></p></li>
+<li><p><em>Administration Route</em></p></li>
+<li><p><em>Dosage</em></p></li>
+<li><p><em>Administration Times</em></p></li>
+</ul>
+<p><em>Extra Info</em> tab:</p>
+<ul class="simple">
+<li><p><em>Status</em>: <em>Active</em>, <em>Course Completed</em> and/or <em>Discontinued</em></p></li>
+<li><p><em>Adverse Reactions and Notes</em></p></li>
+<li><p><em>Log History</em>: Each entry records <em>Date &amp; Time</em>, <em>Health Professional</em>, <em>Dose</em>, <em>Dose Unit</em>, and <em>Remarks</em>.</p></li>
+</ul>
+</section>
+<section id="care-plan-tab">
+<span id="userguide-modules-inpatientmanagement-inpatient-management-care-plan-tab"></span><h2><em>Care Plan</em> Tab<a class="headerlink" href="#care-plan-tab" title="Link to this heading"></a></h2>
+<p>In the <em>Care Plan</em> tab there are simply two text fields allowing you to enter all information related to the <em>Nursing Plan</em> and the <em>Discharge Plan</em>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="imaging.html" class="btn btn-neutral float-left" title="Imaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="icu.html" class="btn btn-neutral float-right" title="Intensive Care Unit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

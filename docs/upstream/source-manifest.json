@@ -2,10 +2,10 @@
   "product": "IST HIS",
   "upstream_product": "GNU Health HIS",
   "upstream_version": "5.0.6",
-  "retrieval_date": "2026-07-14",
+  "retrieval_date": "2026-07-15",
   "immutable_root": "docs/upstream/original/",
   "file_count": 229,
-  "html_pages_downloaded": 6,
+  "html_pages_downloaded": 107,
   "rst_count": 106,
   "files": [
     {

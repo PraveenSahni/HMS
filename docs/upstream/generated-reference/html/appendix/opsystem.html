@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operating System-Specific Notes &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Packaging Guidelines" href="packagingguidelines.html" />
+    <link rel="prev" title="FAQ" href="faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supportus.html">Support Us</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Appendix</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="conduct.html">Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Operating System-Specific Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#freebsd">FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#at-operating-system-installation">At Operating System installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-requirements">Install requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initialize-postgresql">Initialize PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requirements-for-gtk-client">Requirements for GTK client</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#debian">Debian</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-and-install-the-operating-system">Download and install the Operating System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-the-requirements">Install the requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-debian-requirements-for-gtk-client">Requirements for GTK client</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#void-linux">Void Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opensuse">openSUSE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-opensuse-download-and-install-the-operating-system">Download and install the Operating System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-opensuse-install-the-requirements">Install the requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-opensuse-requirements-for-gtk-client">Requirements for GTK client</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntu">Ubuntu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#update-the-sources">Update the Sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-ubuntu-install-requirements">Install requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appendix-opsystem-operating-system-specific-notes-ubuntu-requirements-for-gtk-client">Requirements for GTK client</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="packagingguidelines.html">Packaging Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community.html">Community Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errata.html">Errata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Appendix</a></li>
+      <li class="breadcrumb-item active">Operating System-Specific Notes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendix/opsystem.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="operating-system-specific-notes">
+<span id="appendix-opsystem-operating-system-specific-notes"></span><h1>Operating System-Specific Notes<a class="headerlink" href="#operating-system-specific-notes" title="Link to this heading"></a></h1>
+<section id="freebsd">
+<span id="appendix-opsystem-operating-system-specific-notes-freebsd"></span><h2>FreeBSD<a class="headerlink" href="#freebsd" title="Link to this heading"></a></h2>
+<section id="at-operating-system-installation">
+<span id="appendix-opsystem-operating-system-specific-notes-freebsd-at-operating-system-installation"></span><h3>At Operating System installation<a class="headerlink" href="#at-operating-system-installation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Choose ZFS filesystem and encryption</p></li>
+<li><p>Create the gnuhealth user at installation time</p></li>
+<li><p>Select SSHD and NTP services at boot time</p></li>
+</ul>
+</section>
+<section id="install-requirements">
+<span id="appendix-opsystem-operating-system-specific-notes-freebsd-install-requirements"></span><h3>Install requirements<a class="headerlink" href="#install-requirements" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg<span class="w"> </span>install<span class="w"> </span>python
+<span class="gp"># </span>pkg<span class="w"> </span>install<span class="w"> </span>postgresql16-server
+<span class="gp"># </span>pkg<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span>bash<span class="w"> </span>patch<span class="w"> </span>rust
+<span class="gp"># </span>pkg<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>gmake<span class="w"> </span>libxml2<span class="w"> </span>libxslt<span class="w"> </span>jpeg-turbo
+</pre></div>
+</div>
+</section>
+<section id="initialize-postgresql">
+<span id="appendix-opsystem-operating-system-specific-notes-freebsd-initialize-postgresql"></span><h3>Initialize PostgreSQL<a class="headerlink" href="#initialize-postgresql" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/usr/local/etc/rc.d/postgresql<span class="w"> </span>initdb
+<span class="gp"># </span>sysrc<span class="w"> </span><span class="nv">postgresql_enable</span><span class="o">=</span>yes
+<span class="gp"># </span>service<span class="w"> </span>postgresql<span class="w"> </span>start
+</pre></div>
+</div>
+</section>
+<section id="requirements-for-gtk-client">
+<span id="appendix-opsystem-operating-system-specific-notes-freebsd-requirements-for-gtk-client"></span><span id="appendix-opsystem-operating-system-specific-notes-freebsd-change-bin-bash-to-usr-local-bin-bash"></span><span id="appendix-opsystem-operating-system-specific-notes-freebsd-create-python3-links"></span><h3>Requirements for GTK client<a class="headerlink" href="#requirements-for-gtk-client" title="Link to this heading"></a></h3>
+<p>You have to install some requirements as system packages before installing the client using pip:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg<span class="w"> </span>install<span class="w"> </span>gcc<span class="w"> </span>py39-gobject3<span class="w"> </span>py39-pip
+</pre></div>
+</div>
+</section>
+</section>
+<section id="debian">
+<span id="appendix-opsystem-operating-system-specific-notes-debian"></span><h2>Debian<a class="headerlink" href="#debian" title="Link to this heading"></a></h2>
+<section id="download-and-install-the-operating-system">
+<span id="appendix-opsystem-operating-system-specific-notes-debian-download-and-install-the-operating-system"></span><h3>Download and install the Operating System<a class="headerlink" href="#download-and-install-the-operating-system" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Download the Debian OS  <a class="reference external" href="https://www.debian.org">image</a></p></li>
+<li><p>Check the partitioning and FS options (we use ext4 filesystem)</p></li>
+<li><p>Choose XFCE (optional)</p></li>
+<li><p>Enable SSHD server</p></li>
+<li><p>Create the user “gnuhealth” when prompted at installation time.</p></li>
+</ul>
+</section>
+<section id="install-the-requirements">
+<span id="appendix-opsystem-operating-system-specific-notes-debian-install-the-requirements"></span><h3>Install the requirements<a class="headerlink" href="#install-the-requirements" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>postgresql<span class="w"> </span>patch<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv<span class="w"> </span>wget<span class="w"> </span>libreoffice-nogui<span class="w"> </span>gettext<span class="w"> </span>libpq-dev<span class="w"> </span>python3-dev<span class="w"> </span>python-is-python3
+</pre></div>
+</div>
+<p id="appendix-opsystem-operating-system-specific-notes-debian-allow-local-pip-installation"><strong>Next step</strong>: <a class="reference internal" href="../techguide/installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installing-gnu-health-on-gnu-linux-and-freebsd-creating-the-operating-system-user"><span class="std std-ref">Creating the Operating System User</span></a></p>
+</section>
+<section id="appendix-opsystem-operating-system-specific-notes-debian-requirements-for-gtk-client">
+<span id="id1"></span><h3>Requirements for GTK client<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-debian-requirements-for-gtk-client" title="Link to this heading"></a></h3>
+<p>You have to install some requirements as system packages before installing the client using pip:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-gi<span class="w"> </span>python3-gi-cairo<span class="w"> </span>python3-goocalendar<span class="w"> </span>gir1.2-gtk-3.0<span class="w"> </span>libcairo2-dev<span class="w"> </span>libgirepository1.0-dev<span class="w"> </span>python3-dev<span class="w"> </span>python3-pip<span class="w"> </span>gcc
+</pre></div>
+</div>
+</section>
+</section>
+<section id="void-linux">
+<span id="appendix-opsystem-operating-system-specific-notes-void-linux"></span><h2>Void Linux<a class="headerlink" href="#void-linux" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Download Void <a class="reference external" href="https://voidlinux.org">https://voidlinux.org</a></p></li>
+<li><p>Download PostgreSQL and activate the service</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>xbps-install<span class="w"> </span>postgresql-16_1<span class="w"> </span>postgresql16-client-16.1_1
+<span class="gp"># </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/sv/postgresql16/<span class="w"> </span>/var/service
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check the status of the installation and running server</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>sv<span class="w"> </span>status<span class="w"> </span>postgresql16
+</pre></div>
+</div>
+<p id="appendix-opsystem-operating-system-specific-notes-void-linux-allow-local-pip-installation"><strong>Next step</strong>: <a class="reference internal" href="../techguide/installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installing-gnu-health-on-gnu-linux-and-freebsd-creating-the-operating-system-user"><span class="std std-ref">Creating the Operating System User</span></a></p>
+</section>
+<section id="opensuse">
+<span id="appendix-opsystem-operating-system-specific-notes-opensuse"></span><h2>openSUSE<a class="headerlink" href="#opensuse" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section provides the instructions for the official and standard (vanilla) installation on openSUSE.
+If you want to use the openSUSE package based installation, please refer to the <a class="reference internal" href="community.html#appendix-community-community-pages"><span class="std std-ref">Community Pages</span></a></p>
+</div>
+<section id="appendix-opsystem-operating-system-specific-notes-opensuse-download-and-install-the-operating-system">
+<span id="id2"></span><h3>Download and install the Operating System<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-opensuse-download-and-install-the-operating-system" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Download the openSUSE Leap Network <a class="reference external" href="https://get.opensuse.org/leap/15.5/">CD image</a></p></li>
+<li><p>Check the partitioning and FS options (we use ext4 filesystem)</p></li>
+<li><p>Select SERVER (text only) installation</p></li>
+<li><p>Enable SSHD server</p></li>
+<li><p>Create the user “gnuhealth” when prompted at installation time</p></li>
+</ul>
+</section>
+<section id="appendix-opsystem-operating-system-specific-notes-opensuse-install-the-requirements">
+<span id="id3"></span><h3>Install the requirements<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-opensuse-install-the-requirements" title="Link to this heading"></a></h3>
+<p>We need to use Python3.11</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>zypper<span class="w"> </span><span class="k">in</span><span class="w"> </span>patch<span class="w"> </span>python311
+</pre></div>
+</div>
+<p>Replace default Python 3.6 with 3.11:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ln<span class="w"> </span>-si<span class="w"> </span>python3.11<span class="w"> </span>python
+</pre></div>
+</div>
+<p>Install the rest of dependencies</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>zypper<span class="w"> </span><span class="k">in</span><span class="w"> </span>patch<span class="w"> </span>postgresql15-server<span class="w"> </span>postgresql15-server-devel<span class="w"> </span>gcc<span class="w"> </span>python311-devel<span class="w"> </span>libreoffice
+</pre></div>
+</div>
+<p>Initialize the PostgreSQL environment. The next systemctl start command will generate the initial pg cluster.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>postgresql
+<span class="gp">$ </span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>postgresql
+</pre></div>
+</div>
+<p id="appendix-opsystem-operating-system-specific-notes-opensuse-update-locally-pip3"><strong>Next step</strong>: <a class="reference internal" href="../techguide/installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installing-gnu-health-on-gnu-linux-and-freebsd-creating-the-operating-system-user"><span class="std std-ref">Creating the Operating System User</span></a></p>
+</section>
+<section id="appendix-opsystem-operating-system-specific-notes-opensuse-requirements-for-gtk-client">
+<span id="id4"></span><h3>Requirements for GTK client<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-opensuse-requirements-for-gtk-client" title="Link to this heading"></a></h3>
+<p>You have to install some requirements as system packages before installing the client using pip:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>zypper<span class="w"> </span><span class="k">in</span><span class="w"> </span>python3-pip<span class="w"> </span>gcc<span class="w"> </span>python3-devel<span class="w"> </span>cairo-devel<span class="w"> </span>gobject-introspection-devel<span class="w"> </span>typelib-1_0-Gtk-3_0<span class="w"> </span>python3-gobject-Gdk
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ubuntu">
+<span id="appendix-opsystem-operating-system-specific-notes-ubuntu"></span><h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Create the gnuhealth user at installation time</p></li>
+<li><p>Enable SSH server</p></li>
+</ul>
+<section id="update-the-sources">
+<span id="appendix-opsystem-operating-system-specific-notes-ubuntu-update-the-sources"></span><h3>Update the Sources<a class="headerlink" href="#update-the-sources" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</pre></div>
+</div>
+</section>
+<section id="appendix-opsystem-operating-system-specific-notes-ubuntu-install-requirements">
+<span id="id5"></span><h3>Install requirements<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-ubuntu-install-requirements" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>postgresql<span class="w"> </span>libreoffice-nogui<span class="w"> </span>wget<span class="w"> </span>libpq-dev<span class="w"> </span>python3-dev
+</pre></div>
+</div>
+<p><strong>Next step</strong>: <a class="reference internal" href="../techguide/installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installing-gnu-health-on-gnu-linux-and-freebsd-creating-the-operating-system-user"><span class="std std-ref">Creating the Operating System User</span></a></p>
+</section>
+<section id="appendix-opsystem-operating-system-specific-notes-ubuntu-requirements-for-gtk-client">
+<span id="id6"></span><h3>Requirements for GTK client<a class="headerlink" href="#appendix-opsystem-operating-system-specific-notes-ubuntu-requirements-for-gtk-client" title="Link to this heading"></a></h3>
+<p>You have to install some requirements as system packages before installing the client using pip:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-gi<span class="w"> </span>python3-gi-cairo<span class="w"> </span>gir1.2-gtk-3.0<span class="w"> </span>libcairo2-dev<span class="w"> </span>libgirepository1.0-dev<span class="w"> </span>python3-dev<span class="w"> </span>python3-pip<span class="w"> </span>gcc
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="packagingguidelines.html" class="btn btn-neutral float-right" title="Packaging Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

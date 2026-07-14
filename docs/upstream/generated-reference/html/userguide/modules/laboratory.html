@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratory &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Stock Management" href="stockmanagement.html" />
+    <link rel="prev" title="Modules by functionality" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Laboratory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors">GNU HEALTH LIMS: Laboratory Information Management System for the Healthcare and Biomedical sectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#laboratory-order-request">Laboratory Order request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#managing-laboratory-test-requests">Managing Laboratory Test requests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#laboratory-reports">Laboratory Reports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfaces-with-laboratories-and-lims">Interfaces with Laboratories and LIMS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Laboratory</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/laboratory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="laboratory">
+<span id="userguide-modules-laboratory-laboratory"></span><h1>Laboratory<a class="headerlink" href="#laboratory" title="Link to this heading"></a></h1>
+<section id="gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors">
+<span id="userguide-modules-laboratory-laboratory-gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors"></span><h2>GNU HEALTH LIMS: Laboratory Information Management System for the Healthcare and Biomedical sectors<a class="headerlink" href="#gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors" title="Link to this heading"></a></h2>
+<p>GNU LIMS, also known as Occhiolino, is a modern Laboratory Information Management System for the healthcare and biomedical sectors, that has emerged as a GNU Health sub-project.</p>
+<p>The <strong>Laboratory Modules</strong> manage the request, creation and evaluation of laboratory analyses. As far as the <strong>LIMS</strong> (Laboratory Information Management System) functionality, GNU Health is very flexible. You will be able to link it to the patient chart and to the financial management of the Health Center.</p>
+<p>It is able to link to financial management, and create services and invoices / billing from the laboratory requests. Occhiolino has been integrated to GNU Health since the very beginning.</p>
+</section>
+<section id="laboratory-order-request">
+<span id="userguide-modules-laboratory-laboratory-laboratory-order-request"></span><h2>Laboratory Order request<a class="headerlink" href="#laboratory-order-request" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-183c09d0-7ed4-4907-9dee-5bfeb12bd45b"
+               href="../../_images/Creating_a_new_lab_order_from_the_patient_window_in_GNU_Health1.png"
+               title="Creating a new lab order from the patient window in GNU Health"
+               data-title="Creating a new lab order from the patient window in GNU Health"
+               
+               ><img src="../../_images/Creating_a_new_lab_order_from_the_patient_window_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To create a new <em>Lab Test Request</em> record there are two possibilities:</p>
+<ol class="arabic simple">
+<li><p>Click on the <em>Relate</em> button in the patient form and choose the <em>Request Lab Test</em> command.</p></li>
+<li><p>Click on the <em>Request Lab Test</em> command in the main navigation.</p></li>
+</ol>
+<p>In either case a dialog will open that allows you to enter the following information:</p>
+<a class=""
+               data-lightbox="group-71ab14fa-17f5-4b56-bb0c-5d22c70d1942"
+               href="../../_images/New_lab_order1.png"
+               title="New lab order: It contains the lab tests to include and the associated health service"
+               data-title="New lab order: It contains the lab tests to include and the associated health service"
+               
+               ><img src="../../_images/New_lab_order1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><ul class="simple">
+<li><p><em>Date:</em> The date and time of the request (default values are the current date and time)</p></li>
+<li><p><em>Source:</em> Can be <code class="docutils literal notranslate"><span class="pre">Patient</span></code> or <code class="docutils literal notranslate"><span class="pre">Other</span></code>, for the first case it takes a Patient object, otherwise a string</p></li>
+<li><p><em>Urgent:</em> A checkbox to indicate an urgent request</p></li>
+<li><p><em>Health Prof:</em> The name of the health professional requesting the laboratory test</p></li>
+<li><p><em>Context:</em> It can be a suspected or existing health condition, a regular checkup, etc.</p></li>
+<li><p><em>Tests:</em> The list of tests requested</p></li>
+</ul>
+<p>The only mandatory field is <code class="docutils literal notranslate"><span class="pre">Tests</span></code> and is has to contain at least one element.</p>
+<section id="test-types">
+<span id="userguide-modules-laboratory-laboratory-laboratory-order-request-test-types"></span><h3>Test Types<a class="headerlink" href="#test-types" title="Link to this heading"></a></h3>
+<p>The laboratory module allows you to chose from a list of different lab tests and to create the specific one that you need, with their analytes, normal ranges, etc..</p>
+</section>
+</section>
+<section id="managing-laboratory-test-requests">
+<span id="userguide-modules-laboratory-laboratory-managing-laboratory-test-requests"></span><h2>Managing Laboratory Test requests<a class="headerlink" href="#managing-laboratory-test-requests" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-1423a3c4-03b7-4cce-9a73-007b477314a3"
+               href="../../_images/Multiple_lab_tests_can_be_grouped_in_a_single_order1.png"
+               title="Multiple lab tests can be grouped in a single order"
+               data-title="Multiple lab tests can be grouped in a single order"
+               
+               ><img src="../../_images/Multiple_lab_tests_can_be_grouped_in_a_single_order1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To check for new laboratory test request and to create test reports, the members of the laboratory staff will open the section in the main navigation under:</p>
+<p><em>Health → Laboratory → Lab Test Requests</em></p>
+<p>This brings up the list of <em>Lab Test Requests</em>, showing all information described above.</p>
+<section id="updating-health-services">
+<span id="userguide-modules-laboratory-laboratory-managing-laboratory-test-requests-updating-health-services"></span><h3>Updating Health Services<a class="headerlink" href="#updating-health-services" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-0726e656-36f7-447a-8b61-ac3306ec3c65"
+               href="../../_images/Update_the_service_document_with_a_new_lab_test1.png"
+               title="Update the service document with a new lab test"
+               data-title="Update the service document with a new lab test"
+               
+               ><img src="../../_images/Update_the_service_document_with_a_new_lab_test1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Lab orders contain one or many different lab tests. If the health professional associated the order to a particular health service document, this will be included on each test. Once the test is ready to be processed, the lab test can be included in the service document by clicking on the <strong>“Update Services”</strong>. At this point, you could also assign the test to another service document than the default one.</p>
+</section>
+<section id="creating-the-lab-test">
+<span id="userguide-modules-laboratory-laboratory-managing-laboratory-test-requests-creating-the-lab-test"></span><h3>Creating the lab test<a class="headerlink" href="#creating-the-lab-test" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-d1723a35-f6ed-4191-ad16-f6e974adc6ee"
+               href="../../_images/Creation_of_the_test_from_the_wizard_in_the_lab_request_form1.png"
+               title="Creation of the test from the wizard in the lab request form"
+               data-title="Creation of the test from the wizard in the lab request form"
+               
+               ><img src="../../_images/Creation_of_the_test_from_the_wizard_in_the_lab_request_form1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>In addition there is a <em>State</em> column indicating whether a request is a <em>Draft</em> or <em>Ordered</em>. As soon as a laboratory staff member creates a laboratory test by clicking the <em>Action</em> button and selecting the <em>Lab: Create Test</em> command, the state of the request will change from <em>Draft</em> to <em>Ordered</em>. In addition the font color of the request will change from blue to black, making it easier to distinguish between pending requests and requests being processed.</p>
+<p>It is at this point where all the analytes associated to the lab test type are created and ready to be processed by the analyzer.</p>
+<p>In the screenshot, a single order contains three lab test requests.</p>
+</section>
+</section>
+<section id="laboratory-reports">
+<span id="userguide-modules-laboratory-laboratory-laboratory-reports"></span><h2>Laboratory Reports<a class="headerlink" href="#laboratory-reports" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-cfdc40ca-4ece-4094-ad0b-ed12dd7fc505"
+               href="../../_images/The_health_professional_can_access_all_the_patient_lab_tests_from_the_main_screen1.png"
+               title="The health professional can access all the patient lab tests from the main screen"
+               data-title="The health professional can access all the patient lab tests from the main screen"
+               
+               ><img src="../../_images/The_health_professional_can_access_all_the_patient_lab_tests_from_the_main_screen1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>GH Command: <strong>Lab</strong></p>
+<p>A laboratory test record allows for the storage of the values of all test criteria contained in a specific test plus some extra information.</p>
+<p>To access test results there are two possibilities:</p>
+<ol class="arabic simple">
+<li><p>Click on the <em>Relate</em> button in the patient form and choose the <em>Lab: Reports</em> command.</p></li>
+<li><p>Click on the <em>Health → Laboratory → Lab Test Results</em> command in the main navigation.</p></li>
+</ol>
+<p>The <em>Lab Tests Results</em> form is structured as follows:</p>
+<p><strong>Main Info</strong></p>
+<a class=""
+               data-lightbox="group-d8af2d40-ea03-481b-bf8c-794409ea8215"
+               href="../../_images/Detailed_information_from_the_lab_test_report1.png"
+               title="Detailed information from the lab test report"
+               data-title="Detailed information from the lab test report"
+               
+               ><img src="../../_images/Detailed_information_from_the_lab_test_report1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>Main Info</em> tab provides  information about the patient and about the test as a whole. The majority of this information comes from the laboratory test request.
+Relevant information on this form is the order and its date, the requesting health professional, the technician who made the test and the lab manager who validated it, and the date when it was validated.</p>
+<p>In the lower half of the <em>Main Info</em> tab there is the <em>Lab Test Criteria</em> table. This table allows to enter the following information for each criterion of the test:</p>
+<ul class="simple">
+<li><p><em>Warn</em> : It will automatically be set if the value is out of range. The physician can also set it regardless of the value.</p></li>
+<li><p><em>Excluded</em> : Check this field to ignore this analyte from the test</p></li>
+<li><p><em>Analyte</em> : The actual parameter to be checked</p></li>
+<li><p><em>Value</em>: The result obtained on that analyte.</p></li>
+<li><p><em>Result - Text</em>: For non-quantitative results. For instance, the urine aspect.</p></li>
+<li><p><em>Lower Limit</em>, <em>Upper Limit</em> and <em>Units</em>: Default range for the normal values on the specific analyte.</p></li>
+<li><p><em>Remarks</em>: Any particular note related on the result.</p></li>
+</ul>
+<p><strong>Extra Info and Validation</strong></p>
+<p>The <em>Extra Info</em> tab offers room for a summary of the results and a diagnosis.
+The <em>Validation</em> tab provides a cryptographic digest hash and the status of the record. The lab test can be also <strong>digitally signed</strong>. This functionalities are provided in the <strong>GNU Health crypto packages</strong>.</p>
+<p>The print layout of a laboratory test is called a laboratory report. You can preview and print laboratory reports from the <em>Lab Test Results</em> form by clicking the <em>Report</em> button and choosing the <em>Lab Report</em> action. Any anomalous value (i.e. a value below the lower limit or above the upper limit of a test criterion) is printed in red.</p>
+<p>You can directly access the lab reports using the “Lab” command line.</p>
+<p>Double clicking on the lab test, you will enter the form view, with detailed information about the test.</p>
+<section id="displaying-printing-or-e-mailing-the-lab-test-results-and-labels">
+<span id="userguide-modules-laboratory-laboratory-laboratory-reports-displaying-printing-or-e-mailing-the-lab-test-results-and-labels"></span><h3>Displaying, printing or e-mailing the lab test results and labels<a class="headerlink" href="#displaying-printing-or-e-mailing-the-lab-test-results-and-labels" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-8a375df4-cf22-43c6-a75b-9970eebe5dac"
+               href="../../_images/GNU_LIMS_barcode_standards_and_QR_for_samples1.png"
+               title="GNU LIMS barcode standards and QR for samples"
+               data-title="GNU LIMS barcode standards and QR for samples"
+               
+               ><img src="../../_images/GNU_LIMS_barcode_standards_and_QR_for_samples1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Once the lab test has been generated, the technician can print the lab test label (eg, <strong>code-39</strong> barcodes) to be processed by the analyzer.</p>
+<a class=""
+               data-lightbox="group-cc40c2ca-1388-4754-a3b5-b43ec29194ee"
+               href="../../_images/Patient_lab_test_report_in_PDF_format1.png"
+               title="Patient lab test report in PDF format"
+               data-title="Patient lab test report in PDF format"
+               
+               ><img src="../../_images/Patient_lab_test_report_in_PDF_format1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>By default, the report format in GNU Health is PDF, but it can be configured to other formats (like LibreOffice ODT)</p>
+<p>In addition, the GNU Health client has the option of emailing the reports.</p>
+</section>
+</section>
+<section id="configuration">
+<span id="userguide-modules-laboratory-laboratory-configuration"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
+<p>To configure the available laboratory tests, go to the <em>Health → Configuration → Laboratory</em> section in the main menu. There you have two options: You can create, edit, or delete test types (including their test criteria), and you can configure the units used in the tests.</p>
+<section id="lab-test-units">
+<span id="userguide-modules-laboratory-laboratory-configuration-lab-test-units"></span><h3>Lab Test Units<a class="headerlink" href="#lab-test-units" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-295d3a25-f8ed-4588-8965-83006d4ebd7d"
+               href="../../_images/Gnuhealth_lab_test_units1.png"
+               title="Gnuhealth lab test units"
+               data-title="Gnuhealth lab test units"
+               
+               ><img src="../../_images/Gnuhealth_lab_test_units1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>By double clicking on <em>Health → Configuration → Laboratory → Lab Test Units</em> you will get the list of all units defined in the system. Configuring a unit is quite simple, since there are only two fields:</p>
+<ul class="simple">
+<li><p><em>Unit</em></p></li>
+<li><p><em>Code</em> (in most cases identical to <em>Unit</em>)</p></li>
+</ul>
+</section>
+<section id="lab-test-types">
+<span id="userguide-modules-laboratory-laboratory-configuration-lab-test-types"></span><h3>Lab Test Types<a class="headerlink" href="#lab-test-types" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-6906801c-105a-4fe5-8c0f-e62823b57e49"
+               href="../../_images/Lab_test_types_list1.png"
+               title="Lab test types list"
+               data-title="Lab test types list"
+               
+               ><img src="../../_images/Lab_test_types_list1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>By double clicking on <em>Health → Configuration → Laboratory → Lab Test Types</em> you will get the list of all test types defined in the system. A test type serves as a template for an individual test. It contains a list of test criteria, including information about standard values for each test criterion. It is also linked to a product which allows to properly charge the test’s cost to the patient.</p>
+<section id="main-info-tab">
+<span id="userguide-modules-laboratory-laboratory-configuration-lab-test-types-main-info-tab"></span><h4><em>Main Info</em> Tab<a class="headerlink" href="#main-info-tab" title="Link to this heading"></a></h4>
+<a class=""
+               data-lightbox="group-4ac84ae4-8b9d-40f6-9a02-f9a5a4469826"
+               href="../../_images/Detailed_form_view_of_the_liver_function_test_type1.png"
+               title="Detailed form view of the liver function test type"
+               data-title="Detailed form view of the liver function test type"
+               
+               ><img src="../../_images/Detailed_form_view_of_the_liver_function_test_type1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>In the <em>Main Info</em> tab of the test types form you can manage the following information:</p>
+<ul class="simple">
+<li><p><em>Test:</em> The full name of the test (typically in capital letters)</p></li>
+<li><p><em>Code</em> Unique code for the test</p></li>
+<li><p><em>Active</em> If this flag is set, the lab test will be shown.</p></li>
+<li><p><em>Service</em> Product / Service associated to the lab test.</p></li>
+</ul>
+<p>Below there is the list of <em>Test Cases</em> (or test criteria, as they are called elsewhere) of a test type. Each test case consists of the following information:</p>
+<ul class="simple">
+<li><p><em>Sequence:</em> A number to create an order within the test cases of a test type</p></li>
+<li><p><em>Analyte:</em> The substance or aspect to be analysed</p></li>
+<li><p><em>Lower Limit:</em> The lower limit of the range where a value is considered to be normal or not critical (used for information purposes, but also used to print a test case in red if a value is outside the range)</p></li>
+<li><p><em>Upper Limit:</em> The upper limit of the range where a value is considered to be normal or not critical (used for information purposes, but also used to print a test case in red if a value is outside the range)</p></li>
+<li><p><em>Reference:</em> A text field to add more information about the expected values of a test case</p></li>
+<li><p><em>Units:</em> The unit of the values in a test cases (used for <em>Upper Limit</em>, <em>Lower Limit</em>, and the test value itself)</p></li>
+</ul>
+<p>Using the <em>Service</em> field at the bottom of the <em>Main Info</em> tab each test type is linked to a product. The product defines the price of a test to be charged to the patient. So for each test type record you will need a product record; this product record is typically named after the test type.</p>
+</section>
+<section id="extra-info-tab">
+<span id="userguide-modules-laboratory-laboratory-configuration-lab-test-types-extra-info-tab"></span><h4><em>Extra Info</em> Tab<a class="headerlink" href="#extra-info-tab" title="Link to this heading"></a></h4>
+<p>The <em>Extra Info</em> tab contains a text field <em>Description</em> for additional information about a test type.</p>
+</section>
+</section>
+</section>
+<section id="interfaces-with-laboratories-and-lims">
+<span id="userguide-modules-laboratory-laboratory-interfaces-with-laboratories-and-lims"></span><h2>Interfaces with Laboratories and LIMS<a class="headerlink" href="#interfaces-with-laboratories-and-lims" title="Link to this heading"></a></h2>
+<p>GNU Health allows entry of the results of the analytes manually for any type of test. However, in many cases, it’s not feasible to enter this information manually, since it will be a lot of work and prone to human error.</p>
+<p>Generally, the health professional creates a lab test order, and this is sent to a laboratory. When the laboratory processes the order, the results are sent back in either paper or digital form. Moreover, in larger institutions, the center connects with their own laboratories and lab systems. The interface can automatically retrieve the results from the lab and upload them to GNU Health.</p>
+<p>In order to automate the task for processing the data, both the health institution and the laboratory need to agree in the way the data format and transferred. There are different formats and message exchange methods (csv, xml, web services, HL7, … ), and they can fit different scenarios.</p>
+<section id="basic-workflow">
+<span id="userguide-modules-laboratory-laboratory-interfaces-with-laboratories-and-lims-basic-workflow"></span><h3>Basic workflow<a class="headerlink" href="#basic-workflow" title="Link to this heading"></a></h3>
+<p>In most cases, we would need to set up a basic workflow. Let’s think about a basic hemogram / Complete Blood Count (CBC)</p>
+<ol class="arabic simple">
+<li><p>The health professional creates a test order, that contains one (or more) lab test type, with its unique ID. This lab test ID includes key information such as the lab test type, patient, ordering physician, date of request, …</p></li>
+<li><p>The information on that test ID is then sent to the lab</p></li>
+<li><p>The lab prints the test ID labels and place them on the test tube</p></li>
+<li><p>The nurse extracts the blood sample from the patient and places in the tube labeled with the unique lab test ID</p></li>
+<li><p>The sample is then taken to the analyzer, this reads the bar code of the lab test and processes the CBC</p></li>
+<li><p>The lab technician generates the report with the result for each analyte associated to the lab test request ID</p></li>
+<li><p>This result is sent to GNU Health in the way agreed by both parties (laboratory and institution)</p></li>
+<li><p>GNU Health LIMS interface will process and upload the result to the lab test.</p></li>
+</ol>
+<p>Of course, there can be higher or lower degree of automation, but most of this steps will exist in many scenarios.</p>
+</section>
+<section id="interface-tool">
+<span id="userguide-modules-laboratory-laboratory-interfaces-with-laboratories-and-lims-interface-tool"></span><h3>Interface Tool<a class="headerlink" href="#interface-tool" title="Link to this heading"></a></h3>
+<p>As part of the GNU Health installation, there is a tool named gnuhealth-data-import that will take csv or ods data files and upload the results to GNU Health.</p>
+<p>This program reads CSV or ODS formatted files that contain the following fields:</p>
+<ol class="arabic simple">
+<li><p>test_id</p></li>
+<li><p>analyte_code, this field will be searched in LIS system.</p></li>
+<li><p>analyte_name, this field will be searched in LIS system too, for analyte_name in LIS system will be changed depend on user language, so we prefer use anylyte_code if possible.</p></li>
+<li><p>result</p></li>
+<li><p>result_text</p></li>
+<li><p>_ignore, if its value is ‘yes’, this line will be ignore to import.</p></li>
+<li><p>_type, set its value to ‘labtest’ if this csv or ods file is labtest data.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Field analyte_code is introduced in gnuhealth 4.4.0, the older test result data in LIS system will not have this field or value is None, please check in gnuhealth GUI:</p>
+<p>Laboratory &gt; Lab Tests Results &gt; Code field of Lab Test Critearea.</p>
+<p>User can use the below script to auto add code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>his-utils/scripts/upgrade-utils/5.0/update_lab_critearea.py<span class="w"> </span>-h
+</pre></div>
+</div>
+</div>
+<p>In gnuhealth-data-import data direcory, there are two sample files: 4-labtests.csv and 4-labtests.ods, that contains the results of the test “TEST001” and “TEST006”, “Complete Blood Count - CBC”</p>
+<p>You can customize the program (GNU Health server name, credentials, …), as well as the lab test result file. Of course, the name of the lab test result can be change to meet your needs.</p>
+<p>You can find the latest version of gnuhealth-data-import tool in the HIS source repository on the development branch :</p>
+<p><a class="reference external" href="https://codeberg.org/gnuhealth/his/src/branch/test/tryton/scripts/gnuhealth-data-import">https://codeberg.org/gnuhealth/his/src/branch/test/tryton/scripts/gnuhealth-data-import</a></p>
+<section id="requirements">
+<span id="userguide-modules-laboratory-laboratory-interfaces-with-laboratories-and-lims-interface-tool-requirements"></span><h4>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h4>
+<p>This current components and versions are:</p>
+<ul class="simple">
+<li><p>GNU Health : 5.0</p></li>
+<li><p>Proteus Tryton library : 7.0</p></li>
+<li><p>Pandas</p></li>
+<li><p>odfpy</p></li>
+</ul>
+<p>Installing proteus:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip3<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;proteus&gt;=7.0,&lt;7.1&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<span id="userguide-modules-laboratory-laboratory-interfaces-with-laboratories-and-lims-interface-tool-usage"></span><h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<p>Invoke the program and pass the csv formatted file as an argument
+e.g.:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>gnuhealth-data-import.py<span class="w"> </span>-f<span class="w"> </span>data/4-labtests.csv<span class="w"> </span>-H<span class="w"> </span>&lt;HOST&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;PORT&gt;<span class="w"> </span>-u<span class="w"> </span>&lt;USER&gt;<span class="w"> </span>-P<span class="w"> </span>&lt;PASSWORD&gt;<span class="w"> </span>-d<span class="w"> </span>&lt;DB&gt;
+</pre></div>
+</div>
+<p>More informations can be found:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>gnuhealth-data-import.py<span class="w"> </span>--help
+</pre></div>
+</div>
+<p>The main program steps are :</p>
+<ul class="simple">
+<li><p>Test connection to the GNU Health server</p></li>
+<li><p>Check that the Lab test has been created on GNU Health (eg, TEST006)</p></li>
+<li><p>Check that the analytes from the csv or ods files are on the LIS system.</p></li>
+<li><p>Upload the results.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Modules by functionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stockmanagement.html" class="btn btn-neutral float-right" title="Stock Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

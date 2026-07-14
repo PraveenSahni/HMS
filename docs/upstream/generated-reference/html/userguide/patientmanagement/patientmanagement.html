@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Patient Management &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Patient Evaluations" href="patientevaluations.html" />
+    <link rel="prev" title="Patient Management" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Patient Management</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Introduction to Patient Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-party-with-the-patient-property">Creating a party with the patient property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listing-the-current-patients">Listing the current patients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-patient-record">Creating a patient record</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printing-a-patient-id-card">Printing a patient ID card</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="patientevaluations.html">Patient Evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patientappointment.html">Patient Appointment and Admission Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Patient Management</a></li>
+      <li class="breadcrumb-item active">Introduction to Patient Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/patientmanagement/patientmanagement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-to-patient-management">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management"></span><h1>Introduction to Patient Management<a class="headerlink" href="#introduction-to-patient-management" title="Link to this heading"></a></h1>
+<p>Patients are parties with specific properties. These party properties differentiate them from the other parties. A patient is a party that has the following properties:</p>
+<ul class="simple">
+<li><p>Person</p></li>
+<li><p>Patient</p></li>
+</ul>
+<p>In GNU Health, a person can be both a health professional and a patient at the same time. Makes sense, doesn’t it ?</p>
+<section id="creating-a-party-with-the-patient-property">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-creating-a-party-with-the-patient-property"></span><h2>Creating a party with the patient property<a class="headerlink" href="#creating-a-party-with-the-patient-property" title="Link to this heading"></a></h2>
+<p>Depending on the size of your health center, patient creation can be done by different teams. Let’s go through the different stages of a party, and who could be in charge. We use the example of “Ana Betz” to go through a typical scenario that takes you from defining the party to create the associated patient.</p>
+<section id="step-1-party-definition-and-demographics">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-creating-a-party-with-the-patient-property-step-1-party-definition-and-demographics"></span><h3>Step 1: Party definition and demographics<a class="headerlink" href="#step-1-party-definition-and-demographics" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-dbcbf3b3-0b5d-4fbe-91c0-fe854420a5bf"
+               href="../../_images/GNU_Health_party_with_patient_attribute_set1.png"
+               title="GNU Health party with patient attribute set."
+               data-title="GNU Health party with patient attribute set."
+               
+               ><img src="../../_images/GNU_Health_party_with_patient_attribute_set1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>This information creates the individual <strong>person</strong>. At this point, Ana is just an individual (a physical person). The social worker can enter all the demographics about her (family, Domiciliary Unit, contacts.. ).</p>
+<p><strong>Note</strong>: The person that has been defined in GNU Health can be a patient at a later point. In some cases, this person will never be a patient from our health center, as it can be the case for family members that live in other countries.</p>
+</section>
+<section id="step-2-enabling-the-patient-attribute-in-the-party">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-creating-a-party-with-the-patient-property-step-2-enabling-the-patient-attribute-in-the-party"></span><h3>Step 2: Enabling the patient attribute in the party<a class="headerlink" href="#step-2-enabling-the-patient-attribute-in-the-party" title="Link to this heading"></a></h3>
+<p>Now let’s suppose that Ana - that was created on the system a while ago - shows up to the primary care center for a health checkup. She will give the Social Security Number (SSN) or other type of unique identifier to the officer at the frontdesk, and at this moment, Ana will become a <strong>patient</strong> in the Health System of her region or country.</p>
+<p><strong>Note</strong>: The SSN field (translated to other names depending on the country) is the unique value that identifies each person. Please check the section <a class="reference internal" href="../basics/coremodule/individuals.html#userguide-basics-coremodule-individuals-individuals"><span class="std std-ref">Individuals</span></a> for more information.</p>
+</section>
+</section>
+<section id="listing-the-current-patients">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-listing-the-current-patients"></span><h2>Listing the current patients<a class="headerlink" href="#listing-the-current-patients" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-750bb2ee-a6de-478b-b49a-65f67b1458db"
+               href="../../_images/Patient_list_view1.png"
+               title="Patient list view."
+               data-title="Patient list view."
+               
+               ><img src="../../_images/Patient_list_view1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>You can access the patient main menu from <strong>Health → Patients</strong>. This menu action will show all the patients. Patients are parties that have the patient attribute set and that have a patient record associated with it. You can search patients from any of the fields on the tree view.
+You can enter any of the records by double clicking the patient record from the list. That action will take you to the form view. It you have permissions, then you will be able to edit it.</p>
+</section>
+<section id="creating-a-patient-record">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-creating-a-patient-record"></span><h2>Creating a patient record<a class="headerlink" href="#creating-a-patient-record" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-e37de980-97d8-4634-80ea-44aa56cd91af"
+               href="../../_images/GNU_Health_patient_main_screen1.png"
+               title="GNU Health patient main screen."
+               data-title="GNU Health patient main screen."
+               
+               ><img src="../../_images/GNU_Health_patient_main_screen1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>You can create the patient from clicking on the new record icon or typing <strong>Ctrl + N</strong>. This will take you to the main patient form.</p>
+<p>The first - and required - field is the link to the party that has been created earlier in the process. The search is limited to parties with the patient attribute.</p>
+<a class=""
+               data-lightbox="group-a1affe7e-5ee7-4b0b-9e25-fb8817c3481a"
+               href="../../_images/Patient_ID_card_sample_with_QR_Code1.png"
+               title="Patient ID card sample with QR Code."
+               data-title="Patient ID card sample with QR Code."
+               
+               ><img src="../../_images/Patient_ID_card_sample_with_QR_Code1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="printing-a-patient-id-card">
+<span id="userguide-patientmanagement-patientmanagement-introduction-to-patient-management-printing-a-patient-id-card"></span><h2>Printing a patient ID card<a class="headerlink" href="#printing-a-patient-id-card" title="Link to this heading"></a></h2>
+<p>An ID card lets you quickly identify a patient by his PUID or by a machine readable QR code. Working with ID cards is faster and creates less errors than simply asking patients for their names and birth dates. It even works if a patient is not able to speak (spleeping, sedated, unconcious, or simply a newborn) or does not know how to spell his name exactly (not uncommon in countries with higher illiteracy rates).</p>
+<p>To print an ID card, open the patient record, click the <em>Report</em> button in the toolbar and choose <em>ID Cards</em> or <em>ID Cards - QR</em> (depending on your needs). This will generate a file in the ODT format that can be opened and printed in your word processing application (e.g. LibreOffice Write or Microsoft Word).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Patient Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="patientevaluations.html" class="btn btn-neutral float-right" title="Patient Evaluations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

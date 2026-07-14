@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Management &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Socioeconomics" href="socioeconomics.html" />
+    <link rel="prev" title="Laboratory" href="laboratory.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Stock Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basics-of-stock-management">Basics of Stock Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stock-locations">Stock Locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stock-movements">Stock Movements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shipments">Shipments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventories">Inventories</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Stock Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/stockmanagement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stock-management">
+<span id="userguide-modules-stockmanagement-stock-management"></span><h1>Stock Management<a class="headerlink" href="#stock-management" title="Link to this heading"></a></h1>
+<section id="basics-of-stock-management">
+<span id="userguide-modules-stockmanagement-stock-management-basics-of-stock-management"></span><h2>Basics of Stock Management<a class="headerlink" href="#basics-of-stock-management" title="Link to this heading"></a></h2>
+<p>Stock management contains all processes to track physical products within a company. This allows a company to tell which products in which quantities are on stock and in which location they can be found. The <em>Inventory &amp; Stock</em> module of GNU Health allows to document any change in stock, be it a shipment from a supplier, a shipment to a customer, or simply a move from one location to another.</p>
+<p>In the context of a health instution, stock management is especially useful for keeping track of medicaments available in the pharmacy.</p>
+</section>
+<section id="stock-locations">
+<span id="userguide-modules-stockmanagement-stock-management-stock-locations"></span><h2>Stock Locations<a class="headerlink" href="#stock-locations" title="Link to this heading"></a></h2>
+<p>Stock locations can be defined, edited, and deleted in the <em>Inventory &amp; Stock → Locations</em> section. You can have as many locations as you need, and you can create hierarchical structures by assigning a parent location to a location.</p>
+<p>There are six types of locations:</p>
+<ul class="simple">
+<li><p><em>Storage:</em> Storage locations represent real places where products are stored.</p></li>
+<li><p><em>Warehouse:</em> Warehouses are used to group several storage locations.</p></li>
+<li><p><em>Customer:</em> Customer locations are virtual locations for products that have been sent to customers.</p></li>
+<li><p><em>Supplier:</em> Supplier locations are virtual locations for products that have been received from suppliers.</p></li>
+<li><p><em>Lost And Found:</em> Lost And Found locations are used for inventory gaps.</p></li>
+</ul>
+</section>
+<section id="stock-movements">
+<span id="userguide-modules-stockmanagement-stock-management-stock-movements"></span><h2>Stock Movements<a class="headerlink" href="#stock-movements" title="Link to this heading"></a></h2>
+<p>Whenever goods are transported from one location to another you create a move record in the <em>Inventory &amp; Stock → Moves</em> section. There you basically indicate what amount of a certain product has been moved from one location to another, and at which date. By doing so you tell GNU Health to adapt the inventory of the two locations affected.</p>
+<p>A move has one of the following states:</p>
+<ul class="simple">
+<li><p><em>Draft:</em> A move that is planned for the future but still subject to modifications. Default state for new move records.</p></li>
+<li><p><em>Assigned:</em> A move that will not be modified anymore. The products affected by the move will be reserved.</p></li>
+<li><p><em>Done:</em> A move that has been performed in the real world.</p></li>
+<li><p><em>Cancel:</em> A move that has been cancelled in <em>Draft</em> or <em>Assigned</em> state and therefore has never taken place in the real world.</p></li>
+</ul>
+</section>
+<section id="shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments"></span><h2>Shipments<a class="headerlink" href="#shipments" title="Link to this heading"></a></h2>
+<p>A shipment is simply a group of several moves happening at the same date and around the same location.</p>
+<section id="supplier-shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments-supplier-shipments"></span><h3>Supplier Shipments<a class="headerlink" href="#supplier-shipments" title="Link to this heading"></a></h3>
+<p>A supplier shipment record is created when products are received from a supplier. It contains information about the <em>Supplier,</em> the <em>Warehouse</em> in which the products are coming, the <em>Planned Date</em> and the <em>Effective Date</em> of the shipment. In addition, a supplier shipments contains <em>Incoming Moves</em> (moves between the supplier location and the input location of the warehouse) and <em>Inventory Moves</em> (moves between the input location and the storage location of the warehouse).</p>
+<p>A supplier shipment has one of the following states:</p>
+<ul class="simple">
+<li><p><em>Draft:</em> Incoming moves and inventory moves are in <em>Draft</em> state.</p></li>
+<li><p><em>Received:</em> Incoming move are set in state <em>Done</em>, inventory moves are created if necessary.</p></li>
+<li><p><em>Done:</em> Inventory moves and incoming moves are in <em>Done</em> state.</p></li>
+<li><p><em>Cancel:</em> All containing moves are cancelled.</p></li>
+</ul>
+<section id="supplier-return-shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments-supplier-shipments-supplier-return-shipments"></span><h4>Supplier Return Shipments<a class="headerlink" href="#supplier-return-shipments" title="Link to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Fill Health Center Management - Stock Management - Supplier Return Shipments</p>
+</div>
+</section>
+</section>
+<section id="customer-shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments-customer-shipments"></span><h3>Customer Shipments<a class="headerlink" href="#customer-shipments" title="Link to this heading"></a></h3>
+<p>A customer shipment record is created when products are sent to a customer. It contains information about the <em>Customer</em>, the <em>Warehouse</em> in which the products are going, the <em>Planned Date</em> and the <em>Effective Date</em> of the shipment. In addition, a customer shipment contains <em>Inventory moves</em> (moves between the storage location and the output location of the warehouse) and <em>Outgoing Moves</em> (moves between the output location of the warehouse and the customer location).</p>
+<p>A customer shipment has one of the following states:</p>
+<ul class="simple">
+<li><p><em>Draft:</em> Outgoing moves and inventory moves are in <em>Draft</em> state.</p></li>
+<li><p><em>Waiting:</em> Inventory moves are created (or completed) to balance the outgoing moves. This shipment should be processed.</p></li>
+<li><p><em>Assigned:</em> Products have been assigned (or reserved) from the storage locations.</p></li>
+<li><p><em>Packed:</em> Inventory moves have been made, i.e the products have been physically moved to the outgoing locations.</p></li>
+<li><p><em>Done:</em> Outgoing moves have been made, e.g. the truck has left the warehouse.</p></li>
+<li><p><em>Cancel:</em> Shipment was cancelled before reaching the <em>Done</em> state. All containing moves are cancelled.</p></li>
+</ul>
+<section id="customer-return-shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments-customer-shipments-customer-return-shipments"></span><h4>Customer Return Shipments<a class="headerlink" href="#customer-return-shipments" title="Link to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Fill Health Center Management - Stock Management - Customer Return Shipments</p>
+</div>
+</section>
+</section>
+<section id="internal-shipments">
+<span id="userguide-modules-stockmanagement-stock-management-shipments-internal-shipments"></span><h3>Internal Shipments<a class="headerlink" href="#internal-shipments" title="Link to this heading"></a></h3>
+<p>An internal shipment record is created when products are sent across locations inside the company. It contains information about the <em>From Location</em>, the <em>To Location</em>, the <em>Planned Date</em> and the <em>Effective Date</em> of the shipment. In addition, an internal shipment contains a list of <em>Moves</em>.</p>
+<p>An internal shipment has one of the following states:</p>
+<ul class="simple">
+<li><p><em>Draft:</em> The containing moves are in draft.</p></li>
+<li><p><em>Waiting:</em> The shipment is waiting for been processed.</p></li>
+<li><p><em>Assigned:</em> The products have been assigned.</p></li>
+<li><p><em>Done:</em> The moves have been made.</p></li>
+<li><p><em>Cancel:</em> Shipment was cancelled befor reaching the <em>Done</em> state. All containing moves are cancelled.</p></li>
+</ul>
+</section>
+</section>
+<section id="inventories">
+<span id="userguide-modules-stockmanagement-stock-management-inventories"></span><h2>Inventories<a class="headerlink" href="#inventories" title="Link to this heading"></a></h2>
+<p>An inventory is basically a list of all items in a certain stock location at a given time. It allows to control and update the quantities of the products in stock.</p>
+<p>To create an inventory you enter a <em>Storage Location</em>, a <em>Lost and Found Location</em> and a <em>Date</em>. By clicking the <em>Complete Inventory</em> button a list with the expected quantities for each product in the location is created. If there is a difference between the expected quantities and the quantities in the real world (i.e. the number of products in the shelves), the real quantities can be entered. By clicking the <em>Confirm</em> button, move records are created to balance expected quantities and real ones.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="laboratory.html" class="btn btn-neutral float-left" title="Laboratory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="socioeconomics.html" class="btn btn-neutral float-right" title="Socioeconomics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Localization" href="../localization/index.html" />
+    <link rel="prev" title="Scheduler" href="scheduler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html">System Administration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Development Environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="coding.html">Coding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="future_merging.html">Future Merging Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html">User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences.html">Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scheduler.html">Scheduler</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#activating-modules">Activating Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-modules">Custom Modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fhir/index.html">FHIR REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Development Environment</a></li>
+      <li class="breadcrumb-item active">Modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/development/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modules">
+<span id="techguide-development-modules-modules"></span><h1>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h1>
+<section id="activating-modules">
+<span id="techguide-development-modules-modules-activating-modules"></span><h2>Activating Modules<a class="headerlink" href="#activating-modules" title="Link to this heading"></a></h2>
+<p>The default modules of GNU Health are just a subset of the modules available and provide basic functionality. Depending on your health institution, you will most likely want to install some of the other modules that come with GNU Health.</p>
+<p>Open the menu in <em>Administration → Modules → Modules</em> to see the list of available (installed) modules. Then mark the desired module for activation and perform the activation:</p>
+<a class=""
+               data-lightbox="group-f42c954a-9fd2-4a45-aabc-2f463f31e52e"
+               href="../../_images/Install_Modules_11.png"
+               title="Mark module for activation"
+               data-title="Mark module for activation"
+               
+               ><img src="../../_images/Install_Modules_11.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><a class=""
+               data-lightbox="group-d3242900-6e7e-4401-bc69-1d4119f4d9c0"
+               href="../../_images/Install_Modules_21.png"
+               title="Perform activation"
+               data-title="Perform activation"
+               
+               ><img src="../../_images/Install_Modules_21.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Some modules are depending on other modules: You can not install this module without having installed the other modules as well. You can see these dependencies by double-clicking on a module in the <em>Administration → Modules → Modules</em> section.</p>
+<p>For example: The module <code class="code docutils literal notranslate"><span class="pre">health_inpatient_calendar</span></code> (which adds caldav support to the inpatient management functionality) depends on <code class="code docutils literal notranslate"><span class="pre">health_inpatient</span></code> (which privides the basic inpatient management functionality) and <code class="code docutils literal notranslate"><span class="pre">health_calendar</span></code> (which implements the basic caldav functionality).</p>
+<p>If you mark a module for activation that is depending on other not activated modules those are activated automatically as well.</p>
+</section>
+<section id="custom-modules">
+<span id="techguide-development-modules-modules-custom-modules"></span><h2>Custom Modules<a class="headerlink" href="#custom-modules" title="Link to this heading"></a></h2>
+<p>If you are a software developer, you can customize existing modules or develop your own custom modules according to the needs of your health institution. For more information, please refer to the section <a class="reference internal" href="../contributing.html#techguide-contributing-contributing-coding-customizing-and-creating-your-own-modules"><span class="std std-ref">Submitting Patches</span></a>.</p>
+<section id="customizing-and-creating-your-own-modules">
+<span id="techguide-development-modules-modules-custom-modules-customizing-and-creating-your-own-modules"></span><h3>Customizing and Creating Your Own Modules<a class="headerlink" href="#customizing-and-creating-your-own-modules" title="Link to this heading"></a></h3>
+<p>Chances are that if you are installing GNU Health for your center, you will be customizing it to meet your specific needs. Reports, access control rules and views are just some of the objects that are normally customized. The main concept is to <strong>not edit the standard code or modules</strong>, since it will be overwritten in the next update and most probably will end up in a broken system.</p>
+<p>The recommended steps to customize GNU Health to your center are:</p>
+<ol class="arabic simple">
+<li><p><strong>Create your module</strong>: It’s recommended that you use the following naming convention for your local modules: <code class="code docutils literal notranslate"><span class="pre">z_health_&lt;modulename&gt;</span></code>. For example, if your project is called <em>catalina</em>, your local module name would be <code class="code docutils literal notranslate"><span class="pre">z_health_catalina</span></code>. This way makes is easy to detect and differentiate your modules from the base code. You can also easily make backup of them following the pattern.</p></li>
+<li><p><strong>Inherit the objects.</strong></p></li>
+<li><p><strong>Modify or create new models.</strong></p></li>
+</ol>
+<p>If you create a new custom field, you should also use the <code class="code docutils literal notranslate"><span class="pre">z_&lt;fieldname&gt;</span></code> naming convention. This avoids collision with future field names of the official releases. We will not use any module, class, or model name starting with <code class="code docutils literal notranslate"><span class="pre">z_</span></code>.</p>
+<section id="the-local-modules-directory">
+<span id="techguide-development-modules-modules-custom-modules-customizing-and-creating-your-own-modules-the-local-modules-directory"></span><h4>The “local” modules directory<a class="headerlink" href="#the-local-modules-directory" title="Link to this heading"></a></h4>
+<p>There is a directory called <strong>local</strong> under <code class="code docutils literal notranslate"><span class="pre">~/gnuhealth/tryton/server/modules</span></code>. Please put your local modules that contain the customizations for your project under this directory. When using this approach, it makes sure that the update procedure does not overwrite your packages.</p>
+<p>Make sure modules in <strong>local</strong> directory are linked to <code class="code docutils literal notranslate"><span class="pre">~/gnuhealth/tryton/server/trytond-&lt;VERSION&gt;/trytond/modules</span></code> directory, the below command will relink local modules.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cdutil
+<span class="gp">$ </span>./gnuhealth-control<span class="w"> </span>update
+</pre></div>
+</div>
+<p>if gnuhealth-gui do not show local modules, user can try below command to update modules lists:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cdexe
+<span class="gp">$ </span>./trytond-admin<span class="w"> </span>--update-modules-list<span class="w"> </span>-d<span class="w"> </span>&lt;DB&gt;
+</pre></div>
+</div>
+<p>Also, sometimes you might want to include another existing package from Tryton or the community. This local modules directory is the place to place them.</p>
+<p>Please note that can only support those packages that are included on each GNU Health HIS distribution.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scheduler.html" class="btn btn-neutral float-left" title="Scheduler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../localization/index.html" class="btn btn-neutral float-right" title="Localization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Authentication &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Countries" href="countries.html" />
+    <link rel="prev" title="Users" href="users.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">System Administration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sysinfo.html">The SYSINFO Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backups.html">Backup and Restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlcenter.html">The GNU Health Control Center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patches.html">About GNU Health package bundles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Central Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="countries.html">Countries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendarwebdav.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fhir/index.html">FHIR REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">System Administration</a></li>
+      <li class="breadcrumb-item active">Central Authentication</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/administration/centralauthentication.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="central-authentication">
+<span id="techguide-administration-centralauthentication-central-authentication"></span><h1>Central Authentication<a class="headerlink" href="#central-authentication" title="Link to this heading"></a></h1>
+<section id="introduction">
+<span id="techguide-administration-centralauthentication-central-authentication-introduction"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>For large, distributed GNU Health installations, such a network of public hospitals, you might want to consider a central user authentication model.</p>
+<p>Under this method, the users and their login credentials are managed centrally, so it’s easy to create, modify, and/or revoke them when necessary.</p>
+<p>The central authentication model in GNU Health is quite flexible, allowing different roles per health facility. For example, a health professional can work in two different health centers. <em>Dr. Cameron Cordara</em> works in the morning as a family medicine physician at <em>GNU SOLIDARIO Hospital</em>, and in the afternoon, she cooperates with the social workers, meeting with the community at the local primary care facility. Two different roles in two different centers, yet one single person and one single login.</p>
+<p><strong>Note:</strong> This documentation is based on a installation under <a class="reference external" href="https://en.wikipedia.org/wiki/FreeBSD">FreeBSD</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/OpenLDAP">OpenLDAP</a>, but it should work fine on other Free/Libre Operating Systems, such as <a class="reference external" href="https://en.wikipedia.org/wiki/GNU%2FLinux">GNU/Linux</a> . There are also many configuration and deployment options, such as Public Key Infrastructure (PKI), LDAP replication, etc… that are not covered in this introductory, conceptual document.</p>
+<section id="components">
+<span id="techguide-administration-centralauthentication-central-authentication-introduction-components"></span><h3>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>OpenLDAP</strong> server (slapd)</p></li>
+<li><p>Tryton server modules : <code class="code docutils literal notranslate"><span class="pre">trytond_ldap_authentication</span></code></p></li>
+</ul>
+</section>
+<section id="central-authentication-workflow">
+<span id="techguide-administration-centralauthentication-central-authentication-introduction-central-authentication-workflow"></span><h3>Central Authentication Workflow<a class="headerlink" href="#central-authentication-workflow" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>The health professional enters the username / password at the login prompt.</p></li>
+<li><p>The credentials are checked against the OpenLDAP server.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Scenario 1</strong>: The user exists in the OpenLDAP database. If the password provides is correct, then she logins with her local authorization profiles. If she enters an incorrect password, she will be get the login prompt again.</p></li>
+<li><p><strong>Scenario 2</strong>: The user does not exist in the OpenLDAP database. The credentials are checked against the local GNU Health database at the health facility.</p></li>
+<li><p><strong>Scenatio 3</strong>: The OpenLDAP server is unreachable (network outage, server down, … ). Same rule as in Scenario 2 applies.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="installation">
+<span id="techguide-administration-centralauthentication-central-authentication-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<section id="creating-the-organization-and-users-on-the-ldap-server">
+<span id="techguide-administration-centralauthentication-central-authentication-installation-creating-the-organization-and-users-on-the-ldap-server"></span><h3>Creating the Organization and Users on the LDAP Server<a class="headerlink" href="#creating-the-organization-and-users-on-the-ldap-server" title="Link to this heading"></a></h3>
+<p>After you installed OpenLDAP, you need to create the organization, the roles and the users, so the LDAP client and GNU Health can interact with the server.</p>
+<p>The following <a class="reference external" href="https://en.wikipedia.org/wiki/LDIF">LDIF</a> file to  the basic organization and users, just for demonstration purposes.</p>
+<p>Sample LDIF file</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># The GNU Health Organization</span>
+<span class="nt">dn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc=gnuhealth,dc=org</span>
+<span class="nt">objectclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcObject</span>
+<span class="nt">objectclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">organization</span>
+<span class="nt">o</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GNU Health Nation</span>
+<span class="nt">dc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gnuhealth</span>
+
+<span class="nt">dn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cn=Manager,dc=gnuhealth,dc=org</span>
+<span class="nt">objectclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">organizationalRole</span>
+<span class="nt">cn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Manager</span>
+
+<span class="c1"># PEOPLE Organizational UNIT (first level hierchy)</span>
+<span class="nt">dn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ou=people, dc=gnuhealth,dc=org</span>
+<span class="nt">ou</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">people</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All people in organisation</span>
+<span class="nt">objectclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">organizationalunit</span>
+
+<span class="c1"># Actual users</span>
+<span class="nt">dn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cn=Cameron Cordara,ou=People,dc=gnuhealth,dc=org</span>
+<span class="nt">objectClass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inetorgperson</span>
+<span class="nt">cn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cameron Cordara</span>
+<span class="nt">sn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cordara</span>
+<span class="nt">uid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cameroncordara</span>
+<span class="nt">userPassword</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretPass</span>
+</pre></div>
+</div>
+<p>You can now populate the initial OpenLDAP database uploading your newly created LDIF, for instance</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>slapadd<span class="w"> </span>-l<span class="w"> </span>&lt;your_ldif_file&gt;
+</pre></div>
+</div>
+</section>
+<section id="configuring-ldap-in-gnu-health">
+<span id="techguide-administration-centralauthentication-central-authentication-installation-configuring-ldap-in-gnu-health"></span><h3>Configuring LDAP in GNU Health<a class="headerlink" href="#configuring-ldap-in-gnu-health" title="Link to this heading"></a></h3>
+<p>After you have configured the OpenLDAP server and created your users, you need to configure your GNU Health Tryton instance to communicate with it.</p>
+<ul>
+<li><p><strong>Install the following Tryton module</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">trytond_ldap-authentication</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Create a new LDAP connection</strong> (Administration → LDAP → Connections)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fill in the information to meet your LDAP server specification.</p></li>
+<li><p>Save the connection</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Create a user in GNU Health</strong> (Administration → Users → Users)</p></li>
+</ul>
+<p>You can now create a user matching the uid on the LDIF file, and assign local roles to her. In this case, we would match the “login” name on he screen, with the uid of the user on your Organization. In the case of our Doctor Cameron Cordara, the login name would be <em>cameroncordara</em>. Again, this is just for demo purposes. In real-life scenarios you would use unique identifiers for login names.</p>
+<p>Note: You will notice that the password field is already “filled in”. This is because the actual user password resides now in the LDAP server, and not in your local instance database.</p>
+<p>If everything went right, you now have GNU Health enable for central authentication. Try to login as “cameroncordara”. Her credentials will be checked on the LDAP server.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="users.html" class="btn btn-neutral float-left" title="Users" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="countries.html" class="btn btn-neutral float-right" title="Countries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

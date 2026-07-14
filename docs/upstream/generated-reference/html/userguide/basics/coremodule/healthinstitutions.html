@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Institutions &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Domiciliary Units" href="domiciliaryunits.html" />
+    <link rel="prev" title="The core module" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">The Basics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../firststeps.html">First Steps</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">The core module</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Health Institutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="domiciliaryunits.html">Domiciliary Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="individuals.html">Individuals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bookoflife.html">Book of Life</a></li>
+<li class="toctree-l4"><a class="reference internal" href="families.html">Families</a></li>
+<li class="toctree-l4"><a class="reference internal" href="healthprofessionals.html">Health Professionals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="medicaments.html">Medicaments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prescriptions.html">Prescriptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vitalrecords.html">Vital Records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="immunizations.html">Immunizations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="procedures.html">Procedures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#people-before-patients">People before Patients</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline.html">Command Line</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">The Basics</a></li>
+          <li class="breadcrumb-item"><a href="index.html">The core module</a></li>
+      <li class="breadcrumb-item active">Health Institutions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/userguide/basics/coremodule/healthinstitutions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="health-institutions">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions"></span><h1>Health Institutions<a class="headerlink" href="#health-institutions" title="Link to this heading"></a></h1>
+<section id="introduction-to-health-institutions">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-introduction-to-health-institutions"></span><h2>Introduction to Health Institutions<a class="headerlink" href="#introduction-to-health-institutions" title="Link to this heading"></a></h2>
+<p>The Health Institution plays a central role in GNU Health. As a matter of fact, is the first thing you will have to create in the installation.</p>
+<p>The health institution is a model. It is linked to the party model, but it has many other attributes.</p>
+</section>
+<section id="creating-and-updating-health-institutions">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-creating-and-updating-health-institutions"></span><h2>Creating and Updating Health Institutions<a class="headerlink" href="#creating-and-updating-health-institutions" title="Link to this heading"></a></h2>
+<p>The very first health institution that you create is special because it is also your <strong>company</strong>. Please refer to the <a class="reference internal" href="../../../techguide/installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-creating-a-company"><span class="std std-ref">Creating a Company</span></a> chapter for more details.</p>
+<p>Health institutions can be accessed in the <em>Health → Institutions</em> section.</p>
+</section>
+<section id="health-institution-facilities">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities"></span><h2>Health Institution Facilities<a class="headerlink" href="#health-institution-facilities" title="Link to this heading"></a></h2>
+<p>A health institution can have multiple facilities and resources, such as buildings, wards, operating rooms, beds or units.</p>
+<p>The best way to access the health institution facilities is by clicking on the <em>Relate</em> button in the <em>Institutions</em> form as shown in the screenshot. One of the benefits of using related records from the institution form is that the related facility will contain the parent center, optimizing data entry and minimizing human error.</p>
+<section id="beds">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-beds"></span><h3>Beds<a class="headerlink" href="#beds" title="Link to this heading"></a></h3>
+<p>Beds are the most basic facilities in a health institution. Creating a bed record for each physical bed available is important for capacity planning and for finding a patient. Each bed belongs to a ward.</p>
+<section id="configuring-beds">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-beds-configuring-beds"></span><h4>Configuring Beds<a class="headerlink" href="#configuring-beds" title="Link to this heading"></a></h4>
+<p>Bed records in GNU Health can be managed in the <strong>Health → Configuration → Institutions → Beds</strong> section. For each <strong>Bed</strong> record you need a corresponding <strong>Product Variant</strong> record (which stands for the individual bed) plus a <strong>Product</strong> record (which stands for the bed category and defines its price).</p>
+<p>Note: If you are not familiar with products in Tryton, there is more information about this concept in the chapter <a class="reference internal" href="../../healthcenter/products.html#userguide-healthcenter-products-products-and-services-management"><span class="std std-ref">Products and Services Management</span></a>. But if you just want to configure some beds at this moment and don’t care about the details, then simply read on.</p>
+<p>Configuring beds in GNU Health is a three step process:</p>
+<ol class="arabic simple">
+<li><p>For every category of beds, create a product record and enter the price the patient will be charged. Example:</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><strong>Standard Bed</strong></p></th>
+<th class="head"><p><strong>Luxury Bed</strong></p></th>
+<th class="head"><p><strong>ICU Bed</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Price per day</strong></p></td>
+<td><p>USD 150</p></td>
+<td><p>USD 250</p></td>
+<td><p>USD 500</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>For every bed available in your health institution, create a product variant record and check the <em>Bed</em> checkbox. Every variant will need a code as an identifier, but you are free to use any combination of characters and numbers to match the numbering scheme in your institution. Example:</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><strong>Standard Bed</strong></p></th>
+<th class="head"><p><strong>Luxury Bed</strong></p></th>
+<th class="head"><p><strong>ICU Bed</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Variants</strong></p></td>
+<td><ul class="simple">
+<li><p>M101</p></li>
+<li><p>M102</p></li>
+<li><p>M103</p></li>
+<li><p>M105</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>M201</p></li>
+<li><p>M202</p></li>
+<li><p>M203</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>ICU10</p></li>
+<li><p>ICU20</p></li>
+<li><p>ICU30</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li><p>For every bed available in your health institution, create a bed record and assign it to the corresponding product variant record. A bed record stores additional information about a bed like its status (free, reserved, occupied, …) or the ward it belongs to. If you skip this step you will not be able to assign a patient to a bed in the hospitalization process!</p></li>
+</ol>
+</section>
+</section>
+<section id="buildings">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-buildings"></span><h3>Buildings<a class="headerlink" href="#buildings" title="Link to this heading"></a></h3>
+<p>Buildings simply have a name and a code. At the moment you can not enter more information.</p>
+<section id="configuring-buildings">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-buildings-configuring-buildings"></span><h4>Configuring Buildings<a class="headerlink" href="#configuring-buildings" title="Link to this heading"></a></h4>
+<p>Creating and editing buildings is straight forward. The only thing to keep in mind is that both the name and the code of a building need to be unique within a given health institution.</p>
+</section>
+</section>
+<section id="wards">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-wards"></span><h3>Wards<a class="headerlink" href="#wards" title="Link to this heading"></a></h3>
+<p>Each ward belongs to one building (the physical location) and one unit (the organisational entity).</p>
+<section id="configuring-wards">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-wards-configuring-wards"></span><h4>Configuring Wards<a class="headerlink" href="#configuring-wards" title="Link to this heading"></a></h4>
+<p>Configuring wards is straight forward. However, the <em>Wards</em> form allows you to enter a lot of details about a ward:</p>
+<ul class="simple">
+<li><p><em>Name:</em> The ward name is mandatory and must be unique within a health institution.</p></li>
+<li><p><em>Building:</em> Link to an existing building or create a new one.</p></li>
+<li><p><em>Floor Number:</em> Indicate the floor within a building.</p></li>
+<li><p><em>Unit:</em> Link to an existing unit or create a new one.</p></li>
+<li><p><em>Number of beds:</em> This field is for information only. It does not reflect the number of beds you have configured for your health institution.</p></li>
+<li><p><em>Gender:</em> Indicate if a ward is gender specific. (If not, set it to “Unisex” which is the default value.)</p></li>
+<li><p><em>Status:</em> Indicate if a ward has capacity for more patients. (Choose between “Beds available”, “Full”, or “Not available”.)</p></li>
+</ul>
+<p>The wards form allows you to indicate some special features as well:</p>
+<ul class="simple">
+<li><p>Telephone access</p></li>
+<li><p>Air conditioning</p></li>
+<li><p>Private bathroom</p></li>
+<li><p>Guest sofa-bed</p></li>
+<li><p>Television</p></li>
+<li><p>Internet access</p></li>
+<li><p>Refrigerator</p></li>
+<li><p>Microwave</p></li>
+</ul>
+</section>
+</section>
+<section id="operating-rooms">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-operating-rooms"></span><h3>Operating Rooms<a class="headerlink" href="#operating-rooms" title="Link to this heading"></a></h3>
+<p>Each operating room belongs to one building (the physical location) and one unit (the organizational entity).</p>
+<section id="configuring-operating-rooms">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-operating-rooms-configuring-operating-rooms"></span><h4>Configuring Operating Rooms<a class="headerlink" href="#configuring-operating-rooms" title="Link to this heading"></a></h4>
+<p>The configuration of operating rooms is straight forward. A name is mandatory and must be unique within a given health institution. Assigning an operation room to a building and/or a unit is optional. Further information about the operation room can be stored in the <em>Extra Info</em> field.</p>
+</section>
+</section>
+<section id="units">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-units"></span><h3>Units<a class="headerlink" href="#units" title="Link to this heading"></a></h3>
+<p>Units simply have a name and a code. At the moment you can not enter more information.</p>
+<section id="configuring-units">
+<span id="userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-units-configuring-units"></span><h4>Configuring Units<a class="headerlink" href="#configuring-units" title="Link to this heading"></a></h4>
+<p>Creating and editing units is straight forward. The only thing to keep in mind is that both the name and the code of a unit need to be unique within a given health institution.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="The core module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="domiciliaryunits.html" class="btn btn-neutral float-right" title="Domiciliary Units" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

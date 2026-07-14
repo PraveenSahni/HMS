@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surgery &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pediatrics" href="pediatrics.html" />
+    <link rel="prev" title="Genetics" href="genetics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Surgery</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-surgery">Introduction to Surgery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surgeries-per-patient">Surgeries per Patient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-surgeries">All Surgeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surgeries-form"><em>Surgeries</em> Form</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Surgery</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/surgery.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="surgery">
+<span id="userguide-modules-surgery-surgery"></span><h1>Surgery<a class="headerlink" href="#surgery" title="Link to this heading"></a></h1>
+<section id="introduction-to-surgery">
+<span id="userguide-modules-surgery-surgery-introduction-to-surgery"></span><h2>Introduction to Surgery<a class="headerlink" href="#introduction-to-surgery" title="Link to this heading"></a></h2>
+<p>GNU Health allows you to document all surgical procedures performed per patient and in a health institution overall. It uses the ICD-10 Procedure Coding System (ICD-10-PCS) of the World Health Organization (WHO) to identify the type of surgery.</p>
+<section id="icd-10-pcs">
+<span id="userguide-modules-surgery-surgery-introduction-to-surgery-icd-10-pcs"></span><h3>ICD-10-PCS<a class="headerlink" href="#icd-10-pcs" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-a066fc44-6798-4f45-b600-e8f2831e4565"
+               href="../../_images/The_dialog_to_select_a_ICD10-PCS_code1.png"
+               title="The dialog to select a ICD10-PCS code"
+               data-title="The dialog to select a ICD10-PCS code"
+               
+               ><img src="../../_images/The_dialog_to_select_a_ICD10-PCS_code1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The ICD-10 Procedure Coding System (ICD-10-PCS) is a World Health Organization medical classification used for procedural codes. When procedures are performed for specific diseases or disorders, the disease or disorder is not contained in the procedure code. There are no codes for procedures exclusive to aneurysms, cleft lip, strictures, neoplasms, hernias, etc. The diagnosis codes, not the procedure codes, specify the disease or disorder.</p>
+</section>
+</section>
+<section id="surgeries-per-patient">
+<span id="userguide-modules-surgery-surgery-surgeries-per-patient"></span><h2>Surgeries per Patient<a class="headerlink" href="#surgeries-per-patient" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-abe1dd8a-6230-474b-bd29-0b88397eefe8"
+               href="../../_images/The_Surgeries_tab_in_the_Patients_form1.png"
+               title="The Surgeries tab in the Patients form"
+               data-title="The Surgeries tab in the Patients form"
+               
+               ><img src="../../_images/The_Surgeries_tab_in_the_Patients_form1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To view and edit the surgeries of a specific patient, open the <em>Patients</em> form and switch to the <em>Surgeries</em> tab in the lower half of the form. There you will find a list of all surgical procedures this patient had (if any).</p>
+<p>The list view provides the following information:</p>
+<ul class="simple">
+<li><p><em>Description</em></p></li>
+<li><p><em>Base Condition</em></p></li>
+<li><p><em>Urgency</em></p></li>
+<li><p><em>Date</em> (including Time)</p></li>
+<li><p><em>Duration</em></p></li>
+<li><p><em>Operation Room</em></p></li>
+<li><p><em>Age</em> of the patient at the time of the surgery</p></li>
+<li><p><em>Institution</em></p></li>
+</ul>
+<p>To see the full record, double click on a list entry. This will bring up the <em>Surgery</em> form (see below).</p>
+<p>To add a new <em>Surgeries</em> record, click the <em>Relate</em> button from the toolbar and choose <em>Surgeries</em>. This will open the list in a new window where you are able to add new records.</p>
+</section>
+<section id="all-surgeries">
+<span id="userguide-modules-surgery-surgery-all-surgeries"></span><h2>All Surgeries<a class="headerlink" href="#all-surgeries" title="Link to this heading"></a></h2>
+<p>In the <em>Health → Surgeries</em> section you will find a list of all surgeries in the system. This is the way to look for a surgery when you don’t know the name of the patient, and it allows you to get a broader picture of what is going on in the operation room.</p>
+<p>The columns of that list are the same as in the <em>Patients</em> form (see above). To see the full record, double click on a list entry. This will bring up the <em>Surgery</em> form (see below).</p>
+</section>
+<section id="surgeries-form">
+<span id="userguide-modules-surgery-surgery-surgeries-form"></span><h2><em>Surgeries</em> Form<a class="headerlink" href="#surgeries-form" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-0ba0a99b-9d34-4930-8769-174fa4f76edc"
+               href="../../_images/The_Surgeries_form_in_GNU_Health1.png"
+               title="The Surgeries form"
+               data-title="The Surgeries form"
+               
+               ><img src="../../_images/The_Surgeries_form_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>For every surgery you can store the following information:</p>
+<ul>
+<li><p><em>Patient</em>: Link to a <em>Patient</em> record.</p></li>
+<li><p><em>Date</em> (including time)</p></li>
+<li><p><em>Age</em> of the patient at the time of the surgery: Calculated based on the date of birth and the date of the surgery.</p></li>
+<li><p><em>Code</em></p></li>
+<li><p><em>Description</em></p></li>
+<li><p><em>Base Condition</em>: Link to a <em>Diseases</em> record.</p></li>
+<li><p><em>Urgency</em>: Choose between “Optional”, “Required”, “Urgent”, or “Emergency”.</p></li>
+<li><p><em>Operating Room</em>: Link to an <em>Operating Room</em> record (see <a class="reference internal" href="../basics/coremodule/healthinstitutions.html#userguide-basics-coremodule-healthinstitutions-health-institutions-health-institution-facilities-operating-rooms"><span class="std std-ref">Health Institutions: Operating Rooms</span></a>).</p></li>
+<li><p><em>Surgeon</em>: Link to the health professional who was responsible for the surgery.</p></li>
+<li><p><em>Anesthesist</em>: Link to the health professional who was responsible for the anesthesia.</p></li>
+<li><p><em>Patient Surgical Risk Assessment</em> section:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>ASA PS</em>: Choose between “PS1: Normal healthy patient”, “PS2: Patients with mild systemic disease”, “PS3: Patients with severe systemic disease”, “PS4: Patients with severe systemic disease that is a constant threat to life”, “PS5: Moribund patients who are not expeted to survive without the operation”, or “PS6: A declared brain-dead patient who organs are removed for donor purposes”.</p></li>
+<li><p><em>RCRI</em>: See section “Revised Cardiac Risk Index” below.</p></li>
+<li><p><em>Mallampati Score</em>: In anesthesia, the Mallampati score is used to predict the ease of intubation. It is determined by looking at the anatomy of the oral cavity. A higher Mallampati score is associated with more difficult intubation as well as a higher incidence of sleep apnea. Choose between “Class 1”, “Class 2”, “Class 3”, or “Class 4”.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Preoperative Checklist</em> section:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Risk of Massive Bleeding</em>: Check if appropriate</p></li>
+<li><p><em>Pulse Oximeter in Place</em>: Check if appropriate</p></li>
+<li><p><em>Surgical Site Marking</em>: Check if appropriate</p></li>
+<li><p><em>Antibiotic Prophylaxis</em>: Check if appropriate</p></li>
+<li><p><em>Sterility Confirmed</em>: Check if appropriate</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Procedures</em> section: As we can see in the screenshot, GNU Health helps you searching the procedure using a filter with two different categories, code and long text.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Code</em></p></li>
+<li><p><em>Notes</em></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Details / Incidents</em></p></li>
+<li><p><em>Anesthesia</em></p></li>
+<li><p><em>End</em></p></li>
+<li><p><em>Duration</em></p></li>
+<li><p><em>State</em>: As long as the record is not signed, the state is “In progress”. As soon as you click the <em>Sign</em> button, the state will change to “Done”.</p></li>
+<li><p><em>Signed by</em>: As soon as the record is signed it will show the name of the signing health professional where the <em>Sign</em> button was.</p></li>
+</ul>
+<section id="revised-cardiac-risk-index-rcri">
+<span id="userguide-modules-surgery-surgery-surgeries-form-revised-cardiac-risk-index-rcri"></span><h3>Revised Cardiac Risk Index (RCRI)<a class="headerlink" href="#revised-cardiac-risk-index-rcri" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-da7fc66f-7165-4b2e-b23f-6ad3c261760c"
+               href="../../_images/The_Revised_Cardiac_Risk_Index_dialog_in_GNU_Health1.png"
+               title="The Revised Cardiac Risk Index (RCRI) dialog"
+               data-title="The Revised Cardiac Risk Index (RCRI) dialog"
+               
+               ><img src="../../_images/The_Revised_Cardiac_Risk_Index_dialog_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Revised_Cardiac_Risk_Index">Revised Cardiac Risk Index</a> (RCRI) is a method to indicate a patient’s risk for perioperative cardiac complications. The RCRI <em>Score</em> and <em>Class</em> are entered via a dialog which allows you to indicate the following risk factors:</p>
+<ul class="simple">
+<li><p><em>High Risk Surgery</em></p></li>
+<li><p><em>Preoperative Diabetes</em></p></li>
+<li><p><em>History of Ischemic Heart Disease</em></p></li>
+<li><p><em>History of Cerebrovascular Heart Disease</em></p></li>
+<li><p><em>History of Congestive Heart Disease</em></p></li>
+<li><p><em>Preoperative Kidney Disease</em></p></li>
+</ul>
+<p>Based on this data, GNU Health automatically calculates the <em>Score</em> (0 .. 6) and the <em>RCRI Class</em> (I .. IV).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="genetics.html" class="btn btn-neutral float-left" title="Genetics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pediatrics.html" class="btn btn-neutral float-right" title="Pediatrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

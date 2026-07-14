@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The GNU Health Control Center &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="About GNU Health package bundles" href="patches.html" />
+    <link rel="prev" title="Backup and Restore" href="backups.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">System Administration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sysinfo.html">The SYSINFO Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backups.html">Backup and Restore</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The GNU Health Control Center</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#running-gnuhealth-control">Running gnuhealth-control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#server-installation">Server Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-and-stopping-gnu-health-server">Starting and Stopping GNU Health Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choosing-additional-packages">Choosing additional packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-packages">Update packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#refresh-instance">Refresh Instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#restore">Restore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="patches.html">About GNU Health package bundles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralauthentication.html">Central Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="countries.html">Countries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendarwebdav.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fhir/index.html">FHIR REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">System Administration</a></li>
+      <li class="breadcrumb-item active">The GNU Health Control Center</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/administration/controlcenter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-gnu-health-control-center">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center"></span><h1>The GNU Health Control Center<a class="headerlink" href="#the-gnu-health-control-center" title="Link to this heading"></a></h1>
+<p>The GNU Health Control Center <code class="code docutils literal notranslate"><span class="pre">gnuhealth-control</span></code> is the main tool for administrative tasks of the <a class="reference internal" href="../../features.html#features-features"><span class="std std-ref">GNU Health environment</span></a>.</p>
+<p>Since GNU Health HIS 5.0, all the installation and management of the server is done
+through <strong>GNU Health Control</strong>.</p>
+<p>The new GNU Health control is a self-contained python application that allows you to:</p>
+<ul class="simple">
+<li><p>Install the GNU Health and Tryton server</p></li>
+<li><p>Create new DB instances</p></li>
+<li><p>Update dependencies</p></li>
+<li><p>Install GNU Health packages</p></li>
+<li><p>Start and Stop the GNU Health HIS server</p></li>
+<li><p>Refresh the Instances (languages, datafiles…)</p></li>
+<li><p>Make backups</p></li>
+</ul>
+<p>In an nutshell, gnuhealth-control (“ghcontrol”) will do the daily tasks from a single point
+of entry. We recommend using gnuhealth-control to perform the administrative tasks, since it
+also generates log files of the different tasks that will be very useful in case of problems.</p>
+<section id="running-gnuhealth-control">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-running-gnuhealth-control"></span><h2>Running gnuhealth-control<a class="headerlink" href="#running-gnuhealth-control" title="Link to this heading"></a></h2>
+<p>You can invoke gnuhealth-control typing <em>ghcontrol</em></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ghcontrol
+</pre></div>
+</div>
+</section>
+<section id="server-installation">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-server-installation"></span><h2>Server Installation<a class="headerlink" href="#server-installation" title="Link to this heading"></a></h2>
+<p>With gnuhealth-control, you can do the whole server installation. For more information, please refer to
+<a class="reference internal" href="../installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installation-with-gnu-health-control"><span class="std std-ref">Installation with GNU Health Control</span></a></p>
+</section>
+<section id="starting-and-stopping-gnu-health-server">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-starting-and-stopping-gnu-health-server"></span><h2>Starting and Stopping GNU Health Server<a class="headerlink" href="#starting-and-stopping-gnu-health-server" title="Link to this heading"></a></h2>
+<p>The GNU Health Control Center allows you to see the current status of the
+server. You can also start and stop the server from the menu.</p>
+<p>When you start <strong>ghcontrol</strong>, the server status will show in at the bottom
+of the screen. It will show in <strong>green</strong> when the server is running and in
+<strong>yellow</strong> when is stopped.</p>
+<a class=""
+               data-lightbox="group-d40b468a-0297-457f-9aec-a2e4383ad444"
+               href="../../_images/ghcontrol_start_stop_server1.png"
+               title="Refresh "tao" instance example"
+               data-title="Refresh "tao" instance example"
+               
+               ><img src="../../_images/ghcontrol_start_stop_server1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To start / stop the server you just need to press on the related submenu
+entry.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Needless to say, stopping the server will immediately shutdown the
+Tryton server, and all operations will stop. It will also affect to
+all the interfaces that are connected to the server.</p>
+</div>
+</section>
+<section id="choosing-additional-packages">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-choosing-additional-packages"></span><h2>Choosing additional packages<a class="headerlink" href="#choosing-additional-packages" title="Link to this heading"></a></h2>
+<p>Depending on your area of work, your institution will need extra functionality that
+is provided in the <em>50+ GNU Health modules</em>.</p>
+<p>This is a very important step in the GNU Health implementation process, because ideally
+we should aim for the minimum amount of packages that deliver the functionality we
+need. Installing extra packages increases complexity, so please make sure you put
+enough time to study the packages you will install.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can always install packages at a later time.
+If you are new to GNU Health, we recommend you spend some days / weeks using only
+the core package. Once you feel comfortable, you can dive into the remaining
+functionality options.</p>
+</div>
+<p>Here is the list of current GNUHealth HIS <a class="reference internal" href="../../features.html#features-features"><span class="std std-ref">Features</span></a></p>
+<p>Now that you know which packages you’d like to include on your institution, let’s move
+to the package installation section.</p>
+<a class=""
+               data-lightbox="group-6e826f29-7257-4fc9-8051-2633ccd9cc9b"
+               href="../../_images/ghcontrol_add_health_package_entry1.png"
+               title="GNU Health Control menu entry for adding a new health package."
+               data-title="GNU Health Control menu entry for adding a new health package."
+               
+               ><img src="../../_images/ghcontrol_add_health_package_entry1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>From the main menu, choose “<em>2: Add Health package</em>” entry. The next screen will
+show you the list of official GNU Health packages for the current version.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For security and integrity reasons, gnuhealth-control only shows official packages.</p>
+</div>
+<p>The following screen shows an example of adding the “lab” package, that provides the GNU Health Laboratory Information System functionality (<strong>Occhiolino</strong>)</p>
+<a class=""
+               data-lightbox="group-967525b5-ad98-4ee7-9257-a608d118519f"
+               href="../../_images/ghcontrol_selection_health_package_to_add1.png"
+               title="Example of selecting the lab package from the list."
+               data-title="Example of selecting the lab package from the list."
+               
+               ><img src="../../_images/ghcontrol_selection_health_package_to_add1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <strong>all</strong> special package
+There is an special package called “<em>all</em>”. As the name implies, typing <em>all</em> in the
+package selection field will install the whole list of GNU Health packages, and their
+dependencies. This option is mostly used for training or evaluation purposes, and
+rarely in production systems.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Installing all packages increases complexity and reduces modularity. It is
+usually reserved for training and evaluation purposes.</p>
+</div>
+<p>Installing a package will do download the related Pyhton gnuhealth package and
+its dependencies. If you want to activate the package in one or more instances, you
+need to <strong>refresh</strong> the instance so you can select it and activate it (next section).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Adding a package installs the relevant gnuhealth packages at operating
+system level. The activation of the package is instance dependant.</p>
+</div>
+<a class=""
+               data-lightbox="group-441057c5-8382-4e0e-8491-adabfb9cf795"
+               href="../../_images/ghcontrol_health_package_installation_ok1.png"
+               title="The health package installation process was successful"
+               data-title="The health package installation process was successful"
+               
+               ><img src="../../_images/ghcontrol_health_package_installation_ok1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>If the everything went well, gnuhealth-control will display the message
+<strong>“Package(s) Installation OK”</strong> and you are ready to install more packages
+or to move to the next section if you’re happy :)</p>
+</section>
+<section id="update-packages">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-update-packages"></span><h2>Update packages<a class="headerlink" href="#update-packages" title="Link to this heading"></a></h2>
+<p>GNU Health Control can keep the system up-to-date. gnuhealth-control will
+all the installed gnuhealth, tryton packages and their dependencies, updating those
+that are outdated.</p>
+<a class=""
+               data-lightbox="group-730332d9-ecdf-4e9d-a97b-bdb520b9c951"
+               href="../../_images/ghcontrol_update_packages_dependencies1.png"
+               title="Update Packages and dependencies entry from the main menu"
+               data-title="Update Packages and dependencies entry from the main menu"
+               
+               ><img src="../../_images/ghcontrol_update_packages_dependencies1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Choose “Update Packages / dependencies” in the main menu. GNUHealth-control will
+download and install the required updates.</p>
+<a class=""
+               data-lightbox="group-f0b06200-46fd-4a31-9b6e-4e21dff8e848"
+               href="../../_images/ghcontrol_update_dependencies_process1.png"
+               title="Update Packages and dependencies entry from the main menu"
+               data-title="Update Packages and dependencies entry from the main menu"
+               
+               ><img src="../../_images/ghcontrol_update_dependencies_process1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="refresh-instance">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-refresh-instance"></span><h2>Refresh Instance<a class="headerlink" href="#refresh-instance" title="Link to this heading"></a></h2>
+<p>Refreshing the instance means registering the new resources in your GNU Health
+database instance. The process traverses all the packages, their models, reports,
+translations, etc..</p>
+<a class=""
+               data-lightbox="group-89edb53e-8973-42e8-ad86-6b3c56f99dd7"
+               href="../../_images/ghcontrol_refresh_instance_entry1.png"
+               title="Refresh instance entry from the main menu"
+               data-title="Refresh instance entry from the main menu"
+               
+               ><img src="../../_images/ghcontrol_refresh_instance_entry1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To refresh a particular instance from gnuhealth-control, you do so by choosing
+<strong>“3: Refresh DB instance”</strong> entry from the main menu.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to refresh the instance anytime you install a new package.</p>
+</div>
+<a class=""
+               data-lightbox="group-0af30751-d3e2-4403-a4f8-06dbb0a11c2f"
+               href="../../_images/ghcontrol_refresh_instance_result1.png"
+               title="Refresh "tao" instance example"
+               data-title="Refresh "tao" instance example"
+               
+               ><img src="../../_images/ghcontrol_refresh_instance_result1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="backup">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-backup"></span><h2>Backup<a class="headerlink" href="#backup" title="Link to this heading"></a></h2>
+<p>To backup your instance, just select the menu entry “Backup Instance” and enter the
+instance (db) name.</p>
+<a class=""
+               data-lightbox="group-c7df8e82-589a-4349-a353-5f75aebf1c34"
+               href="../../_images/ghcontrol_backup_instance_example1.png"
+               title="Instance backup process and result."
+               data-title="Instance backup process and result."
+               
+               ><img src="../../_images/ghcontrol_backup_instance_example1.png"
+                     class="align-center"
+                     width="70%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The database backup will be stored with a timestamp inside the <strong>basedir</strong>/log directory.
+In the case of an standard installation, will be <strong>/opt/gnuhealth/his-|version-nodot|/backup</strong></p>
+<p>The logs will be in <strong>/opt/gnuhealth/his-|version-nodot|/log</strong></p>
+</section>
+<section id="restore">
+<span id="techguide-administration-controlcenter-the-gnu-health-control-center-restore"></span><h2>Restore<a class="headerlink" href="#restore" title="Link to this heading"></a></h2>
+<p>The backup made by the GNU Health control center allows you to restore a complete GNU Health instance, including the database and the filesystem. Of course, in order to perform a restore, you need to have a backup.</p>
+<p>To restore a database, connect with “gnuhealth” operating system user, and change to the directory where the database backup resides.</p>
+<p><strong>Create a new database</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>createdb<span class="w"> </span>your_db_name
+</pre></div>
+</div>
+<p><strong>Uncompress the database dump that was generated using GNU Health control</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gunzip<span class="w"> </span>backup_db-name_timestamp.gz
+</pre></div>
+</div>
+<p><strong>Restore the DB using PostgreSQL</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>psql<span class="w"> </span>your_db_name<span class="w"> </span>&lt;<span class="w"> </span>backup_db-name_timestamp
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="backups.html" class="btn btn-neutral float-left" title="Backup and Restore" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="patches.html" class="btn btn-neutral float-right" title="About GNU Health package bundles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

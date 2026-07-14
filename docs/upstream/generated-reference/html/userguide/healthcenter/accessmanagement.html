@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Management &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modules by functionality" href="../modules/index.html" />
+    <link rel="prev" title="Purchase Administration" href="purchaseadministration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Health Center</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="financialaccounting.html">Financial Accounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analyticaccounting.html">Analytic Accounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products.html">Products and Services Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="purchaseadministration.html">Purchase Administration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Access Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#access-management-overview">Access Management Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#groups">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Health Center</a></li>
+      <li class="breadcrumb-item active">Access Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/healthcenter/accessmanagement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="access-management">
+<span id="userguide-healthcenter-accessmanagement-access-management"></span><h1>Access Management<a class="headerlink" href="#access-management" title="Link to this heading"></a></h1>
+<section id="access-management-overview">
+<span id="userguide-healthcenter-accessmanagement-access-management-access-management-overview"></span><h2>Access Management Overview<a class="headerlink" href="#access-management-overview" title="Link to this heading"></a></h2>
+<p>Like in many other IT systems, access to data and functions in GNU Health is controlled through <strong>groups</strong> (also known as roles). A group is a set of access rights. By assigning a <strong>user</strong> (also known as account or login) to a group, this user gains all rights of this group.</p>
+</section>
+<section id="groups">
+<span id="userguide-healthcenter-accessmanagement-access-management-groups"></span><h2>Groups<a class="headerlink" href="#groups" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-b8aa0749-6b38-4677-be17-92f06b36e1c4"
+               href="../../_images/The_Groups_list_in_GNU_Health1.png"
+               title="The Groups list in GNU Health"
+               data-title="The Groups list in GNU Health"
+               
+               ><img src="../../_images/The_Groups_list_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To create, edit, or delete groups, please go to the <em>Administration → Users → Groups</em> section. Create a new group or double click an existing group to open the <em>Groups</em> form. All data in this form is divided into two tabs:</p>
+<section id="members-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-groups-members-tab"></span><h3><em>Members</em> Tab<a class="headerlink" href="#members-tab" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-eefa567f-9cdd-4f22-890d-d77dc815e364"
+               href="../../_images/The_Members_tab_in_the_Groups_form1.png"
+               title="The Members tab in the Groups form"
+               data-title="The Members tab in the Groups form"
+               
+               ><img src="../../_images/The_Members_tab_in_the_Groups_form1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>Members</em> tab lists all users that have been assigned to this group. You can add users to the group here, or you can double click on a user to see this users details.</p>
+<p>It is a safe practice to define all access rights of a group first and add users to the group later.</p>
+</section>
+<section id="access-permissions-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-groups-access-permissions-tab"></span><h3><em>Access Permissions</em> Tab<a class="headerlink" href="#access-permissions-tab" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-b81a781a-69c4-441c-b8ba-57dd2feb9152"
+               href="../../_images/The_Access_Permissions_tab_in_the_Groups_form1.png"
+               title="The Access Permissions tab in the Groups form"
+               data-title="The Access Permissions tab in the Groups form"
+               
+               ><img src="../../_images/The_Access_Permissions_tab_in_the_Groups_form1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>Access Permissions</em> tab defines the access rights of a group. There are four types of rights that can be granted to a group:</p>
+<ol class="arabic simple">
+<li><p>Access to a certain model: This allows to grant the right to read, write, create and/or delete records of a certain record type (or model as it is called in GNU Health).</p></li>
+<li><p>Access to a certain field: This allows to grant the right to read, write, create and/or delete data in certain field. While field access is not as commonly used as model access, this option allows you to fine tune your access permission and to protect sensitive data.</p></li>
+<li><p>Access to a certain menu item: This allows to show or hide sections in the main navigation. It is a good practice to hide sections where a group should not or cannot edit data to simplify the user interface.</p></li>
+<li><p>Access to a certain rule</p></li>
+</ol>
+</section>
+</section>
+<section id="users">
+<span id="userguide-healthcenter-accessmanagement-access-management-users"></span><h2>Users<a class="headerlink" href="#users" title="Link to this heading"></a></h2>
+<p>To create, edit, or delete users, please go to the <em>Administration → Users → Users</em> section. Create a new user or double click an existing user to open the <em>Users</em> form.</p>
+<p>Every user needs a <em>Name</em> (which is a descriptive name, not the user name for logging into the system) and a <em>Status</em> (which is active or not active and defines if a user can log into the system at all).</p>
+<p>Users are bare accounts to log into the GNUHealt server, not a <em>Person</em> in the system. To link a <em>User</em> and a <em>Person</em> you need to set the <em>Internal User</em> field in the <em>Person</em>-form to the <em>User</em> that is already created.
+To do this follow Party-&gt;Parties-&gt;People choose or create an object of People that represets a person in the system. The field can be found in the bottom right of the form.</p>
+<a class=""
+               data-lightbox="group-e453cff8-87ef-4462-8417-1c089aab6d52"
+               href="../../_images/GNU_Health_party_person_internal_user1.png"
+               title="Internal User field in the People form."
+               data-title="Internal User field in the People form."
+               
+               ><img src="../../_images/GNU_Health_party_person_internal_user1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details, please refer to the <a class="reference internal" href="../basics/configuration.html#userguide-basics-configuration-configuration-people"><span class="std std-ref">People</span></a> chapter.</p>
+</div>
+<p>Going back to <em>Administration → Users → Users</em> we have five different tabs:</p>
+<section id="user-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-users-user-tab"></span><h3>User Tab<a class="headerlink" href="#user-tab" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-1f52ee82-035d-4c5f-8d9c-e6d4b75f5ae8"
+               href="../../_images/The_User_tab_in_the_Users_form1.png"
+               title="The User tab in the Users form"
+               data-title="The User tab in the Users form"
+               
+               ><img src="../../_images/The_User_tab_in_the_Users_form1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>User</em> tab contains the very basic information about a user:</p>
+<ul class="simple">
+<li><p><strong>Name:</strong> Internal name for the User, <em>not</em> used for the login.</p></li>
+<li><p><strong>Login:</strong> This is the user name for logging into the system and cannot be empty. It must be unique, that is to say that you can not have to users with identical logins.</p></li>
+<li><p><strong>Password:</strong> This is the password for logging into the system. When entering a password you can check the checkbox on the right hand side of the <em>Password</em> field to see what you are entering.</p></li>
+<li><p><strong>Email:</strong> If you enter a user’s email address here, clicking on the globe icon on the right hand side of the <em>Email</em> field opens a new mail in your email client.</p></li>
+</ul>
+</section>
+<section id="actions-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-users-actions-tab"></span><h3>Actions Tab<a class="headerlink" href="#actions-tab" title="Link to this heading"></a></h3>
+<p>In this tab, you can add or remove <em>Actions</em>. These actions are automaticly launched when the user logs into their account.
+The maximum of Actions is 5 by default.</p>
+</section>
+<section id="userguide-healthcenter-accessmanagement-access-management-users-access-permissions-tab">
+<span id="id1"></span><h3>Access Permissions Tab<a class="headerlink" href="#userguide-healthcenter-accessmanagement-access-management-users-access-permissions-tab" title="Link to this heading"></a></h3>
+<p>In the <em>Access Permissions</em> tab a user can be assigned to one or more groups. Please be aware that not assigning groups here will lead to users who can log into the system but not do anything within the system.</p>
+</section>
+<section id="applications-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-users-applications-tab"></span><h3>Applications Tab<a class="headerlink" href="#applications-tab" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Fill User Guide -&gt; Health Center -&gt; Access Management -&gt; Applications Tab</p>
+</div>
+</section>
+<section id="preferences-tab">
+<span id="userguide-healthcenter-accessmanagement-access-management-users-preferences-tab"></span><h3>Preferences Tab<a class="headerlink" href="#preferences-tab" title="Link to this heading"></a></h3>
+<p>In the <em>Preferences</em> tab you can set the preferred language of a user.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="purchaseadministration.html" class="btn btn-neutral float-left" title="Purchase Administration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../modules/index.html" class="btn btn-neutral float-right" title="Modules by functionality" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

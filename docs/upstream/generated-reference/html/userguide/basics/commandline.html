@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Patient Management" href="../patientmanagement/index.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">The Basics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="firststeps.html">First Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coremodule/index.html">The core module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Command Line</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-the-command-line">Accessing the command line</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">The Basics</a></li>
+      <li class="breadcrumb-item active">Command Line</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/basics/commandline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line">
+<span id="userguide-basics-commandline-command-line"></span><h1>Command Line<a class="headerlink" href="#command-line" title="Link to this heading"></a></h1>
+<section id="description">
+<span id="userguide-basics-commandline-command-line-description"></span><h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>The native HIS client allows to use most of the functionality from the command line, without the need of the menu.
+It’s much faster and direct than the previous menu-based client. Of course, the menu is still available.</p>
+<p>Most commands accept arguments, so the user can go directly to one specific instance of the resource. For example</p>
+<a class=""
+               data-lightbox="group-cb56eda8-db31-4e88-90e9-a9fe633ae4b9"
+               href="../../_images/gnuhealth_command_line1.png"
+               title="GNU Health command line highlighted in red executing the "PAT" command"
+               data-title="GNU Health command line highlighted in red executing the "PAT" command"
+               
+               ><img src="../../_images/gnuhealth_command_line1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>PAT : List all the people registered on the system</p>
+<p>PAT ESPGNU777ORG : Takes you directly to the patient with federation ID “ESPGNU777ORG”</p>
+</section>
+<section id="accessing-the-command-line">
+<span id="userguide-basics-commandline-command-line-accessing-the-command-line"></span><h2>Accessing the command line<a class="headerlink" href="#accessing-the-command-line" title="Link to this heading"></a></h2>
+<p>The command line can be accessed by clicking on the Command Line box (either at the top or bottom left of the client).</p>
+<p>Clicking <strong>SHIFT + Z</strong> will put the focus on the Command Line Interface section.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Command</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CMD</p></td>
+<td><p>GNU Health Commands</p></td>
+</tr>
+<tr class="row-odd"><td><p>PPL</p></td>
+<td><p>Demographics</p></td>
+</tr>
+<tr class="row-even"><td><p>PAT</p></td>
+<td><p>Patients</p></td>
+</tr>
+<tr class="row-odd"><td><p>SYSINFO</p></td>
+<td><p>Technical Information for client and server</p></td>
+</tr>
+<tr class="row-even"><td><p>LAB</p></td>
+<td><p>Lab Test Results</p></td>
+</tr>
+<tr class="row-odd"><td><p>FEDQ</p></td>
+<td><p>Federation objects queue</p></td>
+</tr>
+<tr class="row-even"><td><p>MED</p></td>
+<td><p>Patient Medicaments</p></td>
+</tr>
+<tr class="row-odd"><td><p>APP</p></td>
+<td><p>Appointments</p></td>
+</tr>
+<tr class="row-even"><td><p>SES</p></td>
+<td><p>Socioeconomics and Family Functionality Assessment</p></td>
+</tr>
+<tr class="row-odd"><td><p>DU</p></td>
+<td><p>Domiciliary Units</p></td>
+</tr>
+<tr class="row-even"><td><p>HP</p></td>
+<td><p>Health Professionals</p></td>
+</tr>
+<tr class="row-odd"><td><p>RX</p></td>
+<td><p>Prescription Orders</p></td>
+</tr>
+<tr class="row-even"><td><p>EVL</p></td>
+<td><p>Patient Evaluations</p></td>
+</tr>
+<tr class="row-odd"><td><p>ECG</p></td>
+<td><p>Electrocardiograms</p></td>
+</tr>
+<tr class="row-even"><td><p>RCRI</p></td>
+<td><p>Revised Cardiac Risk Index</p></td>
+</tr>
+<tr class="row-odd"><td><p>DX</p></td>
+<td><p>Health Conditions</p></td>
+</tr>
+<tr class="row-even"><td><p>POL</p></td>
+<td><p>Pages of Life</p></td>
+</tr>
+<tr class="row-odd"><td><p>GEN</p></td>
+<td><p>Personal Genetic Info</p></td>
+</tr>
+<tr class="row-even"><td><p>NEO</p></td>
+<td><p>Newborn / Neonatal Information</p></td>
+</tr>
+<tr class="row-odd"><td><p>OBS</p></td>
+<td><p>Obstetric histories</p></td>
+</tr>
+<tr class="row-even"><td><p>SRV</p></td>
+<td><p>Patient Health Services</p></td>
+</tr>
+<tr class="row-odd"><td><p>SUR</p></td>
+<td><p>Surgeries</p></td>
+</tr>
+<tr class="row-even"><td><p>MI</p></td>
+<td><p>Medical Imaging Results</p></td>
+</tr>
+<tr class="row-odd"><td><p>INV</p></td>
+<td><p>Invoices</p></td>
+</tr>
+<tr class="row-even"><td><p>PRD</p></td>
+<td><p>Products</p></td>
+</tr>
+<tr class="row-odd"><td><p>CMD</p></td>
+<td><p>GNU Health Commands</p></td>
+</tr>
+<tr class="row-even"><td><p>GDIS</p></td>
+<td><p>Disease Genes</p></td>
+</tr>
+<tr class="row-odd"><td><p>VAR</p></td>
+<td><p>Natural variants</p></td>
+</tr>
+<tr class="row-even"><td><p>VARP</p></td>
+<td><p>Natural variant phenotypes</p></td>
+</tr>
+<tr class="row-odd"><td><p>PDIS</p></td>
+<td><p>Protein related diseases</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="configuration.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../patientmanagement/index.html" class="btn btn-neutral float-right" title="Patient Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

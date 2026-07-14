@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar and WebDAV &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using the Demo Database" href="../demodb.html" />
+    <link rel="prev" title="Thalamus" href="federation/thalamus.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Calendar and WebDAV</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-clients">Known clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-the-webdav-server">Setting up the WebDAV server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-calendar">Creating a Calendar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-events">Creating Events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-webdav-server-to-evolution">Connecting WebDAV server to Evolution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Calendar and WebDAV</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/calendar.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="calendar-and-webdav">
+<span id="userguide-modules-calendar-calendar-and-webdav"></span><h1>Calendar and WebDAV<a class="headerlink" href="#calendar-and-webdav" title="Link to this heading"></a></h1>
+<p>GNU Health provides its own WebDAV and Caldav server. It allows to create and associate calendars to health professionals.
+The calendar entries for appointments, hospitalizations and other resources can be accessed via WebDAV clients.</p>
+<p>The calendar module (health_calendar) lets the user create events and track them in a calendar.</p>
+<p>The caldav module (health_caldav) provides a WebDAV server that will run in the background and manages the connection to Calendar applications on the client side.
+We use the Evolution client as an example on how to use the WebDAV server.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This module needs polishing and doesn’t work correctly.</p>
+</div>
+<section id="installation">
+<span id="userguide-modules-calendar-calendar-and-webdav-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>To install the webdav functionality, you need to install the following packages</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">pywebdav3-gnuhealth</span></code> : Python3 WebDAV library for GNU Health (installed automatically when using the standard installation method)</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">health_webdav3_server</span></code> : GNU Health WebDAV server, for Python3 and GNUHealth support</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">health_caldav</span></code> : GNU Health calendar package with webdav3 and caldav support</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">health_calendar</span></code> : Main calendar for appointments</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">health_inpatient_calendar</span></code> : Hospitalization / bed calendar support</p></li>
+</ul>
+<p>If you have installed GNU Health from openSUSE packages, everything is already installed.</p>
+</section>
+<section id="known-clients">
+<span id="userguide-modules-calendar-calendar-and-webdav-known-clients"></span><h2>Known clients<a class="headerlink" href="#known-clients" title="Link to this heading"></a></h2>
+<p>GNU Health Calendar system has been known to work on the following clients:</p>
+<ul class="simple">
+<li><p>Mozilla Thunderbird, Lightning</p></li>
+<li><p>Cadaver</p></li>
+<li><p>Evolution</p></li>
+</ul>
+</section>
+<section id="setting-up-the-webdav-server">
+<span id="userguide-modules-calendar-calendar-and-webdav-setting-up-the-webdav-server"></span><h2>Setting up the WebDAV server<a class="headerlink" href="#setting-up-the-webdav-server" title="Link to this heading"></a></h2>
+<section id="vanilla-installation">
+<span id="userguide-modules-calendar-calendar-and-webdav-setting-up-the-webdav-server-vanilla-installation"></span><h3>Vanilla Installation<a class="headerlink" href="#vanilla-installation" title="Link to this heading"></a></h3>
+<p>Check the settings for the host and port of the GNU Health WebDAV server.
+To do so use this command as the gnuhealth user:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>editconf
+</pre></div>
+</div>
+<p>This will open the config file.
+The settings should look like this:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[webdav]</span>
+<span class="na">listen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">*:8080</span>
+</pre></div>
+</div>
+<p>In this sample from the default configuration file, the WebDAV server will accept connections from any network interface, on port 8080.</p>
+</section>
+<section id="ansible-installation">
+<span id="userguide-modules-calendar-calendar-and-webdav-setting-up-the-webdav-server-ansible-installation"></span><h3>Ansible Installation<a class="headerlink" href="#ansible-installation" title="Link to this heading"></a></h3>
+<p>If you use the Ansible installation you need to set <code class="docutils literal notranslate"><span class="pre">gh_webdav</span></code> to true in your inventories <code class="docutils literal notranslate"><span class="pre">group_vars/gnuhealth/vars.yml</span></code> before running the playbook.</p>
+</section>
+</section>
+<section id="running-the-server">
+<span id="userguide-modules-calendar-calendar-and-webdav-running-the-server"></span><h2>Running the server<a class="headerlink" href="#running-the-server" title="Link to this heading"></a></h2>
+<p>To start the server in the vanilla installation use these commands as the gnuhealth user, to swich to the WebDAV server directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cdmods
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>health_webdav3_server/bin
+</pre></div>
+</div>
+<p>Now start the server with this command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./gnuhealth-webdav-server
+</pre></div>
+</div>
+<p>If you are using the Ansible installation it should already be running if you set <code class="docutils literal notranslate"><span class="pre">gh_webdav</span></code> to true.</p>
+</section>
+<section id="creating-a-calendar">
+<span id="userguide-modules-calendar-calendar-and-webdav-creating-a-calendar"></span><h2>Creating a Calendar<a class="headerlink" href="#creating-a-calendar" title="Link to this heading"></a></h2>
+<p>Every calendar must be assigned to one user and every user can only have one calendar.
+To do so go to Calendar → Calendars and click on the “Create a new record” button. This will open this new window.</p>
+<a class=""
+               data-lightbox="group-aff7c255-edf0-4ff9-bcb2-d1bef2b841b2"
+               href="../../_images/Gnuhealth_Calendar_Creation1.JPG"
+               title="The appointments form in GNU Health."
+               data-title="The appointments form in GNU Health."
+               
+               ><img src="../../_images/Gnuhealth_Calendar_Creation1.JPG"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Here you need to give a name to the calendar and assign it to an owner. In the demo database there is an example with the calendar Cordara assigned to the Administrator.</p>
+<p>In the tab “Access Permissions” you can add read and write permissions.</p>
+</section>
+<section id="creating-events">
+<span id="userguide-modules-calendar-calendar-and-webdav-creating-events"></span><h2>Creating Events<a class="headerlink" href="#creating-events" title="Link to this heading"></a></h2>
+<p>To create events go to Calendar → Calendars → Events and click on the “Create a new record” button.</p>
+<a class=""
+               data-lightbox="group-082bf92e-d150-47ff-b5b1-3e9fbc249128"
+               href="../../_images/Gnuhealth_Calendar_Event_creation1.JPG"
+               title="The appointments form in GNU Health."
+               data-title="The appointments form in GNU Health."
+               
+               ><img src="../../_images/Gnuhealth_Calendar_Event_creation1.JPG"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Here we give the event a name and a start date. Additionally we need to assign the event to a calendar.
+If you create an appointment for a patient it will automatically create an event in the according calendar.</p>
+</section>
+<section id="connecting-webdav-server-to-evolution">
+<span id="userguide-modules-calendar-calendar-and-webdav-connecting-webdav-server-to-evolution"></span><h2>Connecting WebDAV server to Evolution<a class="headerlink" href="#connecting-webdav-server-to-evolution" title="Link to this heading"></a></h2>
+<p>Every calendar in GNU Health needs to be assigned to one user. So in this example we have the calendar Cordara which is assigned to the admin.</p>
+<p>To connect Evolution to the WebDAV server we need to first create a new calendar by clicking the unfoldable menu located next to the “new” button on the top left of the screen.</p>
+<p>This will open a new window. Here you need to choose the type CalDav and enter the name of the your calendar.
+You also need to add the name of the user which is the same as the name of the owner of the calendar. The URL should be structured like this:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">http://your_server_hostname:your_server_port/database_name/Calendars/Calendar_name</span></code></p>
+<p>The default configuration for <code class="docutils literal notranslate"><span class="pre">your_server_port</span></code> is 8080.
+The user and the password need to be the same as the login data of the owner of the calendar in GNU Health. At last you can choose how often the calendar gets updated.</p>
+<a class=""
+               data-lightbox="group-f0c762bc-2ec7-4e20-962b-9a894738be15"
+               href="../../_images/Gnuhealth_Calendar_Creation_of_Calendar_in_Evolution1.JPG"
+               title="The appointments form in GNU Health."
+               data-title="The appointments form in GNU Health."
+               
+               ><img src="../../_images/Gnuhealth_Calendar_Creation_of_Calendar_in_Evolution1.JPG"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><section id="adding-appointments-in-evolution">
+<span id="userguide-modules-calendar-calendar-and-webdav-connecting-webdav-server-to-evolution-adding-appointments-in-evolution"></span><h3>Adding appointments in Evolution<a class="headerlink" href="#adding-appointments-in-evolution" title="Link to this heading"></a></h3>
+<p>Add an appointment by clicking on the “new” button. Enter the name of the patient and the timeslot in the boxes.
+Upload the appointment in by clicking the “green arrow” button.</p>
+<p>Note: The appointment will only be known to the WebDAV server. The GNU Health GTK client doesn’t show the appointment.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="federation/thalamus.html" class="btn btn-neutral float-left" title="Thalamus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../demodb.html" class="btn btn-neutral float-right" title="Using the Demo Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="FHIR REST" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html">System Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">FHIR REST</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about-fhir-and-rest">About FHIR and REST</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#techguide-fhir-installation-installation-installation">Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-server">Running the Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FHIR REST</a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/fhir/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<span id="techguide-fhir-installation-installation"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<section id="about-fhir-and-rest">
+<span id="techguide-fhir-installation-installation-about-fhir-and-rest"></span><h2>About FHIR and REST<a class="headerlink" href="#about-fhir-and-rest" title="Link to this heading"></a></h2>
+<p><strong>Fast Healthcare Interoperability Resources (FHIR)</strong> is a standard for exchanging healthcare information electronically developed by HL7. For more information about FHIR, please see <a class="reference external" href="https://hl7.org/fhir">https://hl7.org/fhir</a></p>
+<p><strong>Representational State Transfer (REST)</strong> is a software architecture style for scalable web services developed by the W3C Technical Architecture Group (TAG). REST based systems can be accessed over the Hypertext Transfer Protocol (HTTP), the same protocol that is used by Web browsers to request Web pages from and to send data to a Web server. For more information about REST, please see <a class="reference external" href="https://en.wikipedia.org/wiki/Representational_state_transfer">https://en.wikipedia.org/wiki/Representational_state_transfer</a></p>
+</section>
+<section id="techguide-fhir-installation-installation-installation">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#techguide-fhir-installation-installation-installation" title="Link to this heading"></a></h2>
+<p>The server requires Flask and a few of its addons. And, of course, a working GNU Health installation.</p>
+<p>Setup the environment (as the gnuhealth user):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>gnuhealth-fhir-server
+</pre></div>
+</div>
+</section>
+<section id="configuration">
+<span id="techguide-fhir-installation-installation-configuration"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
+<p>The server ships with a simple production config file <em>server/config.py</em>. However, it needs to be edited.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TRYTON_DATABASE</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>    <span class="c1">#. GNU Health database</span>
+<span class="n">SERVER_NAME</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>        <span class="c1">#. Domain name of the server (e.g., fhir.example.com)</span>
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>         <span class="c1">#. Set this value to a long and random string</span>
+</pre></div>
+</div>
+<p>You can refer to the latest GNU Health FHIR server at pypi:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/gnuhealth-fhir-server/">GNU Health FHIR Server</a></p></li>
+</ul>
+</section>
+<section id="security">
+<span id="techguide-fhir-installation-installation-security"></span><h2>Security<a class="headerlink" href="#security" title="Link to this heading"></a></h2>
+<p>In production, always use TLS. Sensitive medical information must be protected and confidential.</p>
+<p>By default, all FHIR endpoints except the Conformance statement require user authentication. The user authentication and access follows Tryton’s model, respecting model and field access rights.</p>
+<p>The same credentials used to sign into GNU Health are used to access the FHIR REST server.</p>
+</section>
+<section id="running-the-server">
+<span id="techguide-fhir-installation-installation-running-the-server"></span><h2>Running the Server<a class="headerlink" href="#running-the-server" title="Link to this heading"></a></h2>
+<p>For development, you can just run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>./gnuhealth_fhir_server.py
+</pre></div>
+</div>
+<p>For production environments, you should run it from a WSGI container, such as gunicorn, uWSGI or Tornado. In GNU Health we use
+uWSGI and nginx as a reverse proxy in production settings for most of our components (Hosptital Management, Thalamus, FHIR..)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>uwsgi<span class="w"> </span>server_uwsgi.ini
+</pre></div>
+</div>
+</section>
+<section id="troubleshooting">
+<span id="techguide-fhir-installation-installation-troubleshooting"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="cannot-connect-to-database">
+<span id="techguide-fhir-installation-installation-troubleshooting-cannot-connect-to-database"></span><h3>Cannot connect to database<a class="headerlink" href="#cannot-connect-to-database" title="Link to this heading"></a></h3>
+<p>Make sure you are running as the <em>gnuhealth</em> user.</p>
+<p>Flask-Tryton should automatically find and parse the Tryton config file. If it is not found:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TRYTON_CONFIG</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>      <span class="c1"># Set this to the path of the Tryton configuration file (e.g., &#39;/weird/tryton/weird-tryton.conf&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="no-database-with-that-name">
+<span id="techguide-fhir-installation-installation-troubleshooting-no-database-with-that-name"></span><h3>No database with that name<a class="headerlink" href="#no-database-with-that-name" title="Link to this heading"></a></h3>
+<p>This is related to the previous error, and occurs when Flask-Tryton cannot find the Tryton config file. Following the previous procedure should hopefully fix it.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="FHIR REST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

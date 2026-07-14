@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genetics &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Surgery" href="surgery.html" />
+    <link rel="prev" title="Obstetrics" href="obstetrics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Genetics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-genetics-package">Core genetics package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#health-genetics-uniprot-package">Health Genetics UniProt Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal-genetic-information">Personal Genetic Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#family-history">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genetic-testing-and-medical-history">Genetic testing and Medical history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gnu-health-commands-for-genetics">GNU Health Commands for genetics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Genetics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/genetics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="genetics">
+<span id="userguide-modules-genetics-genetics"></span><h1>Genetics<a class="headerlink" href="#genetics" title="Link to this heading"></a></h1>
+<section id="overview">
+<span id="userguide-modules-genetics-genetics-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>GNU Health medical genetics functionality is provided by the following packages:</p>
+<ul class="simple">
+<li><p>health_genetics</p></li>
+<li><p>health_genetics_uniprot</p></li>
+</ul>
+<p>GNU Health genetic functionality combines the molecular and environmental bases
+of health and disease unique for each individual, foundation for precision medicine.</p>
+<p>The GNU Health genetic functionality can be used both in the clinical and
+research contexts.</p>
+<p>GNU Health incorporates extensive information from <strong>Hugo Gene Nomenclature Committee</strong>
+(HGNC) <strong>The National Center for Biotechnology Information</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/NCBI">NCBI</a>
+and from <strong>the</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/UniProt">UniProt</a> <strong>Consortium</strong> gene natural variants
+and protein-related human health conditions.</p>
+<p>The screenshots provided on this section aim to facilitate the usage
+of the genetic packages, as basic workflows and data entry. We will be using
+two of our (fictional) family members Ana Betz and her son, Matt.
+The CFTR (Cystic Fibrosis transmembrane conductance regulator) will be used
+to illustrate different objects and contexts of the GH genetic functionality.</p>
+</section>
+<section id="core-genetics-package">
+<span id="userguide-modules-genetics-genetics-core-genetics-package"></span><h2>Core genetics package<a class="headerlink" href="#core-genetics-package" title="Link to this heading"></a></h2>
+<p>GNU Health genetic related packages integrate family history
+and individual relevant genetic information.</p>
+<p>The core genetics package provides main functionality, datamodel and
+relationships with other objects in the GNUHealth data dictionary.</p>
+<p>The main models included in this package are:</p>
+<ul class="simple">
+<li><p>Genes</p></li>
+<li><p>Protein related diseases</p></li>
+<li><p>Family History</p></li>
+<li><p>Personal genetic information</p></li>
+<li><p>Natural variants</p></li>
+<li><p>Variants phenotypes.</p></li>
+</ul>
+<p>The Genes model which its atributes will be detailed next wil hold the
+HGCN dataset, which is also included on the health_genetics package.</p>
+<p><strong>The Gene Model</strong></p>
+<p>The main attributes are:</p>
+<ul class="simple">
+<li><p><strong>HGNC Id</strong>: HUGO Gene Nomenclature Committee ID for the gene.</p></li>
+<li><p><strong>Official Symbol</strong>: Gene symbol dictated by HGNC (eg .. CFTR)</p></li>
+<li><p><strong>Long Name</strong>: Official long name (eg CF transmembrane conductance regulator)</p></li>
+<li><p><strong>Aliases</strong>: Alternative symbols (eg .. MRP7|ABC35|TNR-CFTR|dJ760C5.1|CFTR/MRP)</p></li>
+<li><p><strong>Locus</strong>: Location of the gene in the chromosome</p></li>
+<li><p><strong>Type</strong>: Type of gene (eg, protein-coding, ncRNA, pseudogene..)</p></li>
+<li><p><strong>Variants</strong>: List of natural variants associated to the gene (from UniProt)</p></li>
+<li><p><strong>Encoding protein</strong> (ID and URI)</p></li>
+</ul>
+<p>There are other fields such as RefSeq, Ensembl and OMIM IDs that help
+referencing related resources.</p>
+<p><strong>Natural Variant</strong></p>
+<ul class="simple">
+<li><p>Gene</p></li>
+<li><p>Change in amino acid</p></li>
+<li><p>Phenotype</p></li>
+<li><p>Clinical significance</p>
+<ul>
+<li><p>LB/B: Likely benign or benign</p></li>
+<li><p>LP/P: Likely pathogenic or pathogenic</p></li>
+<li><p>US: Unknown Significance</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Variant Phenotype(s)</strong></p>
+<section id="accessing-the-genes-dataset">
+<span id="userguide-modules-genetics-genetics-core-genetics-package-accessing-the-genes-dataset"></span><h3>Accessing the genes dataset<a class="headerlink" href="#accessing-the-genes-dataset" title="Link to this heading"></a></h3>
+<p>You can access the genes dataset via menu or via GH Command line.</p>
+<p><strong>Menu</strong>: Health -&gt; Configuration -&gt; Genetics -&gt; Genes</p>
+<p><strong>Command Line</strong> : gdis</p>
+<a class=""
+               data-lightbox="group-2fcdccbd-2d4d-4c60-8aac-70d6c17a67e8"
+               href="../../_images/gnuhealth_genetics_genes_list_view1.png"
+               title="Genes list view."
+               data-title="Genes list view."
+               
+               ><img src="../../_images/gnuhealth_genetics_genes_list_view1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="filtering-refining-the-search-criteria">
+<span id="userguide-modules-genetics-genetics-core-genetics-package-filtering-refining-the-search-criteria"></span><h3>Filtering / refining the search criteria<a class="headerlink" href="#filtering-refining-the-search-criteria" title="Link to this heading"></a></h3>
+<p>As in any model in GNU Health, you can restrict the search combining
+search arguments.</p>
+<a class=""
+               data-lightbox="group-fc12174b-d992-46a6-8517-614ce33dbac5"
+               href="../../_images/gnuhealth_genetics_gene_filter_options1.png"
+               title="Select protein-coding genes with the symbol containing the
+substring "CFTR" from the general list."
+               data-title="Select protein-coding genes with the symbol containing the
+substring "CFTR" from the general list."
+               
+               ><img src="../../_images/gnuhealth_genetics_gene_filter_options1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="viewing-details-of-the-gene">
+<span id="userguide-modules-genetics-genetics-core-genetics-package-viewing-details-of-the-gene"></span><h3>Viewing details of the gene<a class="headerlink" href="#viewing-details-of-the-gene" title="Link to this heading"></a></h3>
+<p>Once you have selected the gene in particular from the list view, you
+can access the form / detailed view by double clicking on it.
+In our example of the CFTR gene:</p>
+<a class=""
+               data-lightbox="group-89a24847-1b23-42d7-ad5c-f0a800156084"
+               href="../../_images/gnuhealth_genetics_gene_cftr_detailed_view1.png"
+               title="Form view showing the detailed information of the CFTR gene.
+The tooltip from the globe icon shows the URL from UniProt
+of the related protein product ID (P13569) of the gene."
+               data-title="Form view showing the detailed information of the CFTR gene.
+The tooltip from the globe icon shows the URL from UniProt
+of the related protein product ID (P13569) of the gene."
+               
+               ><img src="../../_images/gnuhealth_genetics_gene_cftr_detailed_view1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+</section>
+<section id="health-genetics-uniprot-package">
+<span id="userguide-modules-genetics-genetics-health-genetics-uniprot-package"></span><span id="modulesindetail-genetics-genetics-genetic-information"></span><h2>Health Genetics UniProt Package<a class="headerlink" href="#health-genetics-uniprot-package" title="Link to this heading"></a></h2>
+<p>While the genetics core package defines the genomics and medical genetics
+models, the health_genetics_uniprot loads the meaningful data.</p>
+<p>The datasets included in this package are:</p>
+<ul class="simple">
+<li><p>Human genes natural variants</p></li>
+<li><p>Variant phenotypes</p></li>
+<li><p>Genetic and Protein Related Disorders</p></li>
+</ul>
+<section id="human-genes-natural-variants">
+<span id="userguide-modules-genetics-genetics-health-genetics-uniprot-package-human-genes-natural-variants"></span><h3>Human Genes Natural Variants<a class="headerlink" href="#human-genes-natural-variants" title="Link to this heading"></a></h3>
+<p>GNU Health HIS combines HGNC with the UniProt human natural variants
+datasets. These two excellent sources provide acurate information
+and links to uptodate online references to the particular variant related to
+the patient.</p>
+<p>Previously we saw that when selecting a particular gene we can see the all its
+natural variants. In the tree view, you will see a number. In the CFTR gene,
+the shows that contains 191 natural variants.</p>
+</section>
+<section id="variant-phenotypes">
+<span id="userguide-modules-genetics-genetics-health-genetics-uniprot-package-variant-phenotypes"></span><h3>Variant Phenotypes<a class="headerlink" href="#variant-phenotypes" title="Link to this heading"></a></h3>
+<p>GNU Health also provides a way to study the phenotypes associated to
+the gene natural variants. We can access the variant phenotypes via
+command line or menu:</p>
+<ul class="simple">
+<li><p>Command line: <strong>“VARP”</strong></p></li>
+<li><p><strong>Menu</strong> : Health -&gt; Configuration -&gt; Genetics -&gt; Variant Phenotypes</p></li>
+</ul>
+<p>We can search for a particular phenotype or disorder, a change in the
+aminoacid, the gene or the feature ID of the variant (FTid).</p>
+<p>In our example of the CFTR gene, we highlight the fact of a particular
+variant responsible of more than one phenotype. In the example, variant
+with UniProt FTid VAR_000119 (aa change p.Asp110His) has been documented
+to be involved in two phenotypes:</p>
+<ul class="simple">
+<li><p>DI-01389: Congenital bilateral absence of the vas deferens</p></li>
+<li><p>DI-01466: Cystic fibrosis</p></li>
+</ul>
+<a class=""
+               data-lightbox="group-da0cadeb-2619-468a-9394-48240b9a5ddd"
+               href="../../_images/gnuhealth_genetics_variants_phenotypes_cftr1.png"
+               title="Example of involvement of a particular variant in two
+different phenotypes."
+               data-title="Example of involvement of a particular variant in two
+different phenotypes."
+               
+               ><img src="../../_images/gnuhealth_genetics_variants_phenotypes_cftr1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="genetic-and-protein-related-disorders">
+<span id="userguide-modules-genetics-genetics-health-genetics-uniprot-package-genetic-and-protein-related-disorders"></span><h3>Genetic and Protein Related Disorders<a class="headerlink" href="#genetic-and-protein-related-disorders" title="Link to this heading"></a></h3>
+<p>The GNU Health genetics <strong>UniProt</strong> package provides over 6400 genetic and
+protein related disorders.</p>
+<a class=""
+               data-lightbox="group-87d4583e-1dc2-49c1-b0ea-a96142626e5d"
+               href="../../_images/gnuhealth_genetics_genetic_and_protein_diseases1.png"
+               title="List view of genetic diseases, with the Barth Syndrome entry
+selected (highlighted)"
+               data-title="List view of genetic diseases, with the Barth Syndrome entry
+selected (highlighted)"
+               
+               ><img src="../../_images/gnuhealth_genetics_genetic_and_protein_diseases1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>There are several ways to access or group the disorders.</p>
+<ul class="simple">
+<li><p><strong>Disease ID</strong>: Uniprot provided unique ID per disorder, with the format DI-XXXXX</p></li>
+<li><p><strong>Disease Name</strong>: Long, descriptive name of the disorder</p></li>
+<li><p><strong>Mnemonic</strong>: Simpler, one word that identifies the disorder</p></li>
+<li><p><strong>Xrefs</strong>: Cross references for well known database (OMIM, MedGen, MeSH…)</p></li>
+<li><p><strong>Keywords</strong>: Handy way to search disorders by groups (eg, cardiomyopathies, neurodegeneration,…)</p></li>
+<li><p><strong>Inheritance pattern</strong>: The mode of passing the disorder to offsprings (eg, autosomal dominant/recessive, X-Linked..)</p></li>
+</ul>
+<p>In addition to the fields shown in the previous screenshot corresponding to
+the list view, the form view provides the disease URI (pointing to UniProt
+disease entry online resource), a detailed description of the disorder,
+the gene(s) involved, the protein product and the list of natural variants
+related to the disorder.</p>
+<a class=""
+               data-lightbox="group-1e90971d-76a0-4795-86cb-be29969aff80"
+               href="../../_images/gnuhealth_genetics_genetic_and_protein_diseases_form_view1.png"
+               title="Detailed (form) view for the Barth Syndrome disease entry (DI-0005)."
+               data-title="Detailed (form) view for the Barth Syndrome disease entry (DI-0005)."
+               
+               ><img src="../../_images/gnuhealth_genetics_genetic_and_protein_diseases_form_view1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+</section>
+<section id="personal-genetic-information">
+<span id="userguide-modules-genetics-genetics-personal-genetic-information"></span><span id="modulesindetail-genetics-genetics-protein-related-diseases-natural-variants"></span><h2>Personal Genetic Information<a class="headerlink" href="#personal-genetic-information" title="Link to this heading"></a></h2>
+<p>GNU Health stores the details on each of the genes that are relevant for
+the individual. This information can be accessed from the “Genetics” tab
+on the patient main form.</p>
+<ul class="simple">
+<li><p><strong>Gene involved</strong>: Information about the gene. The gene code, official
+long name, chromosome and locus. It also provides information about the
+protein encoded and the link to UniProt protein code.</p></li>
+<li><p><strong>Natural Variant</strong>: The specific amino acid change.</p></li>
+<li><p><strong>Phenotype</strong>: This field is used if the person shows clinical
+signs associated to the expression of that gene variant.</p></li>
+<li><p><strong>Onset</strong> : Age (expressed in years) of first clinical signs.</p></li>
+<li><p><strong>Notes</strong> : Comments contextualized to the individual.</p></li>
+</ul>
+<p>If we rather want to see the genetic information at population level,
+then we can use the menu:</p>
+<p><strong>Health -&gt; Personal Genetic Information</strong></p>
+</section>
+<section id="family-history">
+<span id="userguide-modules-genetics-genetics-family-history"></span><h2>Family History<a class="headerlink" href="#family-history" title="Link to this heading"></a></h2>
+<p>GNU Health shows extra info related to diseases including the name,
+code and main disease category, genetic data and a free text box for
+adding relevant extra info.</p>
+<a class=""
+               data-lightbox="group-e56bdbc5-4dd6-4105-b447-bae329452788"
+               href="../../_images/gnuhealth_genetics_ana_betz_family_history1.png"
+               title="The family history is encoded on the right hand side section
+of the patient genetics tab."
+               data-title="The family history is encoded on the right hand side section
+of the patient genetics tab."
+               id="modulesindetail-genetics-genetics-protein-related-diseases"
+               ><img src="../../_images/gnuhealth_genetics_ana_betz_family_history1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="genetic-testing-and-medical-history">
+<span id="userguide-modules-genetics-genetics-genetic-testing-and-medical-history"></span><h2>Genetic testing and Medical history<a class="headerlink" href="#genetic-testing-and-medical-history" title="Link to this heading"></a></h2>
+<p>So far we’ve seen how to register the genetic information and family
+history of the individual, and we know will see how to register a
+particular phenotype or disorder.</p>
+<p>A positive result of a particular genetic test does not necessarily equates
+to disease, as we see in many late-onset disorders.</p>
+<p>In our family example, Ana Betz is a (healthy) carrier for a pathogenic
+variant in the CFTR gene, involved in cystic fibrosis.</p>
+<p>Her son, Matt, carries two pathogenic alleles of the CFTR and he shows
+clinical signs compatible with Cystic Fibrosis.</p>
+<p>When both the molecular testing and the clinical signs are present, we can
+then encode the corresponding ICD11 (or whatever coding standard)
+corresponding with the disease.</p>
+<p>Ana Betz has a child (Matt). Cystic fibrosis is has a autosomal recessive
+inheritance pattern, that is, two pathogenic alleles are required to
+develop different signs of cystic fibrosis.</p>
+<p>Matt has inherited two dysfunctional alleles, one from the mother (var_000179) and
+one from the father (var_000267). Because both alleles have been identified by
+molecular testing, <strong>and</strong> he has shown clinical signs compatible with the
+cystic fibrosis, the corresponding ICD11 (CA25) has been incorporated to
+his medical history.</p>
+<a class=""
+               data-lightbox="group-c36d508a-ab39-4d26-a0a2-e9f1cfe84696"
+               href="../../_images/gnuhealth_genetics_variants_phenotypes_patient_information_matt1.png"
+               title="Some of the elements related to the molecular diagnostics and
+medical history of a particular individual."
+               data-title="Some of the elements related to the molecular diagnostics and
+medical history of a particular individual."
+               
+               ><img src="../../_images/gnuhealth_genetics_variants_phenotypes_patient_information_matt1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="gnu-health-commands-for-genetics">
+<span id="userguide-modules-genetics-genetics-gnu-health-commands-for-genetics"></span><h2>GNU Health Commands for genetics<a class="headerlink" href="#gnu-health-commands-for-genetics" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>gen</strong>: Personal Genetic Information</p></li>
+<li><p><strong>gdis</strong>: Genes</p></li>
+<li><p><strong>var</strong>: Natural Variants</p></li>
+<li><p><strong>varp</strong>: Variant Phenotypes</p></li>
+<li><p><strong>pdis</strong>: Genetic / Protein diseases</p></li>
+</ul>
+<p>The GNU Health commands allow arguments. For example, if you want to get
+the information related to the CFTR gene, you can type in the command
+line widget:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdis</span> <span class="n">CFTR</span>
+</pre></div>
+</div>
+<p>To retrieve a CFTR natural variant its Feature ID (FTid) var_000179</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">VAR_000179</span>
+</pre></div>
+</div>
+<p>If you want to see the genetic information for a particular patient:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gen</span> <span class="n">GNU777ORG</span>
+</pre></div>
+</div>
+<p>To access the latest information about cystic fibrosis:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdis</span> <span class="n">DI</span><span class="o">-</span><span class="mi">01466</span>
+</pre></div>
+</div>
+<a class=""
+               data-lightbox="group-2bd56da2-6ca7-40fb-af22-1016212409ad"
+               href="../../_images/gnuhealth_genetics_gen_command1.png"
+               title="gen command to retrieve the personal genetic information for the
+ID "GNU777ORG" (Ana Betz)"
+               data-title="gen command to retrieve the personal genetic information for the
+ID "GNU777ORG" (Ana Betz)"
+               
+               ><img src="../../_images/gnuhealth_genetics_gen_command1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="obstetrics.html" class="btn btn-neutral float-left" title="Obstetrics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="surgery.html" class="btn btn-neutral float-right" title="Surgery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

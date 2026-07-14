@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sequences" href="sequences.html" />
+    <link rel="prev" title="Models" href="models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html">System Administration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Development Environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="coding.html">Coding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="future_merging.html">Future Merging Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html">User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#template-guidelines">Template Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences.html">Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scheduler.html">Scheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fhir/index.html">FHIR REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Development Environment</a></li>
+      <li class="breadcrumb-item active">Reports</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/development/reports.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reports">
+<span id="techguide-development-reports-reports"></span><h1>Reports<a class="headerlink" href="#reports" title="Link to this heading"></a></h1>
+<section id="template-guidelines">
+<span id="techguide-development-reports-reports-template-guidelines"></span><h2>Template Guidelines<a class="headerlink" href="#template-guidelines" title="Link to this heading"></a></h2>
+<section id="read-tryton-reports-document">
+<h3>Read tryton reports document<a class="headerlink" href="#read-tryton-reports-document" title="Link to this heading"></a></h3>
+<p>GNU Health HIS is based on tryton service, so should read it first.</p>
+<p><a class="reference external" href="https://docs.tryton.org/7.0/server/topics/reports/index.html">https://docs.tryton.org/7.0/server/topics/reports/index.html</a></p>
+</section>
+<section id="libreoffice-setup">
+<h3>Libreoffice setup<a class="headerlink" href="#libreoffice-setup" title="Link to this heading"></a></h3>
+<ol class="arabic" id="techguide-administration-reports-1-libreoffice-setup-1-remove-user-data">
+<li><p>Remove user data</p>
+<ul class="simple">
+<li><p>Open: <em>(File → Properties)</em></p></li>
+<li><p>Uncheck: <em>Apply user data</em></p></li>
+<li><p>Uncheck: <em>Save preview image with this document</em></p></li>
+<li><p>Click on: <em>Reset Properties</em></p></li>
+</ul>
+</li>
+<li><p>Set some parameters</p>
+<ul>
+<li><p>Check <em>(View &gt; Field Names)</em> and let field only show
+<em>Placeholder</em> label, which will be more conducive to observing
+the layout effect.</p></li>
+<li><p>Use English (USA) UI, so the name of table or figure in document will be
+English.</p>
+<p><em>(Options → Language Settings → Languages → User Interface)</em></p>
+</li>
+<li><p>Disable table number recognition</p>
+<p><em>(Options → Libreoffice Write → Table → Number recognition)</em></p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="edit-report-template-file">
+<h3>Edit report template file<a class="headerlink" href="#edit-report-template-file" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Do not use direct (or manual) formatting.</p></li>
+<li><p>Do not use character style unless absolutely necessary.</p></li>
+<li><p>Prefer use paragraph styles, but suggest style number &lt; 20.</p></li>
+<li><p>Use <em>GNU FreeFont</em> as English font, for example: <em>FreeSerif</em>, <em>FreeSans</em> and <em>FreeMono</em>.</p></li>
+<li><p>Hide all unused styles.</p></li>
+<li><p>User custom styles suggest prefix with <em>GH-</em>, which means <em>GNU Health</em>.</p></li>
+<li><p>Be careful of spaces of label strings.</p>
+<p>Suggest <em>PUID</em> or <em>PUID:</em>, instead of <em>PUID&lt;SPC&gt;:</em>.</p>
+</li>
+<li><p>Do not add extra spaces between two words.</p>
+<p>Using <em>hello&lt;SPC&gt;world</em> instead of <em>hello&lt;SPC&gt;&lt;SPC&gt;world</em>.</p>
+</li>
+<li><p>The name of table, figure and other things suggest use ascii.</p></li>
+<li><p>Reconfigure table properties after table layout is changed.</p></li>
+<li><p>Should we use <em>and/or/not</em> or <em>if directive</em> ?</p>
+<ol class="arabic">
+<li><p>In most situation, we prefer <em>and/or/not</em>, for it is not disrupt
+report layout and make grep work well.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">appointment</span><span class="o">.</span><span class="n">patient</span> <span class="ow">and</span> <span class="n">appointment</span><span class="o">.</span><span class="n">patient</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> <span class="n">appointment</span><span class="o">.</span><span class="n">patient</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">ref</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Using Python Conditional Expressions is a good idea too:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">value_if_true</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">value_if_false</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>if string will be translated by other languages, and <em>if
+directive</em> do not disrupt report layout too much, we suggest
+use <em>if directive</em>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">if test=&#39;appointment.patient&#39;</span>
+<span class="go">appointment.patient.name.ref</span>
+<span class="go">/if</span>
+</pre></div>
+</div>
+</li>
+<li><p>if <em>if directive</em> seriously affects the report structure, we
+suggest to add a method to model and use this method in
+template, for example, we use <em>get_report_pain_and_level()</em> in
+report template of health_nursing modules.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use by round_report template</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_report_pain_and_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pain</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">pain_level</span><span class="p">:</span>
+         <span class="k">return</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health_nursing.msg_report_pain_level&#39;</span><span class="p">,</span>
+                        <span class="n">pain_level</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pain_level</span><span class="p">))</span>
+     <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">pain</span><span class="p">:</span>
+         <span class="k">return</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health_nursing.msg_report_pain_yes&#39;</span><span class="p">)</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="k">return</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health_nursing.msg_report_pain_no&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>How to keep ratio when add a image to report?</p>
+<p>We have added <em>ImageReportMixin</em> class and register to <em>Report</em>
+class with the help of <em>Pool.register_mixin</em>, user can use its
+methods in report template, for example:</p>
+<ul class="simple">
+<li><p>patient_card.fodt: <em>image: image_crop(patient.photo, 2.5, 3.5)</em></p></li>
+<li><p>labtest_report.fodt: <em>image: image_resize(image.data, 5, 5)</em></p></li>
+</ul>
+</li>
+<li><p>How to add ‘yes’ or ‘no’ string to report and let them translatable.</p>
+<p>A simple way is using <em>yes_str</em> and <em>no_str</em> variable in report
+template, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">death_cert</span><span class="o">.</span><span class="n">autopsy</span> <span class="ow">and</span> <span class="n">yes_str</span> <span class="ow">or</span> <span class="n">no_str</span>
+</pre></div>
+</div>
+<p>User can use gettext in report template if wish, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">death_cert</span><span class="o">.</span><span class="n">autopsy</span> <span class="ow">and</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health.msg_yes_str&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health.msg_no_str&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>The functions and variables which can be used directly in report template.</p>
+<p>Grep <em>get_context</em> in Trytond sources and GNU Health sources, you
+will find like below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_context</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">records</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GettextReportMixin</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">get_context</span><span class="p">(</span>
+        <span class="n">records</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;yes_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health.msg_yes_str&#39;</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;no_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gettext</span><span class="p">(</span><span class="s1">&#39;health.msg_no_str&#39;</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;gettext&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gettext</span>
+
+    <span class="k">return</span> <span class="n">context</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Tryton</p>
+<ul class="simple">
+<li><p>header</p></li>
+<li><p>data</p></li>
+<li><p>context</p></li>
+<li><p>user</p></li>
+<li><p>records</p></li>
+<li><p>record</p></li>
+<li><p>format_date</p></li>
+<li><p>format_datetime</p></li>
+<li><p>format_timedelta</p></li>
+<li><p>format_currency</p></li>
+<li><p>format_number</p></li>
+<li><p>datetime</p></li>
+</ul>
+</li>
+<li><p>GNU Health</p>
+<ul class="simple">
+<li><p>image_crop</p></li>
+<li><p>image_resize</p></li>
+<li><p>image_keep_size</p></li>
+<li><p>yes_str</p></li>
+<li><p>no_str</p></li>
+<li><p>gettext</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="save-and-check-report-template-file">
+<h3>Save and check report template file<a class="headerlink" href="#save-and-check-report-template-file" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Clean Direct Formatting.</p>
+<ol class="arabic simple">
+<li><p><em>(Edit → Select All)</em></p></li>
+<li><p><em>(Format → Clean Direct Formatting)</em></p></li>
+</ol>
+<p>NOTE: This step is very useful, which can solve most <em>Abnormal
+string fragmentation</em> issues describe below.</p>
+</li>
+<li><p>Check ‘Abnormal string fragmentation’ issue.</p>
+<p>Save file to fodt format, then open fodt file with a text editor to
+check “PU” + “ID” style issues <em>(Abnormal string fragmentation)</em>, if
+found, edit template file again.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;text:span text:style-name=&quot;T4&quot;&gt;PU&lt;/text:span&gt;&lt;text:span text:style-name=&quot;T3&quot;&gt;ID&lt;/text:span&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;text:p text:style-name=&quot;P11&quot;&gt;Hello &lt;text:s/&gt;world&lt;/text:p&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check po or pot files.</p>
+<p>Finally, user can use below command to update pot files (see:
+<a class="reference internal" href="../localization/index.html#techguide-localization-index-localization-update-po-and-pot-files"><span class="std std-ref">Update po and pot files</span></a>),
+then check diff with hg command, make sure no <em>PU + ID</em> style
+issues.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bash his-utils/script/po-export/po-export.sh --fast-export --his-dir &lt;your-his-repo&gt; --pot</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="models.html" class="btn btn-neutral float-left" title="Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sequences.html" class="btn btn-neutral float-right" title="Sequences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

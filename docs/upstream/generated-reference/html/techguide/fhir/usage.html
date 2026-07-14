@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Release Process" href="../release.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html">System Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html">Security</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">FHIR REST</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fhir-overview">FHIR Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#url-structure">URL Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#searching-listing">Searching / Listing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-server-examples">Test Server Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Technical Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FHIR REST</a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/techguide/fhir/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage">
+<span id="techguide-fhir-usage-usage"></span><h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
+<section id="fhir-overview">
+<span id="techguide-fhir-usage-usage-fhir-overview"></span><h2>FHIR Overview<a class="headerlink" href="#fhir-overview" title="Link to this heading"></a></h2>
+<p><strong>Fast Healthcare Interoperability Resources (FHIR)</strong> is a standard for exchanging healthcare information electronically developed by HL7. The standard defines a common interface for medical software interoperability. For more reading, look at the <a class="reference external" href="https://www.hl7.org/implement/standards/fhir/">FHIR standard</a>.</p>
+</section>
+<section id="url-structure">
+<span id="techguide-fhir-usage-usage-url-structure"></span><h2>URL Structure<a class="headerlink" href="#url-structure" title="Link to this heading"></a></h2>
+<p>The FHIR standard defines a REST API, a set of interactions with each resource. Each resource handles different types of information. Currently, the GNU Health FHIR server supports 12 resources:</p>
+<ul class="simple">
+<li><p><strong>Conformance</strong>: Describes the server’s FHIR capabilities.</p></li>
+<li><p><strong>Patient</strong>: Patient information, like email, address, SSN, etc.</p></li>
+<li><p><strong>DiagnosticReport</strong>: Completed lab tests, but not the data</p></li>
+<li><p><strong>Observation</strong>: Lab data, like Uric Acid values</p></li>
+<li><p><strong>Practitioner</strong>: Health professionals and their information</p></li>
+<li><p><strong>Procedure</strong>: Surgeries/operations</p></li>
+<li><p><strong>Condition</strong>: Diseases/diagnoses</p></li>
+<li><p><strong>FamilyHistory</strong>: Family histories of patients</p></li>
+<li><p><strong>Medication</strong>: Medications (not prescriptions!)</p></li>
+<li><p><strong>MedicationStatement</strong>: Medications taken by a patient</p></li>
+<li><p><strong>Immunization</strong>: Immunizations</p></li>
+<li><p><strong>Organization</strong>: Institutions, departments, companies, etc.</p></li>
+</ul>
+<p>Each resource has its own endpoint. For example, the <strong>Patient</strong> endpoint is found at <code class="code docutils literal notranslate"><span class="pre">/Patient</span></code>, the <strong>DiagnosticReport</strong> endpoint at <code class="code docutils literal notranslate"><span class="pre">DiagnosticReport</span></code>, and so on. The only exception to this naming schema is the <strong>Conformance</strong> endpoint which is found at <code class="code docutils literal notranslate"><span class="pre">/</span></code> and <code class="code docutils literal notranslate"><span class="pre">/metadata</span></code>.</p>
+<p>The interactions use HTTP verbs. Simple read and search interactions with GET, and so on.</p>
+<p>For further reading into the REST design, read the <a class="reference external" href="https://www.hl7.org/implement/standards/fhir/http.html">documentation</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, the GNU Health FHIR server has no write functionality.</p>
+</div>
+</section>
+<section id="authentication">
+<span id="techguide-fhir-usage-usage-authentication"></span><h2>Authentication<a class="headerlink" href="#authentication" title="Link to this heading"></a></h2>
+<p><strong>All resources, except for Conformance, require authentication</strong>. The server authenticates with the user credentials of the underlying GNU Health/Tryton server. Login with your user credentials at <code class="code docutils literal notranslate"><span class="pre">/auth/login</span></code>. Logout at <code class="code docutils literal notranslate"><span class="pre">/auth/logout</span></code>. There is a simple welcome page for logged-in users at <code class="code docutils literal notranslate"><span class="pre">/auth/home</span></code>.</p>
+</section>
+<section id="searching-listing">
+<span id="techguide-fhir-usage-usage-searching-listing"></span><h2>Searching / Listing<a class="headerlink" href="#searching-listing" title="Link to this heading"></a></h2>
+<p>To search a resource, simply add arguments to the endpoint to refine the search. For example, <code class="code docutils literal notranslate"><span class="pre">/Patient</span></code>, will return all the patients on the server. <code class="code docutils literal notranslate"><span class="pre">/Patient?name=Matt</span></code> will return all the patients with ‘Matt’ in their name.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are still search criteria for the GNU Health FHIR server to implement, as using more than one search argument</p>
+</div>
+<p>Refer to the FHIR documentation for more information.</p>
+</section>
+<section id="test-server-examples">
+<span id="techguide-fhir-usage-usage-test-server-examples"></span><h2>Test Server Examples<a class="headerlink" href="#test-server-examples" title="Link to this heading"></a></h2>
+<p>Some examples with the community FHIR server (may need to sign in):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://federation.gnuhealth.org:8700/Patient">List all patients</a></p></li>
+<li><p><a class="reference external" href="https://federation.gnuhealth.org:8700/Patient/1">Show info for patient id #1</a></p></li>
+<li><p><a class="reference external" href="https://federation.gnuhealth.org:8700/Practitioner?name=Cameron">Show health professionals matching the name “Cameron”</a></p></li>
+<li><p><a class="reference external" href="https://federation.gnuhealth.org:8700/Procedure">List all surgeries</a></p></li>
+<li><p><a class="reference external" href="https://federation.gnuhealth.org:8700/Observation">List Lab results</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../release.html" class="btn btn-neutral float-right" title="Release Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

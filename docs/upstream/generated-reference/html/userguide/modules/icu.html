@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intensive Care Unit &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Neglected Tropical Diseases" href="neglectedtropicaldiseases.html" />
+    <link rel="prev" title="Inpatient Management" href="inpatientmanagement.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaging.html">Imaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Intensive Care Unit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-the-icu-functionality">Introduction to the ICU Functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#patient-icu-information">Patient ICU Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#patient-rounding">Patient Rounding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Intensive Care Unit</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/icu.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="intensive-care-unit">
+<span id="userguide-modules-icu-intensive-care-unit"></span><h1>Intensive Care Unit<a class="headerlink" href="#intensive-care-unit" title="Link to this heading"></a></h1>
+<section id="introduction-to-the-icu-functionality">
+<span id="userguide-modules-icu-intensive-care-unit-introduction-to-the-icu-functionality"></span><h2>Introduction to the ICU Functionality<a class="headerlink" href="#introduction-to-the-icu-functionality" title="Link to this heading"></a></h2>
+<p>The module <code class="code docutils literal notranslate"><span class="pre">health_icu</span></code> provides basic functionality for Intensive Care Units (ICU). It covers both Intensive Care medicine and the processes related to the Intensive Care Unit, such as procedures and stock management.</p>
+<p>The functionality is divided into two major sections:</p>
+<ul class="simple">
+<li><p>Patient ICU Information</p></li>
+<li><p>Patient Roundings</p></li>
+</ul>
+</section>
+<section id="patient-icu-information">
+<span id="userguide-modules-icu-intensive-care-unit-patient-icu-information"></span><h2>Patient ICU Information<a class="headerlink" href="#patient-icu-information" title="Link to this heading"></a></h2>
+<p>All information about a patient that is related to the ICU is managed in the <em>Health → Hospitalization → Intensive Care → Patient ICU Info</em> section. Every <em>Patient ICU Info</em> record is linked to a <em>Hospitalizations</em> record (not to a <em>Patients</em> record directly).</p>
+<p>The <em>Patient ICU Info</em> form allows you to have an idea of the patient status, days since admission at ICU and use of mechanical ventilation, among other functionalities.</p>
+<p>By clicking the <em>Relate</em> button you can directly create and evaluate the following data for a given patient:</p>
+<ul class="simple">
+<li><p>Acute Physiology and Chronic Health Evaluation II (APACHE II)</p></li>
+<li><p>Electrocardiograms (ECG)</p></li>
+<li><p>Glasgow Coma Scale (GCS)</p></li>
+</ul>
+<section id="apache-ii">
+<span id="userguide-modules-icu-intensive-care-unit-patient-icu-information-apache-ii"></span><h3>APACHE II<a class="headerlink" href="#apache-ii" title="Link to this heading"></a></h3>
+<p>The Acute Physiology and Chronic Health Evaluation II (APACHE II) is a classification system for the severity of disease. It is applied within 24 hours of admission of a patient to an ICU. A score between 0 and 71 is computed based on several measurements, where higher scores correspond to more severe disease and a higher risk of death. (Read more about <a class="reference external" href="https://en.wikipedia.org/wiki/APACHE_II">APACHE II</a>.)</p>
+<a class=""
+               data-lightbox="group-886118a0-5f73-47fe-8823-1ff8cc065148"
+               href="../../_images/APACHE_II_Score_form_in_the_ICU_module_of_GNU_Health1.png"
+               title="APACHE II Score form in the ICU module of GNU Health"
+               data-title="APACHE II Score form in the ICU module of GNU Health"
+               
+               ><img src="../../_images/APACHE_II_Score_form_in_the_ICU_module_of_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The APACHE II form in GNU Health contains the following information:</p>
+<ul class="simple">
+<li><p><em>Registration Code:</em> Link to the inpatient record of the patient (mandatory).</p></li>
+<li><p><em>Date</em>: Date and time of the evaluation (mandatory).</p></li>
+<li><p><em>Age</em></p></li>
+<li><p><em>Temperature</em></p></li>
+<li><p><em>MAP</em></p></li>
+<li><p><em>Heart Rate</em></p></li>
+<li><p><em>Resporatory Rate</em></p></li>
+<li><p><em>FiO2</em></p></li>
+<li><p><em>PaO2</em></p></li>
+<li><p><em>PaCO2</em></p></li>
+<li><p><em>A-a DO2</em></p></li>
+<li><p><em>pH</em></p></li>
+<li><p><em>Sodium</em></p></li>
+<li><p><em>Potassium</em></p></li>
+<li><p><em>Creatinine</em></p></li>
+<li><p><em>Hematocrit</em></p></li>
+<li><p><em>WBC</em></p></li>
+<li><p><em>ARF:</em> Check if appropriate.</p></li>
+<li><p><em>Chronic condition:</em> Check if appropriate.</p></li>
+<li><p><em>Score:</em> The resulting APACHE II score (calculated automatically).</p></li>
+</ul>
+</section>
+<section id="ecg">
+<span id="userguide-modules-icu-intensive-care-unit-patient-icu-information-ecg"></span><h3>ECG<a class="headerlink" href="#ecg" title="Link to this heading"></a></h3>
+<p>In the <em>Health → Hospitalizations → Intensive Care → ECG</em> section of GNU Health you can document any electrocardiograms taken from a patient.</p>
+<a class=""
+               data-lightbox="group-4ddd1962-77cb-43fb-bcda-023d7719ae61"
+               href="../../_images/ECG_form_of_GNU_Health1.png"
+               title="ECG form of GNU Health"
+               data-title="ECG form of GNU Health"
+               
+               ><img src="../../_images/ECG_form_of_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>ECG</em> form provides the following information:</p>
+<ul class="simple">
+<li><p><em>Registration Code:</em> Link to the inpatient record of the patient (mandatory).</p></li>
+<li><p><em>Date:</em> Date and time when the ECG was taken (mandatory). <strong>Please note: Currently you have not access to this field in the form view, only in the list view.</strong></p></li>
+<li><p><em>Lead:</em> Choose between I, II, III, aVF, aVR, aVL, V1, V2, V3, V4, V5, or V6.</p></li>
+<li><p><em>Axis:</em> Choose between “Normal axis”, “Left deviation”, “Right deviation”, or “Extreme right deviation” (mandatory).</p></li>
+<li><p><em>Rate:</em> (mandatory)</p></li>
+<li><p><em>Pacemaker:</em> Choose between “Sinus node”, “Atrioventricular”, or “Purkinje” (mandatory).</p></li>
+<li><p><em>Rhythm:</em> Choose between “Regular” or “Irregular” (mandatory).</p></li>
+<li><p><em>PR</em></p></li>
+<li><p><em>QRS</em></p></li>
+<li><p><em>QT</em></p></li>
+<li><p><em>ST Segment:</em> Choose between “Normal”, “Depressed”, or “Elevated” (mandatory).</p></li>
+<li><p><em>T Wave Inversion</em></p></li>
+<li><p><em>Interpretation:</em> (mandatory)</p></li>
+</ul>
+<p>At the bottom of the form you can add an image of the electrocardiogram plot.</p>
+</section>
+<section id="gcs">
+<span id="userguide-modules-icu-intensive-care-unit-patient-icu-information-gcs"></span><h3>GCS<a class="headerlink" href="#gcs" title="Link to this heading"></a></h3>
+<p>The Glasgow Coma Scale (GCS) is a standard to evaluate the level of consciousness of neurological patients. Based on three factors - eye opening, verbal response, and motor response - an overall score between 3 and 15 is calculated. A higher value indicates a higher level of consciousness and a better chance to recover. (Read more about the <a class="reference external" href="https://en.wikipedia.org/wiki/Glasgow_Coma_Scale">Glasgow Coma Scale</a>.)</p>
+<a class=""
+               data-lightbox="group-d4ea8fe3-05c3-4a8b-a126-fa783a956d9a"
+               href="../../_images/The_GSC_form_in_GNU_Health1.png"
+               title="The GSC form in GNU Health"
+               data-title="The GSC form in GNU Health"
+               
+               ><img src="../../_images/The_GSC_form_in_GNU_Health1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The <em>GCS</em> form in GNU Health provides the following fields:</p>
+<ul class="simple">
+<li><p><em>Registration Code:</em> Link to the inpatient record of the patient (mandatory).</p></li>
+<li><p><em>Date:</em> Date and time when the GCS was evaluated (mandatory).</p></li>
+<li><p><em>Eyes:</em> Choose between “1: Does not open eyes”, “2: Opens eyes in response to painful stimuly”, “3: Opens eyes in response to voice”, or “4: Opens eyes spontanously” (mandatory).</p></li>
+<li><p><em>Verbal:</em> Choose between “1: Makes no sounds”, “2: Incomprehensible sounds”, “3: Utters inappropriate words”, “4: Confused, disoriented”, “5: Oriented, converses normally” (mandatory).</p></li>
+<li><p><em>Motor:</em> Choose between “1: Makes no movements”, “2: Extension to painful stimuli (decerebrate response)”, “3: Abnormal flexion to painful stimuli (decorticate response)”, “4: Flexion / Withdrawal to painful stimuli”, “5: Localizes painful stimuli”, or “6: Obeys commands” (mandatory).</p></li>
+<li><p><em>Glasgow:</em> The resuling score (calculated automatically).</p></li>
+</ul>
+</section>
+</section>
+<section id="patient-rounding">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding"></span><h2>Patient Rounding<a class="headerlink" href="#patient-rounding" title="Link to this heading"></a></h2>
+<p>The <code class="code docutils literal notranslate"><span class="pre">health_icu</span></code> module adds the <em>ICU</em> tab to the <em>Roundings</em> form (which can be found in the <em>Health → Nursing → Roundings</em> section).
+In this assessment (that can have different frequencies, depending on the center policies), you should enter the basic information starting at the <em>Main</em> tab first; once you are done with this tab, switch to the <em>ICU</em> tab. The assessment is divided into the following sections:</p>
+<section id="neurologic">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-neurologic"></span><h3>Neurologic<a class="headerlink" href="#neurologic" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Neurologic</p>
+</div>
+</section>
+<section id="respiratory-incl-x-ray">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-respiratory-incl-x-ray"></span><h3>Respiratory (incl. X-Ray)<a class="headerlink" href="#respiratory-incl-x-ray" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Respiratory</p>
+</div>
+<p>The ICU rounding allows to place an X-ray (or other imaging diagnosis image). Unlike attachments related to the object, that you can also use, this image is even more contextual and graphic. Of course, this image should be very recent to the evaluation itself.</p>
+</section>
+<section id="drainages">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-drainages"></span><h3>Drainages<a class="headerlink" href="#drainages" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Drainages</p>
+</div>
+<p>Chest drainages are input from a One2Many widget. This permits to have as many as in the patient, and with their own characteristics.</p>
+</section>
+<section id="cardiovascular">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-cardiovascular"></span><h3>Cardiovascular<a class="headerlink" href="#cardiovascular" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Cardiovascular</p>
+</div>
+</section>
+<section id="blood-and-skin">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-blood-and-skin"></span><h3>Blood and Skin<a class="headerlink" href="#blood-and-skin" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Blood and Skin</p>
+</div>
+</section>
+<section id="digestive-and-abdomen">
+<span id="userguide-modules-icu-intensive-care-unit-patient-rounding-digestive-and-abdomen"></span><h3>Digestive and Abdomen<a class="headerlink" href="#digestive-and-abdomen" title="Link to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">Todo</p>
+<p>Fill Modules in Detail - ICU - Digestive and Abdomen</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inpatientmanagement.html" class="btn btn-neutral float-left" title="Inpatient Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="neglectedtropicaldiseases.html" class="btn btn-neutral float-right" title="Neglected Tropical Diseases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Roadmap" href="../roadmap.html" />
+    <link rel="prev" title="Plugins" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Plugins</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initialize-the-plugin-directory">Initialize the plugin directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#camera-plugin">Camera Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-opencv">Installing OpenCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-camera-plugin">Installing the Camera Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#invoking-the-camera-plugin">Invoking the Camera Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-camera">Using the Camera</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#crypto-plugin">Crypto plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-the-crypto-plugin">Installation of the Crypto plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#screenshot-plugin">Screenshot plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-the-screenshot-plugin">Installation of the Screenshot plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Plugins</a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/plugins/plugins.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="plugins-plugins-introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The GNU Health Plugins are client-side programs that provide extra functionality. They are installed locally.</p>
+</section>
+<section id="initialize-the-plugin-directory">
+<span id="plugins-plugins-initialize-the-plugin-directory"></span><h1>Initialize the plugin directory<a class="headerlink" href="#initialize-the-plugin-directory" title="Link to this heading"></a></h1>
+<p>The GNU Health plugins are installed in your $HOME directory, under “gnuhealth_plugins”.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span><span class="nv">$HOME</span>/gnuhealth_plugins
+</pre></div>
+</div>
+<p>In order to keep the GNU Health plugins compatible with the latest client, you need to create a link to the GNU Health plugins directory</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ln<span class="w"> </span>-si<span class="w"> </span><span class="nv">$HOME</span>/gnuhealth_plugins<span class="w"> </span><span class="nv">$HOME</span>/.config/gnuhealth/5.0/plugins
+</pre></div>
+</div>
+</section>
+<section id="camera-plugin">
+<span id="plugins-plugins-camera-plugin"></span><h1>Camera Plugin<a class="headerlink" href="#camera-plugin" title="Link to this heading"></a></h1>
+<p>The camera plugin allows to visualize, transfer and store media from a webcam device ( camera, microscope, … ).</p>
+<p>There are many contexts where the camera is useful, some of them :</p>
+<ul class="simple">
+<li><p>Person or patient registration</p></li>
+<li><p>Domiciliary units surveys</p></li>
+<li><p>Histological studies</p></li>
+<li><p>EKG strips</p></li>
+<li><p>Telemedicine</p></li>
+<li><p>Dx Imaging</p></li>
+</ul>
+<p>The information captured by the device will be transferred and stored in the GNU Health server.</p>
+<section id="installing-opencv">
+<span id="plugins-plugins-camera-plugin-installing-opencv"></span><h2>Installing OpenCV<a class="headerlink" href="#installing-opencv" title="Link to this heading"></a></h2>
+<p>The GNU Health camera uses the excellent Open Computer Vision library (“OpenCV”). You need to install the opencv package for your operating system.</p>
+<p>Install the Python bindings for OpenCV of your distribution. In Debian &amp; openSUSE the package is <code class="code docutils literal notranslate"><span class="pre">python3-opencv</span></code> and in Archlinux <code class="code docutils literal notranslate"><span class="pre">python-opencv</span></code>.
+Besides you can take it directly from PyPI as <code class="code docutils literal notranslate"><span class="pre">opencv-python</span></code>.</p>
+<p>In order to check the correct installation of OpenCV import the module CV2 in the python interpreter:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">$ python3</span>
+<span class="go">Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux</span>
+<span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="gp">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>If no errors, the installation is successful!</p>
+</section>
+<section id="installing-the-camera-plugin">
+<span id="plugins-plugins-camera-plugin-installing-the-camera-plugin"></span><h2>Installing the Camera Plugin<a class="headerlink" href="#installing-the-camera-plugin" title="Link to this heading"></a></h2>
+<p>Download and uncompress the latest version of the camera plugin and finally move it into your plugins directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>wget<span class="w"> </span>https://codeberg.org/gnuhealth/client-plugins/releases/download/v4.4.1-camera/gnuhealth_plugin_camera-4.4.1.tar.gz
+<span class="gp">$ </span>tar<span class="w"> </span>-xzvf<span class="w"> </span>gnuhealth_plugin_camera-4.4.1.tar.gz
+<span class="gp">$ </span>mv<span class="w"> </span>gnuhealth_camera<span class="w"> </span><span class="nv">$HOME</span>/gnuhealth_plugins/camera
+</pre></div>
+</div>
+<p>Afterwards restart the client.</p>
+</section>
+<section id="invoking-the-camera-plugin">
+<span id="plugins-plugins-camera-plugin-invoking-the-camera-plugin"></span><h2>Invoking the Camera Plugin<a class="headerlink" href="#invoking-the-camera-plugin" title="Link to this heading"></a></h2>
+<p>From the client, click on the <code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">action</span></code> icon, and select <code class="docutils literal notranslate"><span class="pre">GNU</span> <span class="pre">Health</span> <span class="pre">Camera</span></code>.</p>
+</section>
+<section id="using-the-camera">
+<span id="plugins-plugins-camera-plugin-using-the-camera"></span><h2>Using the Camera<a class="headerlink" href="#using-the-camera" title="Link to this heading"></a></h2>
+<p>“<strong>a</strong>” : attach any media taken from the camera device into the current model.</p>
+<p><strong>[SPACE]</strong> : store the media as a binary field, for instance, as the person / patient picture. To store the media as a picture, press the SPACE bar. Currently GNU Health has the party model person picture predefined.</p>
+<p>“<strong>h</strong>” : Show the help menu</p>
+<p>“<strong>q</strong>” : Quit the camera</p>
+<p>After you transfer the media, you need to refresh the current view <strong>[CONTROL + R]</strong></p>
+</section>
+</section>
+<section id="crypto-plugin">
+<span id="plugins-plugins-crypto-plugin"></span><h1>Crypto plugin<a class="headerlink" href="#crypto-plugin" title="Link to this heading"></a></h1>
+<p>GNU Health implemented signing documents with the GNU Privacy Guard plugin. It could also be modified in order to encrypt documents.</p>
+<p>The Crypto plugin works along with the <a class="reference internal" href="../techguide/security.html#techguide-security-security-public-key-cryptography-in-gnu-health-gnu-health-cryptographic-module"><span class="std std-ref">GNU Health Crypto Module</span></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These packages are installed in the client, NOT in the server</p>
+</div>
+<p>In order to use it, you need the following in your client:</p>
+<ul>
+<li><p>The <strong>GNU Health crypto plugin</strong> itself. It is shipped with the main tarball when following the Vanilla installation.
+Besides it can be downloaded here:</p>
+<p><a class="reference external" href="https://codeberg.org/gnuhealth/client-plugins/releases">https://codeberg.org/gnuhealth/client-plugins/releases</a></p>
+</li>
+<li><p>The <strong>GPG package</strong> (comes with most modern operating systems).</p></li>
+<li><p>A <strong>GPG key</strong> which is accessible by the operating system user running the client - if you want to make signatures.</p></li>
+<li><p>The <strong>python-gnupg library</strong> (<a class="reference external" href="https://pypi.org/project/python-gnupg/">https://pypi.org/project/python-gnupg/</a>).</p></li>
+</ul>
+<p>Note that everything except the GPG key is in place when using the Ansible installation with the default configuration (and one is created if setting <code class="docutils literal notranslate"><span class="pre">gpg</span></code> to true).</p>
+<section id="installation-of-the-crypto-plugin">
+<span id="plugins-plugins-crypto-plugin-installation-of-the-crypto-plugin"></span><h2>Installation of the Crypto plugin<a class="headerlink" href="#installation-of-the-crypto-plugin" title="Link to this heading"></a></h2>
+<p>The procedure is the same as for the camera:</p>
+<p>Place the “crypto” directory containing the plugin under the “gnuhealth_plugins” directory.`</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>wget<span class="w"> </span>https://codeberg.org/gnuhealth/client-plugins/releases/download/v5.0.0/gnuhealth_plugin_crypto-5.0.0.tar.gz
+<span class="gp">$ </span>tar<span class="w"> </span>-xvf<span class="w"> </span>gnuhealth_plugin_crypto-5.0.0.tar.gz
+<span class="gp">$ </span>mv<span class="w"> </span>crypto<span class="w"> </span><span class="nv">$HOME</span>/gnuhealth_plugins/
+</pre></div>
+</div>
+</section>
+</section>
+<section id="screenshot-plugin">
+<span id="plugins-plugins-screenshot-plugin"></span><h1>Screenshot plugin<a class="headerlink" href="#screenshot-plugin" title="Link to this heading"></a></h1>
+<p>GNU Health implemented screenshot plugin. It can save screenshots to a record’s attachment or set a screenshot as photo of record when possible.</p>
+<p>This plugin may be useful when create report include image, for example, lab test report, user can create screenshots from orthanc browser and save them to lab test result’s attachement, images saved will be showed in lab test report.</p>
+<p>When the plugin create screenshots, it will delay about 2 seconds.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These packages are installed in the client, NOT in the server</p>
+</div>
+<p>In order to use it, you need the following in your client:</p>
+<ul>
+<li><p>The <strong>GNU Health Screenshot plugin</strong> itself. It is shipped with the main tarball when following the Vanilla installation.
+Besides it can be downloaded here:</p>
+<p><a class="reference external" href="https://ftp.gnu.org/gnu/health/plugins/gnuhealth_plugin_screenshot-latest.tar.gz">https://ftp.gnu.org/gnu/health/plugins/gnuhealth_plugin_screenshot-latest.tar.gz</a></p>
+</li>
+</ul>
+<section id="installation-of-the-screenshot-plugin">
+<span id="plugins-plugins-screenshot-plugin-installation-of-the-screenshot-plugin"></span><h2>Installation of the Screenshot plugin<a class="headerlink" href="#installation-of-the-screenshot-plugin" title="Link to this heading"></a></h2>
+<p>The procedure is the same as for the camera:</p>
+<p>Place the “screenshot” directory containing the plugin under the “gnuhealth_plugins” directory.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>wget<span class="w"> </span>https://ftp.gnu.org/gnu/health/plugins/gnuhealth_plugin_screenshot-latest.tar.gz
+<span class="gp">$ </span>tar<span class="w"> </span>-xvf<span class="w"> </span>gnuhealth_plugin_screenshot-latest.tar.gz
+<span class="gp">$ </span>mv<span class="w"> </span>screenshot<span class="w"> </span><span class="nv">$HOME</span>/gnuhealth_plugins/
+</pre></div>
+</div>
+<p>User need to install a screenshot tool or command supported by this plugin, at the moment the plugin support:</p>
+<ol class="arabic simple">
+<li><p>flameshot: <a class="reference external" href="https://flameshot.org/">https://flameshot.org/</a></p></li>
+<li><p>xfce4-screenshooter</p></li>
+<li><p>scrot</p></li>
+</ol>
+<p>Support other screenshot tools or commands is easy, see <code class="code docutils literal notranslate"><span class="pre">get_screenshot_commands</span></code> function of screenshot plugin.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../roadmap.html" class="btn btn-neutral float-right" title="Roadmap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

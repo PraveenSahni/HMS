@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imaging &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Inpatient Management" href="inpatientmanagement.html" />
+    <link rel="prev" title="Nursing" href="nursing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patientmanagement/index.html">Patient Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Modules by functionality</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="laboratory.html">Laboratory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stockmanagement.html">Stock Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="socioeconomics.html">Socioeconomics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifestyle.html">Lifestyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functioninganddisability.html">Functioning and Disapility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gynecology.html">Gynecology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obstetrics.html">Obstetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genetics.html">Genetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surgery.html">Surgery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pediatrics.html">Pediatrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nursing.html">Nursing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Imaging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#default-imaging-module">Default imaging module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imaging-worklist-module">Imaging worklist module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orthanc-integration">Orthanc Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orthanc-patients"><em>Orthanc::Patients</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orthanc-studies"><em>Orthanc::Studies</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools-full-synchronization"><em>Tools: Full Synchronization</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools-newly-synchronization"><em>Tools: Newly Synchronization</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools-uploaded-dicom-files"><em>Tools: uploaded DICOM files</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="inpatientmanagement.html">Inpatient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="icu.html">Intensive Care Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neglectedtropicaldiseases.html">Neglected Tropical Diseases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federation/index.html">GNU Health Federation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar and WebDAV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Modules by functionality</a></li>
+      <li class="breadcrumb-item active">Imaging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/modules/imaging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="imaging">
+<span id="userguide-modules-imaging-imaging"></span><h1>Imaging<a class="headerlink" href="#imaging" title="Link to this heading"></a></h1>
+<section id="default-imaging-module">
+<span id="userguide-modules-imaging-imaging-default-imaging-module"></span><h2>Default imaging module<a class="headerlink" href="#default-imaging-module" title="Link to this heading"></a></h2>
+<p>The default GNU Health imaging module (health_imaging) provides basic imaging support and workflow. Only basic, non-DICOM images are supported. <strong>No DICOM viewer is provided</strong>.</p>
+<section id="creating-a-request">
+<span id="userguide-modules-imaging-imaging-default-imaging-module-creating-a-request"></span><h3>Creating a request<a class="headerlink" href="#creating-a-request" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Create draft request</p>
+<blockquote>
+<div><ul>
+<li><p>Wizard under Imaging → Dx Imaging - New’’</p></li>
+<li><p>Fill in:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Patient</p></li>
+<li><p>Urgent or not</p></li>
+<li><p>Specific test(s)</p></li>
+<li><p>Requesting doctor</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Click <em>Request</em></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Generate order</dt><dd><ul>
+<li><p>Find draft requests under <em>Imaging → Dx Imaging - New → Draft</em></p></li>
+<li><p>Click <em>Request</em> button on the draft request in the detailed view</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Request will now be under the <em>Requested</em> tab</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="generating-results">
+<span id="userguide-modules-imaging-imaging-default-imaging-module-generating-results"></span><h3>Generating results<a class="headerlink" href="#generating-results" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Click <em>Generate Results</em> button on the form (under <em>Dx Imaging Requests</em>)</p></li>
+<li><p>Fill in data (available under the <em>Dx Imaging - Results</em> menu item)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add images under the <em>Images</em> tab</p></li>
+<li><p>Add comments under the <em>Comment</em> tab</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="view-results">
+<span id="userguide-modules-imaging-imaging-default-imaging-module-view-results"></span><h3>View results<a class="headerlink" href="#view-results" title="Link to this heading"></a></h3>
+<p>Results are found under the <em>Imaging → Dx Imaging - Results</em> menu item.</p>
+</section>
+<section id="configuring-available-tests">
+<span id="userguide-modules-imaging-imaging-default-imaging-module-configuring-available-tests"></span><h3>Configuring available tests<a class="headerlink" href="#configuring-available-tests" title="Link to this heading"></a></h3>
+<p>Available tests can be configured under the <em>Configuration → Dx Imaging</em> menu item.</p>
+<p>There are two sub-sections:</p>
+<ul class="simple">
+<li><p>Dx Imaging Test Types (MRI, Ultrasound, etc)</p></li>
+<li><p>Dx Imaging Tests (available tests)</p></li>
+</ul>
+</section>
+</section>
+<section id="imaging-worklist-module">
+<span id="userguide-modules-imaging-imaging-imaging-worklist-module"></span><h2>Imaging worklist module<a class="headerlink" href="#imaging-worklist-module" title="Link to this heading"></a></h2>
+<section id="setup-worklist-template">
+<span id="userguide-modules-imaging-imaging-imaging-worklist-module-setup-worklist-template"></span><h3>Setup worklist template<a class="headerlink" href="#setup-worklist-template" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Open: Health &gt; Configuration &gt; Medical Imaging &gt; Worklist template</p></li>
+<li><p>Set template type.</p>
+<p>If set template type to dump2dcm, worklist text will be handle by
+dump2dcm command of dcmtk package in the future, if set to json,
+worklist text will be handle as json by python-orthanc-tools in the
+future.</p>
+</li>
+<li><p>Set charset field.</p>
+<p>This field is used to store SpecificCharacterSet tag (0008,0005) of
+worklist, for example: ISO_IR 100, ISO_IR 192, GBK …</p>
+<p>See SpecificCharacterSet variable of worklist template.</p>
+</li>
+<li><p>Create worklist templates.</p>
+<p>In most situation, a type of modality should to create a template,
+template use python genshi new text syntax and used to generate
+dump2dcm dumpfile-in text file or json format string depend on
+template type.</p>
+<p><a class="reference external" href="https://genshi.readthedocs.io/en/latest/text-templates/">https://genshi.readthedocs.io/en/latest/text-templates/</a></p>
+<p>At the moment, template support the following variables and most of
+them use dicom tag nicknames.</p>
+<ol class="arabic simple">
+<li><p>AccessionNumber</p></li>
+<li><p>RequestedProcedureID</p></li>
+<li><p>StudyInstanceUID</p></li>
+<li><p>PatientName</p></li>
+<li><p>PatientID</p></li>
+<li><p>PatientAge</p></li>
+<li><p>PatientBirthDate</p></li>
+<li><p>PatientSex</p></li>
+<li><p>RequestingPhysician</p></li>
+<li><p>RequestingService</p></li>
+<li><p>ReferringPhysicianName</p></li>
+<li><p>InstitutionName</p></li>
+<li><p>RequestedProcedureDescription</p></li>
+<li><p>ScheduledProcedureStepStartDate</p></li>
+<li><p>ScheduledProcedureStepStartTime</p></li>
+<li><p>ScheduledProcedureStepID</p></li>
+<li><p>TimezoneOffsetFromUTC</p></li>
+<li><p>ScheduledStationAETitle</p></li>
+<li><p>Modality</p></li>
+</ol>
+<p>Two special variables are supported:</p>
+<ol class="arabic simple">
+<li><p>my: this variable refer to ‘gnuhealth.imaging.test.request’
+model.</p></li>
+<li><p>MergeID: Merge Id is used to merge orthanc studies to health
+imaging result, in most situation, we do not use this variable
+for we use StudyInstanceUID as merge id, if modality workstation
+has bug and can not handle StudyInstanceUID properly, user can
+use other dicom tags to tranfer merge id, more details can be
+found in <em>get_merge_id</em> method in gnuhealth.imaging_orthanc.study
+model. but, this is a hack way, do not use unless absolutely
+necessary.</p></li>
+</ol>
+<p>if user would like to support new worklist template variables,
+extend <em>get_worklist_template_data</em> method in
+gnuhealth.imaging.test.request model is a good way.</p>
+<p>Note: Creating a template for a modality may need more work, user
+should know which tags should be set up properly with the help of
+Dicom Conformance Statement of this modality, user can use wlmscpfs
+of dcmtk to create a test worklist server to know which tags will
+be sent to worklist server from modality. user can try:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">his-utils/scripts/imaging/worklists_service_demo.sh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p>Setup fields of Medical Imaging Studies.</p>
+<p>(Health &gt; Configuration &gt; Medical Imaging &gt; Medical Imaging Studies)</p>
+<ol class="arabic">
+<li><p>Type: the code of this field is used as Modality (0008,0060) tag
+of worklist, so make sure its code use the value of Dicom
+Modality (0008,0060) tag, more details can be found at:</p>
+<p><a class="reference external" href="https://www.dicomlibrary.com/dicom/modality/">https://www.dicomlibrary.com/dicom/modality/</a></p>
+</li>
+<li><p>AETitle: this field is used as ScheduledStationAETitle
+(0040,0001) tag of worklist.</p></li>
+<li><p>Worklist Template.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="view-worklist-text-of-a-imaging-request">
+<span id="userguide-modules-imaging-imaging-imaging-worklist-module-view-worklist-text-of-a-imaging-request"></span><h3>View worklist text of a imaging request<a class="headerlink" href="#view-worklist-text-of-a-imaging-request" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open form: Medical Imaging &gt; Medical Imaging Requests</p></li>
+<li><p>Click worklist field of a request</p></li>
+</ol>
+</section>
+<section id="generate-worklists-wl-files">
+<span id="userguide-modules-imaging-imaging-imaging-worklist-module-generate-worklists-wl-files"></span><h3>Generate worklists wl files<a class="headerlink" href="#generate-worklists-wl-files" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Let orthanc enable worklists plugin, please read:</p>
+<p><a class="reference external" href="https://book.orthanc-server.com/plugins/worklists-plugin.html">https://book.orthanc-server.com/plugins/worklists-plugin.html</a></p>
+</li>
+<li><p>Install pydicom python package in orthanc machine.</p></li>
+<li><p>Install dcmtk package in orthanc machine if dump2dcm template type
+is used.</p></li>
+<li><p>Install python-orthanc-tools python package in orthanc machine if
+json template type is used.</p></li>
+<li><p>Run the below command in orthanc machine, it will get worklist text
+from gnuhealth and generate a wl file (dicom file used by orthanc
+worklist server), -w argument should set to the Database config of
+worklists plugin.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>his-utils/scripts/imaging/update_worklists_database.py<span class="w"> </span>-d<span class="w"> </span>&lt;gnuhealth-db&gt;<span class="w"> </span>-u<span class="w"> </span>&lt;gnuhealth-user&gt;<span class="w"> </span>-P<span class="w"> </span>&lt;password&gt;<span class="w"> </span>-w<span class="w"> </span>&lt;orthanc-worklist-db-dir&gt;
+</pre></div>
+</div>
+<p>More arguments can be found by run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>his-utils/scripts/imaging/update_worklists_database.py<span class="w"> </span>-h
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="orthanc-integration">
+<span id="userguide-modules-imaging-imaging-orthanc-integration"></span><h2>Orthanc Integration<a class="headerlink" href="#orthanc-integration" title="Link to this heading"></a></h2>
+<section id="introduction">
+<span id="userguide-modules-imaging-imaging-orthanc-integration-introduction"></span><h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>This module (health_orthanc) provides a light integration between Orthanc DICOM servers and GNU Health. The module uses the REST API provided by Orthanc to synchronize patient and study information in GNU Health.
+Put simply, the code asks the Orthanc REST API what studies it has and then saves that information locally in GNU Health. <strong>No image data is stored in GNU Health.</strong></p>
+</section>
+<section id="main-features">
+<span id="userguide-modules-imaging-imaging-orthanc-integration-main-features"></span><h3>Main Features<a class="headerlink" href="#main-features" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">health_orthanc</span></code> module enables you to manage and visualise DICOM studies stored on Orthanc servers. It supports the synchronisation
+of patient and study data, the structured viewing of studies, and the linking of Orthanc studies with GNU Health patients.
+These features can be accessed via <em>Health → Medical Imaging → Orthanc</em>.</p>
+<a class=""
+               data-lightbox="group-d1c1893b-b3c6-4157-a84a-fe79bf71e62e"
+               href="../../_images/GNU_Health_Orthanc_Integration1.png"
+               title="Orthanc Integration"
+               data-title="Orthanc Integration"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Integration1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+</section>
+<section id="orthanc-patients">
+<span id="userguide-modules-imaging-imaging-orthanc-patients"></span><h2><em>Orthanc::Patients</em><a class="headerlink" href="#orthanc-patients" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-1ffbec90-27f9-47f1-8fad-f46f980a1c5e"
+               href="../../_images/GNU_Health_Orthanc_Patients1.png"
+               title="Orthanc Patients"
+               data-title="Orthanc Patients"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Patients1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>This view shows all GNU Health patients that are linked to studies on the Orthanc servers.</p>
+</section>
+<section id="orthanc-studies">
+<span id="userguide-modules-imaging-imaging-orthanc-studies"></span><h2><em>Orthanc::Studies</em><a class="headerlink" href="#orthanc-studies" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-b870b5ce-62f8-4a08-89ac-767b083e3760"
+               href="../../_images/GNU_Health_Orthanc_Studies1.png"
+               title="Orthanc Studies"
+               data-title="Orthanc Studies"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Studies1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The view under <em>Health → Medical Imaging → Orthanc → Studies</em> shows all studies stored on the Orthanc servers.
+This requires that the Orthanc servers are properly configured and connected to GNU Health.
+The following information is displayed for each study:
+- GNU Health Patient: The GNU Health patient who is linked to the study. This field is empty if the study ishas not yet been linked to a GNU Health patient.
+- Orthanc Patient: The patient name as stored in the Orthanc server.
+- Orthanc Server: The Orthanc server where the study is stored.
+- OHIF Viewer: A link to the OHIF DICOM viewer for the study.
+- Stone Viewer: A link to the Stone DICOM viewer for the study.</p>
+<p>Double-clicking on a study opens the ‘Study Content’ view, displaying information about the study. This view consists of three sections: The “GNU Health” section shows
+information about the GNU Health patient linked to the study, the “Orthanc” section displays information about the study retrived from Orthanc, and the “Study Series” section provides details about the series belonging to the study.</p>
+<a class=""
+               data-lightbox="group-76f1f20d-89df-4364-bb0e-2d12a5c3f1c6"
+               href="../../_images/GNU_Health_Orthanc_Study_Content1.png"
+               title="Orthanc Study Content"
+               data-title="Orthanc Study Content"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Study_Content1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The GNU Health Patient field is editable. Clicking on the search icon next to the ‘GNU Health Patient’ field opens the list of patients registered in GNU Health.
+This makes it easy to link the relevant GNU Health patient record to the Orthanc study.</p>
+<a class=""
+               data-lightbox="group-74ce9f64-de0a-4342-b640-e0b5c50a0f1b"
+               href="../../_images/GNU_Health_Orthanc_Search_Patient1.png"
+               title="Orthanc Search Patient"
+               data-title="Orthanc Search Patient"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Search_Patient1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><dl>
+<dt>The ‘Orthanc’ section shows the information:</dt><dd><ul class="simple">
+<li><p>Patient: The patient’s name as stored in Orthanc server.</p></li>
+<li><p>Patient ID: The unique identifier assigned to the patient by the Orthanc server.</p></li>
+<li><p>Date: The date when the study was conducted.</p></li>
+<li><p>Institution: The healthcare institution where the study took place.</p></li>
+<li><p>Physician: The name of the physician who requested the study.</p></li>
+</ul>
+</dd>
+<dt>The study’s DICOM series are displayed in tabular format. The following details are provided for each series:</dt><dd><ul class="simple">
+<li><p>Modality: ispecifies the imaging modality used in the series (e.g. CT or MRI).</p></li>
+<li><p>Server: indicates the Orthanc server hosting the series.</p></li>
+<li><p>Description: provides a brief summary or description of the series.</p></li>
+<li><p>Stone Viewer: opens the series in the Stone DICOM viewer.</p></li>
+<li><p>Delete: allows to delete the series from the Orthanc server. This action is irreversible and should be used with caution.</p></li>
+</ul>
+<a class=""
+               data-lightbox="group-582d61eb-e2d3-4feb-bdfb-3272aebf35d1"
+               href="../../_images/GNU_Health_Orthanc_Series_List1.png"
+               title="Orthanc Series List"
+               data-title="Orthanc Series List"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Series_List1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></dd>
+</dl>
+<p>Double-clicking on a series opens the series detail View, which displays information about the selected series, including its associated instances (DICOM images).
+The view includes the following fields:
+- Description: A brief summary of the series content.
+- Modality: The imaging modality used (e.g. CT or MRI).
+- Viewers: Direct links to view the series in the Stone DICOM viewer.</p>
+<blockquote>
+<div><a class=""
+               data-lightbox="group-9940209d-6ceb-4d68-81b1-6127deb3c4e2"
+               href="../../_images/GNU_Health_Orthanc_Series_Detail1.png"
+               title="Orthanc Series Detail"
+               data-title="Orthanc Series Detail"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Series_Detail1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></div></blockquote>
+<dl class="simple">
+<dt>The list of instances is presented in table format, containing the following columns:</dt><dd><ul class="simple">
+<li><p>Instance Number: displays the sequence number of the DICOM image within the series.</p></li>
+<li><p>Image position: indicates the spatial location of the image within the series.</p></li>
+<li><p>SOP Instance UID: is the unique identifier assigned to each DICOM image.</p></li>
+<li><p>Add to RPT: allows users to add the selected instance to a report within GNU Health.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Double-clicking on an instance in the table opens the image preview in PNG format.</p>
+<a class=""
+               data-lightbox="group-d0617f00-3eee-4414-b46f-99804526a8f7"
+               href="../../_images/GNU_Health_Orthanc_Instance_Preview1.png"
+               title="Orthanc Instance Preview"
+               data-title="Orthanc Instance Preview"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Instance_Preview1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="tools-full-synchronization">
+<span id="userguide-modules-imaging-imaging-tools-full-synchronization"></span><h2><em>Tools: Full Synchronization</em><a class="headerlink" href="#tools-full-synchronization" title="Link to this heading"></a></h2>
+<p>Full synchronisation retrieves all DICOM studies from the selected Orthanc server. Provided that the Orthanc server is properly configured and connected,
+this process ensures that every imaging study is imported into GNU Health.</p>
+<a class=""
+               data-lightbox="group-751c838d-9a1f-4e3c-83e6-9c9cf14f02cf"
+               href="../../_images/GNU_Health_Orthanc_Full_Synchronization1.png"
+               title="Orthanc Full Synchronization"
+               data-title="Orthanc Full Synchronization"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Full_Synchronization1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="tools-newly-synchronization">
+<span id="userguide-modules-imaging-imaging-tools-newly-synchronization"></span><h2><em>Tools: Newly Synchronization</em><a class="headerlink" href="#tools-newly-synchronization" title="Link to this heading"></a></h2>
+<p>The new synchronisation mechanism only retrieves studies that exist in Orthanc but are not yet present in GNU Health. This makes it especially useful for keeping
+your GNU Health database up to date with the latest studies from Orthanc, thereby reducing upload time.</p>
+<a class=""
+               data-lightbox="group-8fe21555-4edb-4997-92e1-21df5e201a7c"
+               href="../../_images/GNU_Health_Orthanc_Newly_Synchronization1.png"
+               title="Orthanc Newly Synchronization"
+               data-title="Orthanc Newly Synchronization"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Newly_Synchronization1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+<section id="tools-uploaded-dicom-files">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files"></span><h2><em>Tools: uploaded DICOM files</em><a class="headerlink" href="#tools-uploaded-dicom-files" title="Link to this heading"></a></h2>
+<p>The health_orthanc module enables DICOM files to be uploaded directly to Orthanc servers from GNU Health. This integration is useful for managing medical
+imaging data within the GNU Health ecosystem.</p>
+<a class=""
+               data-lightbox="group-8f11c747-6c68-42b8-bc83-2c47d4571342"
+               href="../../_images/GNU_Health_Orthanc_Uploaded_DICOM_File1.png"
+               title="Orthanc Uploaded DICOM Files"
+               data-title="Orthanc Uploaded DICOM Files"
+               
+               ><img src="../../_images/GNU_Health_Orthanc_Uploaded_DICOM_File1.png"
+                     class="align-right"
+                     width="30%"
+                     height="auto"
+                     alt=""/>
+                </a><p>The health_orthanc module has been greatly improved in GNU Health 5.0, but its models are not compatible with old version, so users need to migrate data like below:</p>
+<ol class="arabic">
+<li><p>Full synchronize data from orthanc server by click ‘Orthanc: Full synchronize’ menu in studies forum of health_orthanc module.</p></li>
+<li><p>Run migrate_orthanc_module.py to migrate map data created by user hand, this script will mark study merge comment field to “NEED TO VERIFY!”, which will help user verify them in the future.</p>
+<ol class="arabic simple">
+<li><p>orthanc study -&gt; gnuhealth test result</p></li>
+<li><p>orthanc patient -&gt; gnuhealth patient</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>his-utils/scripts/upgrade_utils/5.0/migrate_orthanc_module.py<span class="w"> </span>-h
+</pre></div>
+</div>
+</li>
+</ol>
+<section id="usage">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-usage"></span><h3>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h3>
+<p>A new dropdown menu titled <em>Orthanc</em> is available under <em>Health → Imaging</em>.</p>
+<p>The menu has 2 sub-sections:</p>
+<ul class="simple">
+<li><p>Patients</p></li>
+<li><p>Studies</p></li>
+</ul>
+<p>These sub-sections provide the list of studies and patients on the known Orthanc servers. You can filter and search normally. The views are generally read-only. On the list of Orthanc patients, however, some patients will be linked to local patients if the remote and local MRN/PUID match. Otherwise, Orthanc patients can be manually linked to a local patient by updating their patient field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When an imaging request is completed, the result can be directly linked to Orthanc studies through the new <em>Studies</em> tab under the <em>Imaging → Dx Imaging - Results</em> entry.</p>
+</div>
+<section id="sync-orthanc-studies-to-gnuhealth-imaging-results">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-usage-sync-orthanc-studies-to-gnuhealth-imaging-results"></span><h4>Sync orthanc studies to gnuhealth imaging results.<a class="headerlink" href="#sync-orthanc-studies-to-gnuhealth-imaging-results" title="Link to this heading"></a></h4>
+<p>Just run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>his-utils/scripts/imaging/sync_orthanc_server.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="administration">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-administration"></span><h3>Administration<a class="headerlink" href="#administration" title="Link to this heading"></a></h3>
+<section id="server-configuration">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-administration-server-configuration"></span><h4>Server configuration<a class="headerlink" href="#server-configuration" title="Link to this heading"></a></h4>
+<p>A new dropdown menu titled <em>Orthanc</em> is available under <em>Health → Configuration → Medical Imaging</em></p>
+<p>The menu has 2 sub-sections:</p>
+<ul class="simple">
+<li><p>Add Orthanc Server</p></li>
+<li><p>Servers</p></li>
+</ul>
+<p>To add a new remote server click <em>Add Orthanc Server</em>. This will open a wizard that guides the user through adding a server:</p>
+<ul class="simple">
+<li><p>Fill in the label (must be unique), full domain, username, and password.</p></li>
+<li><p>Click <em>Begin</em></p></li>
+</ul>
+<p>After a short time, a success message should appear.</p>
+<p>In case of invalid domains or credentials, there will be an error page instead of a success page.</p>
+<p>The <em>Servers</em> page lists the current servers. Clicking on a specific server will show its credentials, validated status, and other important information. Of note, updating the domain, username, or password will trigger a background, remote check to validate the newly updated information.</p>
+</section>
+<section id="synchronization">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-administration-synchronization"></span><h4>Synchronization<a class="headerlink" href="#synchronization" title="Link to this heading"></a></h4>
+<p>The module provides a trytond-cron job which by default synchronizes all validated servers every 15 minutes. This can be changed through the <em>Scheduled Actions</em> configuration under <em>Administration → Scheduler</em>.</p>
+<p>Servers can by manually synchronized by clicking the <em>Sync</em> button on their individual view.</p>
+</section>
+</section>
+<section id="troubleshooting">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-troubleshooting"></span><h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h3>
+<section id="server-s-not-automatically-synchronizing">
+<span id="userguide-modules-imaging-imaging-tools-uploaded-dicom-files-troubleshooting-server-s-not-automatically-synchronizing"></span><h4>Server(s) not automatically synchronizing<a class="headerlink" href="#server-s-not-automatically-synchronizing" title="Link to this heading"></a></h4>
+<p>Make sure trytond-cron is running.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="nursing.html" class="btn btn-neutral float-left" title="Nursing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inpatientmanagement.html" class="btn btn-neutral float-right" title="Inpatient Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

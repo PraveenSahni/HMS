@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FHIR REST" href="fhir/index.html" />
+    <link rel="prev" title="Localization" href="localization/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Technical Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demodb.html">Local Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administration/index.html">System Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/index.html">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localization/index.html">Localization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-best-practices">General Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnu-health-security-advisories">GNU Health Security Advisories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-nginx-and-uwsgi-instead-of-werkzeug">Use Nginx and uWSGI instead of Werkzeug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authentication-in-tryton">Authentication in Tryton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#public-key-cryptography-in-gnu-health">Public-key Cryptography in GNU Health</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gnu-health-cryptographic-module">GNU Health Cryptographic Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-digital-signatures-in-gnu-health">Using Digital Signatures in GNU Health</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reporting-a-security-vulnerability">Reporting a security vulnerability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fhir/index.html">FHIR REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release.html">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Technical Guide</a></li>
+      <li class="breadcrumb-item active">Security</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/techguide/security.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="security">
+<span id="techguide-security-security"></span><h1>Security<a class="headerlink" href="#security" title="Link to this heading"></a></h1>
+<p>Security is a multi disciplinary task, involving components from networking, operating system, database and application (Tryton), to human resources, to name a few.</p>
+<p>This page will try to give an overview of some basic concepts that will help you to enhance the access control to your system. We will also talk about enabling <a class="reference external" href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-key cryptography</a> to sign documents and records from different models.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>By no means this introductory page will replace the advice of computer security specialists for your specific installation!</p>
+</div>
+<section id="general-best-practices">
+<span id="techguide-security-security-general-best-practices"></span><h2>General Best Practices<a class="headerlink" href="#general-best-practices" title="Link to this heading"></a></h2>
+<p>We will focus on GNU Health specific security measures. Nevertheless we start by giving
+some general advisories (which are obviously not complete as this is a huge topic itself):</p>
+<ul class="simple">
+<li><p>Keep your Operaing System up to date by doing regular updates. Upgrade your distribution before support of security updates ends.</p></li>
+<li><p>Do not publicly expose any ports of productive systems in your hospital or doctors office.</p></li>
+<li><p>Use strong passwords, generate and store them securely. For example use KeePassXC and passwords with &gt;=20 digits and special characters included.</p></li>
+<li><p>Protect SSH access: At least use SSH keys, disable password based authentication and change the port.
+Think of 2FA, rate limiting and banning malicious IPs for advanced protection.</p></li>
+<li><p>Set up a firewall: Restrict access to only expose the needed ports for the needed hosts or subnets.</p></li>
+<li><p>Encrypt your file system (see <a class="reference internal" href="installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-installing-gnu-health-on-gnu-linux-and-freebsd-encrypting-the-gnuhealth-database-and-attachment-filesystem"><span class="std std-ref">Encrypting the GNUHealth database and attachment filesystem</span></a>)</p></li>
+<li><p>Avoid plain HTTP: Use HTTPS/TLS to encrypt your communication between systems and use digital certificates to ensure integrity.</p></li>
+<li><p>Check your logfiles regularly, think of using Logwatch for sending them by email or setting up a dedicated monitoring server.</p></li>
+</ul>
+</section>
+<section id="gnu-health-security-advisories">
+<span id="techguide-security-security-gnu-health-security-advisories"></span><h2>GNU Health Security Advisories<a class="headerlink" href="#gnu-health-security-advisories" title="Link to this heading"></a></h2>
+<p>GNU Health releases Security Advisories (SA) anytime a vulnerability is found. The security advisory format is inspired on FreeBSD.</p>
+<p>The GNU Health security advisories are sent to all subscribers in the “health-security” mailing list. See the “Resources” chapter to subscribe.</p>
+<p>You can check the current security advisory list in <a class="reference external" href="https://ftp.gnu.org/gnu/health/security/security_advisories.html">https://ftp.gnu.org/gnu/health/security/security_advisories.html</a></p>
+</section>
+<section id="use-nginx-and-uwsgi-instead-of-werkzeug">
+<span id="techguide-security-security-use-nginx-and-uwsgi-instead-of-werkzeug"></span><h2>Use Nginx and uWSGI instead of Werkzeug<a class="headerlink" href="#use-nginx-and-uwsgi-instead-of-werkzeug" title="Link to this heading"></a></h2>
+<p>Trytond comes with a builtin web server that is only intended for development, not for productive use!</p>
+<p>We recommend to use uWSGI as application server and Nginx as web server.
+Nginx will handle the requests and it is a state of the art solution in terms of security and performance.
+See <a class="reference internal" href="installation/vanilla.html#techguide-installation-vanilla-vanilla-installation-using-a-wsgi-server-for-gnu-health-hospital-management-component"><span class="std std-ref">Using a WSGI Server for GNU Health Hospital Management Component</span></a> how to set it up.</p>
+<p>There are more options for production grade application and web servers.
+But by using the same we can help each other more easily and test and document less.</p>
+</section>
+<section id="authentication-in-tryton">
+<span id="techguide-security-security-authentication-in-tryton"></span><h2>Authentication in Tryton<a class="headerlink" href="#authentication-in-tryton" title="Link to this heading"></a></h2>
+<p>Apart from putting strong passwords yourself you can change Trytons configuration:</p>
+<ul>
+<li><p>Extend or change the authentication method and restrict sessions lifetimes or login attempts:</p>
+<p><a class="reference external" href="https://docs.tryton.org/7.0/server/topics/configuration.html#session">https://docs.tryton.org/7.0/server/topics/configuration.html#session</a></p>
+</li>
+<li><p>Configure the password, e.g. define a minimum password length:</p>
+<p><a class="reference external" href="https://docs.tryton.org/7.0/server/topics/configuration.html#password">https://docs.tryton.org/7.0/server/topics/configuration.html#password</a></p>
+</li>
+</ul>
+</section>
+<section id="public-key-cryptography-in-gnu-health">
+<span id="techguide-security-security-public-key-cryptography-in-gnu-health"></span><h2>Public-key Cryptography in GNU Health<a class="headerlink" href="#public-key-cryptography-in-gnu-health" title="Link to this heading"></a></h2>
+<section id="gnu-health-cryptographic-module">
+<span id="techguide-security-security-public-key-cryptography-in-gnu-health-gnu-health-cryptographic-module"></span><h3>GNU Health Cryptographic Module<a class="headerlink" href="#gnu-health-cryptographic-module" title="Link to this heading"></a></h3>
+<p>The module goal is to achieve the concepts of confidentiality, integrity and non-repudiation in GNU Health.</p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">health_crypto</span></code> module currently provides the following functionality:</p>
+<ul class="simple">
+<li><p>Document Serialization</p></li>
+<li><p>Document hashing (MD)</p></li>
+<li><p>Document signing</p></li>
+<li><p>Document verification</p></li>
+</ul>
+<p>The module will work on records from models that will need this functionality such as prescription, patient evaluations, surgeries or lab tests.</p>
+<p>The Serialization includes the information in a predefined format (JSON) and encoding (UTF8).</p>
+<p>There will be a field that will contain the Message digest of the serialization process, and that will check for any changes. If the case of alteration of any fields</p>
+<p>The signing process will be upon that Message Digest field, whereas the encryption process will work on row or column level.</p>
+<p>Public-key / asymmetric cryptography will be used for signing the documents.</p>
+<p>The standard models that are included are Prescription, Birth Certificate and Death Certificate.  Of course, you can apply the functionality to any model that you feel like is necessary. In addition, and based on the community requests, we will incorporate new models in the next versions.</p>
+</section>
+<section id="using-digital-signatures-in-gnu-health">
+<span id="techguide-security-security-public-key-cryptography-in-gnu-health-using-digital-signatures-in-gnu-health"></span><h3>Using Digital Signatures in GNU Health<a class="headerlink" href="#using-digital-signatures-in-gnu-health" title="Link to this heading"></a></h3>
+<p>GNU Health works along with <a class="reference external" href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard">GNU Privacy Guard</a> for <strong>digitally signing and verifying documents</strong>. Please refer to the <a class="reference internal" href="../plugins/plugins.html#plugins-plugins-crypto-plugin"><span class="std std-ref">Crypto plugin</span></a> section for the installation</p>
+</section>
+</section>
+<section id="reporting-a-security-vulnerability">
+<span id="techguide-security-security-reporting-a-security-vulnerability"></span><h2>Reporting a security vulnerability<a class="headerlink" href="#reporting-a-security-vulnerability" title="Link to this heading"></a></h2>
+<p>We take security very seriously, and we appreciate your help on this!</p>
+<p>If you believe you have found a vulnerability in GNU Health, please send an email to <a class="reference external" href="mailto:security&#37;&#52;&#48;gnuhealth&#46;org">security<span>&#64;</span>gnuhealth<span>&#46;</span>org</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="localization/index.html" class="btn btn-neutral float-left" title="Localization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fhir/index.html" class="btn btn-neutral float-right" title="FHIR REST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

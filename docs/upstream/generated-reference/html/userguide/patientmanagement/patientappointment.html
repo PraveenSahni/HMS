@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Appointment and Admission Management &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Health Center" href="../healthcenter/index.html" />
+    <link rel="prev" title="Patient Evaluations" href="patientevaluations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">The Basics</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Patient Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="patientmanagement.html">Introduction to Patient Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="patientevaluations.html">Patient Evaluations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Patient Appointment and Admission Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#appointments">Appointments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hospitalizations">Hospitalizations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../healthcenter/index.html">Health Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">Modules by functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demodb.html">Using the Demo Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../his/index.html">Health Information System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Patient Management</a></li>
+      <li class="breadcrumb-item active">Patient Appointment and Admission Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userguide/patientmanagement/patientappointment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="patient-appointment-and-admission-management">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management"></span><h1>Patient Appointment and Admission Management<a class="headerlink" href="#patient-appointment-and-admission-management" title="Link to this heading"></a></h1>
+<section id="appointments">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments"></span><h2>Appointments<a class="headerlink" href="#appointments" title="Link to this heading"></a></h2>
+<section id="information-stored-per-appointment">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments-information-stored-per-appointment"></span><h3>Information stored per appointment<a class="headerlink" href="#information-stored-per-appointment" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-71cf25e3-2f95-4626-89c3-968fe3e89db7"
+               href="../../_images/The_appointments_form_in_GNU_Health1.png"
+               title="The appointments form in GNU Health."
+               data-title="The appointments form in GNU Health."
+               
+               ><img src="../../_images/The_appointments_form_in_GNU_Health1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>Each appointment can store the following information:</p>
+<ul class="simple">
+<li><p><em>Appointment ID</em></p></li>
+<li><p><em>Patient</em>: Select the name of a registered patient.</p></li>
+<li><p><em>Visit</em>: Type of Appointment</p></li>
+<li><p><em>State</em>: The current state of the appointment. Can for example indicate that the patient has already checked in or that the appointment was cancelled.</p></li>
+<li><p><em>Health Professional</em>: The name of the appointed health professional.</p></li>
+<li><p><em>Institution</em>: The name of the institution. The institution is likely a health center.</p></li>
+<li><p><em>Date</em></p></li>
+<li><p><em>Urgency</em>: Level of Emergency</p></li>
+<li><p><em>CalDAV Event</em>:</p></li>
+<li><p><em>Inpatient Registration</em>: Links a patient that currently inhabits the institution.</p></li>
+<li><p><em>Type</em>: Inpatient vs. Outpatient. Inpatient indicates the patient currently inhabits the institution.</p></li>
+<li><p><em>Specialty</em>: What the appointed health professional specializes in.</p></li>
+<li><p><em>Additional Information</em></p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Explain CalDAV Event</p>
+</div>
+</section>
+<section id="list-of-all-appointments">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments-list-of-all-appointments"></span><h3>List of all appointments<a class="headerlink" href="#list-of-all-appointments" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-037ddc19-5f9a-4797-b078-77f736663d69"
+               href="../../_images/The_list_of_all_appointments_in_GNU_Health1.png"
+               title="The list of all appointments in GNU Health."
+               data-title="The list of all appointments in GNU Health."
+               
+               ><img src="../../_images/The_list_of_all_appointments_in_GNU_Health1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>From the main menu of Health you have the possibility to get into the <em>Appointments</em> section. Here you see the list of all the appointments stored in the system.</p>
+<ul class="simple">
+<li><p><em>Confirmed</em> tab: This list reflects all existing appointments for which the state of the appointment is set to “confirmed”.</p></li>
+<li><p><em>Checked in</em> tab: This list reflects all existing appointments for which the state of the appointment is set to “Checked in”.</p></li>
+<li><p><em>Free</em> tab: This list reflects all available timeslots where you can create a new appointment.</p></li>
+<li><p><em>No Shows</em> tab: This list reflects all existing appointments for which the state of the appointment is set to “No Show”.</p></li>
+<li><p><em>All</em> tab: This list combines all the other lists mentioned above.</p></li>
+</ul>
+<section id="appointments-calendar">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments-list-of-all-appointments-appointments-calendar"></span><h4>Appointments Calendar<a class="headerlink" href="#appointments-calendar" title="Link to this heading"></a></h4>
+<p>The subsection <em>Appointments Calendar</em> allows you to display all appointments stored in the system in a calendar view.</p>
+</section>
+<section id="appointments-report">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments-list-of-all-appointments-appointments-report"></span><h4>Appointments Report<a class="headerlink" href="#appointments-report" title="Link to this heading"></a></h4>
+<p>The subsection <em>Appointments Report</em> allows you to display all appointments of a certain health professional in a certain time period.</p>
+</section>
+</section>
+<section id="list-of-appointments-for-a-specific-patient">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-appointments-list-of-appointments-for-a-specific-patient"></span><h3>List of appointments for a specific patient<a class="headerlink" href="#list-of-appointments-for-a-specific-patient" title="Link to this heading"></a></h3>
+<a class=""
+               data-lightbox="group-7298cac1-299d-456c-afd3-8642fce38d7c"
+               href="../../_images/How_to_access_the_list_of_appointments_for_a_specific_patient1.png"
+               title="How to access the list of appointments for a specific patient."
+               data-title="How to access the list of appointments for a specific patient."
+               
+               ><img src="../../_images/How_to_access_the_list_of_appointments_for_a_specific_patient1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>To access the list of all appointments for a specific patient only you typically start from the patients record. Simply click the <em>Relate</em> button and choose <em>Appointments</em>.</p>
+<a class=""
+               data-lightbox="group-9ae7ce83-806e-4151-a9b9-a5bc68f25d6a"
+               href="../../_images/The_list_of_appointments_for_a_specific_patient1.png"
+               title="The list of appointments for a specific patient."
+               data-title="The list of appointments for a specific patient."
+               
+               ><img src="../../_images/The_list_of_appointments_for_a_specific_patient1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a></section>
+</section>
+<section id="hospitalizations">
+<span id="userguide-patientmanagement-patientappointment-patient-appointment-and-admission-management-hospitalizations"></span><h2>Hospitalizations<a class="headerlink" href="#hospitalizations" title="Link to this heading"></a></h2>
+<a class=""
+               data-lightbox="group-3cf46385-f55b-4c9d-84a1-c97cb9991f4d"
+               href="../../_images/The_Hospitalizations_list_in_GNU_Health1.png"
+               title="The Hospitalizations list in GNU Health."
+               data-title="The Hospitalizations list in GNU Health."
+               
+               ><img src="../../_images/The_Hospitalizations_list_in_GNU_Health1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>From the main menu you will have access to the <em>Hospitalizations</em> area. From here you will manage any kind of action related to the patient’s admission to or discharge from the hospital.</p>
+<a class=""
+               data-lightbox="group-fd1b6cb0-a1a9-4bad-83b8-0d92233057ec"
+               href="../../_images/The_Hospitalization_form_in_GNU_Health1.png"
+               title="The Hospitalization form in GNU Health."
+               data-title="The Hospitalization form in GNU Health."
+               
+               ><img src="../../_images/The_Hospitalization_form_in_GNU_Health1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>When you create a new Hospitalization record there are different tabs that will help you gather more information:</p>
+<ul class="simple">
+<li><p><em>Administrative Data</em>: In this section you can enter all the administrative information related to the patient admission.</p></li>
+<li><p><em>Nutrition</em>: The information in this section helps the hospital center to know more about the patient’s diet, belief etc.</p></li>
+<li><p><em>Medication Plan</em>: All the information entered here is related to medication during the admission (indication, treatment period, dosage etc.).</p></li>
+<li><p><em>Care Plan</em>: Here you will input all the data about nursing plan and discharge plan.</p></li>
+</ul>
+<p>For more information about hospitalizations please refer to the <a class="reference internal" href="../modules/inpatientmanagement.html#userguide-modules-inpatientmanagement-inpatient-management"><span class="std std-ref">Inpatient Management</span></a> chapter.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="patientevaluations.html" class="btn btn-neutral float-left" title="Patient Evaluations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../healthcenter/index.html" class="btn btn-neutral float-right" title="Health Center" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

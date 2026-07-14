@@ -1,6 +1,6 @@
 # Attribution — Upstream GNU Health Documentation
 
-Retrieval date: 2026-07-14
+Retrieval date: 2026-07-15
 
 ## Copyright
 
@@ -22,6 +22,10 @@ GNU Health software components are licensed under the GNU General
 Public License version 3 or later. IST-specific components must carry
 the applicable copyright and licence notices.
 
+
+## Upstream documentation acquisition
+
+Full HIS documentation RST tree aligned with Codeberg [gnuhealth/documentation](https://codeberg.org/gnuhealth/documentation) (branch main, path his/source/). Rendered HTML acquired from Codeberg [gnuhealth/pages](https://codeberg.org/gnuhealth/pages) (his/ tree). GNU Health HIS software remains pinned at **5.0.6** (not upgraded).
 
 ## Legal review flag
 
