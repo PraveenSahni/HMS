@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "IST Health",
+    "name": "IST HIS",
     "subtitle": "Hospital Management System",
     "company": "IST Technologies LLC",
     "location": "Doha, Qatar"
@@ -138,13 +138,13 @@
     "database": "Database",
     "databaseSelected": "Selected database",
     "signingIn": "Signing in…",
-    "loginTitle": "IST Health — Sign In",
-    "loginSubtitle": "GNU Health · Tryton 7 · IST Technologies LLC",
-    "loginHeaderBrand": "Sign in to IST Health",
+    "loginTitle": "IST HIS — Sign In",
+    "loginSubtitle": "Iris Star Hospital Information System · Tryton 7",
+    "loginHeaderBrand": "Sign in to IST HIS",
     "loginContinue": "to continue to",
     "loginTagline": "The Digital Health Engine for the Middle East & Africa.",
     "loginTaglineShort": "The Digital Health Engine for MEA.",
-    "loginInspireTitle": "Sign in to IST Health",
+    "loginInspireTitle": "Sign in to IST HIS",
     "loginFeature1": "Patient management",
     "loginFeature2": "Appointments & scheduling",
     "loginFeature3": "Laboratory & pharmacy",

@@ -1,0 +1,3171 @@
+{
+  "baseline": "5.0.6",
+  "modules": [
+    {
+      "technical_module_name": "health",
+      "display_name": "Core HIS",
+      "version": "5.0.6",
+      "description": "GNU Health module health",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "party",
+        "company",
+        "currency",
+        "product"
+      ],
+      "reverse_dependencies": [
+        "health_archives",
+        "health_calendar",
+        "health_contact_tracing",
+        "health_crypto",
+        "health_dentistry",
+        "health_disability",
+        "health_ems",
+        "health_federation",
+        "health_genetics",
+        "health_gyneco",
+        "health_history",
+        "health_icd10",
+        "health_icd10pcs",
+        "health_icd11",
+        "health_icd9procs",
+        "health_icpm",
+        "health_icu",
+        "health_imaging",
+        "health_inpatient",
+        "health_insurance",
+        "health_iss",
+        "health_lab",
+        "health_lifestyle",
+        "health_mdg6",
+        "health_ntd",
+        "health_nursing",
+        "health_ophthalmology",
+        "health_pediatrics",
+        "health_qrcodes",
+        "health_reporting",
+        "health_services",
+        "health_socioeconomics",
+        "health_stock",
+        "health_surgery",
+        "health_who_essential_medicines"
+      ],
+      "models_introduced": [
+        "country.subdivision",
+        "gnuhealth.appointment",
+        "gnuhealth.appointment.report",
+        "gnuhealth.appointment.report.open",
+        "gnuhealth.appointment.report.open.start",
+        "gnuhealth.birth_certificate",
+        "gnuhealth.check_immunization_status",
+        "gnuhealth.check_immunization_status.init",
+        "gnuhealth.command",
+        "gnuhealth.death_certificate",
+        "gnuhealth.death_underlying_condition",
+        "gnuhealth.diagnostic_hypothesis",
+        "gnuhealth.directions",
+        "gnuhealth.disease_group.members",
+        "gnuhealth.dose.unit",
+        "gnuhealth.drug.form",
+        "gnuhealth.drug.route",
+        "gnuhealth.du",
+        "gnuhealth.ethnicity",
+        "gnuhealth.family",
+        "gnuhealth.family_member",
+        "gnuhealth.federation.country.config",
+        "gnuhealth.healthprofessional",
+        "gnuhealth.help",
+        "gnuhealth.hospital.bed",
+        "gnuhealth.hospital.building",
+        "gnuhealth.hospital.or",
+        "gnuhealth.hospital.unit",
+        "gnuhealth.hospital.ward",
+        "gnuhealth.hp_specialty",
+        "gnuhealth.immunization_schedule",
+        "gnuhealth.immunization_schedule_dose",
+        "gnuhealth.immunization_schedule_line",
+        "gnuhealth.immunization_status_report",
+        "gnuhealth.institution",
+        "gnuhealth.institution.operationalsector",
+        "gnuhealth.institution.specialties",
+        "gnuhealth.insurance",
+        "gnuhealth.insurance.plan",
+        "gnuhealth.medicament",
+        "gnuhealth.medicament.category",
+        "gnuhealth.medication.dosage",
+        "gnuhealth.occupation",
+        "gnuhealth.online_document",
+        "gnuhealth.operational_area",
+        "gnuhealth.operational_sector",
+        "gnuhealth.pathology",
+        "gnuhealth.pathology.category",
+        "gnuhealth.pathology.group",
+        "gnuhealth.patient",
+        "gnuhealth.patient.disease",
+        "gnuhealth.patient.ecg",
+        "gnuhealth.patient.evaluation",
+        "gnuhealth.patient.family.diseases",
+        "gnuhealth.patient.medication",
+        "gnuhealth.patient.procedure",
+        "gnuhealth.person_alternative_identification",
+        "gnuhealth.person_name",
+        "gnuhealth.pol",
+        "gnuhealth.prescription.line",
+        "gnuhealth.prescription.order",
+        "gnuhealth.procedure",
+        "gnuhealth.procedures.config",
+        "gnuhealth.secondary_condition",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.appointment_sequence",
+        "gnuhealth.sequences.patient_evaluation_sequence",
+        "gnuhealth.sequences.patient_sequence",
+        "gnuhealth.sequences.prescription_sequence",
+        "gnuhealth.signs_and_symptoms",
+        "gnuhealth.specialty",
+        "gnuhealth.update_patient_disease_info",
+        "gnuhealth.vaccination",
+        "ir.module",
+        "party.address",
+        "party.contact_mechanism",
+        "party.party",
+        "product.product",
+        "product.template",
+        "wizard.gnuhealth.appointment.evaluation"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "country_subdivision",
+        "gnuhealth_appointment",
+        "gnuhealth_appointment_report",
+        "gnuhealth_appointment_report_open",
+        "gnuhealth_appointment_report_open_start",
+        "gnuhealth_birth_certificate",
+        "gnuhealth_check_immunization_status",
+        "gnuhealth_check_immunization_status_init",
+        "gnuhealth_command",
+        "gnuhealth_death_certificate",
+        "gnuhealth_death_underlying_condition",
+        "gnuhealth_diagnostic_hypothesis",
+        "gnuhealth_directions",
+        "gnuhealth_disease_group_members",
+        "gnuhealth_dose_unit",
+        "gnuhealth_drug_form",
+        "gnuhealth_drug_route",
+        "gnuhealth_du",
+        "gnuhealth_ethnicity",
+        "gnuhealth_family",
+        "gnuhealth_family_member",
+        "gnuhealth_federation_country_config",
+        "gnuhealth_healthprofessional",
+        "gnuhealth_help",
+        "gnuhealth_hospital_bed",
+        "gnuhealth_hospital_building",
+        "gnuhealth_hospital_or",
+        "gnuhealth_hospital_unit",
+        "gnuhealth_hospital_ward",
+        "gnuhealth_hp_specialty",
+        "gnuhealth_immunization_schedule",
+        "gnuhealth_immunization_schedule_dose",
+        "gnuhealth_immunization_schedule_line",
+        "gnuhealth_immunization_status_report",
+        "gnuhealth_institution",
+        "gnuhealth_institution_operationalsector",
+        "gnuhealth_institution_specialties",
+        "gnuhealth_insurance",
+        "gnuhealth_insurance_plan",
+        "gnuhealth_medicament",
+        "gnuhealth_medicament_category",
+        "gnuhealth_medication_dosage",
+        "gnuhealth_occupation",
+        "gnuhealth_online_document",
+        "gnuhealth_operational_area",
+        "gnuhealth_operational_sector",
+        "gnuhealth_pathology",
+        "gnuhealth_pathology_category",
+        "gnuhealth_pathology_group",
+        "gnuhealth_patient",
+        "gnuhealth_patient_disease",
+        "gnuhealth_patient_ecg",
+        "gnuhealth_patient_evaluation",
+        "gnuhealth_patient_family_diseases",
+        "gnuhealth_patient_medication",
+        "gnuhealth_patient_procedure",
+        "gnuhealth_person_alternative_identification",
+        "gnuhealth_person_name",
+        "gnuhealth_pol",
+        "gnuhealth_prescription_line",
+        "gnuhealth_prescription_order",
+        "gnuhealth_procedure",
+        "gnuhealth_procedures_config",
+        "gnuhealth_secondary_condition",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_appointment_sequence",
+        "gnuhealth_sequences_patient_evaluation_sequence",
+        "gnuhealth_sequences_patient_sequence",
+        "gnuhealth_sequences_prescription_sequence",
+        "gnuhealth_signs_and_symptoms",
+        "gnuhealth_specialty",
+        "gnuhealth_update_patient_disease_info",
+        "gnuhealth_vaccination",
+        "ir_module",
+        "party_address",
+        "party_contact_mechanism",
+        "party_party",
+        "product_product",
+        "product_template",
+        "wizard_gnuhealth_appointment_evaluation"
+      ],
+      "menus": [],
+      "views": [
+        "health_view.xml"
+      ],
+      "wizards": [
+        "wizard/appointment_evaluation.xml",
+        "wizard/check_immunization_status.xml",
+        "wizard/update_patient_disease_info.xml"
+      ],
+      "reports": [
+        "health_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_accounting",
+      "display_name": "Health Accounting",
+      "version": "",
+      "description": "Financial accounting / billing (features catalogue). May map to Tryton account_* + health_services.",
+      "upstream_or_ist": "upstream-features-doc-only",
+      "installation_state": "absent",
+      "activation_state": "absent_from_release",
+      "dependencies": [],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [],
+      "facility_applicability": "n/a",
+      "synthetic_data_availability": "none",
+      "ist_his_documentation_status": "marked-missing-deprecated",
+      "test_coverage": "n/a",
+      "implementation_status": "not_in_selected_release",
+      "brief_section5": true,
+      "in_release": false,
+      "notes": "Listed in docs features; not a separate tryton package in HIS 5.0.6 source tree."
+    },
+    {
+      "technical_module_name": "health_archives",
+      "display_name": "Archives",
+      "version": "5.0.4",
+      "description": "GNU Health module health_archives",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.paper_archive"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_paper_archive"
+      ],
+      "menus": [],
+      "views": [
+        "health_archives_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_caldav",
+      "display_name": "CalDAV",
+      "version": "5.0.4",
+      "description": "GNU Health module health_caldav",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_webdav3_server"
+      ],
+      "reverse_dependencies": [
+        "health_calendar"
+      ],
+      "models_introduced": [
+        "calendar.calendar",
+        "calendar.calendar-read-res.user",
+        "calendar.calendar-write-res.user",
+        "calendar.category",
+        "calendar.event",
+        "calendar.event-calendar.category",
+        "calendar.event.alarm",
+        "calendar.event.attendee",
+        "calendar.event.exdate",
+        "calendar.event.exrule",
+        "calendar.event.rdate",
+        "calendar.event.rrule",
+        "calendar.location",
+        "res.user",
+        "webdav.collection"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "calendar_calendar",
+        "calendar_calendar-read-res_user",
+        "calendar_calendar-write-res_user",
+        "calendar_category",
+        "calendar_event",
+        "calendar_event-calendar_category",
+        "calendar_event_alarm",
+        "calendar_event_attendee",
+        "calendar_event_exdate",
+        "calendar_event_exrule",
+        "calendar_event_rdate",
+        "calendar_event_rrule",
+        "calendar_location",
+        "res_user",
+        "webdav_collection"
+      ],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_calendar",
+      "display_name": "Calendar",
+      "version": "5.0.5",
+      "description": "GNU Health module health_calendar",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_caldav"
+      ],
+      "reverse_dependencies": [
+        "health_inpatient_calendar"
+      ],
+      "models_introduced": [
+        "gnuhealth.appointment",
+        "gnuhealth.calendar.create.appointment",
+        "gnuhealth.calendar.create.appointment.start",
+        "res.user"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_appointment",
+        "gnuhealth_calendar_create_appointment",
+        "gnuhealth_calendar_create_appointment_start",
+        "res_user"
+      ],
+      "menus": [],
+      "views": [
+        "health_calendar_view.xml"
+      ],
+      "wizards": [
+        "wizard/health_calendar_wizard.xml"
+      ],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_contact_tracing",
+      "display_name": "Contact Tracing",
+      "version": "5.0.4",
+      "description": "GNU Health module health_contact_tracing",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.contact_tracing"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_contact_tracing"
+      ],
+      "menus": [],
+      "views": [
+        "health_contact_tracing_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_crypto",
+      "display_name": "Crypto",
+      "version": "5.0.4",
+      "description": "GNU Health module health_crypto",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_crypto_lab"
+      ],
+      "models_introduced": [
+        "gnuhealth.birth_certificate",
+        "gnuhealth.death_certificate",
+        "gnuhealth.patient.evaluation",
+        "gnuhealth.prescription.order"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_birth_certificate",
+        "gnuhealth_death_certificate",
+        "gnuhealth_patient_evaluation",
+        "gnuhealth_prescription_order"
+      ],
+      "menus": [],
+      "views": [
+        "health_crypto_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_crypto_lab",
+      "display_name": "Crypto Laboratory",
+      "version": "5.0.4",
+      "description": "GNU Health module health_crypto_lab",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_crypto",
+        "health_lab"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.lab"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_lab"
+      ],
+      "menus": [],
+      "views": [
+        "health_crypto_lab_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_dentistry",
+      "display_name": "Dentistry",
+      "version": "5.0.6",
+      "description": "GNU Health module health_dentistry",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.dentistry.load.procedure",
+        "gnuhealth.dentistry.load.procedure.start",
+        "gnuhealth.dentistry.procedure",
+        "gnuhealth.dentistry.set.odontogram",
+        "gnuhealth.dentistry.set.odontogram.start",
+        "gnuhealth.dentistry.treatment",
+        "gnuhealth.dentistry.treatment.procedure",
+        "gnuhealth.patient",
+        "health_dentistry.odontogram.report",
+        "health_dentistry.procedure.report"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_dentistry_load_procedure",
+        "gnuhealth_dentistry_load_procedure_start",
+        "gnuhealth_dentistry_procedure",
+        "gnuhealth_dentistry_set_odontogram",
+        "gnuhealth_dentistry_set_odontogram_start",
+        "gnuhealth_dentistry_treatment",
+        "gnuhealth_dentistry_treatment_procedure",
+        "gnuhealth_patient",
+        "health_dentistry_odontogram_report",
+        "health_dentistry_procedure_report"
+      ],
+      "menus": [],
+      "views": [
+        "health_dentistry_view.xml"
+      ],
+      "wizards": [
+        "wizard/patient_set_odontogram.xml",
+        "wizard/load_procedure.xml"
+      ],
+      "reports": [
+        "health_dentistry_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_disability",
+      "display_name": "Disability / ICF",
+      "version": "5.0.4",
+      "description": "GNU Health module health_disability",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_socioeconomics"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.activity.assessment",
+        "gnuhealth.activity_and_participation",
+        "gnuhealth.activity_and_participation.category",
+        "gnuhealth.body_function",
+        "gnuhealth.body_function.assessment",
+        "gnuhealth.body_function.category",
+        "gnuhealth.body_structure",
+        "gnuhealth.body_structure.assessment",
+        "gnuhealth.body_structure.category",
+        "gnuhealth.environment.assessment",
+        "gnuhealth.environmental_factor",
+        "gnuhealth.environmental_factor.category",
+        "gnuhealth.patient",
+        "gnuhealth.patient.amputation",
+        "gnuhealth.patient.disability_assessment",
+        "gnuhealth.patient.prothesis",
+        "product.product"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_activity_assessment",
+        "gnuhealth_activity_and_participation",
+        "gnuhealth_activity_and_participation_category",
+        "gnuhealth_body_function",
+        "gnuhealth_body_function_assessment",
+        "gnuhealth_body_function_category",
+        "gnuhealth_body_structure",
+        "gnuhealth_body_structure_assessment",
+        "gnuhealth_body_structure_category",
+        "gnuhealth_environment_assessment",
+        "gnuhealth_environmental_factor",
+        "gnuhealth_environmental_factor_category",
+        "gnuhealth_patient",
+        "gnuhealth_patient_amputation",
+        "gnuhealth_patient_disability_assessment",
+        "gnuhealth_patient_prothesis",
+        "product_product"
+      ],
+      "menus": [],
+      "views": [
+        "health_disability_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_ems",
+      "display_name": "EMS / Ambulance",
+      "version": "5.0.4",
+      "description": "GNU Health module health_ems",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.ambulance",
+        "gnuhealth.ambulance.support",
+        "gnuhealth.ambulance_hp",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.support_request_code_sequence",
+        "gnuhealth.support_request",
+        "gnuhealth.support_request.log"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_ambulance",
+        "gnuhealth_ambulance_support",
+        "gnuhealth_ambulance_hp",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_support_request_code_sequence",
+        "gnuhealth_support_request",
+        "gnuhealth_support_request_log"
+      ],
+      "menus": [],
+      "views": [
+        "health_ems_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_federation",
+      "display_name": "Federation",
+      "version": "5.0.4",
+      "description": "GNU Health module health_federation",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.federation.config",
+        "gnuhealth.federation.object",
+        "gnuhealth.federation.queue",
+        "gnuhealth.pol",
+        "party.party"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_federation_config",
+        "gnuhealth_federation_object",
+        "gnuhealth_federation_queue",
+        "gnuhealth_pol",
+        "party_party"
+      ],
+      "menus": [],
+      "views": [
+        "health_federation_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_genetics",
+      "display_name": "Genetics",
+      "version": "5.0.4",
+      "description": "GNU Health module health_genetics",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_genetics_uniprot"
+      ],
+      "models_introduced": [
+        "gnuhealth.gene",
+        "gnuhealth.gene.variant",
+        "gnuhealth.gene.variant.phenotype",
+        "gnuhealth.patient",
+        "gnuhealth.patient.genetic.risk",
+        "gnuhealth.protein.disease"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_gene",
+        "gnuhealth_gene_variant",
+        "gnuhealth_gene_variant_phenotype",
+        "gnuhealth_patient",
+        "gnuhealth_patient_genetic_risk",
+        "gnuhealth_protein_disease"
+      ],
+      "menus": [],
+      "views": [
+        "health_genetics_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_genetics_uniprot",
+      "display_name": "Genetics UniProt",
+      "version": "5.0.4",
+      "description": "GNU Health module health_genetics_uniprot",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_genetics"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_gyneco",
+      "display_name": "Gynecology & Obstetrics",
+      "version": "5.0.4",
+      "description": "GNU Health module health_gyneco",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.patient",
+        "gnuhealth.patient.colposcopy_history",
+        "gnuhealth.patient.mammography_history",
+        "gnuhealth.patient.menstrual_history",
+        "gnuhealth.patient.pap_history",
+        "gnuhealth.patient.pregnancy",
+        "gnuhealth.patient.prenatal.evaluation",
+        "gnuhealth.perinatal",
+        "gnuhealth.perinatal.monitor",
+        "gnuhealth.pregnancy.result",
+        "gnuhealth.puerperium.monitor"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient",
+        "gnuhealth_patient_colposcopy_history",
+        "gnuhealth_patient_mammography_history",
+        "gnuhealth_patient_menstrual_history",
+        "gnuhealth_patient_pap_history",
+        "gnuhealth_patient_pregnancy",
+        "gnuhealth_patient_prenatal_evaluation",
+        "gnuhealth_perinatal",
+        "gnuhealth_perinatal_monitor",
+        "gnuhealth_pregnancy_result",
+        "gnuhealth_puerperium_monitor"
+      ],
+      "menus": [],
+      "views": [
+        "health_gyneco_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_history",
+      "display_name": "Enhanced History",
+      "version": "5.0.4",
+      "description": "GNU Health module health_history",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "patient.evaluation"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "patient_evaluation"
+      ],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [
+        "health_history_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icd10",
+      "display_name": "ICD-10",
+      "version": "5.0.4",
+      "description": "GNU Health module health_icd10",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_surgery_protocols"
+      ],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icd10pcs",
+      "display_name": "ICD-10-PCS",
+      "version": "5.0.3",
+      "description": "GNU Health module health_icd10pcs",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icd11",
+      "display_name": "ICD-11",
+      "version": "5.0.4",
+      "description": "GNU Health module health_icd11",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icd9procs",
+      "display_name": "ICD-9 Procedures",
+      "version": "5.0.4",
+      "description": "GNU Health module health_icd9procs",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icpm",
+      "display_name": "ICPM",
+      "version": "5.0.4",
+      "description": "GNU Health module health_icpm",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_icu",
+      "display_name": "ICU",
+      "version": "5.0.4",
+      "description": "GNU Health module health_icu",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_inpatient"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.icu.apache2",
+        "gnuhealth.icu.chest_drainage",
+        "gnuhealth.icu.glasgow",
+        "gnuhealth.icu.ventilation",
+        "gnuhealth.inpatient.icu",
+        "gnuhealth.inpatient.registration",
+        "gnuhealth.patient.rounding"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_icu_apache2",
+        "gnuhealth_icu_chest_drainage",
+        "gnuhealth_icu_glasgow",
+        "gnuhealth_icu_ventilation",
+        "gnuhealth_inpatient_icu",
+        "gnuhealth_inpatient_registration",
+        "gnuhealth_patient_rounding"
+      ],
+      "menus": [],
+      "views": [
+        "health_icu_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_imaging",
+      "display_name": "Medical Imaging",
+      "version": "5.0.4",
+      "description": "GNU Health module health_imaging",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_imaging_worklist",
+        "health_orthanc",
+        "health_services_imaging",
+        "health_surgery"
+      ],
+      "models_introduced": [
+        "gnuhealth.imaging.test",
+        "gnuhealth.imaging.test.request",
+        "gnuhealth.imaging.test.result",
+        "gnuhealth.imaging.test.type",
+        "gnuhealth.patient.imaging.test.request",
+        "gnuhealth.patient.imaging.test.request.start",
+        "gnuhealth.request-imaging-test",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.imaging_req_seq",
+        "gnuhealth.sequences.imaging_test_sequence",
+        "wizard.generate.result"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_imaging_test",
+        "gnuhealth_imaging_test_request",
+        "gnuhealth_imaging_test_result",
+        "gnuhealth_imaging_test_type",
+        "gnuhealth_patient_imaging_test_request",
+        "gnuhealth_patient_imaging_test_request_start",
+        "gnuhealth_request-imaging-test",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_imaging_req_seq",
+        "gnuhealth_sequences_imaging_test_sequence",
+        "wizard_generate_result"
+      ],
+      "menus": [],
+      "views": [
+        "health_imaging_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_imaging_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_imaging_orthanc",
+      "display_name": "Imaging Orthanc (alias)",
+      "version": "",
+      "description": "Features alias for Orthanc imaging integration.",
+      "upstream_or_ist": "upstream-features-doc-only",
+      "installation_state": "absent",
+      "activation_state": "absent_from_release",
+      "dependencies": [],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [],
+      "facility_applicability": "n/a",
+      "synthetic_data_availability": "none",
+      "ist_his_documentation_status": "marked-missing-deprecated",
+      "test_coverage": "n/a",
+      "implementation_status": "not_in_selected_release",
+      "brief_section5": true,
+      "in_release": false,
+      "notes": "Use health_orthanc in HIS 5.0.6."
+    },
+    {
+      "technical_module_name": "health_imaging_worklist",
+      "display_name": "Imaging Worklist",
+      "version": "5.0.4",
+      "description": "GNU Health module health_imaging_worklist",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_imaging"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.imaging.test",
+        "gnuhealth.imaging.test.request",
+        "gnuhealth.imaging.test.result",
+        "gnuhealth.imaging_worklist.worklist_template"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_imaging_test",
+        "gnuhealth_imaging_test_request",
+        "gnuhealth_imaging_test_result",
+        "gnuhealth_imaging_worklist_worklist_template"
+      ],
+      "menus": [],
+      "views": [
+        "health_imaging_worklist_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_inpatient",
+      "display_name": "Inpatient",
+      "version": "5.0.4",
+      "description": "GNU Health module health_inpatient",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_lifestyle"
+      ],
+      "reverse_dependencies": [
+        "health_icu",
+        "health_inpatient_calendar",
+        "health_stock_inpatient"
+      ],
+      "models_introduced": [
+        "gnuhealth.appointment",
+        "gnuhealth.bed.transfer",
+        "gnuhealth.bed.transfer.create",
+        "gnuhealth.bed.transfer.init",
+        "gnuhealth.diet.therapeutic",
+        "gnuhealth.inpatient.diet",
+        "gnuhealth.inpatient.meal",
+        "gnuhealth.inpatient.meal.order",
+        "gnuhealth.inpatient.meal.order.item",
+        "gnuhealth.inpatient.medication",
+        "gnuhealth.inpatient.medication.admin_time",
+        "gnuhealth.inpatient.medication.log",
+        "gnuhealth.inpatient.registration",
+        "gnuhealth.patient",
+        "gnuhealth.patient.ecg",
+        "gnuhealth.patient.evaluation",
+        "gnuhealth.patient.procedure",
+        "gnuhealth.patient.rounding",
+        "gnuhealth.rounding_procedure",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.inpatient_meal_order_sequence",
+        "gnuhealth.sequences.inpatient_registration_sequence",
+        "gnuhealth.sequences.patient_rounding_sequence",
+        "wizard.gnuhealth.inpatient.evaluation"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_appointment",
+        "gnuhealth_bed_transfer",
+        "gnuhealth_bed_transfer_create",
+        "gnuhealth_bed_transfer_init",
+        "gnuhealth_diet_therapeutic",
+        "gnuhealth_inpatient_diet",
+        "gnuhealth_inpatient_meal",
+        "gnuhealth_inpatient_meal_order",
+        "gnuhealth_inpatient_meal_order_item",
+        "gnuhealth_inpatient_medication",
+        "gnuhealth_inpatient_medication_admin_time",
+        "gnuhealth_inpatient_medication_log",
+        "gnuhealth_inpatient_registration",
+        "gnuhealth_patient",
+        "gnuhealth_patient_ecg",
+        "gnuhealth_patient_evaluation",
+        "gnuhealth_patient_procedure",
+        "gnuhealth_patient_rounding",
+        "gnuhealth_rounding_procedure",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_inpatient_meal_order_sequence",
+        "gnuhealth_sequences_inpatient_registration_sequence",
+        "gnuhealth_sequences_patient_rounding_sequence",
+        "wizard_gnuhealth_inpatient_evaluation"
+      ],
+      "menus": [],
+      "views": [
+        "health_inpatient_view.xml"
+      ],
+      "wizards": [
+        "wizard/bed_transfer_wizard.xml",
+        "wizard/inpatient_evaluation.xml"
+      ],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_inpatient_calendar",
+      "display_name": "Inpatient Calendar",
+      "version": "5.0.4",
+      "description": "GNU Health module health_inpatient_calendar",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_inpatient",
+        "health_calendar"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.hospital.bed",
+        "gnuhealth.inpatient.registration"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_hospital_bed",
+        "gnuhealth_inpatient_registration"
+      ],
+      "menus": [],
+      "views": [
+        "health_inpatient_calendar_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_insurance",
+      "display_name": "Insurance",
+      "version": "5.0.4",
+      "description": "GNU Health module health_insurance",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_services"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.health_service",
+        "gnuhealth.insurance.plan",
+        "gnuhealth.insurance.plan.product.policy",
+        "gnuhealth.patient.procedure",
+        "gnuhealth.service.invoice.create"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_health_service",
+        "gnuhealth_insurance_plan",
+        "gnuhealth_insurance_plan_product_policy",
+        "gnuhealth_patient_procedure",
+        "gnuhealth_service_invoice_create"
+      ],
+      "menus": [],
+      "views": [
+        "health_insurance_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_iss",
+      "display_name": "Injury Surveillance",
+      "version": "5.0.4",
+      "description": "GNU Health module health_iss",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.iss"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_iss"
+      ],
+      "menus": [],
+      "views": [
+        "health_iss_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_lab",
+      "display_name": "Laboratory",
+      "version": "5.0.4",
+      "description": "GNU Health module health_lab",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_crypto_lab",
+        "health_mdg6",
+        "health_ntd",
+        "health_qrcodes",
+        "health_services_lab",
+        "health_surgery"
+      ],
+      "models_introduced": [
+        "gnuhealth.lab",
+        "gnuhealth.lab.test.create",
+        "gnuhealth.lab.test.create.init",
+        "gnuhealth.lab.test.critearea",
+        "gnuhealth.lab.test.units",
+        "gnuhealth.lab.test_type",
+        "gnuhealth.patient",
+        "gnuhealth.patient.disease",
+        "gnuhealth.patient.lab.test",
+        "gnuhealth.patient.lab.test.request",
+        "gnuhealth.patient.lab.test.request.start",
+        "gnuhealth.request-test",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.lab_request_sequence",
+        "gnuhealth.sequences.lab_test_sequence"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_lab",
+        "gnuhealth_lab_test_create",
+        "gnuhealth_lab_test_create_init",
+        "gnuhealth_lab_test_critearea",
+        "gnuhealth_lab_test_units",
+        "gnuhealth_lab_test_type",
+        "gnuhealth_patient",
+        "gnuhealth_patient_disease",
+        "gnuhealth_patient_lab_test",
+        "gnuhealth_patient_lab_test_request",
+        "gnuhealth_patient_lab_test_request_start",
+        "gnuhealth_request-test",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_lab_request_sequence",
+        "gnuhealth_sequences_lab_test_sequence"
+      ],
+      "menus": [],
+      "views": [
+        "health_lab_view.xml"
+      ],
+      "wizards": [
+        "wizard/create_lab_test.xml"
+      ],
+      "reports": [
+        "health_lab_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_lifestyle",
+      "display_name": "Lifestyle",
+      "version": "5.0.4",
+      "description": "GNU Health module health_lifestyle",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_inpatient"
+      ],
+      "models_introduced": [
+        "gnuhealth.diet.belief",
+        "gnuhealth.drugs_recreational",
+        "gnuhealth.patient",
+        "gnuhealth.patient.cage",
+        "gnuhealth.patient.recreational_drugs",
+        "gnuhealth.vegetarian_types"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_diet_belief",
+        "gnuhealth_drugs_recreational",
+        "gnuhealth_patient",
+        "gnuhealth_patient_cage",
+        "gnuhealth_patient_recreational_drugs",
+        "gnuhealth_vegetarian_types"
+      ],
+      "menus": [],
+      "views": [
+        "health_lifestyle_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_mdg6",
+      "display_name": "MDG6",
+      "version": "5.0.4",
+      "description": "GNU Health module health_mdg6",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_lab"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_ntd",
+      "display_name": "NTD Metapackage",
+      "version": "5.0.3",
+      "description": "GNU Health module health_ntd",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_lab"
+      ],
+      "reverse_dependencies": [
+        "health_ntd_chagas",
+        "health_ntd_dengue"
+      ],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_ntd_chagas",
+      "display_name": "NTD Chagas",
+      "version": "5.0.4",
+      "description": "GNU Health module health_ntd_chagas",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_ntd"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.chagas_du_survey",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.chagas_du_survey_sequence"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_chagas_du_survey",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_chagas_du_survey_sequence"
+      ],
+      "menus": [],
+      "views": [
+        "health_ntd_chagas_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_ntd_dengue",
+      "display_name": "NTD Dengue",
+      "version": "5.0.4",
+      "description": "GNU Health module health_ntd_dengue",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_ntd"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.dengue_du_survey",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.dengue_du_survey_sequence"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_dengue_du_survey",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_dengue_du_survey_sequence"
+      ],
+      "menus": [],
+      "views": [
+        "health_ntd_dengue_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_nursing",
+      "display_name": "Nursing",
+      "version": "5.0.4",
+      "description": "GNU Health module health_nursing",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_stock_nursing"
+      ],
+      "models_introduced": [
+        "gnuhealth.ambulatory_care_procedure",
+        "gnuhealth.patient.ambulatory_care",
+        "gnuhealth.patient.procedure",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.ambulatory_care_sequence"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_ambulatory_care_procedure",
+        "gnuhealth_patient_ambulatory_care",
+        "gnuhealth_patient_procedure",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_ambulatory_care_sequence"
+      ],
+      "menus": [],
+      "views": [
+        "health_nursing_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_nursing_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_ophthalmology",
+      "display_name": "Ophthalmology",
+      "version": "5.0.4",
+      "description": "GNU Health module health_ophthalmology",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.ophthalmology.evaluation",
+        "gnuhealth.ophthalmology.findings"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_ophthalmology_evaluation",
+        "gnuhealth_ophthalmology_findings"
+      ],
+      "menus": [],
+      "views": [
+        "health_ophthalmology_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_ophthalmology_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_orthanc",
+      "display_name": "Orthanc PACS",
+      "version": "5.0.4",
+      "description": "GNU Health module health_orthanc",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_imaging"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.imaging.test.result",
+        "gnuhealth.imaging_orthanc.full_synchronize",
+        "gnuhealth.imaging_orthanc.full_synchronize.start",
+        "gnuhealth.imaging_orthanc.get_new_studies",
+        "gnuhealth.imaging_orthanc.get_new_studies.start",
+        "gnuhealth.imaging_orthanc.orthanc_add_init_data",
+        "gnuhealth.imaging_orthanc.series_instances",
+        "gnuhealth.imaging_orthanc.study",
+        "gnuhealth.imaging_orthanc.study_series",
+        "gnuhealth.imaging_orthanc.upload_image_data",
+        "gnuhealth.imaging_orthanc.upload_image_data.start",
+        "gnuhealth.imaging_orthanc.wizard.orthanc_new_connect",
+        "gnuhealth.orthanc.config",
+        "gnuhealth.orthanc.patient",
+        "gnuhealth.orthanc.study",
+        "gnuhealth.patient",
+        "ir.ui.view"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_imaging_test_result",
+        "gnuhealth_imaging_orthanc_full_synchronize",
+        "gnuhealth_imaging_orthanc_full_synchronize_start",
+        "gnuhealth_imaging_orthanc_get_new_studies",
+        "gnuhealth_imaging_orthanc_get_new_studies_start",
+        "gnuhealth_imaging_orthanc_orthanc_add_init_data",
+        "gnuhealth_imaging_orthanc_series_instances",
+        "gnuhealth_imaging_orthanc_study",
+        "gnuhealth_imaging_orthanc_study_series",
+        "gnuhealth_imaging_orthanc_upload_image_data",
+        "gnuhealth_imaging_orthanc_upload_image_data_start",
+        "gnuhealth_imaging_orthanc_wizard_orthanc_new_connect",
+        "gnuhealth_orthanc_config",
+        "gnuhealth_orthanc_patient",
+        "gnuhealth_orthanc_study",
+        "gnuhealth_patient",
+        "ir_ui_view"
+      ],
+      "menus": [],
+      "views": [
+        "health_orthanc_view.xml",
+        "health_orthanc_configuration_view.xml"
+      ],
+      "wizards": [
+        "wizard/full_synchronize.xml",
+        "wizard/get_new_studies.xml",
+        "wizard/upload_image_data.xml"
+      ],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_pediatrics",
+      "display_name": "Pediatrics",
+      "version": "5.0.4",
+      "description": "GNU Health module health_pediatrics",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_pediatrics_growth_charts",
+        "health_qrcodes"
+      ],
+      "models_introduced": [
+        "gnuhealth.neonatal.apgar",
+        "gnuhealth.newborn",
+        "gnuhealth.patient.disease",
+        "gnuhealth.patient.medication",
+        "gnuhealth.patient.psc"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_neonatal_apgar",
+        "gnuhealth_newborn",
+        "gnuhealth_patient_disease",
+        "gnuhealth_patient_medication",
+        "gnuhealth_patient_psc"
+      ],
+      "menus": [],
+      "views": [
+        "health_pediatrics_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_pediatrics_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_pediatrics_growth_charts",
+      "display_name": "Growth Charts",
+      "version": "5.0.4",
+      "description": "GNU Health module health_pediatrics_growth_charts",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_pediatrics"
+      ],
+      "reverse_dependencies": [
+        "health_pediatrics_growth_charts_who"
+      ],
+      "models_introduced": [
+        "gnuhealth.patient.evaluation"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient_evaluation"
+      ],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_pediatrics_growth_charts_who",
+      "display_name": "WHO Growth Charts",
+      "version": "5.0.4",
+      "description": "GNU Health module health_pediatrics_growth_charts_who",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_pediatrics_growth_charts"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.pediatrics.growth.charts.who",
+        "gnuhealth.pediatrics.growth.charts.who.bmifa.report",
+        "gnuhealth.pediatrics.growth.charts.who.lhfa.report",
+        "gnuhealth.pediatrics.growth.charts.who.report",
+        "gnuhealth.pediatrics.growth.charts.who.report.open",
+        "gnuhealth.pediatrics.growth.charts.who.report.open.start",
+        "gnuhealth.pediatrics.growth.charts.who.wfa.report"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_pediatrics_growth_charts_who",
+        "gnuhealth_pediatrics_growth_charts_who_bmifa_report",
+        "gnuhealth_pediatrics_growth_charts_who_lhfa_report",
+        "gnuhealth_pediatrics_growth_charts_who_report",
+        "gnuhealth_pediatrics_growth_charts_who_report_open",
+        "gnuhealth_pediatrics_growth_charts_who_report_open_start",
+        "gnuhealth_pediatrics_growth_charts_who_wfa_report"
+      ],
+      "menus": [],
+      "views": [
+        "health_pediatrics_growth_charts_who_view.xml"
+      ],
+      "wizards": [
+        "wizard/health_pediatrics_growth_charts_who_wizard.xml"
+      ],
+      "reports": [
+        "health_pediatrics_growth_charts_who_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_profile",
+      "display_name": "Health Profile",
+      "version": "",
+      "description": "Metapackage bundling common clinical modules.",
+      "upstream_or_ist": "upstream-features-doc-only",
+      "installation_state": "absent",
+      "activation_state": "absent_from_release",
+      "dependencies": [],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [],
+      "facility_applicability": "n/a",
+      "synthetic_data_availability": "none",
+      "ist_his_documentation_status": "marked-missing-deprecated",
+      "test_coverage": "n/a",
+      "implementation_status": "not_in_selected_release",
+      "brief_section5": false,
+      "in_release": false,
+      "notes": "Listed in docs features; not present as tryton package in HIS 5.0.6 source tree."
+    },
+    {
+      "technical_module_name": "health_qrcodes",
+      "display_name": "QR Codes",
+      "version": "5.0.4",
+      "description": "GNU Health module health_qrcodes",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_pediatrics",
+        "health_lab"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.appointment",
+        "gnuhealth.lab",
+        "gnuhealth.newborn",
+        "gnuhealth.patient",
+        "party.party"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_appointment",
+        "gnuhealth_lab",
+        "gnuhealth_newborn",
+        "gnuhealth_patient",
+        "party_party"
+      ],
+      "menus": [],
+      "views": [
+        "health_qrcodes_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_qrcodes_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_reporting",
+      "display_name": "Reporting",
+      "version": "5.0.4",
+      "description": "GNU Health module health_reporting",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.epidemics.report",
+        "gnuhealth.epidemics.report.open",
+        "gnuhealth.epidemics.report.open.start",
+        "gnuhealth.evaluations.open",
+        "gnuhealth.evaluations.open.start",
+        "gnuhealth.evaluations_doctor",
+        "gnuhealth.evaluations_sector",
+        "gnuhealth.evaluations_specialty",
+        "gnuhealth.summary.report",
+        "gnuhealth.summary.report.open",
+        "gnuhealth.summary.report.open.start",
+        "gnuhealth.top_diseases",
+        "gnuhealth.top_diseases.open",
+        "gnuhealth.top_diseases.open.start"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_epidemics_report",
+        "gnuhealth_epidemics_report_open",
+        "gnuhealth_epidemics_report_open_start",
+        "gnuhealth_evaluations_open",
+        "gnuhealth_evaluations_open_start",
+        "gnuhealth_evaluations_doctor",
+        "gnuhealth_evaluations_sector",
+        "gnuhealth_evaluations_specialty",
+        "gnuhealth_summary_report",
+        "gnuhealth_summary_report_open",
+        "gnuhealth_summary_report_open_start",
+        "gnuhealth_top_diseases",
+        "gnuhealth_top_diseases_open",
+        "gnuhealth_top_diseases_open_start"
+      ],
+      "menus": [],
+      "views": [
+        "health_reporting_view.xml"
+      ],
+      "wizards": [
+        "wizard/evaluations.xml",
+        "wizard/top_diseases.xml",
+        "wizard/summary_report_wizard.xml",
+        "wizard/epidemics_report_wizard.xml"
+      ],
+      "reports": [
+        "health_reporting_view.xml",
+        "health_reporting_report.xml",
+        "wizard/summary_report_wizard.xml",
+        "wizard/epidemics_report_wizard.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_services",
+      "display_name": "Services & Billing",
+      "version": "5.0.4",
+      "description": "GNU Health module health_services",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "account_invoice"
+      ],
+      "reverse_dependencies": [
+        "health_insurance",
+        "health_services_imaging",
+        "health_services_lab"
+      ],
+      "models_introduced": [
+        "account.invoice",
+        "account.invoice.line",
+        "gnuhealth.health_service",
+        "gnuhealth.health_service.line",
+        "gnuhealth.patient.evaluation",
+        "gnuhealth.prescription.order",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.health_service_sequence",
+        "gnuhealth.service.invoice.create",
+        "gnuhealth.service.invoice.init"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "account_invoice",
+        "account_invoice_line",
+        "gnuhealth_health_service",
+        "gnuhealth_health_service_line",
+        "gnuhealth_patient_evaluation",
+        "gnuhealth_prescription_order",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_health_service_sequence",
+        "gnuhealth_service_invoice_create",
+        "gnuhealth_service_invoice_init"
+      ],
+      "menus": [],
+      "views": [
+        "health_services_view.xml"
+      ],
+      "wizards": [
+        "wizard/create_health_service_invoice.xml"
+      ],
+      "reports": [
+        "health_services_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_services_imaging",
+      "display_name": "Imaging Services",
+      "version": "5.0.4",
+      "description": "GNU Health module health_services_imaging",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_imaging",
+        "health_services"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.imaging.test.request",
+        "gnuhealth.patient.imaging.test.request",
+        "gnuhealth.patient.imaging.test.request.start"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_imaging_test_request",
+        "gnuhealth_patient_imaging_test_request",
+        "gnuhealth_patient_imaging_test_request_start"
+      ],
+      "menus": [],
+      "views": [
+        "health_services_imaging_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_services_lab",
+      "display_name": "Lab Services",
+      "version": "5.0.4",
+      "description": "GNU Health module health_services_lab",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_lab",
+        "health_services"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.patient.lab.test",
+        "gnuhealth.patient.lab.test.request",
+        "gnuhealth.patient.lab.test.request.start"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient_lab_test",
+        "gnuhealth_patient_lab_test_request",
+        "gnuhealth_patient_lab_test_request_start"
+      ],
+      "menus": [],
+      "views": [
+        "health_services_lab_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_socioeconomics",
+      "display_name": "Socioeconomics",
+      "version": "5.0.4",
+      "description": "GNU Health module health_socioeconomics",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [
+        "health_disability"
+      ],
+      "models_introduced": [
+        "gnuhealth.patient",
+        "gnuhealth.ses.assessment",
+        "party.party"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient",
+        "gnuhealth_ses_assessment",
+        "party_party"
+      ],
+      "menus": [],
+      "views": [
+        "health_socioeconomics_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": false,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_stock",
+      "display_name": "Health Stock",
+      "version": "5.0.4",
+      "description": "GNU Health module health_stock",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "stock_lot"
+      ],
+      "reverse_dependencies": [
+        "health_stock_inpatient",
+        "health_stock_nursing",
+        "health_stock_surgery"
+      ],
+      "models_introduced": [
+        "gnuhealth.prescription.order",
+        "gnuhealth.prescription.stock.move.create",
+        "gnuhealth.prescription.stock.move.init",
+        "gnuhealth.vaccination",
+        "gnuhealth.vaccination.stock.move.create",
+        "gnuhealth.vaccination.stock.move.init",
+        "party.party",
+        "stock.lot",
+        "stock.move"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_prescription_order",
+        "gnuhealth_prescription_stock_move_create",
+        "gnuhealth_prescription_stock_move_init",
+        "gnuhealth_vaccination",
+        "gnuhealth_vaccination_stock_move_create",
+        "gnuhealth_vaccination_stock_move_init",
+        "party_party",
+        "stock_lot",
+        "stock_move"
+      ],
+      "menus": [],
+      "views": [
+        "health_stock_view.xml"
+      ],
+      "wizards": [
+        "wizard/create_prescription_stock_move.xml",
+        "wizard/create_vaccination_stock_move.xml"
+      ],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_stock_inpatient",
+      "display_name": "Stock Inpatient",
+      "version": "5.0.4",
+      "description": "GNU Health module health_stock_inpatient",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_stock",
+        "health_inpatient"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.patient.rounding",
+        "gnuhealth.patient.rounding.medical_supply",
+        "gnuhealth.patient.rounding.medicament",
+        "stock.move"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient_rounding",
+        "gnuhealth_patient_rounding_medical_supply",
+        "gnuhealth_patient_rounding_medicament",
+        "stock_move"
+      ],
+      "menus": [],
+      "views": [
+        "health_stock_inpatient_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": false,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_stock_nursing",
+      "display_name": "Stock Nursing",
+      "version": "5.0.4",
+      "description": "GNU Health module health_stock_nursing",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_nursing",
+        "health_stock"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.patient.ambulatory_care",
+        "gnuhealth.patient.ambulatory_care.medical_supply",
+        "gnuhealth.patient.ambulatory_care.medicament",
+        "stock.move"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_patient_ambulatory_care",
+        "gnuhealth_patient_ambulatory_care_medical_supply",
+        "gnuhealth_patient_ambulatory_care_medicament",
+        "stock_move"
+      ],
+      "menus": [],
+      "views": [
+        "health_stock_nursing_view.xml"
+      ],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": false,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_stock_surgery",
+      "display_name": "Stock Surgery",
+      "version": "5.0.4",
+      "description": "GNU Health module health_stock_surgery",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_stock",
+        "health_surgery"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [
+        "gnuhealth.surgery",
+        "gnuhealth.surgery.stock.move.create",
+        "gnuhealth.surgery.stock.move.init",
+        "stock.move"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_surgery",
+        "gnuhealth_surgery_stock_move_create",
+        "gnuhealth_surgery_stock_move_init",
+        "stock_move"
+      ],
+      "menus": [],
+      "views": [
+        "health_stock_surgery_view.xml"
+      ],
+      "wizards": [
+        "wizard/create_surgery_stock_move.xml"
+      ],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_surgery",
+      "display_name": "Surgery",
+      "version": "5.0.4",
+      "description": "GNU Health module health_surgery",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health",
+        "health_lab",
+        "health_imaging"
+      ],
+      "reverse_dependencies": [
+        "health_stock_surgery",
+        "health_surgery_protocols"
+      ],
+      "models_introduced": [
+        "gnuhealth.operation",
+        "gnuhealth.or.schedule",
+        "gnuhealth.patient",
+        "gnuhealth.patient.evaluation",
+        "gnuhealth.patient.procedure",
+        "gnuhealth.preoperative_assessment",
+        "gnuhealth.rcri",
+        "gnuhealth.sequences",
+        "gnuhealth.sequences.surgery_code_sequence",
+        "gnuhealth.surgery",
+        "gnuhealth.surgery.complication",
+        "gnuhealth.surgery.drain",
+        "gnuhealth.surgery.protocol",
+        "gnuhealth.surgery_supply",
+        "gnuhealth.surgery_team"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "gnuhealth_operation",
+        "gnuhealth_or_schedule",
+        "gnuhealth_patient",
+        "gnuhealth_patient_evaluation",
+        "gnuhealth_patient_procedure",
+        "gnuhealth_preoperative_assessment",
+        "gnuhealth_rcri",
+        "gnuhealth_sequences",
+        "gnuhealth_sequences_surgery_code_sequence",
+        "gnuhealth_surgery",
+        "gnuhealth_surgery_complication",
+        "gnuhealth_surgery_drain",
+        "gnuhealth_surgery_protocol",
+        "gnuhealth_surgery_supply",
+        "gnuhealth_surgery_team"
+      ],
+      "menus": [],
+      "views": [
+        "health_surgery_view.xml"
+      ],
+      "wizards": [],
+      "reports": [
+        "health_surgery_report.xml"
+      ],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_surgery_protocols",
+      "display_name": "Surgery Protocols",
+      "version": "5.0.4",
+      "description": "GNU Health module health_surgery_protocols",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health_icd10",
+        "health_surgery"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_webdav3_server",
+      "display_name": "WebDAV3 Server",
+      "version": "5.0.4",
+      "description": "GNU Health module health_webdav3_server",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "ir",
+        "res"
+      ],
+      "reverse_dependencies": [
+        "health_caldav"
+      ],
+      "models_introduced": [
+        "ir.attachment",
+        "webdav.collection",
+        "webdav.share"
+      ],
+      "models_extended": [],
+      "database_tables": [
+        "ir_attachment",
+        "webdav_collection",
+        "webdav_share"
+      ],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    },
+    {
+      "technical_module_name": "health_who_essential_medicines",
+      "display_name": "WHO Essential Medicines",
+      "version": "5.0.4",
+      "description": "GNU Health module health_who_essential_medicines",
+      "upstream_or_ist": "upstream",
+      "installation_state": "installed",
+      "activation_state": "activated",
+      "dependencies": [
+        "health"
+      ],
+      "reverse_dependencies": [],
+      "models_introduced": [],
+      "models_extended": [],
+      "database_tables": [],
+      "menus": [],
+      "views": [],
+      "wizards": [],
+      "reports": [],
+      "sequences": [],
+      "scheduled_jobs": [],
+      "security_groups": [],
+      "access_control_rules": [],
+      "reference_master_data": [],
+      "country_applicability": [
+        "AE",
+        "QA",
+        "global"
+      ],
+      "facility_applicability": "all",
+      "synthetic_data_availability": "pack-mapped",
+      "ist_his_documentation_status": "guide-generated",
+      "test_coverage": "pack-stub",
+      "implementation_status": "activated",
+      "brief_section5": true,
+      "in_release": true,
+      "notes": ""
+    }
+  ]
+}

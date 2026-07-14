@@ -1,0 +1,2070 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog &mdash; GNU Health Hospital Information System  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=d0a1bf8f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+      <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer’s Corner" href="devcorner.html" />
+    <link rel="prev" title="Roadmap" href="roadmap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GNU Health Hospital Information System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Resources and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userguide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="techguide/index.html">Technical Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/index.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">4.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">4.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client">4.0.2 (Client)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">4.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">4.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">4.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">4.0.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#versions-3-x-x">Versions 3.x.x</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">3.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b3-hl7-fhir">0.9b3 (HL7 FHIR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">3.6.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-center">3.6.5 (Control Center)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">3.6.4 (Control Center)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">3.6.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">3.6.8 (Client)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">3.6.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">3.6.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">3.6.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">3.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installer">3.4.1 (Installer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">3.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">3.4.1 (Control Center)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">3.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">3.2.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">3.2.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">3.2.7 &amp; 3.2.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">3.2.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">3.2.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">3.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">3.2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id31">3.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">3.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id33">3.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">3.0.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id35">3.0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">3.0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">3.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">3.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">3.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">3.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">3.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id42">3.0.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#versions-2-x-x">Versions 2.x.x</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id43">2.8.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id44">2.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id45">2.6.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id46">2.6.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id47">2.6.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id48">2.4.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#versions-1-x-x">Versions 1.x.x</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id49">1.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id50">1.6.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id51">1.6.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id52">1.4.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id53">1.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id54">1.3.3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="devcorner.html">Developer’s Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supportus.html">Support Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/index.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">ToDo’s</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GNU Health Hospital Information System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changelog">
+<span id="changelog-changelog"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+<p>This is a summary of the Hospital Information System (HIS) release announcements</p>
+<p>Since release 5.0 we don’t show the patchsets, only major, minor release annoucements.
+You can find a detailed Changelog per commit inside the repository at Codeberg.</p>
+<section id="id1">
+<h2>5.0.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2025/06/30</span></code></p>
+<p>Dear community:</p>
+<p>I am very happy to announce the release 5.0 series of the GNU Health Hospital Information System (HIS). This release it’s the result of a tremendous amount of work that spanned for almost the last two years!</p>
+<p>Series 5.0 represent a major leap in functionality, the underlying technology &amp; project development.</p>
+<p>Currently we have the vanilla version ready to be downloaded, via gnuhealth-control</p>
+<p>The following paragraphs summarize the changes and features included in GNUHealth HIS 5.0. There are more features and information that has been left outside this document for the sake of brevity.
+You can look consult the Changelog at Codeberg.</p>
+<p>New Functionality Features</p>
+<p><strong>Laboratory Information System (Occhiolino)</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>New visual aids for out-of-range results</p></li>
+<li><p>Create individual test directly w/o orders</p></li>
+<li><p>Include testing for veterinary context</p></li>
+<li><p>Analyte code harmonization</p></li>
+<li><p>Test sources for patient &amp; non-patients</p></li>
+<li><p>Enhanced report formats</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Focus on Social Diseases</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Check for uninsured population</p></li>
+<li><p>Enhanced data entry for socioeconomic status and family functionality</p></li>
+<li><p>Add homeless status</p></li>
+<li><p>Link with International Classification of Functionality, Health and Disability (ICF)</p></li>
+<li><p>Epidemiological report takes into account the socioeconomic status of the population</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Medical Imaging</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Extensive package refactoring</p></li>
+<li><p>health_imaging</p></li>
+<li><p>health_imaging_worklist (DICOM patient worklists)</p></li>
+<li><p>health_imaging_orthanc</p></li>
+<li><p>Better integration with Orthanc PACS server</p></li>
+<li><p>Work from Wei Thao, University of Louvain and the Orthanc community</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Patient Medication</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Accessible from the main menu</p></li>
+<li><p>Report at population level</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Allergic status validation</strong></p>
+<blockquote>
+<div><p>Automatically check the patient allergic status
+Patient level
+Prescription level
+Sets ‘Focus on allergy’ automatically</p>
+</div></blockquote>
+<p><strong>Demographics</strong></p>
+<blockquote>
+<div><p>Enhanced demographics information
+Insurance validity check
+Record Homeless status
+Ethnicity and proclaimed ethnicity
+Improved socioeconomic assessments</p>
+</div></blockquote>
+<p><strong>Insurances</strong></p>
+<blockquote>
+<div><p>Enhanced demographics
+Warning on expired insurances
+Insurance policies and pricing for procedures
+Linked to medical evaluations, surgeries, …</p>
+</div></blockquote>
+<p><strong>Obstetrics</strong></p>
+<blockquote>
+<div><p>Enhanced obstetric history
+Link newborn with pregnancy result
+General population report
+Detailed information about multiple-pregnancy for each fetus</p>
+</div></blockquote>
+<p><strong>Medical Genetics</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Include family history in core package</p></li>
+<li><p>Patient family tab (members, history …)</p></li>
+<li><p>Mutation zygosity</p></li>
+<li><p>Improved data entry and view</p></li>
+<li><p>Updated genes and proteins datasets (2023 → 2025)</p></li>
+<li><p>Genes: 44056 (+348)</p></li>
+<li><p>UniProt Natural variants: 82581 (+1422)</p></li>
+<li><p>Protein related diseases: 6740 (+300)</p></li>
+<li><p>HGNC: 80 gene symbols renamed</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Summary of new features</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>New functionality for patient procedures and medical interventions</p></li>
+<li><p>Improved reporting and analytics</p></li>
+<li><p>New features on patient obstetric history and pregnancy related evaluations</p></li>
+<li><p>Improved ergonomics and views on demographics and patient related information.</p></li>
+<li><p>Enhanced socioeconomic and family functionality assessment</p></li>
+<li><p>Extensively revised Medical Imaging, DICOM worklists and Orthanc packages</p></li>
+<li><p>Reorganize nursing and ambulatory care packages</p></li>
+<li><p>Enhanced patient body composition and anthropometrics</p></li>
+<li><p>Enhanced “Focus on” patient section, including automated settings and mental health</p></li>
+<li><p>New insurance and billing features for medical interventions and insurance plans.</p></li>
+<li><p>Improved patient safety and allergic conditions checks and prescription writing</p></li>
+</ul>
+</div></blockquote>
+<p>Technology</p>
+<p><strong>The development environment is now at Codeberg</strong></p>
+<blockquote>
+<div><p>Translation : 30+ language teams</p>
+</div></blockquote>
+<p><strong>GNUHealth-Control as a single point for sysadmin tasks</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>GNU Health control will install, update and backup the instances</p></li>
+<li><p>Removed gnuhealth-setup</p></li>
+</ul>
+</div></blockquote>
+<p><strong>GNU Health HIS 5.0 uses Tryton 7.0 LTS framework</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Support until end of 2028</p></li>
+<li><p>Full refactoring of packages</p></li>
+<li><p>Support of Python 3.13</p></li>
+<li><p>Native GNU Health GTK Client</p></li>
+<li><p>Development web client</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Gunicorn as WSGI server</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Gunicorn is now the default WSGI server for GNUHealth HIS</p></li>
+<li><p>For production / large deployments</p></li>
+<li><p>Can be coupled with Nginx</p></li>
+<li><p>Used already in Thalamus and the GNU Health Federation</p></li>
+<li><p>Replaces uWSGI</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Increased Modularity</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Reduced Package inter-dependency, mainly in:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Nursing &amp; Ambulatory care</p></li>
+<li><p>Crypto</p></li>
+<li><p>Lab</p></li>
+<li><p>Clinical History</p></li>
+<li><p>Stock management</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Removed health_profile</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Packages are in the GNU Health Organization at PyPI</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>wheel and source (sdist) distributions</p></li>
+<li><p>Installation of individual health packages via gnuhealth-control</p></li>
+<li><p>Much lighter, simple installations and implementations</p></li>
+<li><p>Specific for user and health institution needs</p></li>
+<li><p>Reduced complexity</p></li>
+<li><p>Improved performance and security</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Minor number / patches at individual package level</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The patch level version is at package level instead of the whole GNU Health. This provides greater modularity and improves system administration tasks.</p></li>
+<li><p>gnuhealth-control detects which packages need to be updated, from gnuhealth and its dependencies.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Source code of GNU Health HIS and gnuhealth-control at GNU.org</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>GNU Health HIS sourced code will be packaged as a bundle with a date format when any of the resources is updated.</p></li>
+<li><p>gnuhealth-control source will also be at GNU.org</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Migrate to Poetry</strong></p>
+<blockquote>
+<div><p>Poems, everybody! From release 5.0, we have migrated the package and dependency management system from setuptools to Poetry.</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>4.4.0<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2023/12/23</span></code></p>
+<p>Dear community:</p>
+<p>I am very happy to announce the release of the 4.4 series from the GNU Health Hospital Management Information System (HMIS) component!</p>
+<p><strong>What is new in GNUHealth Hospital Management 4.4 series</strong></p>
+<p>The following is a summary of the main new features included in GH 4.4:</p>
+<ul class="simple">
+<li><p>Improve ergonomics on patient health condition model</p></li>
+<li><p>Menu for dental treatments</p></li>
+<li><p>Include synchronization with Orthanc server using Tryton scheduler</p></li>
+<li><p>Add age_str field to gnuhealth.patient.disease</p></li>
+<li><p>Refactor FHIR server</p></li>
+<li><p>Include surgery stock moves</p></li>
+<li><p>New packages health_surgery_protocols and health_stock_surgery</p></li>
+<li><p>Update documentation on existing modules</p></li>
+<li><p>Expand information and management of surgical protocols</p></li>
+<li><p>Support generate DICOM Modality Worklists</p></li>
+<li><p>Operating room scheduler</p></li>
+<li><p>QR Code bracelet / wristband in demographics. No need to enter the patient / clinical section to print the QR.</p></li>
+<li><p>pot template generator</p></li>
+<li><p>Support Stone Web Viewer and Osimis Web Viewer link.</p></li>
+<li><p>Add service_updated to health_services* packages</p></li>
+<li><p>Automatically create patient upon entering demographics</p></li>
+<li><p>Move samples/interfaces/* to script directory</p></li>
+<li><p>Add ICD-10 or ICD-11 parent to disease_categories</p></li>
+<li><p>Update functionality in Health Genetics packages</p></li>
+<li><p>Include ambulatory care reporting</p></li>
+<li><p>Support no-patient labtest</p></li>
+<li><p>Make age string returned by compute_age_from_dates function translatable.</p></li>
+<li><p>Add code field to GnuHealthTestCritearea and let lab interface script use it</p></li>
+<li><p>Write a example Interface with pandas.</p></li>
+</ul>
+<p><strong>Genomics and medical genetics package</strong></p>
+<p>A particular mention to the health_genetics packages because major work and significant improvements have been done for this version.
+I’ve spent quite a bit of time on this to be ready for this new release. I am confident GNU Health genetics functionality can be a valuable tool for genomics and medical genetics, both in research and clinical practice.</p>
+<p>The following is a summary of changes in health_genetics and health_genetics_uniprot packages:</p>
+<ul class="simple">
+<li><p>Rename gnuhealth.disease.gene model to gnuhealth.gene</p></li>
+<li><p>Rename disease_genes xml data files to human_genes</p></li>
+<li><p>Update views and references in related modules</p></li>
+<li><p>Include hgnc_id</p></li>
+<li><p>The primary key is now the HGNC identifier</p></li>
+<li><p>Add symbol aliases</p></li>
+<li><p>Update gene type selection</p></li>
+<li><p>Include locus group and type</p></li>
+<li><p>Update Gene form and tree view</p></li>
+<li><p>Include name aliases, omim, ensembl and refseq accession ids to gnuhealth.gene model</p></li>
+<li><p>Gene related proteins are now managed in main health_genetics package</p></li>
+<li><p>Update and remove obsolete references of natural variants and phenotypes</p></li>
+<li><p>Use human genes datafiles for Genome Reference Consortium Human build 38 (grch38) and alternative loci</p></li>
+<li><p>Include xrefs, protein and keywords in genetic diseases</p></li>
+<li><p>Improve field descriptions</p></li>
+<li><p>Simplify protein-related views and terms</p></li>
+<li><p>Use Inheritance pattern</p></li>
+<li><p>Include MIM reference in protein diseases tree view</p></li>
+<li><p>Use xrefs in tree view to broaden search</p></li>
+<li><p>Update protein diseases datafile</p></li>
+<li><p>Update variants phenotypes datafile to v 2023_03_june28 from  Uniprot</p></li>
+</ul>
+<p><strong>Upgrading from GNU Health 4.2</strong></p>
+<p>The GNUHealth 4.4 will benefit from the stability of using Tryton 6.0! Still, at GH level there are significant changes on the data dictionary and kernel.</p>
+<p>As usual:</p>
+<ul class="simple">
+<li><p>Make a FULL BACKUP your kernel, database and attach directories !!</p></li>
+<li><p>Follow the instructions in the manual / Wikibooks</p></li>
+</ul>
+<p><strong>Development focus</strong></p>
+<p>In addition of the GH HMIS server, we will focus the development in the following  areas of the GNU Health ecosystem:</p>
+<ul class="simple">
+<li><p>The Documentation Portal: It’s now a reality! Little by little we are integrating the information on <a class="reference external" href="https://docs.gnuhealth.org">https://docs.gnuhealth.org</a> . We now have a dedicated server that will host the documentation for the GNUHealth ecosystem components. The docmentation portal is a read-only resource, focusing on stability and quality. Wikibooks will work as the great community wiki that has been helping us for over a decade. Wikibooks will also work for development discussion and host the latest screenshots at Wikimedia commons.</p></li>
+<li><p>MyGNUHealth: The GNU Health Personal Health Record app for desktop and mobile devices is now at 2.0 and on Kivy framework! We can now port it to different platforms (Android, MacOS, ..) using pretty much the same codebase.</p></li>
+<li><p>Thalamus and the Federation Portal. The GNU Health Federation integrates information from many health institutions and individuals from a region or country. The GH Federation portal will  allow to manage resources, as well as the main point for <strong>analytics</strong> and <strong>reporting</strong> of massive demographics and epidemiological data generated nationwide. People, health centers and research institutions will benefit from the GNU Health Federation and the GNU Health ecosystem in general.</p></li>
+</ul>
+<p>As always, no matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, and give us your feedback via them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>The community server has been already migrated to 4.4.0, so you just need to download the GNU Health HMIS client.</p>
+<p>Happy and Healthy Hacking!
+Luis</p>
+</section>
+<section id="id3">
+<h2>4.2.3<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2023/09/24</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #64712: Bug afer installing patcheset 4.2.2</p></li>
+<li><p>bug #64706: Error saving party with photo due to PIL deprecation of ANTIALIAS</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>4.2.2<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">`2023/09/17</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>List of bugs and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #64269: get_serial function of LabTest class in health_crypto_lab.py need conside add units.name</p></li>
+<li><p>bug #64386: Automatically update the appointment sequence when state is confirm</p></li>
+<li><p>bug #64432: Gestational weeks show floating point instead of weeks</p></li>
+<li><p>bug #64457: Patient automatic critical information entries should be unique</p></li>
+<li><p>bug #64530: traceback on evaluation page of life if no institution is given</p></li>
+<li><p>bug #64665: Product cost_price needs to be passed as an argument in stock moves</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>4.2.1<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2023/04/07</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #64014: Update gender identity in patient evaluations and reports</p></li>
+<li><p>bug #64009: Include signing health professional and avoid scrolling in patient evaluation</p></li>
+<li><p>bug #64007: Summary report is not using FreeFonts family</p></li>
+<li><p>bug #63993: Python-sql error on patient evaluation report</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>4.2.0<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2023/02/11</span></code></p>
+<p>Dear community:</p>
+<p>I am excited to announce the release of series 4.2 from the GNU Health Hospital Management Information System (HMIS) component!</p>
+<p>The 4.2 series is the result of one year of work and cooperation with the community. Many new exciting features are included, bugs fixed and new translations are now in place.</p>
+<p><strong>What is new in GNUHealth Hospital Management 4.2 series</strong></p>
+<p>The following is a summary of the main new features included in GH 4.2:</p>
+<ul class="simple">
+<li><p>Enhanced Medical Imaging functionality and ergonomics.</p></li>
+<li><p>Introduced GNU Health “Focus on” section on patient main form. Key health indicators that put our attention on the patient main health conditions. The main indicators are Cardiovascular (excl hbp), HBP, Nutrition, Cognitive, Social, Cancer and Immuno.</p></li>
+<li><p>Surgery package has been vastly revised and enhanced. Thanks to the collaboration with our colleagues from Cirugia Solidaria, the surgery package is now being used in thousands of operations and all the new functionality is available in this 4.2.</p></li>
+<li><p>Enhanced Insurance and billing functionality. Now, in one view we can integrate all product policies from a particular insurance company plan. The 4.2 release also allows to include a fixed prices on product or category.</p></li>
+<li><p>The Vital Record System (VRS) can now issue reports on birth and death certificates.</p></li>
+<li><p>Demographics can now accept entering estimate age / DoB.</p></li>
+<li><p>Health services has now the functionality of “grouping” all the tests from a single order - lab and medical imaging -. It allows automatically updating the service document directly right from the request order wizard. There a new “ungroup” checkbox that, when set, it will behave as today, ie, giving the option to the manager.</p></li>
+<li><p>Improved Patient encounter / evaluation. Medical interventions, DDx and secondary conditions. A new report is now available that summarizes the key information from the evaluation.</p></li>
+<li><p>Weblate translations holds 35 languages!</p></li>
+<li><p>Instance and connection information visible at the GTK client title</p></li>
+<li><p>On the technical side, we have improved unit testing on each package, speedup load times on large datafiles and using python-sql for most queries.</p></li>
+<li><p>Last but not least…. GNU Health is now REUSE (Free Software Foundation Europe) compliant! This is a great step forward, since REUSE facilitates documenting and sharing licenses of Libre projects like GNU Health. It’s been quite a bit of work, but definitely worth!</p></li>
+</ul>
+<p><strong>Upgrading from GNU Health 4.0</strong></p>
+<p>The GNUHealth 4.2 will benefit from the stability of using Tryton 6.0! Still, at GH level there are significant changes on the data dictionary and kernel.</p>
+<p>As usual:</p>
+<ul class="simple">
+<li><p>Make a FULL BACKUP your kernel, database and attach directories !!!</p></li>
+<li><p>Follow the instructions on the Wikibooks.</p></li>
+</ul>
+<p>Development focus</p>
+<p>In addition of the GH HMIS server, we will focus the development in the
+following  areas of the GNU Health ecosystem:</p>
+<ul class="simple">
+<li><p>The Documentation Portal. We now have a dedicated server that will host the documentation for the GNUHealth ecosystem components.
+The docmentation portal is a read-only resource, focusing on stability and high-quality. We will also keep using Wikibooks as a community wiki, as well as development.</p></li>
+<li><p>MyGNUHealth: The GNU Health app for desktop and mobile devices</p></li>
+<li><p>Thalamus and the Federation Portal. The GNU Health Federation integrates information from many health institutions and individuals from a region or country. The GH Federation portal will  allow to manage resources, as well as the main point for <strong>analytics</strong> and <strong>reporting</strong> of massive demographics and epidemiological data generated nationwide. People, health centers and research institutions will benefit from the GNU Health Federation and the GNU Health ecosystem in general.</p></li>
+</ul>
+<p>As always, no matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, and give us your feedback via them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>The community server has been already migrated to 4.2.0, so you just need to download the GNU Health HMIS client.</p>
+<p>Happy and Healthy Hacking !</p>
+</section>
+<section id="id7">
+<h2>4.0.5<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2023/01/09</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #63558: Fault: ‘NoneType’ object has no attribute ‘name’</p></li>
+<li><p>bug #63557: Missing view architecture for (‘calendar.category’, None, ‘tree’)</p></li>
+<li><p>bug #63533: Model ‘gnuhealth.pol’ is missing a default access</p></li>
+<li><p>bug #63532: health_caldav misses requiremnt vobject in setup.py</p></li>
+<li><p>bug #63517: Fault: ‘webdav’ is not in list</p></li>
+<li><p>bug #62777: The term health prof used for both initiating and signing professional in patient evaluation</p></li>
+<li><p>bug #62634, Missing Spanish Translations</p></li>
+</ul>
+</section>
+<section id="client">
+<h2>4.0.2 (Client)<a class="headerlink" href="#client" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2022/12/14</span></code></p>
+<p>Dear GNUHealth community:</p>
+<p>I am happy to announce the maintenance release 4.0.2 of the Hospital Management client (GTK).</p>
+<p>Release 4.0.2 of the GNUHealth HMIS client includes bug fixes (see the Changelog[1]) and is REUSE compliant[2].</p>
+<p>As usual, the source code can be downloaded from the official GNU ftp site[3]. You can also install it directly via pip[4].</p>
+<p>You can join us at Mastodon for the latest news and events around GNUHealth! (<a class="reference external" href="https://mastodon.social/&#64;gnuhealth">https://mastodon.social/&#64;gnuhealth</a>)</p>
+<p>Happy and healthy hacking!
+Luis</p>
+<p>1.- <a class="reference external" href="https://hg.savannah.gnu.org/hgweb/health-hmis-client/file/5d21a06fa998/Changelog">https://hg.savannah.gnu.org/hgweb/health-hmis-client/file/5d21a06fa998/Changelog</a>
+2.- <a class="reference external" href="https://reuse.software/">https://reuse.software/</a>
+3.- <a class="reference external" href="https://ftp.gnu.org/gnu/health/">https://ftp.gnu.org/gnu/health/</a>
+4.- <a class="reference external" href="https://pypi.org/project/gnuhealth-client/">https://pypi.org/project/gnuhealth-client/</a></p>
+</section>
+<section id="id8">
+<h2>4.0.4<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2022/06/16</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #62598, Payment term search stops in party</p></li>
+<li><p>bug #62596: Traceback if there is no Account Receivable defined neither on party or default acct config</p></li>
+<li><p>bug #62555: Too many decimals error when generating the invoice with certain discounts</p></li>
+<li><p>bug #62439: Error in sequence when generating Dx Imaging order</p></li>
+<li><p>bug #62428: complete blood count report takes two pages</p></li>
+<li><p>bug #62427: Typo in health_services exceptions</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>4.0.3<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2022/04/02</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p><strong>Update Python dependencies</strong>:</p>
+<ul class="simple">
+<li><p>vobject: We have removed the version pinning on this library, using the current, latest version.</p></li>
+<li><p>Update gnuhealth-control and gnuhealth-setup</p></li>
+<li><p>Fixed issue on stock and nursing due to an old method on default health professional.</p></li>
+</ul>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #62240: trytond-console: ValueError due to old vobject version</p></li>
+<li><p>bug #62235: Traceback on default health professional</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>4.0.1<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2022/03/08</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p><strong>Update Python dependencies</strong></p>
+<p><strong>We needed to pin some underlying python libraries dependencies. We also included defusedxml library, included in a trytond security patch</strong>:</p>
+<ul class="simple">
+<li><p>progressbar</p></li>
+<li><p>defusedxml</p></li>
+<li><p>pycountry</p></li>
+</ul>
+<p>GNU Health control center (gnuhealth-control) and gnuhealth-setup packages have also been updated to 4.0.1 and ready at GNU.org</p>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #62154 Missing dependency: defusedxml</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>4.0.0<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2022/03/03</span></code></p>
+<p>Dear community:</p>
+<p>I am very proud to announce the release of series 4.0 from the GNU Health Hospital Management Information System (HMIS) component!</p>
+<p>Thanks to our community, GNU Health is now a leading Hospital Management Information System, with implementations in many countries around the world. The 4.0 series improves the navigation, introduces many more language teams, new packages and much better integration of evaluation, laboratory and Dx Imaging services.</p>
+<p><strong>What is new in GNU Health 4.0 series</strong>:</p>
+<ul class="simple">
+<li><p>Improved ergonomics on the GTK client</p></li>
+<li><p>New HELP command that allows offline and contextualized documentation</p></li>
+<li><p>WebDAV and CalDAV packages are fully integrated in GH (no links)</p></li>
+<li><p>Weblate now holds 34 language teams!</p></li>
+<li><p>Removed obsoleted binary ODT (except for some charts)</p></li>
+<li><p>Improved integration with OpenStreetMap (OSM)</p></li>
+<li><p>Improved surgery and patient evaluation flows</p></li>
+<li><p>New health service Dx imaging package</p></li>
+<li><p>Update person gender list</p></li>
+<li><p>Add medical evaluations to health services</p></li>
+<li><p>Include (optional) expiration date on the person ID</p></li>
+<li><p>Add context field for Dx Imaging and Lab tests</p></li>
+</ul>
+<p><strong>Upgrading from GNU Health 3.8</strong></p>
+<ul class="simple">
+<li><p>Make a FULL BACKUP your kernel, database and attach directories !!!</p></li>
+<li><p>Follow the instructions on the Wikibooks.</p></li>
+<li><p>Don’t forget to run the “before” and “after” sql scripts</p></li>
+</ul>
+<p><strong>Development focus</strong></p>
+<p>In addition of the GH HMIS server, we will focus the development in the following  areas of the GNU Health ecosystem:</p>
+<ul class="simple">
+<li><p>MyGNUHealth: The GNU Health app for desktop and mobile devices</p></li>
+<li><p>The Documentation Portal and HELP command documentation packages</p></li>
+<li><p>Thalamus and the Federation Portal</p></li>
+</ul>
+<p>The GNU Health Federation integrates information from many health institutions and people from a region or country. The GH Federation portal will allow to manage resources, as well as the main point for <strong>analytics</strong> and <strong>reporting</strong> of massive demographics and epidemiological data generated nationwide. People, health centers and research institutions (eg genomics) can benefit from the GNU Health Federation and the GNU Health ecosystem in general.</p>
+<p>As always, no matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, and give us your feedback via them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>The community server has been already migrated to 4.0.0, so you just need to download the GNU Health HMIS client and enjoy it.</p>
+<p>Happy and Healthy Hacking !</p>
+<section id="versions-3-x-x">
+<span id="changelog-changelog-versions-3-x-x"></span><h3>Versions 3.x.x<a class="headerlink" href="#versions-3-x-x" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="id12">
+<h2>3.8.0<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2021/02/14</span></code></p>
+<p>Dear community:</p>
+<p>I am very proud to announce the release of the series 3.8 from the GNU Health Hospital Management Information System (HMIS) component!</p>
+<p>Twelve years old, the GNU Health project has now become a Libre digital Health ecosystem, with different solutions to meet different realities, integrating them in the Federation.</p>
+<p>The year 2020, the year of the COVID-19 pandemic, has put our societies against the ropes, and challenging the public health system of every country around the globe.
+The GNU Health community responded swiftly to this formidable challenge. Within hours of the official World Health Organization announcement, we were able to deliver the new ICD-10 codes of the COVID-19 disease; Include the pathology in the person record when it was confirmed by laboratory and setting the disease as a notifiable disease so the Min. of Health could have uptodate epidemiological information.</p>
+<p>GNU Health has played a crucial role in many public health systems, not only by providing real-time observatory of COVID-19, but also, very importantly, study the impact of the socioeconomic conditions in both the incidence and severity of the disease on the underprivileged.</p>
+<p>Our community keeps growing! A notable example is that GNU Health is now also part of the**KDE community**! KDE has adopted MyGNUHealth, the GH Personal Health record.
+We are very grateful to KDE for trusting us! Most GNU/Linux users will have in their favorite GNU/Linux distribution a Personal Health Record focused on privacy and integrated with Libre devices and trackers. MyGNUHealth also runs on the PinePhone!</p>
+<p><strong>What is new in GNU Health 3.8 series</strong></p>
+<ul class="simple">
+<li><p>New Dentistry package with odontogram and dental procedures</p></li>
+<li><p>Enhanced Page of Life generation (PoL)</p></li>
+<li><p>Use FODT (Flat ODT) format for reports</p></li>
+<li><p>Integrated infectious diseases Contact Tracing</p></li>
+<li><p>Epidemiological observatory</p></li>
+<li><p>International Classification of diseases, 11th revision (ICD-11)</p></li>
+<li><p>Improved integration with Weblate (now 23 languages!)</p></li>
+<li><p>Updated the UNIPROT protein natural variants DB from 2020</p></li>
+<li><p>The HL7 FHIR server is now ported to Python3</p></li>
+<li><p>New repositories for the components (HMIS, client, plugins, Thalamus…)</p></li>
+</ul>
+<p><strong>Development focus</strong></p>
+<p>In addition of the GH HMIS server, we will focus the development in the following  areas of the GNU Health ecosystem:</p>
+<ul class="simple">
+<li><p>MyGNUHealth: The GNU Health application for desktop and mobile devices</p></li>
+<li><p>The GNU Health Federation Portal</p></li>
+</ul>
+<p>The GH Federation Portal has already started. It is a VueJS application and provides a single point of entry for individuals, health professionals and epidemiologists to the GNU Health Information system.</p>
+<p>The GNU Health Federation integrates information from many health institutions and people from a region or country. The GH Federation portal will allow to manage resources, as well as the main point for <strong>analytics</strong> and <strong>reporting</strong> of massive demographics and epidemiological data generated nationwide. People, health centers and research institutions can benefit from the GNU Health Federation and from the GNU Health ecosystem in general.</p>
+<p><strong>Upgrading from GNU Health 3.6</strong></p>
+<ul class="simple">
+<li><p>Make a <strong>FULL BACKUP</strong> your kernel, database and attach directories !!!</p></li>
+<li><p>Follow the instructions on the Wikibooks.</p></li>
+</ul>
+<p>As always, no matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, and give us your feedback via them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>The community server has been already migrated to 3.8.0, so you just need to download the GNU Health HMIS client and enjoy it.</p>
+<p><strong>Free Software day</strong></p>
+<p>Finally, today is the Free Software day. We have chosen this date as the release date of the GH HMIS component, as a way to remind and stress the importance of Libre Software and Open Science in our society.</p>
+<p>Happy and Healthy Hacking !</p>
+</section>
+<section id="b3-hl7-fhir">
+<h2>0.9b3 (HL7 FHIR)<a class="headerlink" href="#b3-hl7-fhir" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/11/04</span></code></p>
+<p>Dear GH community</p>
+<p>The FHIR REST server 0.9b3 is out! This new version is Python3 compatible and can interact with the GNU Health HMIS node =&gt; 3.6</p>
+<p>The FHIR server is a Flask application, that generates HL7 FHIR messages to a number of resources in the GNU Health Hospital Management Information System (HMIS) node .</p>
+<p>This Reversion is the continuation of the great work done by Chris Zimmerman for Python2 and older GH instances.</p>
+<p>The current resources are now being implemented are:</p>
+<ul class="simple">
+<li><p>Conformance: Describes the server’s FHIR capabilities.</p></li>
+<li><p>Patient: Patient demographic information, like email, address, SSN, etc.</p></li>
+<li><p>DiagnosticReport: Completed lab tests, but not the data</p></li>
+<li><p>Observation: Lab data, like uric acid values</p></li>
+<li><p>Practitioner: Health professionals and their information</p></li>
+<li><p>Procedure: Surgeries/operations</p></li>
+<li><p>Condition: Diseases/diagnoses</p></li>
+<li><p>FamilyHistory: Family histories of patients</p></li>
+<li><p>Medication: Medications (not prescriptions!)</p></li>
+<li><p>MedicationStatement: Medications taken by a patient</p></li>
+<li><p>Immunization: Immunizations</p></li>
+<li><p>Organization: Institutions, departments, companies, etc.</p></li>
+</ul>
+<p>This is still a beta version. We plan to add write support in the near future.</p>
+<p>The server is now shipped as a Python package and hosted at PyPI (<a class="reference external" href="https://pypi.org/project/gnuhealth-fhir-server/">https://pypi.org/project/gnuhealth-fhir-server/</a>). It also provides two scripts to run it via Tornado or Gunicorn WSGI servers.</p>
+<p>The latest documentation about the FHIR REST server can be found at Wikibooks (<a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Using_the_FHIR_REST_server">https://en.wikibooks.org/wiki/GNU_Health/Using_the_FHIR_REST_server</a>)</p>
+<p>We have also created an instance at the GH Federation community server, so you can try it out without the need of installing it.</p>
+<p>The HL7 provides yet another means to interact with GNU Health HMIS nodes from other systems, besides the current existing methods that are in place.</p>
+<p>Best
+Luis</p>
+</section>
+<section id="id13">
+<h2>3.6.5<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/08/21</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>GNU Health 3.6.5 includes:</p>
+<ul class="simple">
+<li><p>ICD-10 package:
+The World Health Organization International Classification of Diseases, 10th revision, h  has been extensively revised and updated to the 2020 edition.
+The translation templates have been also updated, specially the German and Chinese.
+Special thanks to Dr. Edgar Hagenbichler for his excellent work on this package!</p></li>
+</ul>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>task #15733: Update ICD10 datafile</p></li>
+</ul>
+</section>
+<section id="control-center">
+<h2>3.6.5 (Control Center)<a class="headerlink" href="#control-center" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/07/02</span></code></p>
+<p>Dear community</p>
+<p>As you may know, GNU Health HMIS has migrated its translation server to Weblate.
+(see news <a class="reference external" href="https://savannah.gnu.org/forum/forum.php?forum_id=9762">https://savannah.gnu.org/forum/forum.php?forum_id=9762</a>)</p>
+<p>Today, we have released the GH Control Center 3.6.5, which has support to Weblate for the language installation. The syntax is the same, and you won’t notice any difference.</p>
+<p>To update to the latest GH Control Center, run:</p>
+<p>$ cdutil
+$ ./gnuhealth-control update</p>
+<p>That will fetch and install the latest version, and you’re ready to go :)</p>
+<p>Happy and Healthy hacking!
+Luis</p>
+</section>
+<section id="id14">
+<h2>3.6.4 (Control Center)<a class="headerlink" href="#id14" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/06/20</span></code></p>
+<p>Dear all
+The GH control center (gnuhealth-control) version 3.6.4 is out, fixing some minor security issues found by the openSUSE security team[1]</p>
+<p>You just need to to the following:</p>
+<ol class="arabic simple">
+<li><p>Login as GNU Health</p></li>
+<li><p>cdutil</p></li>
+<li><p>./gnuhealth-control update</p></li>
+</ol>
+<p>That is all. The new gnuhealth-control center is now installed. To verify, please check it with</p>
+<p>./gnuhealth-control version</p>
+<p>If the update reports that, in addition to the gnuhealth-control, there are other components that need to be upgraded, please re-run gnuhealth-control and update the instance, as explained in the wikibook[2]</p>
+<p>Please remember to submit any possible vulnerabilities to <a class="reference external" href="mailto:security&#37;&#52;&#48;gnuhealth&#46;org">security<span>&#64;</span>gnuhealth<span>&#46;</span>org</a></p>
+<p>Have a great weekend!
+1.- <a class="reference external" href="https://bugzilla.opensuse.org/show_bug.cgi?id=1167128#c13">https://bugzilla.opensuse.org/show_bug.cgi?id=1167128#c13</a>
+2.- <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p>
+</section>
+<section id="id15">
+<h2>3.6.4<a class="headerlink" href="#id15" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/05/16</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>GNU Health 3.6.4 includes:
+The most relevant features on this version are:</p>
+<ul class="simple">
+<li><p>health_contact_tracing package: Allows to trace people that have been in contact with a person suspected of being positive of a infectious disease. Name, demographics, place and date of contact, sanitary region (operational sector), type of contact, exposure risk and follow-up status are some of the information that is recorded per contact.</p></li>
+<li><p>Epidemiological Surveillance: A new report that provides epidemiological information on an specific health condition. Data on prevalence of the disease as well as the incidence over a period of time. It produces epi curves for new confirmed cases, deaths related to the disease (both immediate cause as well as underlying conditions) from death certificates. It also shows very relevant charts on the population affected from a demographic and socioeconomic point of view (age, gender, ethnicity, socioeconomic status).</p></li>
+<li><p>Lab and lab crypto packages: When a disease is confirmed from a positive lab test result, GNU Health LIMS automatically includes the health condition in the patient medical history upon the validation of the lab manager.</p></li>
+<li><p>GH Control center and gnuhealth-setup have been updated.</p></li>
+</ul>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.6.3, then just follow the general instructions. You can find the patchsets at GNU Health main download site at GNU.org (<a class="reference external" href="https://ftp.gnu.org/gnu/health/">https://ftp.gnu.org/gnu/health/</a>)</p>
+<p>In most cases, GNU Health Control center (gnuhealth-control) takes care of applying the patches for you.</p>
+<p>Pre-requisites for upgrade to 3.6.4: Matplotlib (You can skip this step if you are doing a fresh installation.)
+If you are upgrading from 3.6.3, you need to install the matplotlib package:</p>
+<p>$pip3 install –upgrade –user matplotlib</p>
+<p>Now follow the general instructions at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p>After applying the patches, make a full update of your GNU Health
+database as explained in the documentation.</p>
+<p>When running “gnuhealth-control” for the first time, you will see the following message: “Please restart now the update with the new control center” Please do so. Restart the process and the update will continue.</p>
+<ul class="simple">
+<li><p>Restart the GNU Health server</p></li>
+</ul>
+<p><strong>List of other issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #58104: view_attributes() method should extend list of attributes</p></li>
+<li><p>bug #58358: Need current SES in main patient info</p></li>
+<li><p>task #15563: Assign health condition from a confirmed lab</p></li>
+<li><p>task #15562: ((updated)) Include coronavirus COVID-19 in ICD10 codes</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>3.6.8 (Client)<a class="headerlink" href="#id16" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/03/01</span></code></p>
+<p>Dear all</p>
+<p>The GH GTK client 3.6.8 fixes several bugs, specially related to the compatibility issues with KDE and other desktop environments.</p>
+<p>We have moved the header bar components to the main window, so now it also allows borderless operation.</p>
+<p>Summary :</p>
+<ul class="simple">
+<li><p>Removed the deprecated App Menu in favor of the Menu Bar.</p></li>
+<li><p>Migrate from obsolete Table to Grid</p></li>
+<li><p>Fix the footer</p></li>
+<li><p>Include accelerator for preferences (ctrl+shift+p) and fix accelerator for shortcuts (ctrl+shift+F1)</p></li>
+<li><p>Avoid maximizing application at startup</p></li>
+<li><p>Remove unused fast tabbing option from menu</p></li>
+<li><p>Allow setting the GH command line on the bottom again (cli_position = bottom). By default is top.</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>3.6.3<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2020/02/28</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.6.3 updates World Health Organization ICD10 with the novel coronavirus COVID-19 code (U07.1)</p>
+<p>It also fixes an issue when creating a page of life from an encounter that has an empty main condition.
+in addition, updated gnuhealth-setup and gnuhealth control center are also included.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>GH HMIS server. task #15562: Include coronavirus COVID-19 in ICD10 codes</p></li>
+<li><p>GH HMIS server. bug #57695: Traceback when creating a page of life associated to an empty evaluation</p></li>
+<li><p>GH HMIS server. task #15561: Werkzeug 1.0 is not compatible with Trytond 5.0</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>3.6.2<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/11/23</span></code></p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.6.2 fixes a problem in the obstetric history (OBS command) on representing the weeks at the end of pregnancy.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>GH HMIS server. health_gyneco . Bug #57292: OBS command generates a traceback</p></li>
+<li><p>GH HMIS server. health_federation.  Enforce unicode on setup read method</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>3.6.1<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/11/19</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.6.1 mainly fixes crash / tracebacks on medicament computation,
+which is now using the standard product location quantities. Version
+3.6.1 also provides the latest gnuhealth-control center tool.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #57267: Crash when listing the medicaments:
+<a class="reference external" href="https://savannah.gnu.org/bugs/?57267">https://savannah.gnu.org/bugs/?57267</a></p></li>
+<li><p>bug #57266: Remove the 2to3 conversion in updates:
+<a class="reference external" href="https://savannah.gnu.org/bugs/?57266">https://savannah.gnu.org/bugs/?57266</a></p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>3.6.0<a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/11/10</span></code></p>
+<p>Dear community:</p>
+<p>I am very proud to announce the release of the GNU Health 3.6 series !</p>
+<p>This version is the result of many developments and integration of ideas from the community.</p>
+<p>We are now 11 years old. We should all be very proud because not only we have built the best Libre Health and Hospital Information System, but we have created a strong, committed and friendly international community around it.</p>
+<p><strong>What is new in GNU Health 3.6 series</strong>:</p>
+<ul class="simple">
+<li><p>Both GNU Health client and server are now in Python3</p></li>
+<li><p>Remove Python2 support</p></li>
+<li><p>GH HMIS server uses Tryton 5.0 LTS kernel (5 year support)</p></li>
+<li><p>Client is based on Tryton GTK client 5.2</p></li>
+<li><p>Automation on the GH Federation queue management</p></li>
+<li><p>Integration to Orthanc DICOM server</p></li>
+<li><p>Pages of Life models fully integrated with patient evaluation &amp; GH Federation</p></li>
+<li><p>GNU Health camera plugin integrated with the latest OpenCV</p></li>
+<li><p>GH Client uses GI. Removed pygtkcompat.</p></li>
+<li><p>GH Federation HIS has been migrated from MongoDB to PostgreSQL</p></li>
+<li><p>New demo database downloader</p></li>
+<li><p>Thalamus uses now uwsgi as the default WSGI</p></li>
+<li><p>SSL is the default method for Thalamus and the GH Federation</p></li>
+</ul>
+<p><strong>Upgrading from GNU Health 3.4</strong>:</p>
+<ul class="simple">
+<li><p>Make a <strong>FULL BACKUP</strong> your kernel, database and attach directories !!!</p></li>
+<li><p>Follow the instructions on the Wikibooks</p></li>
+<li><p>Read specific instructions found under scripts/upgrade/3.6 of the main source installation tarball, an apply the scripts in the specified order.</p></li>
+</ul>
+<p><strong>Development focus</strong></p>
+<p>In addition of the GH HMIS server, we will focus the development in the following  areas of the GNU Health ecosystem:</p>
+<ul class="simple">
+<li><p>The GNU Health Federation Portal</p></li>
+<li><p>The mobile client</p></li>
+<li><p>Interoperability</p></li>
+</ul>
+<p>The GH Federation Portal has already started. It is a VueJS application and provides a single point of entry for individuals, health professionals and epidemiologists to the GNU Health Information system.</p>
+<p>The GNU Health Federation now receives information coming from many health institutions and people from a region or country. The GH Federation portal will allow to manage resources, as well as the main point for <strong>analytics</strong> and <strong>reporting</strong> of massive amount of demographics health data generated nationwide. People, health centers and research institutions (eg genomics already can enjoy the benefits from the GNU Health Federation.</p>
+<p>The mobile client (MyGNUHealth) development will remain in QT and will be focus on KDE plasma mobile technology, and run in Libre mobile operating systems and devices (such as Pine64). We need fully libre mobile devices if we want to preserve privacy in healthcare.</p>
+<p>As far as Interoperability goes, GNU Health is now very interoperable. It uses open coding standards, as well as open formats (XML, JSON, .. ) to exchange messages. We currently have support for read operations in HL7 FHIR for a number of resources. Needless to say, we are open to other open standard communities that are willing to integrate to GNU Health.</p>
+<p>Last but not least….no matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, and give us your feedback via them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>Happy and Healthy Hacking !</p>
+</section>
+<section id="installer">
+<h2>3.4.1 (Installer)<a class="headerlink" href="#installer" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/03/18</span></code></p>
+<p>Dear community</p>
+<p>The GNU Health installer (gnuhealth-setup) has been updated to 3.4.1.</p>
+<p>It basically fixes an issue due to the removal of the the pybarcode library from pypi (<a class="reference external" href="https://savannah.gnu.org/bugs/?55942">https://savannah.gnu.org/bugs/?55942</a>)</p>
+<p>We have also updated the documentation to always download the latest installer as the first step (<a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Downloading_and_Installing_GNU_Health">https://en.wikibooks.org/wiki/GNU_Health/Installation#Downloading_and_Installing_GNU_Health</a>)</p>
+<p>This applies for new installations / migrations.</p>
+</section>
+<section id="id21">
+<h2>3.4.1<a class="headerlink" href="#id21" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/03/10</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.4.1 fixes issues related to the generation of the Federation Account, and it adapts the ID field on the federation objects.</p>
+<p>The gnuhealth-control program and the documentation / man page have also been updated.</p>
+<p>It is important to know that since 3.4.1 and Thalamus 0.9.8, the Health Information System has been migrated from MongoDB to PostgreSQL.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #55595: Remove unimplemented functionality fields from Federation Country</p></li>
+<li><p>bug #55594: Traceback when creating a person without a system institution</p></li>
+</ul>
+</section>
+<section id="id22">
+<h2>3.4.1 (Control Center)<a class="headerlink" href="#id22" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2019/03/02</span></code></p>
+<p>Dear all</p>
+<p>We just released GNU health control center 3.4.1 !</p>
+<p>It mainly fixes an issue with the file format of the translation files from pootle on our GNU Health translation portal, when executing the getlang command.</p>
+<p>You can update automatically the gnuhealth control center using the command</p>
+<p>$ gnuhealth-control update</p>
+<p>You can also find the program at our GNU FTP site (<a class="reference external" href="https://ftp.gnu.org/gnu/health/">https://ftp.gnu.org/gnu/health/</a>)</p>
+</section>
+<section id="id23">
+<h2>3.4.0<a class="headerlink" href="#id23" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2018/11/27</span></code></p>
+<p>Dear community</p>
+<p>We are proud to announce the release of GNU Health 3.4 series !</p>
+<p>It’s been over a year of hard work, integrating the latest in technology and Social Medicine into GNU Health.</p>
+<p>This versions incorporates many cool features, some of them are :</p>
+<ul class="simple">
+<li><p>The GNU Health Federation model</p></li>
+<li><p>Thalamus message server</p></li>
+<li><p>New Health Information System (on MongoDB)</p></li>
+<li><p>Person Master Index</p></li>
+<li><p>MongoDB support (on the HIS)</p></li>
+<li><p>Updated UniprotKB database with over 30K protein natural variants</p></li>
+<li><p>Contextualized information on genetics and social determinants</p></li>
+<li><p>Genetic and family history and environmental factors integrated to the Page of Life and Federation</p></li>
+<li><p>The GNU Health Book of Life</p></li>
+<li><p>Tryton 4.6 integration on the HMIS node</p></li>
+<li><p>All GNU Health packages are natively in Python 3</p></li>
+<li><p>Enhanced support for Calendar and WebDAV system</p></li>
+<li><p>GNU LIMS improvements in views</p></li>
+<li><p>Pypi packages with our own name (“gnuhealth-&lt;package&gt;”)</p></li>
+<li><p>Native client has a command line interface</p></li>
+<li><p>Over 30 new commands for the main daily tasks</p></li>
+<li><p>Enhanced GNU Health camera plugin, including zoom</p></li>
+<li><p>Activity Log window on the client</p></li>
+<li><p>SYSINFO command to retrieve the information about client and server</p></li>
+<li><p>Customize the banner on the client</p></li>
+<li><p>Reports are generated now in PDF format</p></li>
+</ul>
+<p><strong>The GNU Health Federation</strong></p>
+<p>The GNU Health Federation (aka, The Federation) is here !
+This is revolutionary and ground breaking. With the Federation, we will be able to integrate heterogeneous systems and build large regional and national health networks. No more data isolation. No more silos. The GNU Health Federation is a great tool for the people, health practitioners, research institutions and public health systems.</p>
+<p>Relevant demographics and medical information will be up-to-date, no matter where the person and patient visits. It is great tool for early detection on epidemics, improving the health promotion and disease prevention campaigns.</p>
+<p>I am also optimist about the role of the Federation in integrative anc precision medicine. It combines Nature and Nurture, and can shed light on the diagnostic and therapeutics of devastating and elusive genetic diseases, cancer and autoimmune disorders.</p>
+<p>The GNU Health Federation components (eg, Thalamus), will have their own development process, so they can be integrated with each of the other GNU Health projects without blocking each other.</p>
+<p>This journey is just starting, but I trust that, as a community, we’ll be able to tackle today and future issues in health.</p>
+<p><strong>Derivative languages / translations</strong></p>
+<p>GNU Health takes the approach of derivative languages, which will simplify the localization effort. Basically, for languages who have many strings in common, will only have to work on those strings that differ from a main source.
+Let’s take the example of Spanish. The new approach will work in the following way:
+* One source language “es”
+* Many derivative / regional languages (es_ES, es_AR, es_PE, es_VE … ).</p>
+<p>Until now, each derivative language had, except the local terminology, the same strings as the source. That makes localization harder to maintain,and larger in size.
+The new method allow the translators to focus on the main source language, greatly improving the quality of the translation, and without duplication.</p>
+<p>Please make sure that you focus on the generic language first, and only add local terms in the derivative language.</p>
+<p><strong>Summary of Upgrade steps</strong>:</p>
+<ul class="simple">
+<li><p>Make a FULL BACKUP your kernel, database and attach directories !!!</p></li>
+<li><p>Follow the instructions on the Wikibooks.</p></li>
+<li><p>Apply the SQL script “upgrade_34.sql” found under scripts/upgrade/3.4 of the main source installation tarball.</p></li>
+<li><p>Upgrade the instance</p></li>
+</ul>
+<p>Last but not least….oo matter how hard we try to avoid them, there will be bugs, so please test the new system, upgrade process, languages, … and please report them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>Enjoy Freedom in Healthcare !</p>
+</section>
+<section id="id24">
+<h2>3.2.10<a class="headerlink" href="#id24" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2018/06/05</span></code></p>
+<p><strong>Priority</strong>: Medium</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.2.10 fixes issues related to the CalDAV functionality, updating the calDAV event after changing an appointment.</p>
+<p>The gnuhealth-setup program has also been updated, including numpy for the latest pytools</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #54055: Caldav event does not update after changing the appointment</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>3.2.9<a class="headerlink" href="#id25" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/12/04</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Patch 3.2.9 mainly fixes issues with real time computation of fields in the evaluation, lab, and APACHE II score system</p>
+<p>Minor view reordering on the WHR and BMI fields have been also applied.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52580: Removing the patient field before saving the record generates an error</p></li>
+<li><p>bug #52579: some on_change numeric method operations generate traceback</p></li>
+<li><p>bug #52578: WHR should be on the same line as hip and waist fields</p></li>
+</ul>
+</section>
+<section id="id26">
+<h2>3.2.7 &amp; 3.2.8<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/11/15</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Yes folks, two for the price of one :-)</p>
+<ul class="simple">
+<li><p>Patch 3.2.7 fixes a problem related to signing a death certificate</p></li>
+<li><p>Patch 3.2.8 fixes a depdendency issue related to the calendar_webdav3 package, on installations that use the python packages (setup / pip). The standard installation method is not affected.</p></li>
+</ul>
+<p>We also updated the descriptions and URLs of trytond_calendar_webdav3 and trytond_webdav3 packages, that no longer are supported by Tryton, and that are now GNU Health developments.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52366: Error when signing the death certificate</p></li>
+<li><p>task #14626: Renaming Package names prefix <code class="docutils literal notranslate"><span class="pre">trytond_</span></code> from Pypi</p></li>
+</ul>
+<p>(<a class="reference external" href="https://savannah.gnu.org/task/index.php?14626">https://savannah.gnu.org/task/index.php?14626</a>)</p>
+</section>
+<section id="id27">
+<h2>3.2.6<a class="headerlink" href="#id27" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/10/28</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Version 3.2.6 fixes two issues , one related to the invoice discount associated to an insurance plan (health_insurance package), and the other related to free time slots in a health professional calendar (health_calendar and health_qrcodes packages)</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52298: Traceback generating an invoice from service with an insurance policy plan</p></li>
+<li><p>bug #52275: Traceback when creating a free slot in appointments or work schedule</p></li>
+</ul>
+</section>
+<section id="id28">
+<h2>3.2.5<a class="headerlink" href="#id28" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/10/07</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Version 3.2.5 fixes issues on reports (patient evaluation, appointment and QRCODES), mainly linked to lingering obsolete python2 unicode function that is no longer used in GNU Health 3.2 series, that uses Python 3</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52179: Traceback due to obsolete unicode method in reports</p></li>
+</ul>
+</section>
+<section id="id29">
+<h2>3.2.4<a class="headerlink" href="#id29" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/10/04</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong></p>
+<p>Version 3.2.4 provides an important fix on the services model, that prevented to generate the related invoice, due to changes on the data model of Tryton 4.2 from previous versions.
+Other minor bug fixes related to the prescription report have been also fixed.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52160: Issues related to invoice type and domain when creating the service invoice</p></li>
+<li><p>bug #52167: Selection field translations in prescription report are not translatable</p></li>
+<li><p>bug #52168: Rename Prothesis model name from Amputation</p></li>
+</ul>
+</section>
+<section id="id30">
+<h2>3.2.3<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/09/15</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<p>Version 3.2.3 provides the updated gnuhealth-control and gnuhealth-setup programs, the latter including the bcrypt library. It also fixes a duplicated field on the tree view for the prescription line.</p>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #52020: Missing bcrypt dependency in gnuhealth-setup</p></li>
+<li><p>bug #52038: Field history is repeated in the tree view of the prescription line</p></li>
+</ul>
+<p><strong>Additional Installation Notes</strong></p>
+<p>If you are applying the patch (not a new installation) you need to install locally the bcrypt package.</p>
+<p>Login as the “gnuhealth” admin user, and execute :</p>
+<ul class="simple">
+<li><p>Stop the GNU Health Tryton instance</p></li>
+<li><p>Install the Bcrypt package
+$ pip3 install –user bcrypt</p></li>
+<li><p>Restart the GNU Health Tryton server</p></li>
+</ul>
+</section>
+<section id="id31">
+<h2>3.2.2<a class="headerlink" href="#id31" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/08/27</span></code></p>
+<p><strong>Priority</strong>: Medium</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>health_imaging: Update the default health doctor retreival to the current method</p></li>
+</ul>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #51864: Default doctor retrieval on Dx Imaging using obsolete method</p></li>
+</ul>
+</section>
+<section id="id32">
+<h2>3.2.1<a class="headerlink" href="#id32" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/07/22</span></code></p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix view error on lab order.</p></li>
+</ul>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #51537: Missing ID on lab separator view</p></li>
+</ul>
+</section>
+<section id="id33">
+<h2>3.2.0<a class="headerlink" href="#id33" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/07/01</span></code></p>
+<p>Dear community</p>
+<p>I am proud to announce the release of GNU Health 3.2 series !</p>
+<p>It’s been over a year of hard work, integrating the latest in technology and Social Medicine into GNU Health.</p>
+<p>This versions incorporates many cool features, some of them are :</p>
+<ul class="simple">
+<li><p>Tryton 4.2 integration</p></li>
+<li><p>All GNU Health packages are now written in Python 3</p></li>
+<li><p>Enhanced support for Calendar and WebDAV system</p></li>
+<li><p>Updated Crypto packages</p></li>
+<li><p>Link lab orders with health services</p></li>
+<li><p>Better language and localization, that optimizes translation for regional languages</p></li>
+<li><p>Add code39 to lab tests</p></li>
+<li><p>Include the Domicilary Unit address in the main person information</p></li>
+<li><p>Improved gnuhealth-setup and gnuhealth-control programs</p></li>
+<li><p>Patient, Medicament and Services can now be activated / deactivated</p></li>
+</ul>
+<p><strong>New Modules</strong>:</p>
+<ul class="simple">
+<li><p>health_ems : Emergency and Ambulances Management</p></li>
+<li><p>health_insurance : Insurance management and pricelists</p></li>
+<li><p>health_genetics_uniprot : Uniprot DB for thousands of genetic natural variants and phenotypes</p></li>
+<li><p>health_crypto_lab : Digital signatures for lab orders</p></li>
+<li><p>health_services_lab : Integrate lab orders into services</p></li>
+</ul>
+<p><strong>The GNU Health Federation</strong></p>
+<p>In addition to all these new features and enhancements, probably the most revolutionary and exciting feature of the GNU Health project at this time is the GNU Health Federation.</p>
+<p>The GNU Health Federation goal is to make a distributed network of multiple, heterogeneous nodes. The main components are :</p>
+<ul class="simple">
+<li><p>The GNU Health Information System (on MongoDB)</p></li>
+<li><p>The GNU Health Thalamus (Message and Authentication Server).
+See <a class="reference external" href="https://pypi.python.org/pypi/thalamus/0.0.6">https://pypi.python.org/pypi/thalamus/0.0.6</a></p></li>
+<li><p>The participating nodes : GNU Health HMIS, mobile applications, research centers, etcetera.</p></li>
+</ul>
+<p>The GNU Health Federation will produce more quality information and at a better pace. It will also separate the traditional GNU Health HMIS transactional and operational model, from the analytic model that will be taken by the GNU Health Information System on a document database (MongoDB).</p>
+<p>The GNU Health Federation, the Health Information System will also provide a unique ID and unique history per person. No data isolation, and no data duplication.
+The demographics and medical history of people will updated in realtime, and people will be able to go from one center to the other in the region or country, knowing that all the relevant information will be at timely updated in any center she or he visits.</p>
+<p>The GNU Health Federation components (eg, Thalamus), will have
+their own development process, so they can be integrated with each of the other GNU Health projects without blocking each other.</p>
+<p>GNU Health 3.2 will be the first release where we could start focusing on the GNU Health Information</p>
+<p><strong>New model for translations</strong></p>
+<p>GNU Health takes the approach of derivative languages, which will simplify the localization effort. Basically, for languages who have many strings in common, will only have to work on those strings that differ from a main source.
+Let’s take the example of Spanish. The new approach will work in the following way:
+* One source language “es”
+* Many derivative / regional languages (es_ES, es_AR, es_PE, es_VE … ).</p>
+<p>Until now, each derivative language had, except the local terminology, the same strings as the source. That makes localization harder to maintain, and larger in size. The new method allow the translators to focus on the main source language, greatly improving the quality of the translation, and without uplication.</p>
+<p><strong>Summary of Upgrade steps</strong>:</p>
+<ul class="simple">
+<li><p>Make a full backup your kernel, database and attach directories !</p></li>
+<li><p>Follow the instructions on the Wikibooks.</p></li>
+<li><p>Upgrade the instance</p></li>
+<li><p>Apply the SQL script “upgrade_32.sql” found under scripts/upgrade/3.2 of the   main source installation tarball.</p></li>
+</ul>
+<p>No matter how hard we try to avoid issues, there will be bugs, so please test the new system, upgrade process, languages, … and please report them via <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<p>Enjoy Freedom in Healthcare !</p>
+</section>
+<section id="id34">
+<h2>3.0.8<a class="headerlink" href="#id34" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/03/25</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.8 patchset has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.8.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix missing view declaration on module health_disability in pypi based installers (eg, SuSE, Debian). This issue does not affect to installations that used the vanilla installation method (gnuhealth-setup install)</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.7, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p>List of issues and tasks related to this patchset:</p>
+<ul class="simple">
+<li><p>bug #50635: Missing declaration of view directory on setup.py on health_disability module</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+<p>For detailed information about each task, you can visit <a class="reference external" href="https://savannah.gnu.org/task/?group=health">https://savannah.gnu.org/task/?group=health</a></p>
+</section>
+<section id="id35">
+<h2>3.0.7<a class="headerlink" href="#id35" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/03/15</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.7 patchset has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.7.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix traceback on patient critical info with non-ascii characters from health conditions in the allergy group</p></li>
+<li><p>Fix several issues related to the inpatient meal orders.</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.6, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Bug #50464 Official given and family names not updating on party</p></li>
+<li><p>Bug #50460 Use of gender when using growth charts in transgender population</p></li>
+<li><p>Bug #50437 Missing declaration of view directory on setup.py</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+<p>For detailed information about each task, you can visit <a class="reference external" href="https://savannah.gnu.org/task/?group=health">https://savannah.gnu.org/task/?group=health</a></p>
+</section>
+<section id="id36">
+<h2>3.0.6<a class="headerlink" href="#id36" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2017/02/12</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.6 patchset has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.6.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix traceback on patient critical info with non-ascii characters from health conditions in the allergy group</p></li>
+<li><p>Fix several issues related to the inpatient meal orders.</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.5, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p><strong>Follow the general instructions at</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>bug #50281: Traceback when displaying patient critical info in non-english languages</p></li>
+<li><p>bug #50288: Wrong widget for mealtime field on meal order tree view</p></li>
+<li><p>bug #50269: Traceback when assigning a new meal order</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+<p>For detailed information about each task, you can visit <a class="reference external" href="https://savannah.gnu.org/task/?group=health">https://savannah.gnu.org/task/?group=health</a></p>
+</section>
+<section id="id37">
+<h2>3.0.5<a class="headerlink" href="#id37" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/12/12</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.5 patchset has been released !</p>
+<p><strong>Priority</strong>: Medium</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.5.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Update to the latest WHO ICD10 version 2016, update descriptions and deactivate obsolete codes.</p></li>
+<li><p>Fix issues on prescription reports</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.4, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues and tasks related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>task #14262: Update to ICD10 - 2016 version</p></li>
+<li><p>bug #49414: Error when printing prescription using review dates</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+<p>For detailed information about each task, you can visit <a class="reference external" href="https://savannah.gnu.org/task/?group=health">https://savannah.gnu.org/task/?group=health</a></p>
+</section>
+<section id="id38">
+<h2>3.0.4<a class="headerlink" href="#id38" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/10/22</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.4 patchset has been released !</p>
+<p><strong>Priority</strong>: Medium</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.4.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix issues on summary reports</p></li>
+<li><p>Fix timezone issue on patient hospitalization admission</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.3, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>49405 Error on summary report when no date of birth is assigned to the person</p></li>
+<li><p>49181 Check admission date with UTC</p></li>
+</ul>
+<blockquote>
+<div><p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+</div></blockquote>
+</section>
+<section id="id39">
+<h2>3.0.3<a class="headerlink" href="#id39" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/08/14</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.3 patchset has been released !</p>
+<p><strong>Priority</strong>: Medium</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.3.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Fix issues when updating demographics on existing person</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.2, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>health core: bug #48695: Error when adding attribute in existing person</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+</section>
+<section id="id40">
+<h2>3.0.2<a class="headerlink" href="#id40" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/07/13</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.2 patchset has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.2.tar.gz)</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks). Don’t use it if you use an alternative method or if your distribution does not follow the GNU Health packaging guidelines.</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Issues with GTK client on MS, and performance improvements</p></li>
+<li><p>GNU Health control now includes automatic download of security patches from its components[1]. There is always Security Advisory (SA) associated to the patch.</p></li>
+<li><p>New site for GNU Health translation portal is now at translate.gnusolidario.org. GNU Health control has been updated to fetch the language packs from the new URL.</p></li>
+<li><p>Bug fixes on reports, especially on dates, ages and date formats.</p></li>
+<li><p>Gnuhealth-control has been updated. These tools are also packaged separately, with their own numbering, so you can always download the latest version without the need of applying a patchset.</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.1, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>client: #47583: Windows client crashes rendering SVG files</p></li>
+<li><p>health_iss: #48491: Remove TimeDelta for age and use patient gender</p></li>
+<li><p>health: #47983: Performance and scalability issues on party address</p></li>
+<li><p>health_stock: #47739: Allow to use storage for pharmacy</p></li>
+<li><p>gnuhealth-control : Update to 3.0.3. Use SSL for main GNU URL. Include automatic download of security advisories. Updated URL for translation portal (translate.gnusolidario.org)</p></li>
+<li><p>health: #47562: Domain error when modifying a party name</p></li>
+<li><p>health : #47312: Use Subdivision as label in DU</p></li>
+<li><p>task #13904: Use user specific date format in reports. Include DoB validation</p></li>
+<li><p>health_socioeconomics : remove TimeDelta function and use standard GNU Health age computation in Family and Socioeconomic assessment</p></li>
+</ul>
+<p>1.- <a class="reference external" href="https://savannah.gnu.org/forum/forum.php?forum_id=8482">https://savannah.gnu.org/forum/forum.php?forum_id=8482</a></p>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+</section>
+<section id="id41">
+<h2>3.0.1<a class="headerlink" href="#id41" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/01/31</span></code></p>
+<p>Dear community</p>
+<p>GNU Health 3.0.1 patchset has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Summary of this patchset</p></li>
+<li><p>Updating your system with the GNU Health control Center</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of issues related to this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow applying bug fixes and updates on production systems. Always try to keep your production system up-to-date with the latest patches.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new, fresh installations, download and install the whole tarball (ie, gnuhealth-3.0.1.tar.gz)</p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>The main issues resolved have to do with the age representation . There were issues with the generic timedelta method, so we reverted to the original relativedelta function, with deals better with ages. Timedelta (and its related Tryton fields.TimeDelta) is still used to show shorter periods of time, such as patient waiting times, duration of evaluations / surgeries, etc…</p></li>
+<li><p>Bug fixes on reports, especially on dates, ages and date formats.</p></li>
+<li><p>The gnuhealth-setup and and gnuhealth-control have been updated. These tools are also packaged separately, with their own numbering, so you can always download the latest version without the need of applying a patchset.</p></li>
+</ul>
+<p>Refer to the List of issues related to this patchset for a comprehensive list of fixed bugs.</p>
+<p><strong>Updating your system with the GNU Health control Center</strong></p>
+<p>Starting GNU Health 3.x series, you can do automatic updates on the GNU Health and Tryton kernel and modules using the GNU Health control center program.</p>
+<p>Please refer to the administration manual section ( <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a> )</p>
+<p>The GNU Health control center works on standard installations (those done following the installation manual on wikibooks).</p>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 3.0.0, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Control_Center">https://en.wikibooks.org/wiki/GNU_Health/Control_Center</a></p></li>
+</ul>
+<p><strong>List of issues related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>#47031 gnuhealth-control status error when multiple instances are running</p></li>
+<li><p>#47023 Patient CAGE score not available to admin group</p></li>
+<li><p>#46996 vobject version name changed</p></li>
+<li><p>#46991 health : gnuhealth.patient has no attribute “patient_age” at immunization status report</p></li>
+<li><p>#46961 Use relative delta for age</p></li>
+<li><p>#46953 Error on creating appointment if healthprof.name.internal_user == None</p></li>
+<li><p>#46950 Error when generating the summary report</p></li>
+<li><p>#46947 Traceback when generating the invoice associated to a prescription service</p></li>
+<li><p>#46942 Prescription report : Age on prescription is shown in days</p></li>
+<li><p>#46908 Use biological sex in view attributes</p></li>
+</ul>
+<p>For detailed information about each issue, you can visit <a class="reference external" href="https://savannah.gnu.org/bugs/?group=health">https://savannah.gnu.org/bugs/?group=health</a></p>
+</section>
+<section id="id42">
+<h2>3.0.0<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2016/01/11</span></code></p>
+<p>Dear all</p>
+<p>After one year of work, I am very happy and proud to announce the release of GNU Health 3.0 series !</p>
+<p>Following is a brief summary of the release highlights</p>
+<p><strong>New features</strong>:</p>
+<ul class="simple">
+<li><p>Tryton 3.8 compatibility and responsive web client.</p></li>
+<li><p>Multiple person names, compliant with FHIR HL7, and flexible person name formats</p></li>
+<li><p>Automatic inclusion of medicament history from the prescription</p></li>
+<li><p>History of a person socioeconomic assessments</p></li>
+<li><p>Link to patient health conditions</p></li>
+<li><p>Health conditions now visible from patient main page</p></li>
+<li><p>Any person can be mapped to an internal user, not only the health professionals</p></li>
+<li><p>Add person biological sex and gender properties.</p></li>
+<li><p>Check all evaluations related to a person specific healh condition</p></li>
+<li><p>Easy change a patient appointment status from the tree view (checked in, no show, … )</p></li>
+<li><p>Automatic computing of a patient evaluation waiting time</p></li>
+<li><p>Hospitalization and outpatient discharge reason</p></li>
+<li><p>Merge chronic with followups evaluations. Merge ambulatory with outpatient evaluations</p></li>
+<li><p>Optimize CAGE (Alcoholism status assessment) view</p></li>
+<li><p>Enhanced Crypto plugin and module</p></li>
+<li><p>Create / see all the evaluations within a hospitalization</p></li>
+<li><p>Health center and hospitalization meals management</p></li>
+<li><p>Improved surgery module (surgery team, supplies, status, wound class, post-op dx, reservation workflow)</p></li>
+<li><p>Health services reporting</p></li>
+<li><p>Automatic prescription concentration, form and route based on the med</p></li>
+<li><p>Enhanced functionality in patient evaluation.</p></li>
+<li><p>Improved reporting</p></li>
+<li><p>Include / Update unitests ( Thanks Cedric !)</p></li>
+<li><p>Improved ergonomics for patient conditions and history.</p></li>
+<li><p>Patient protheses and amputation history ( Thanks Lao team !)</p></li>
+<li><p>Automatic inclusion of prescription lines in Service document</p></li>
+<li><p>Updated disease groups (thanks Chris Zimmerman !)</p></li>
+<li><p>Improve patient clinical history report</p></li>
+<li><p>New installer gnuhealth-setup tool</p></li>
+<li><p>Improved gnuhealth-control center</p></li>
+<li><p>Installation of language packs in one single instruction.</p></li>
+<li><p>Many other additions and community contributions …</p></li>
+</ul>
+<p><strong>New Modules</strong>:</p>
+<ul class="simple">
+<li><p>WHO ICD9 Volume 3 (procedural codes) (in addition to ICD10-PCS and ICPM) .( Thanks Min of Health of Morelos, Mexico !)</p></li>
+<li><p>Ophthalmology module ( thanks Sivadas !)</p></li>
+<li><p>Functioning and Disability module [1]</p></li>
+</ul>
+<p><strong>Translation portal moves to Pootle</strong></p>
+<p>Since GNU Health 3.0, the main translation portal is at GNU Pootle server [2]</p>
+<p>The following languages have been requested, and they are now included:</p>
+<ul class="simple">
+<li><p>Arabic</p></li>
+<li><p>Chinese (China)</p></li>
+<li><p>English (United Kingdom)</p></li>
+<li><p>French</p></li>
+<li><p>German (Austria)</p></li>
+<li><p>Greek</p></li>
+<li><p>Italian</p></li>
+<li><p>Japanese</p></li>
+<li><p>Kannada</p></li>
+<li><p>Lao</p></li>
+<li><p>Portuguese (Brazil)</p></li>
+<li><p>Spanish (Argentina)</p></li>
+<li><p>Spanish (Ecuador)</p></li>
+<li><p>Spanish (Mexico)</p></li>
+<li><p>Spanish (Peru)</p></li>
+<li><p>Spanish (Spain)</p></li>
+</ul>
+<p>Some of them are still in the process of migrating the translation files from Transifex to the GNU Pootle server. It will take a bit until everything is in place. Of course, you can update your server translation packs at anytime,  using the getlang command of gnuhealth-control program.</p>
+<p>There is a new mailing list (health-i18n) dedicated to the localization and translation of GNU Health[3]</p>
+<p>During the upcoming weeks we’ll be updating the documentation,
+improving the demo database, as well as working on the translations.</p>
+<p>Of course, we’ll be fixing any bugs you will find in this new
+release :)</p>
+<p>Many, many thanks to all of you who have contributed to this
+release, in any way !</p>
+<p>All the best,</p>
+<div class="line-block">
+<div class="line">1.- <a class="reference external" href="https://en.wikipedia.org/wiki/International_Classification_of_Functioning,_Disability_and_Health">https://en.wikipedia.org/wiki/International_Classification_of_Functioning,_Disability_and_Health</a></div>
+<div class="line">2.- <a class="reference external" href="https://chapters.gnu.org/projects/health/">https://chapters.gnu.org/projects/health/</a></div>
+<div class="line">3.- <a class="reference external" href="https://lists.gnu.org/mailman/listinfo/health-i18n">https://lists.gnu.org/mailman/listinfo/health-i18n</a></div>
+<div class="line">4.- <a class="reference external" href="https://en.wikipedia.org/wiki/ICD-9-CM_Volume_3">https://en.wikipedia.org/wiki/ICD-9-CM_Volume_3</a></div>
+</div>
+<section id="versions-2-x-x">
+<span id="changelog-changelog-versions-2-x-x"></span><h3>Versions 2.x.x<a class="headerlink" href="#versions-2-x-x" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="id43">
+<h2>2.8.1<a class="headerlink" href="#id43" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2015/02/08</span></code></p>
+<p>Dear community</p>
+<p>GNU Health patchset 2.8.1 has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Summary of this patchset</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of Bugs</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow quick bug fixes and updates for production systems.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation.</p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new installations, download and install the whole tarball (ie, gnuhealth-2.8.1.tar.gz)</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Affected modules (excludes localization / typos) : health, health_lab, installer</p></li>
+<li><p>health : Fix traceback error when creating a company and assigning a code with non-ascii characters</p></li>
+<li><p>health_lab : Fix default date analysis</p></li>
+<li><p>Installer : In new installations, the serverpass script is called automatically.</p></li>
+</ul>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 2.8.0, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>Source the GNU Health profile (source $HOME/.gnuhealthrc) to update your environment</p>
+<p>Update your database ( trytond –all )</p>
+<p><strong>List of bugs related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>#44165     Subtle bug in date of analysis for lab tests</p></li>
+<li><p>#44182     2.8 installer fails with “TRYTOND_CONFIG variable not set”</p></li>
+<li><p>#44189     Ascii code Error when trying to create Institution</p></li>
+</ul>
+</section>
+<section id="id44">
+<h2>2.8.0<a class="headerlink" href="#id44" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2015/02/02</span></code></p>
+<p>Dear GNU Health community</p>
+<p>After 7 months of intense work, I am happy to announce GNU Health 2.8 series !</p>
+<p>Here is a partial list of the new features :</p>
+<ul class="simple">
+<li><p>Tryton 3.4 compatibility</p></li>
+<li><p>Distributed environment, data aggregation and synchronization features</p></li>
+<li><p>Universal Person Unique Identifier (PUID) and UUID implementation</p></li>
+<li><p>Country immunization schedule</p></li>
+<li><p>HL7 FHIR server (thank you, Chris Zimmerman !)</p></li>
+<li><p>Automatic person immunization status check</p></li>
+<li><p>Vital Records System : Birth and Death certificates</p></li>
+<li><p>Enhanced security for Tryton server credentials</p></li>
+<li><p>Injury Surveillance System (Thank you, Jamaica Ministry of Health !)</p></li>
+<li><p>GNU Health control program : Automatic backups and patches</p></li>
+<li><p>Enhanced Crypto features / GNU Privacy Guard integration</p></li>
+<li><p>New models including in digital signatures</p></li>
+<li><p>Demographics reports</p></li>
+</ul>
+<p>There are many other improvements and bug fixes that have not been included in this summary document. You can read the Changelog for a detailed description of all the activity.</p>
+<p><strong>Installation</strong></p>
+<p>If you are installing GNU Health as the first time, follow the
+instructions in <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Installation">https://en.wikibooks.org/wiki/GNU_Health/Installation</a></p>
+<p><strong>Upgrade procedure</strong></p>
+<p>If you already have a GNU Health system in your health center, you should upgrade it to 2.8.0 . As always, the upgrade path is included in GNU Health.  The upgrade for version 2.8.0 is straight forward :</p>
+<p>Follow the Upgrade Instructions in the Wikibook
+<a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Upgrade">https://en.wikibooks.org/wiki/GNU_Health/Upgrade</a></p>
+<p><strong>Official Languages</strong></p>
+<p>GNU Health now includes**English, Chinese, French, Greek, Italian, Japanese, Portuguese and  Spanish**as the official languages. The language packs of the official languages are included in the GNU Health package, with all the modules, so there is no need to download.</p>
+<p>There are <strong>over 100 language teams for GNU Health !</strong> If you are a
+language maintainer and want to include your language for the next stable release, please send us a mail to <a class="reference external" href="mailto:health&#37;&#52;&#48;gnusolidario&#46;org">health<span>&#64;</span>gnusolidario<span>&#46;</span>org</a> .</p>
+<p>Thanks !</p>
+<p>A big thank you to my colleagues from GNU Health community; GNU
+Solidario; Thymbra and Tryton, and to the Free Software movement.</p>
+<p>Enjoy the new version and report any bug / issues / improvements to <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a> !</p>
+<p>T : &#64;gnuhealth</p>
+<p>Back to the top</p>
+</section>
+<section id="id45">
+<h2>2.6.4<a class="headerlink" href="#id45" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2014/10/04</span></code></p>
+<p>Dear community</p>
+<p>GNU Health patchset 2.6.4 has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Summary of this patchset</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of Bugs</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow quick bug fixes and updates for production systems.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation. Some of them, and thanks to the magic of Tryton can be applied to running system.</p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new installations, download and install the whole tarball (ie, gnuhealth-2.6.4.tar.gz)</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Affected modules (excludes localization / typos) : health, health_calendar</p></li>
+<li><p>health : Fix appointment institution link, to point now to the new Institution model.</p></li>
+<li><p>health_calendar : Fix Health Professional Work Schedule wizard</p></li>
+</ul>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 2.6.3, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p>Follow the general instructions at <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>Source the GNU Health profile (source $HOME/.gnuhealthrc) to update your environment</p>
+<p>Update your database ( update=all )</p>
+<p><strong>List of bugs related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>#43347     Invalid assignment of institution in appointments ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43347">https://savannah.gnu.org/bugs/index.php?43347</a> )</p></li>
+<li><p>#43350 Institution field in Work Schedule still points to party ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43350">https://savannah.gnu.org/bugs/index.php?43350</a> )</p></li>
+</ul>
+</section>
+<section id="id46">
+<h2>2.6.3<a class="headerlink" href="#id46" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2014/09/09</span></code></p>
+<p>Dear community</p>
+<p>GNU Health patchset 2.6.3 has been released !</p>
+<p><strong>Priority</strong>: High</p>
+<p><strong>Table of Contents</strong>:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Summary of this patchset</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of bugs fixed in this patchset</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow quick bug fixes and updates for production systems.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation. Some of them, and thanks to the magic of Tryton can be applied to running system.</p>
+<p>NOTE: Patchsets are applied on previously installed systems only. For new installations, download and install the whole tarball (ie, gnuhealth-2.6.3.tar.gz)</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p><strong>Summary of this patchset</strong>:</p>
+<ul class="simple">
+<li><p>Affected modules (excludes localization / typos) : health, health_lab, health_socioeconomics</p></li>
+<li><p>health : The relate action on appointments is now a wizard, to create patient evaluations from appointment (due to Tryton change on action domains); more validations and constraints on operational sectors, specialties and insurances; fix appointment report.</p></li>
+<li><p>health_socioeconomics : Fix Smilkstein Family APGAR (FAPGAR) on the field “help from family”.</p></li>
+</ul>
+<p><strong>Installation Notes</strong></p>
+<p>You must apply previous patchsets before installing this patchset. If your patchset level is 2.6.2, then just follow the general instructions. You can find the patchsets at GNU Health FTP site (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/">ftp://ftp.gnu.org/gnu/health/</a>)</p>
+<p><strong>Read</strong> and follow the general instructions at <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p>Source the GNU Health profile (source $HOME/.gnuhealthrc) to update your environment</p>
+<p>Update your database ( update=all )</p>
+<p><strong>List of bugs fixed in this patchset</strong>:</p>
+<ul class="simple">
+<li><p>#43179 The Insurance number must be unique for each insurance company ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43179">https://savannah.gnu.org/bugs/index.php?43179</a> )</p></li>
+<li><p>#43111 Traceback when creating an evaluation from the appointment form ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43111">https://savannah.gnu.org/bugs/index.php?43111</a> )</p></li>
+<li><p>#43092 column b.doctor does not exist (<a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43092">https://savannah.gnu.org/bugs/index.php?43092</a>)</p></li>
+<li><p>#43090 Specialties should be unique per health professionals (<a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43090">https://savannah.gnu.org/bugs/index.php?43090</a>)</p></li>
+<li><p>#43089 Missing unique constraint on health professionals ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43089">https://savannah.gnu.org/bugs/index.php?43089</a>)</p></li>
+<li><p>#43085 Institution Specialty should be available on existing records only ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43085">https://savannah.gnu.org/bugs/index.php?43085</a> )</p></li>
+<li><p>#43083 Operational Sectors and Specialties for each institution must be unique ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43083">https://savannah.gnu.org/bugs/index.php?43083</a> )</p></li>
+<li><p>#43059 Error creating specialties on institutions ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43059">https://savannah.gnu.org/bugs/index.php?43059</a> )</p></li>
+<li><p>#43048 Assertion Error with datetime, it does not possible install health module ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?43048">https://savannah.gnu.org/bugs/index.php?43048</a> )</p></li>
+<li><p>#42938 Error on Family APGAR selections ( <a class="reference external" href="https://savannah.gnu.org/bugs/index.php?42938">https://savannah.gnu.org/bugs/index.php?42938</a> )</p></li>
+</ul>
+</section>
+<section id="id47">
+<h2>2.6.2<a class="headerlink" href="#id47" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2014/08/07</span></code></p>
+<p>Dear community</p>
+<p>GNU Health patchset 2.6.2 has been released !</p>
+<p><strong>Priority</strong>: Medium</p>
+<p>Table of Contents:</p>
+<ul class="simple">
+<li><p>About GNU Health Patchsets</p></li>
+<li><p>Summary of this patchset</p></li>
+<li><p>Installation notes</p></li>
+<li><p>List of Bugs</p></li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases. Patchsets allow quick bug fixes and updates for production systems.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation. Some of them, and thanks to the magic of Tryton can be applied to running system.</p>
+<p><strong>NOTE</strong>: Patchsets are applied on previously installed systems only. For new installations, download and install the whole tarball (ie, gnuhealth-2.6.2.tar.gz)</p>
+<p>For more information about GNU Health patches and patchsets you can visit <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p>
+<p><strong>Summary of this patchset</strong></p>
+<p>This is a small patchset, related mostly to reports and wizards:</p>
+<ul class="simple">
+<li><p>Affected modules (excludes localization / typos) :   health, health_lab, health_imaging</p></li>
+<li><p>health : Fix prescription report</p></li>
+<li><p>health_lab :Check for health professional on test request</p></li>
+<li><p>health_imaging : Check for health professional on Dx imaging request</p></li>
+</ul>
+<p><strong>Installation Notes</strong>:</p>
+<ul class="simple">
+<li><p>You must apply patchset 2.6.1 before installing this patchset. If you have already apply 2.6.1, then just follow the general instructions. Otherwise, download and apply patchset 2.6.1 (<a class="reference external" href="ftp://ftp.gnu.org/gnu/health/gnuhealth_patchset-2.6.1.tar.gz">ftp://ftp.gnu.org/gnu/health/gnuhealth_patchset-2.6.1.tar.gz</a>)</p></li>
+<li><p>Follow the general instructions at <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p>Source the GNU Health profile (source $HOME/.gnuhealthrc) to update your environment</p></li>
+<li><p>This patchset does not require a database update.</p></li>
+</ul>
+<p><strong>List of bugs related to this patchset</strong>:</p>
+<ul class="simple">
+<li><p>health: error in prescription report when assigining a revision date to prescription line ( <a class="reference external" href="https://savannah.gnu.org/bugs/?42841">https://savannah.gnu.org/bugs/?42841</a> )</p></li>
+<li><p>health_lab : Error in printing lab test result ( <a class="reference external" href="https://savannah.gnu.org/bugs/?42843">https://savannah.gnu.org/bugs/?42843</a> )</p></li>
+<li><p>Check for health professional when requesting tests (<a class="reference external" href="https://savannah.gnu.org/bugs/?42914">https://savannah.gnu.org/bugs/?42914</a> )</p></li>
+</ul>
+</section>
+<section id="id48">
+<h2>2.4.1<a class="headerlink" href="#id48" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2014/02/18</span></code></p>
+<p>GNU Health patchset 2.4.1 has been released !</p>
+<p><strong>SUMMARY OF BUG FIXES / TASKS</strong></p>
+<p><strong>Affected modules / functionality</strong>:</p>
+<ul class="simple">
+<li><p>health_inpatient:</p>
+<ul>
+<li><p>Fix health professional display on the patient discharge (changeset 1182:6b452268a2a5 )</p></li>
+</ul>
+</li>
+<li><p>health_surgery:</p>
+<ul>
+<li><p>Fix surgery report traceback due to date format (changeset 1177:33e45da63c55 )</p></li>
+</ul>
+</li>
+<li><p>health_services:</p>
+<ul>
+<li><p>Update health services wizard to be Tryton 3.0 compatible on the invoice generation (changeset 1178:83f26d207cb0)</p></li>
+</ul>
+</li>
+<li><p>PIP setup.py:</p>
+<ul>
+<li><p>Update setup.py to Tryton version 3.0 ( changeset 1174:3eaa6b06807f )</p></li>
+<li><p>Update missing module health_stock setup.py to Tryton version 3.0 (changeset 1175:25948f16ffab)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>About GNU Health Patchsets</strong></p>
+<p>We provide “patchsets” to stable releases (with even minor number). This allows quick bug fixes and updates for production systems.</p>
+<p>Patches and Patchsets maximize uptime for production systems, and keep your system updated, without the need to do a whole installation. Some of them, and thanks to the magic of Tryton can be applied to running system.</p>
+<p>Patchsets are installed on previously installed systems. For new
+installations, download the regular package (ie, gnuhealth-latest.tar.gz)</p>
+<p><strong>Installation Notes</strong>:</p>
+<ul class="simple">
+<li><p>Follow the general instructions at <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets">https://en.wikibooks.org/wiki/GNU_Health/Patches_and_Patchsets</a></p></li>
+<li><p>No special instructions for this patchset</p></li>
+</ul>
+<p>Please send your comments and suggestions to <a class="reference external" href="mailto:health&#37;&#52;&#48;gnu&#46;org">health<span>&#64;</span>gnu<span>&#46;</span>org</a></p>
+<section id="versions-1-x-x">
+<span id="changelog-changelog-versions-1-x-x"></span><h3>Versions 1.x.x<a class="headerlink" href="#versions-1-x-x" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="id49">
+<h2>1.8.0<a class="headerlink" href="#id49" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2013/02/20</span></code></p>
+<p>It’s been a couple of weeks since the release of GNU Health <strong>series 1.8</strong>, and we’re thrilled on the evolution of the system, and its adoption by the community.</p>
+<p>This latest series is compatible with Tryton 2.6 and has many improvements, in the core and reporting modules, among others. As usual, the migration from previous versions are included.</p>
+<p>The other good news is that, being compatible with Tryton 2.6 allows the connection from <strong>mobile devices</strong> with the Android Operating System .
+Thanks to the great Tryton development framework, and to the fantastic job done by SCIL  in the development of the Android client for Tryton, GNU Health servers can now be accessed directly from your mobile device.</p>
+<blockquote>
+<div><p>You can find the Android client on Google Play . For the development process, check the SCIL page .</p>
+</div></blockquote>
+<p>There are more good news on the way. The <strong>web client</strong> is also around the corner, and we will have 3 different ways to connect to GNU Health. From the standard GTK interface, the Android client, or your web browser.</p>
+<p>Make sure you upgrade your database to the latest GNU Health version. The upgrade scripts and the instructions are always incorporated in the new version. The upgrade process is an integral part of GNU Health and, of course, it’s completely free.</p>
+<p>e-Health for all !</p>
+<p><strong>About GNU Health</strong></p>
+<p>GNU Health is a free Health and Hospital Information System that provides the following functionality :</p>
+<ul class="simple">
+<li><p>Electronic Medical Record (EMR)</p></li>
+<li><p>Hospital Information System (HIS)</p></li>
+<li><p>Health Information System (Epidemiology)</p></li>
+</ul>
+<p>GNU Health has been awarded the <strong>Best Project of Social Benefit</strong> from the Free Software Foundation in 2012.
+In 2013, GNU Health received the awards for  most revolutionary Free Software and software with the largest potential from PortalProgramas.</p>
+<p>GNU Health is an <strong>official GNU Package</strong>, chosen by Richard Stallman and part of GNU Solidario. GNU Solidario is a NGO that delivers education and health to emerging economies with free software. GNU Health is the Hospital Information System chosen by the <strong>United Nations</strong> International Institute of Global Health.  GNU Solidario and the United Nations University, International Institute for Global Health have signed an agreement to implement and to train GNU Health globally.</p>
+<p>Main site : <a class="reference external" href="http://health.gnu.org">http://health.gnu.org</a></p>
+</section>
+<section id="id50">
+<h2>1.6.4<a class="headerlink" href="#id50" title="Link to this heading"></a></h2>
+<p>I am happy to announce the release of GNU Health <strong>1.6.4</strong>!</p>
+<p>This version brings many improvements, especially in the Obstetrics and Nursing modules. A quick summary :</p>
+<p><strong>Features</strong></p>
+<p><strong>Gynecology and Obstetrics module</strong></p>
+<ul class="simple">
+<li><p>Functionality covers pre-conception; genetic and nutrition counseling; prenatal evaluations; antenatal and intrapartum monitoring; labor and puerperium</p></li>
+<li><p>Improve obstetrics views and navigation</p></li>
+<li><p>Automatic Pregnancy due date calculation from last menstrual period (LMP)</p></li>
+<li><p>Pregnancies include the prenatal, antepartum and puerperium</p></li>
+<li><p>Automatic, functional notification of patient pregnancy</p></li>
+<li><p>Automatic computation of gestation age</p></li>
+<li><p>Improved prenatal evaluation information:</p>
+<ul>
+<li><p>Include ultrasound information</p></li>
+<li><p>Fetal biometry and activity</p></li>
+<li><p>IUGR and its forms</p></li>
+<li><p>Simplify end of birth recording, as well as maternal death information</p></li>
+<li><p>Include preeclampsia, invasive placentation and other abnormalities during pregnancy</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Lifestyle</strong>:</p>
+<ul class="simple">
+<li><p>Include CAGE alcoholism score</p></li>
+</ul>
+<p><strong>Pediatrics</strong>:</p>
+<ul class="simple">
+<li><p>Optimize Pediatric Symptoms Checklist for psychosocial risk</p></li>
+</ul>
+<p><strong>Nursing</strong>:</p>
+<ul class="simple">
+<li><p>New outpatient / ambulatory care functionality</p></li>
+</ul>
+<p>-&gt; Bug fixes</p>
+<p><strong>Installation Notes</strong></p>
+<p>Please follow the instructions at the Wikibook GNU Health
+documentation Portal : <a class="reference external" href="http://en.wikibooks.org/wiki/GNU_Health">http://en.wikibooks.org/wiki/GNU_Health</a></p>
+<p><strong>Upgrade Notes</strong></p>
+<p>There are no specific notes for this upgrade, so upgrading your previous GNU Health version should be straight forward. Of course, before any upgrade, please backup your database and follow the general upgrade instructions at the GNU Health Wikibook : <a class="reference external" href="http://en.wikibooks.org/wiki/GNU_Health/Upgrade">http://en.wikibooks.org/wiki/GNU_Health/Upgrade</a></p>
+</section>
+<section id="id51">
+<h2>1.6.3<a class="headerlink" href="#id51" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2012/08/28</span></code></p>
+<p>Dear all</p>
+<p>We are proud to announce the release of GNU Health 1.6.3, the Free Health and Hospital Information System. This version brings major improvements in the hospital information system, both from the administrative and patient management. Here is a quick summary of the main changes :</p>
+<p><strong>New Features</strong>:</p>
+<ul class="simple">
+<li><p>Patient Nutrition management. Complex combinations that take into account therapeutics, pre-existing conditions, surgeries, lifestyles, vegetarianism and other belief-based diets.</p></li>
+<li><p>Inpatient medication medication and history log.</p></li>
+<li><p>New nursing module</p></li>
+<li><p>Nursing roundings ( evaluations, procedures, medications … )</p></li>
+<li><p>New user profiles (doctors, nurses, clerks, …)</p></li>
+<li><p>New appointment reports</p></li>
+<li><p>Improved standard security profiles</p></li>
+<li><p>The translation project is now entirely done from Transifex, so the health center will install only the languages they need</p></li>
+<li><p>Revised and improved look and feel, from views to icons</p></li>
+<li><p>Many models datafiles ( medicaments, WHO essential meds, .. ) can be now modified from the client.</p></li>
+<li><p>Improve installation scripts and Archlinux / Parabola support</p></li>
+<li><p>Improve search patient methods</p></li>
+<li><p>Bugfixes</p></li>
+</ul>
+<p><strong>Credits</strong></p>
+<p>Thanks to all of you who have collaborated in the mailing lists and IRC channels. The end users, developers, Tryton community. Many thanks to the GNU community and to the <strong>Free Software Foundation</strong> ( <a class="reference external" href="http://www.fsf.org">http://www.fsf.org</a> ) for hosting GNU Health !</p>
+<p>Thanks to organizations like the <strong>United Nations</strong> International Institute for Global Health - UNU IIGH - for their commitment with GNU Health. UNU is giving GNU Health trainings and capacity building to countries in Asia and Africa.</p>
+<p><strong>Upgrade Notes</strong></p>
+<p>There is no specific notes for this upgrade, so upgrading your previous GNU Health version will be straight forward. Please follow the general upgrade instructions at the GNU Health Wikibook : <a class="reference external" href="http://en.wikibooks.org/wiki/GNU_Health/Upgrade">http://en.wikibooks.org/wiki/GNU_Health/Upgrade</a></p>
+<p>More information at : <a class="reference external" href="http://health.gnu.org">http://health.gnu.org</a></p>
+</section>
+<section id="id52">
+<h2>1.4.4<a class="headerlink" href="#id52" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2012/03/11</span></code></p>
+<p>Dear all</p>
+<p>I’m happy to announce the new stable version of GNU Health <strong>1.4.4</strong></p>
+<p>This version has great new features, such as <em>Medicament Pregnancy
+Categories, Prescription Decision Support and patient and newborn QR codes identification</em></p>
+<p>We have also included and updated translations for : <strong>French, Greek, Italian, Persian (Farsi) and Spanish</strong></p>
+<p>We’ll be updating the documentation portal at Wikibooks with the
+content of this new version. I invite you to download and test it, as usual from Savannah ( <a class="reference external" href="https://savannah.gnu.org/projects/health/">https://savannah.gnu.org/projects/health/</a> )</p>
+<p>For more information please check the official homepage at <a class="reference external" href="http://health.gnu.org">http://health.gnu.org</a></p>
+<p>Thanks to the GNU community contributing your time and talent to Health.</p>
+<p>Best,
+Luis Falcon</p>
+</section>
+<section id="id53">
+<h2>1.4.1<a class="headerlink" href="#id53" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2011/10/30</span></code></p>
+<p>I’m happy to announce the release of <strong>GNU Health 1.4.1</strong>, in which we have incorporated support for PyPI, the Python Package Index</p>
+<p>This version is compatible with the latest Tryton release (2.2.0). Now GNU Health is also a set of python modules, fully integrated to the Python community.</p>
+<p>Thanks to the magic of pip, and the help of the Tryton community ( Cedric Krier, et al ), installing the latest GNU Health version is as easy as running</p>
+<p>pip install –user trytond_health_profile</p>
+<p>This will install the requirements ( the tryton server and all the standard GNU Health modules ) automatically and in your “$HOME/.local” directory. I will be updating the installation process at the wiki today.
+The main site is the GNU Savannah where all the development and discussion takes place.</p>
+<p>There are many improvements, bug fixes and news features, some of them :</p>
+<ul class="simple">
+<li><p>CalDav compatibility (it allows complex calendar views and settings for appointments and hospitalizations)</p></li>
+<li><p>Support for JSON RPC protocol</p></li>
+<li><p>Fully Tryton 2.2 compatible</p></li>
+<li><p>Enhanced Medication form</p></li>
+<li><p>New Medicament categories</p></li>
+<li><p>Medication pregnancy category</p></li>
+<li><p>Included the latest WHO essential medicines (17th edition)</p></li>
+<li><p>New translation engine (to be used with .po format)</p></li>
+<li><p>Improved Laboratory model and functionality</p></li>
+</ul>
+<p>Thanks to all of you for contributing with your code, testing, translating and documenting the project !</p>
+<p><strong>About GNU Health</strong></p>
+<p>GNU Health is a Free (GPL v3+) Health and Hospital Information System that provides the following functionality :</p>
+<ul class="simple">
+<li><p>Electronic Medical Record (EMR)</p></li>
+<li><p>Hospital Information System (HIS)</p></li>
+<li><p>Health Information System</p></li>
+</ul>
+<p>GNU Health is an <strong>official GNU Package</strong>.</p>
+<p>GNU Health is part of <strong>GNU Solidario</strong>. GNU Solidario is a NGO that delivers education and health to emerging economies with free software.</p>
+<p>GNU Health is the Hospital Information System chosen by the <strong>United Nations International Institute of Global Health</strong>.</p>
+<p>Main site : <a class="reference external" href="http://health.gnu.org">http://health.gnu.org</a></p>
+<p>Governments hosting GNU Health through their portals :</p>
+<ul class="simple">
+<li><p>European Commission (EU) , OSOR</p></li>
+<li><p>Brazil: Portal do Software Público Brasileiro (SPB)</p></li>
+</ul>
+</section>
+<section id="id54">
+<h2>1.3.3<a class="headerlink" href="#id54" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">2011/09/19</span></code></p>
+<p>I’m pleased to announce GNU Health 1.3.3</p>
+<p>This version could be considered a milestone in itself, due the major changes and new features:</p>
+<ul class="simple">
+<li><p>New naming convention of modules and models. From  medical to gnuhealth</p></li>
+<li><p>New installation scripts (setup.py) .</p></li>
+<li><p>Major improvements in the Laboratory module. Now we have automatic visual alerts, possibility to exclude analytes from the analysis, qualitative and quantitative testing. Contextualize results in the patient status (gender, age, comorbidities … ).</p></li>
+</ul>
+<p>As in every new release, bugs are fixed, navigation improved and new features are includes.</p>
+<p>Since Health is now part of the official GNU system, the development is hosted at GNU Savannah, where you can also download the latest version.</p>
+<p>Last but not least…  many thanks to Cedric and Tryton community for getting involved in the GNU Health project !</p>
+<p><strong>About GNU Health</strong></p>
+<p>GNU Health (formerly known as “Medical”) is a free (GPL v3+ license), Health and Hospital Information System that provides the following functionality :</p>
+<ul class="simple">
+<li><p>Electronic Medical Record (EMR)</p></li>
+<li><p>Hospital Information System (HIS)</p></li>
+<li><p>Health Information System</p></li>
+</ul>
+<p>GNU Health is part of GNU Solidario. GNU Solidario is a NGO that delivers education and health to emerging economies with free software.</p>
+<p>Main site : <a class="reference external" href="http://health.gnu.org">http://health.gnu.org</a></p>
+<p>Governments hosting GNU Health through their portals :</p>
+<ul class="simple">
+<li><p>European Commission (EU) , OSOR</p></li>
+<li><p>Brazil: Portal do Software Público Brasileiro (SPB)</p></li>
+</ul>
+<p>You can check the original post, with screenshots at :  <a class="reference external" href="http://blog.gnusolidario.org/2011/09/gnu-health-133-released.html">http://blog.gnusolidario.org/2011/09/gnu-health-133-released.html</a></p>
+<p>Project at the Savannah :
+<a class="reference external" href="https://savannah.gnu.org/projects/health/">https://savannah.gnu.org/projects/health/</a></p>
+<p>Thanks,</p>
+<p>–
+Luis Falcón</p>
+<p>GNU Health</p>
+<p>health.gnu.org</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="roadmap.html" class="btn btn-neutral float-left" title="Roadmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="devcorner.html" class="btn btn-neutral float-right" title="Developer’s Corner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, GNU Solidario.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

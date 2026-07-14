@@ -45,3 +45,11 @@ Desktop.ini
 docs/testing/evidence/_prod_cfg.yaml
 frontend/db-login.json
 frontend/db-list.json
+
+# Upstream sync caches (re-cloneable from Codeberg)
+docs/upstream/_cache/
+_vm_probe*.sh
+
+# Upstream sync caches (re-cloneable)
+docs/upstream/_cache/
+

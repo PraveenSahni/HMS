@@ -1,0 +1,2302 @@
+{
+  "product": "IST HIS",
+  "upstream_product": "GNU Health HIS",
+  "upstream_version": "5.0.6",
+  "retrieval_date": "2026-07-14",
+  "immutable_root": "docs/upstream/original/",
+  "file_count": 229,
+  "html_pages_downloaded": 6,
+  "rst_count": 106,
+  "files": [
+    {
+      "path": "docs/upstream/original/images/images/APACHE_II_Score_form_in_the_ICU_module_of_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7fcd0b1304c540983f245015e1cc6eb10f1928f83088d13147c90a57d68e738e",
+      "bytes": 178080
+    },
+    {
+      "path": "docs/upstream/original/images/images/Chagas_DU_Survey_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "83e778a60a97f672c78ef10fc85e9b7b9791c26db834bd2b49b7b7909cd5b5d8",
+      "bytes": 67524
+    },
+    {
+      "path": "docs/upstream/original/images/images/Create_Health_Service_Invoice_dialog.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a58efa4d2045a1adfc1fba9086084a1ae9c0ba2e02738a0e3b384a8580182342",
+      "bytes": 19878
+    },
+    {
+      "path": "docs/upstream/original/images/images/Create_Lab_Request_in_toolbar.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e13f9ef723d5756ec9302ba687263882dc7fd0948652762fadc4ce23dfac63d1",
+      "bytes": 54137
+    },
+    {
+      "path": "docs/upstream/original/images/images/Create_Lab_Request_through_main_menu.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5ea59f38abe17b921f94cb92bdf5f9a041b56a3e3227618613e227bff1c23392",
+      "bytes": 20111
+    },
+    {
+      "path": "docs/upstream/original/images/images/Creating_a_new_lab_order_from_the_patient_window_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a833bc2087d9cbc1fbbfc44dde9a79b1486bdb3ea97def06ae09b9a70a67c4bd",
+      "bytes": 323384
+    },
+    {
+      "path": "docs/upstream/original/images/images/Creation_of_the_test_from_the_wizard_in_the_lab_request_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7b2894bb499704a6f56b90e300b326c784c913dccaca1259b646a9658b0465fc",
+      "bytes": 161956
+    },
+    {
+      "path": "docs/upstream/original/images/images/Dengue_DU_Survey_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c3a0108fad52200ffb12eb546853f68aaf73b26fe7866f0395ebfa41fc39ca3c",
+      "bytes": 175859
+    },
+    {
+      "path": "docs/upstream/original/images/images/Detailed_form_view_of_the_liver_function_test_type.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4773fee99489ecd1cf32391e1532fa9a90d4d4251a6ca2469c83ef4a759c5cfd",
+      "bytes": 224274
+    },
+    {
+      "path": "docs/upstream/original/images/images/Detailed_information_from_the_lab_test_report.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "150d682919e75c528b1fbeb1f06d945f8ddb4e41255138803fb86e6125ce6db6",
+      "bytes": 284181
+    },
+    {
+      "path": "docs/upstream/original/images/images/ECG_form_of_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1d54b2390fef3e9c3f32144f8452c6fc0424f032d2236af148d5d623f0fe0e27",
+      "bytes": 217151
+    },
+    {
+      "path": "docs/upstream/original/images/images/federation_components.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "956270025e93e686a4bb01d6873bef48537b7827bef25c0820d0d69e6b6f5162",
+      "bytes": 192891
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_add_health_package_entry.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f0c94706a0cb2be6dda20c284c14fcb10758d73e4925479f495813746385a6cc",
+      "bytes": 39988
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_backup_instance.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "69c36952912668ac740794b7df1bc26ec9c40a07fb9f84cb02a2d3674d5af3de",
+      "bytes": 70302
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_backup_instance_example.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a04bb8a80ab91c92279e5d0591d68ae0c0e1434e716d1067aa4dd618fd67dbd4",
+      "bytes": 46170
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_create_instance_log_window.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9d63ab79de5177fae25e360c586bc3cc32760649d4a42bf1543be1b0bbb5d869",
+      "bytes": 39831
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_health_package_installation_ok.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3bf56c5fb1d7186694153e2150d6a25bbba34e8ccdcb885d74e8212964af97ae",
+      "bytes": 58546
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_his_installation_section.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6225775718f21c7ab3da3053e464df834c69a941afff829d3c71d20363c19f66",
+      "bytes": 44051
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_initial_screen.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b8014b7529dbb826bf7dda5d88575cf8d2fb7e281bab92384bd1f60095c5faaf",
+      "bytes": 39566
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_instance_creation_parameters.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "07b5ae92d247ed2f097ea515562b8810d9d0018531e4dff448645395efecfaaa",
+      "bytes": 32482
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_new_instance_menu_entry.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8895c2fa49c9349c9f008a71e08a97af055316ce38ea3691283bf47c2d8a6a35",
+      "bytes": 39934
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_refresh_instance_entry.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "05847768a3f1f18b977f65cde5ebf54062401d4e6be07f4503e4cb2175315732",
+      "bytes": 41631
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_refresh_instance_result.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "18547c08b87099fafbd79b577c5c21b3071f3779ec88e31df0f733c476826529",
+      "bytes": 29568
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_selection_health_package_to_add.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4ad1b0034b36c7b6b1248ee1e52992a376727107d5ce9efd7c470a649801eb08",
+      "bytes": 61417
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_start_stop_server.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "ee0684f380ab2a79fa99e84a3b3ff4d84b4fc3c54adc0adc7a2fcd6e764e6309",
+      "bytes": 38764
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_update_dependencies_process.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "763005f76fdd15f93e81d20df932045d5e4767d2dab3fbf089c7bef27dc74af9",
+      "bytes": 50166
+    },
+    {
+      "path": "docs/upstream/original/images/images/ghcontrol_update_packages_dependencies.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1060a5244917ccd61c958f81f2dd69cd3162d1af89ac664eeaf50798a7a640de",
+      "bytes": 63998
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Health_Services_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3131405d8e0ab98c530c1ddfb69e20629e804711158db9b2e7347e03ddd8e2f8",
+      "bytes": 173816
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Addictions_Alcohol_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "aae535299333039b195ba1b4518ec2d93c1b0d03dc3e521b80dcef7555f55dea",
+      "bytes": 42524
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Addictions_Main_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a049e174aa312eaf95d51a2b0061951c1d0ec7d0e9b51a973b1d51a225a0ad5e",
+      "bytes": 31902
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Addictions_Recreational_Drugs_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6ec1a5b9356f44654de72243213f86b4668557264c9609bab09a08f34b0a0ecd",
+      "bytes": 29260
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Diet_and_Exercise_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "936deb8789888d06064a43751ddc20998ac586639b17a3b3cb1bc94130ef5545",
+      "bytes": 38213
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Safety_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7028b7d710791f4029690565f1afd68f37e45376a61f5729dbe5491cbac3ba3c",
+      "bytes": 27687
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Lifestyle_Sexuality_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "69ed777cdaebc89488ff542963a8ae05a4ef0db2dc67894c3585071c53797a42",
+      "bytes": 42688
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Full_Synchronization.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8c2b20202aec14b48a580c594504c3a21407b5e0adf5ee982d49e93bfb79a6f6",
+      "bytes": 19272
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Instance_Preview.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "10949e55c5eb7861652a838e53ae47807be601ebe5a253f7478416e64870aa3f",
+      "bytes": 108564
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Integration.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "fed1d75bb810c0710d1d3abf18212a294fb5cd68fcf7d6ac3dd68429179dcf78",
+      "bytes": 13144
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Newly_Synchronization.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b0ec62d7ed1d4c67816c795fd7f671ef8104a8ec8d6edfd0d3db04cab3826bd9",
+      "bytes": 17084
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Patients.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a948b67524bb0cd056af6c8a7ec24f347ac7f8d2a32fb7bdc4c643428a9ffb62",
+      "bytes": 37606
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Search_Patient.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6405608a51d51ce4bcb33ace1a5e939273c1d6e44c3251d9649131dc452dc752",
+      "bytes": 84267
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Series_Detail.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "22c9b0bef3bcb7f4b462b081d1136442b3fc3fa6603301c1873d6214743923fb",
+      "bytes": 81420
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Series_List.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0e4e1b58513140c4e8494d9fc2438c28c07427f16f6b09dc4d6e9a4a3d2173e8",
+      "bytes": 31607
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Studies.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1e1c850a04139a391911ea7b53ad23ec4722404908a352af19f20802feafb92e",
+      "bytes": 49847
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Study_Content.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e800f24b22b946d5312c5e741f3369fd67eb5366e34d77da876543de87a33ceb",
+      "bytes": 78878
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Orthanc_Uploaded_DICOM_File.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b50b5ee36c513b2598da54667def048248b166a6501d19aa80de46d0500bcbc6",
+      "bytes": 24050
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_party_person.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "56ea6de89df1811c3853571624068de0f9501d50751645fb4ff8948d3caf7a1f",
+      "bytes": 173498
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_party_person_internal_user.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e163a9e94641b2a96d0e6d8bcebf86f753cde53c5a5b2d8e876c4843fe16bd46",
+      "bytes": 174969
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_party_with_patient_attribute_set.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8592755a836e18edfcc0015ed4969655730d57d81b275c2577a7d9b062530d18",
+      "bytes": 357000
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_patient_main_screen.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0b024231618f509d97e1962af75b733080aece191f252e40b582080c48199062",
+      "bytes": 327812
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_Health_Pediatrics_Newborn.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "58553565d65b1cac6e0f9c1616e2dd696ca806be484b327ffedae7456b308050",
+      "bytes": 256364
+    },
+    {
+      "path": "docs/upstream/original/images/images/GNU_LIMS_barcode_standards_and_QR_for_samples.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3c883ab2588b3e5a1435b223f2ee7622438fd40ecaaf914587789746a7cf3473",
+      "bytes": 55358
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth-his.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "33106aa68e35811ca2fff99edb7c30544352d2f4f9be4948b2c920f3becb8a58",
+      "bytes": 133127
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gnuhealth_Calendar_Creation.JPG",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cec8bb149bd4e440396c05721e275d352101388c34544815c055bdee4025ca74",
+      "bytes": 52073
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gnuhealth_Calendar_Creation_of_Calendar_in_Evolution.JPG",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "63b636ec8e5106693c845baeb328513129a3ebf4259e217fd7748b281fd59a67",
+      "bytes": 68738
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gnuhealth_Calendar_Event_creation.JPG",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "07030eb43d4e3697f4bc9ce35fa33b07a70d04baf96f81f6b0784cdcdd220f10",
+      "bytes": 58821
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_command_line.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "831404e2d5faf560843ba149345299efbe44d901b8862a950e452d0b6e0b45ef",
+      "bytes": 85176
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_ana_betz_family_history.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6dc99cf54836febef5c0c2e34fdd77eb227e7d5d42f4ba70af6d74f056115f43",
+      "bytes": 291423
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_gen_command.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "343cae3fbde888369b4260b4f2920b071c3b70ddf2660f77197db3eb68b54a70",
+      "bytes": 89952
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_gene_cftr_detailed_view.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9df0cfecd0ab291a628210251b8ac38494da2326a1e122d34f46be6736ffcbc3",
+      "bytes": 213663
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_gene_filter_options.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c617637530e9dfe6e42e1b148a63aebeb0089d9b47fb33dbe3ccd0a895708039",
+      "bytes": 139589
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_genes_list_view.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4453cc950854dccbd3119f4e929d1b4aed8162e709d91adc8fda70bda996a51c",
+      "bytes": 265948
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_genetic_and_protein_diseases.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "67290e88bb0d11b630c733d3fe6a198420719a020331224bd2145e64c1b93475",
+      "bytes": 276931
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_genetic_and_protein_diseases_form_view.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "75c3e53a8c0c3bac6cc95d43887ab922bbf27f802f4e436e2e4aa0870d8ffb62",
+      "bytes": 222584
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_patient_medical_history_matt.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "73b30b7d8e81cd0a5d43a023c7f7fb11c81cd71a74417e119597f593203a79aa",
+      "bytes": 210290
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_variants_phenotypes_cftr.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c5046e7556de3b9e65f115d5544bebeef836f2d29a7f223e40aec404a93f2ea5",
+      "bytes": 259112
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_genetics_variants_phenotypes_patient_information_matt.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f9906810b3356ee20aef1f7a5a3b27477264413f89dca244fe28b327d89ae1ac",
+      "bytes": 231069
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_health_professional.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "db6a96a29fab75fd8b62d9180fd30320790bf9750fef43cc0f2bb4b3c6a41e74",
+      "bytes": 157786
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_his_features.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c3457b77083e0de1b716c07874abacb11f0327c9c9076b9f2f84204b5b97476b",
+      "bytes": 54547
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gnuhealth_lab_test_units.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b30d2669619c82a10c6c72297cd5de770af9dc0b9188fe1e30c0b08616a1a679",
+      "bytes": 191746
+    },
+    {
+      "path": "docs/upstream/original/images/images/gnuhealth_party_health_professional.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0a756a799a2eda372352b848f90c6343dbc2ee2c1de9f007b66c172fad57ad28",
+      "bytes": 235274
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gynecology_information_in_the_Patient_form_General_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6d3b851e4380fffd7f9d2473e361aff9508e74ff3b2ac5ff27a9eead5397153c",
+      "bytes": 40558
+    },
+    {
+      "path": "docs/upstream/original/images/images/Gynecology_information_in_the_patient_form_Screening_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f5a6869b6f33499ad7841baa0557bcf926bde45798c41907f5b6945440ab6605",
+      "bytes": 53300
+    },
+    {
+      "path": "docs/upstream/original/images/images/HIS_branching.drawio.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "51248a48d2d567ef76f2fd5d7badefcb182c4f42b5bd841a5cb5a68ae1e3ac81",
+      "bytes": 182815
+    },
+    {
+      "path": "docs/upstream/original/images/images/How_to_access_the_list_of_appointments_for_a_specific_patient.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "41afb431319065c088b33495f52041885b1c85e5a4aceebaccfef082496ec8a8",
+      "bytes": 268779
+    },
+    {
+      "path": "docs/upstream/original/images/images/How_to_find_all_PSC_records_for_a_patient.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "be09ef89e12cf65460bf4b113a1eecbedfca6d447ad3fd0663e83300a827f664",
+      "bytes": 208495
+    },
+    {
+      "path": "docs/upstream/original/images/images/How_to_open_the_list_of_evaluations_for_a_specific_patient.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d2c2913ea1594675741351a6f354ba79f1873f52c4ce244cdc4979c56aa6bcb6",
+      "bytes": 320523
+    },
+    {
+      "path": "docs/upstream/original/images/images/How_to_print_a_wristband_for_a_newborn_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b91d15992d2ac2ee52bde6afeeb22d40f484d217e85feacedf5bdf2437e2e927",
+      "bytes": 263124
+    },
+    {
+      "path": "docs/upstream/original/images/images/Install_Modules_1.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "73cf89cfcd0d4fe0ee0d8d45d764c71bd808e91541ad310f4e602de5f6ce0938",
+      "bytes": 185477
+    },
+    {
+      "path": "docs/upstream/original/images/images/Install_Modules_2.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "71fe5ceeba8549074bad05ffac209ee5e2f1c32a494f9834701b8f485896855f",
+      "bytes": 196696
+    },
+    {
+      "path": "docs/upstream/original/images/images/Invoice_record_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7e04688090d84f84734ddab00bdfc56ad4cb4e71d3b169d63642c8a0dd8b99f5",
+      "bytes": 216592
+    },
+    {
+      "path": "docs/upstream/original/images/images/Lab_test_types_list.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f0cf8d9ce8f1ba0ead250c352ae61867e720b1f75cf54d9bb7e1719a236b582e",
+      "bytes": 230962
+    },
+    {
+      "path": "docs/upstream/original/images/images/Multiple_lab_tests_can_be_grouped_in_a_single_order.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d596b1f19765f6647e380ecaa05f0fb5bfa7a96148bdc82b7ba04d950adbbbb5",
+      "bytes": 322960
+    },
+    {
+      "path": "docs/upstream/original/images/images/New_lab_order.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "85bf5cd117bc99f44df1643d0146f3e5ee260bfacdc3ee175f3479c0625b639e",
+      "bytes": 54382
+    },
+    {
+      "path": "docs/upstream/original/images/images/Newborn_wristband_Identification_with_all_the_information_encoded_in_QR.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5bd2a8c300249d34958e85c681186719ed6a15075f7c64f1f5ba2eac59417627",
+      "bytes": 91277
+    },
+    {
+      "path": "docs/upstream/original/images/images/Patient_ID_card_sample_with_QR_Code.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "2263ea6ba331595fc58c90b177e6df6730e77cc3cda7d0c5ac4ca5d2e4198ad7",
+      "bytes": 166061
+    },
+    {
+      "path": "docs/upstream/original/images/images/Patient_lab_test_report_in_PDF_format.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "820e9a4e70d4bd6770994af7e07b887f2b187f61c9eb063a662a8d3820f5ee2e",
+      "bytes": 88049
+    },
+    {
+      "path": "docs/upstream/original/images/images/Patient_list_view.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b875ef0fded7263c0506fb91e9c828ad5d33602834297b06e04eb602bf9fd8c6",
+      "bytes": 164038
+    },
+    {
+      "path": "docs/upstream/original/images/images/Perinatal_and_Intrapartum_Information_dialog_Additional_Info_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3bcf69c25731a6b00c53b627fbb9617fda0bece91fbcb15944bdde7dbff9274d",
+      "bytes": 29249
+    },
+    {
+      "path": "docs/upstream/original/images/images/Perinatal_and_Intrapartum_Information_dialog_Main_tab.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "05013dfea439a0676ac8d75185d35a5d9425f38efb562df8b35afd09f90af537",
+      "bytes": 56473
+    },
+    {
+      "path": "docs/upstream/original/images/images/Perinatal_Monitor_dialog.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "92fe6fe51d8d841c765ac986f28d46d84c7f59b5f0743ec5aaf89fb48e28bab1",
+      "bytes": 51536
+    },
+    {
+      "path": "docs/upstream/original/images/images/Prenatal_Evaluation_dialog.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1cb495b1ec9721a73db920f8beaa4bded1660cfbf1a0a482490eef87be0f5a6a",
+      "bytes": 59134
+    },
+    {
+      "path": "docs/upstream/original/images/images/Process_of_paying_an_invoice_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a0290c1930bf2e5bdf42d959cece84d2fa422bfd5c1ee12df3c76f4799a63f54",
+      "bytes": 31829
+    },
+    {
+      "path": "docs/upstream/original/images/images/Puerperium_Monitor_dialog.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "55945a06c36c8371d51356031dc055a5d1ba1b7105b12154e0906fd40eabbe25",
+      "bytes": 42915
+    },
+    {
+      "path": "docs/upstream/original/images/images/Sample_of_GNU_Health_HIS_node_federation_queue.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "eae2b10d722cb22030d9cd051d049eaad1f125780a294a29fbe032c811b72066",
+      "bytes": 58656
+    },
+    {
+      "path": "docs/upstream/original/images/images/Scheduler.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "869593d59b4ed23bb47a71710db0d6bd99bf2d1473357886dd763dd4b288cf5c",
+      "bytes": 106999
+    },
+    {
+      "path": "docs/upstream/original/images/images/Selection_of_the_GNU_Health_Federation_module.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6feefa47ae1c813c4ab72383dd28aa22fb3ecf6ffc5d7e01e37f84d7fe95b206",
+      "bytes": 226548
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Access_Permissions_tab_in_the_Groups_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9fbb6d013b9e4bb0a00d5386086a2e0fb9443c30dde982da9cf77eeb0b374c8c",
+      "bytes": 171072
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_appointments_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b578d3e3c7cf11e9aa6f0db515a2001f193953aefec753613fecaaa298694c4c",
+      "bytes": 75761
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Beds_list_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "dc338c3f080dab05850efa7768e85f1bb7b4b5496040bc1af53ada23f2bd6ae4",
+      "bytes": 149760
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_dialog_box_to_confirm_the_assignment_of_a_patient_to_a_bed.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "889db778faba6f43f6007343b531e153b6f4fe856d5452049b3e53475f322622",
+      "bytes": 202365
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_dialog_to_select_a_ICD10-PCS_code.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0b412692876fd7ff5377cc89b1682f0368fc0dba7f67be7f88832f79509d1e8a",
+      "bytes": 216807
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Evaluations_Form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f44a03867997fdf7e063bc3990469efa21022e74822697b58bcb85f869006438",
+      "bytes": 81594
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Evaluations_History_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a579a7607476b29f318da0bbbe24113f4c08bc3d0d35c96b46144b464e712c5f",
+      "bytes": 58421
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Groups_list_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e44fc64b55e0cc17caf2b598e8819465800c6fd79d74e7ad18051fe10a20d22f",
+      "bytes": 159761
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_GSC_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "509aaeeceaaadb91a20aabdbf77664fd86cd6673c40138875aafac6efc4bb69f",
+      "bytes": 159064
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_health_professional_can_access_all_the_patient_lab_tests_from_the_main_screen.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6e8594c9d28ec00edd881b0428ee91c6b0305a75568bcaeb7a69d0dac44ef4fd",
+      "bytes": 280978
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Hospitalization_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c18ae6de91ba4e833692284a8a37a490e9cd867957cc79887717f044c5bdf002",
+      "bytes": 197555
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Hospitalizations_list_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0a1a378d421ddde8fe486b0fb62ade62d9c837f8d5574e804590421082f0b47f",
+      "bytes": 43440
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_list_of_all_appointments_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9117db92045898930c7b40ea576045c411b6555dc41be8878ef0ed8fc56128f2",
+      "bytes": 224414
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_list_of_appointments_for_a_specific_patient.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "dad2e52a83e63cdd33c457f32711e8cf24bb35cd88a4686e86f8b51835d42500",
+      "bytes": 133397
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Members_tab_in_the_Groups_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7379df73da77c0b478acec42c0983f88abcab29582d16669dd1a778aa0119e56",
+      "bytes": 102172
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Obstetric_History_stores_information_about_a_pregnancy.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e806473194c302b76a062f6e59bc879e0f25dd2fcabae19f621a2f537e7dcaa7",
+      "bytes": 219562
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_PSC_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1294f46c8e98f58aab89e8881938b1d5442afa3e47b7e5ec6c10b54aad479b1f",
+      "bytes": 136997
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Revised_Cardiac_Risk_Index_dialog_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "39820855443ec36e7fbc956d06cff582fded4cdb7e837d9cbe2ba2963a768967",
+      "bytes": 50984
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_socioeconomics_module_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c09c7ab42a792243c9c2ef96fed9de7ad739375309aeaad1df3e57dc6763efee",
+      "bytes": 327109
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Surgeries_form_in_GNU_Health.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "60b0827d05b94b4fd8bb53d31fd4dcfdb9eb3082155be2e50aba109a4e7c45db",
+      "bytes": 207899
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_Surgeries_tab_in_the_Patients_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c9f39a8da5b06b0d932c161f658b3853496c08835d9e3a2e6e30790ab66370d8",
+      "bytes": 282064
+    },
+    {
+      "path": "docs/upstream/original/images/images/The_User_tab_in_the_Users_form.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "ba2279232b85647213eeb57f6ca077aa642ebc453b1ab8d7c645b2229b528924",
+      "bytes": 130217
+    },
+    {
+      "path": "docs/upstream/original/images/images/Update_the_service_document_with_a_new_lab_test.png",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4e66b6cf92643c87487ad1230eb1e5dc9d8b2f214e3c5c6e5e85c088509d309f",
+      "bytes": 197823
+    },
+    {
+      "path": "docs/upstream/original/release-notes/Changelog",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5d493e07133b4a821a57c4398881e9c4152772aab535666dec5655b1eb36a1e1",
+      "bytes": 1809124
+    },
+    {
+      "path": "docs/upstream/original/release-notes/COPYING",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b",
+      "bytes": 35821
+    },
+    {
+      "path": "docs/upstream/original/release-notes/README.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b55bd67e9c78a6ae4d528c7c7c5cd183854bdd77f03660b8f55703f0cf0c1248",
+      "bytes": 4949
+    },
+    {
+      "path": "docs/upstream/original/rst/_static/css/custom.css",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8a987bf9c8fa742477d9947a975f9b300246087ece1e3dfff587c8744daac319",
+      "bytes": 201
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/community.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "25539565a8e59eec7eedb2304e075852f202ee87233eca412621c7cfe37e36c1",
+      "bytes": 781
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/conduct.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cee2a25540b89d4cd94476642fc350cba6aa958bfe88d48a3e72b7990ecf0f72",
+      "bytes": 3501
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/errata.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6262840e84c041681bbe877be842dae6fbb4f164516d963bbc4915cc6e5f8f6b",
+      "bytes": 1771
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/faq.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e427d112b376d003ef7c76735b25ac76a51d8f7611025dfb172adc256ca352d9",
+      "bytes": 5589
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/glossary.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e4a5ad069012ee77fffdd804fe90abf7336178b6c4de9b118301768b7d16c89e",
+      "bytes": 5512
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cda8ed7130ad85cdb774a0dc4e015374e1bc0a2d3e2065b8e5e578c16f2732c6",
+      "bytes": 258
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/opsystem.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "98cceeee4142a96b5920c1460cfa392d5e75644b014b7c805d1ff5d4fcce4525",
+      "bytes": 7381
+    },
+    {
+      "path": "docs/upstream/original/rst/appendix/packagingguidelines.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d438ad815a6a6e9c0b628a9ecd94b27c4440134379c009acddb77150fc5823a3",
+      "bytes": 3159
+    },
+    {
+      "path": "docs/upstream/original/rst/changelog.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7660a96e6a1fe62b9555566b71d6e596749b896ce18b53b0f11b00ef44b40d75",
+      "bytes": 104319
+    },
+    {
+      "path": "docs/upstream/original/rst/conf.py",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "15126c07e665600a321c99126aaae6a567a4cb51dcaf253387fcc5a89f91dd98",
+      "bytes": 1700
+    },
+    {
+      "path": "docs/upstream/original/rst/devcorner.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3aa4eef1dbf9d4dcdf74e2e636e6f62ac221153139b17bd6d7abfd9e8f79a1b5",
+      "bytes": 580
+    },
+    {
+      "path": "docs/upstream/original/rst/features.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8d6f1eef80ebd129828eb8ffd84724d82947490a4063d2860b1468a77ab3136c",
+      "bytes": 12975
+    },
+    {
+      "path": "docs/upstream/original/rst/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d726120b43468f8a7b3213f3b1dd570030f7b105ff0ae4488fc7469d6e5fe594",
+      "bytes": 853
+    },
+    {
+      "path": "docs/upstream/original/rst/plugins/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "52127c01095d02976136e0b1a6d4101b4884f4c26659f4cd66bba4ef65284fa9",
+      "bytes": 117
+    },
+    {
+      "path": "docs/upstream/original/rst/plugins/plugins.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "a96adfeef98eafac5fdfe4de843657e8e19a68779465c1ea13a5524df9141b02",
+      "bytes": 6976
+    },
+    {
+      "path": "docs/upstream/original/rst/preface.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8145a27a723ceafd20e7a0690cba4b649f20a0798b70ab5df25c18498d278912",
+      "bytes": 7213
+    },
+    {
+      "path": "docs/upstream/original/rst/roadmap.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d8e4e7d88eb4a77a583d54866a025960f941fb0b2553c7f6ae575933421c1fa6",
+      "bytes": 262
+    },
+    {
+      "path": "docs/upstream/original/rst/support.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5d2fa42b5658043320e9ab2ec62204c6e36ca77c05fca1cd678d10e5f06eecf7",
+      "bytes": 2135
+    },
+    {
+      "path": "docs/upstream/original/rst/supportus.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "fc49d44fa4e496ed6e116bfdaf49b1236a7e0532a281d17c1b153cb02165991a",
+      "bytes": 1317
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/backups.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1a9b51ee3e3705ddf9ab07f75366f3d9676b3211dc79a5f58cac4f8d585c2ba9",
+      "bytes": 544
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/calendarwebdav.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "23df22bd0d3ce21e85c62d0cc9b351be0b61fcfeded488222872f812427be972",
+      "bytes": 4070
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/centralauthentication.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "088c1af3365ecb9e80a4b77765816da0b252ef61d8d1eb8312644a7efd6439c5",
+      "bytes": 5520
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/controlcenter.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "1aac3a21e249356e1980f130a413db1de348412cb0947628a7693691f5679a9a",
+      "bytes": 8862
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/countries.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4dd33cfc6799f876f678ae5ec0f2868de427a84869dd74fa9138516a3720ee46",
+      "bytes": 556
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9ba29b1444755842f7ef803c8dc3b22b06f5d2a0a7d5da9dc6459eb3c6f2567d",
+      "bytes": 301
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/patches.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "069fb67638ac799182d2e5d77197c596783a3b39faa197893e26670de9c29f10",
+      "bytes": 1740
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/sysinfo.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6a7ac1fd33e552f67b48b05fb2cd0e5456e9059bd97686ad58a8688fbaa9a323",
+      "bytes": 743
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/upgrade.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "bff8ec7a99438a5b8dbb0326b4ab1de0074deb679e0608f8b98ae2e3cc6087ab",
+      "bytes": 6406
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/administration/users.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3ed0e387c770534331e6867f25a7f1fae9b312a4a10f7ea92bd40122288d35a5",
+      "bytes": 175
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/contributing.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e06a830316d8b73c63f89cc82fe4ae4506d1a2fcaf6d8e2564b6f8f2ccb70ccf",
+      "bytes": 5438
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/demodb.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9021c32a246b7ce9bc4e1eedcf6b81e27f2489bd771327c94cacb8bbe4b63abc",
+      "bytes": 1147
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/coding.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "77020ab2e397529310d2d605ccc4eed4c68779800df6d898b0bb43340faa0bdc",
+      "bytes": 2545
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/future_merging.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "63aa80ae4348f7d49b26a789d6663effc8570d7a046dab89b9689b398366eff2",
+      "bytes": 1555
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "90b53fddbcb3312ae41d8abb4a59fbd5ee36990c8dac02fad875261b49a50605",
+      "bytes": 499
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/models.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "18c0cf3a22c732db74a2329cfef26868dfd76a461c7735b62adfce75459e5fba",
+      "bytes": 106
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/modules.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e3437d73a6e91492f78ddce82e4bbd7a868cb2068a9ed304a3d928f90c635d48",
+      "bytes": 4431
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/reports.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0f4f4ecd3dbfe82a5e119444a97e4b216cb46220a324939c12470da1f2a2e6d5",
+      "bytes": 6372
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/scheduler.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e323ab15132ed0c0c464f53a46ff103da26a31d00d0c6e78b98b0393d16fb306",
+      "bytes": 1342
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/sequences.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "09c72d59655317ee04cd0e89a9984eeec97600908ebd75d142ab2a52018750e8",
+      "bytes": 125
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/development/ui.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "361022d14d09b8d04f83259c7cd4f675b4128f1b9118b97abce3aba6f4b301d1",
+      "bytes": 136
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/fhir/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f036f1e75584d19a209a9fbd13263d9460c66747731958f5e1939afce3806805",
+      "bytes": 237
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/fhir/installation.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e259dfd533994441fe1ec9c38b93b1bb7a41cf931ed9b3b0d7ac5e37997f2dd6",
+      "bytes": 3670
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/fhir/usage.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3823862808e7ed679bca63ea02d4b5a70ef86cd0227c06dbd2ef9a7bbdfcd4cf",
+      "bytes": 3539
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "aa9011c47e7553eb7dce27c69acbcff9220afb40554e4c4cc90ade72d3c840b9",
+      "bytes": 294
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/ansible.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f01d1dbaa7ff743ae72a8db679aae4bad88230611452565bfff5b4aea4a3969a",
+      "bytes": 329
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/embedded.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "4331309d55e27c5b77c5e1323111fc964db452ac9b7378b652f972e13efcf5b9",
+      "bytes": 3006
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6dd528d2e96551982d1cc1e56922241e73028f84378c640a911720d7e14488d2",
+      "bytes": 541
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/other.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "ed53f4942808fff3ab3de336f5880e56e05d45b47557a331db057afa0183da21",
+      "bytes": 506
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/vanilla.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "0486d67e3e36e99f9e245ac5cbb15b134ebb27a3b6699984bdcd2b72dc7110de",
+      "bytes": 32541
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/installation/virtualmachine.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f78dfe3480203cbcb4af9144c69d46841266a2d9d889eceee7bae01df1155496",
+      "bytes": 2114
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/localization/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "faf72a04ba5228e5202fab4c19f2b9bfacad8f6d5c3a5d31d9085c7d5772e832",
+      "bytes": 6334
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/release.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c8f26104771dd6ebd1037240bdd2343717317c62c50b9bcb5ad107a698bfb3b3",
+      "bytes": 1862
+    },
+    {
+      "path": "docs/upstream/original/rst/techguide/security.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6309e5978b62bfccbd23c3041230078c38862d22636924a581ab60b26dd2586d",
+      "bytes": 6134
+    },
+    {
+      "path": "docs/upstream/original/rst/todo.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cf7d81d6b45a597847cf793e22806f0fb65e29a3a63fda1b33dc0cf02a6089ce",
+      "bytes": 53
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/commandline.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3c0c6950031547dc63fdf69079e218261c2d711c1375b3a3bf803f661b70f475",
+      "bytes": 2783
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/configuration.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "258e890253eebb35b58f47cfb17c4a063a65962d34346e37f51b3a8a13c4751e",
+      "bytes": 9532
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/bookoflife.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cb7ffb41845a20ff98d3a49984f8c04498b84161155be4e424c26e911b374b33",
+      "bytes": 2593
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/domiciliaryunits.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "9d382ab23f152f5e2898577e015083ac6751b53b99521542d54bca4fe6995589",
+      "bytes": 2368
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/families.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "748c299948dec252c0acdb31a05399de7ac73e95774ffe44e54e6413b2985c98",
+      "bytes": 2764
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/healthinstitutions.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d4803948ef55d4507b5c573ab63fde11f531e28408a1990ad5ebda5df1c65b44",
+      "bytes": 7641
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/healthprofessionals.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "24f2bf35c33762954ba3b8a72e9b9ed17539a6fd1c4d9a0b25e8e3d17b6a5d04",
+      "bytes": 3986
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/immunizations.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3da92b3926614a438a0c0aec5c5c9e186b5f1c1a57379e1183f96cadaac5b6ba",
+      "bytes": 4857
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "83cbf6fe64d7261564ded84a6070d15bca12aea5dfbd0d6d987b44b5d22574f5",
+      "bytes": 3058
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/individuals.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "df210ef90d38206795451ded49be111a1a4872db69667368ff8347ddd0e8f310",
+      "bytes": 6111
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/medicaments.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "aef58b814df9d618336aed25f14c9aab2dc2fc0fc7b6ac964c6f231b5cf91389",
+      "bytes": 202
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/prescriptions.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "b19b3f5927591a0ef4fb9a90270f2244465096e7748ee57d93d82fc73e9f3381",
+      "bytes": 2675
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/procedures.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f7a2f803faa1646296224fc141bf80515351010a3b410812458a94d48950d17a",
+      "bytes": 824
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/coremodule/vitalrecords.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3e0de9112f79283563572b8df0ccf265cbd3f60339d560f972c64ca089632484",
+      "bytes": 5169
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/firststeps.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "be54592c8dff497487439d9df48c057fa52c02103c7bc638eccffc7934b99f62",
+      "bytes": 8779
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/basics/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "69bbb8067339867e32c87538e4804bd3d73590dd994f15ef75e564022374049e",
+      "bytes": 193
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/demodb.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "ff577949c2fb768cae86149ea2ca6f6ddf6551e855ea4a4d15d74be3dd2cb158",
+      "bytes": 5853
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/accessmanagement.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "e2080c87722875c9843c813440c58271e9cdecf17363192666da2525da9decf5",
+      "bytes": 5879
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/analyticaccounting.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "f157ac5537e3f5d739842305a94272b0b79561db2b69a621c8a5fd0cbfe32566",
+      "bytes": 150
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/financialaccounting.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5b7be44d6c7d7d76abeb4a3cb3b3d7c11daea2c65221cf19ddf09f1263aa9bb0",
+      "bytes": 551
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "037c6c40b4b210fb9ac38c0b51299e1d4fa79f7abdb0873659f958ccbcf6835e",
+      "bytes": 246
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/products.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3987dfd4f234b04b5dd5e1c924f76b8737920fd8e36b61cbb0087de82d1e041f",
+      "bytes": 8976
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/healthcenter/purchaseadministration.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cecdcf40a00e43b7810a277cfa9103ab98f27ed8d77f78c0b01dea4d3c91cda7",
+      "bytes": 170
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/his/demographics.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "2340838cb139d8655732eb97291ac3e92a00a044f658ffeb2d5485702e6f0a48",
+      "bytes": 105
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/his/epidemiology.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6afdb0c831be04abec44b9b85fac4530c31e91182ecacd01671adc46949af2a9",
+      "bytes": 105
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/his/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7055d25744c550dfcc053a6be3fc12b6e0c17f28451eddbe164e1c57d66c06a7",
+      "bytes": 199
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "47ea6f09e051f8d914bce9fc255661448e94a1a4e90b93c4833101d5c1b1ff34",
+      "bytes": 534
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/calendar.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "68bd5f0a3b0bb8b735bbfb45e126f2abb04c2c65924ed7a47ead166d0769b150",
+      "bytes": 6305
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/federation/gnuhealthfederation.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8e0c965ff42edd8d984e9fcf3af9fb11c4a9342f14babaed9a111db2449bc7e4",
+      "bytes": 9395
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/federation/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "47d1146b50acbfae17329bd5fb71dd88de1120f9f53b0279ada356a9cb971fa3",
+      "bytes": 205
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/federation/thalamus.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "84a3fd75e820527937f0021604e4b228663994c3945753fc1a29d893e23bc5dd",
+      "bytes": 1519
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/functioninganddisability.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "3b73fa58b9a05a139c87e109a0d381f192adc08af51ac5ce5645d33df8335aba",
+      "bytes": 179
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/genetics.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c84dbc7ee74897042e06111956c8a7e2afdfc08b0e57bdefe7c0feded49000ee",
+      "bytes": 12392
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/gynecology.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "d2883c9554af55b12f8c2398ba6e4849f44a00a6732366851f4da6d1a86ff2b1",
+      "bytes": 3374
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/icu.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "dbcfd4a61bac8037f604be7853020dd7641de84045d04d27e5ae233de2f3742f",
+      "bytes": 7472
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/imaging.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7f2724aa060c4f2631175379d5cff2302559a5641116d0ae72a5726ff403258e",
+      "bytes": 17808
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8aefcecfa1d5e0f912b64b3ebf9b1ec29da26be83be93eb8aae481cb8c485fcb",
+      "bytes": 997
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/inpatientmanagement.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "7b98cd166bf4eb8b5b2f1dab1d13eb1c1069a22a20407059aa6a4eae1cf5cc75",
+      "bytes": 6501
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/laboratory.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5e38ab0814140c551a22cb303f27ede0fcf4466a6220db1c4377b63f417ead82",
+      "bytes": 18094
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/lifestyle.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "cbf0f5ae96cb6fe107e5f8056daa9df05b8aa8bd05fad2035ca1feeba3e97ec6",
+      "bytes": 4616
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/neglectedtropicaldiseases.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "796119692d979c23d64e7637df7b135633cbe426070f49e1c1da67598abfd027",
+      "bytes": 7213
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/nursing.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "bc03385688f2a165278445217775ce62bd8473dcfff43e5a82292274d20d16ac",
+      "bytes": 2682
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/obstetrics.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "ce1cd1b7229373f9a0da998783c4757c9f1460f2e0fafbe552233682baf0b2dc",
+      "bytes": 8660
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/pediatrics.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "363766278b091447a46c0babf0bc2a2317cc85da4ac2ca8c36d6c29b47c58ea1",
+      "bytes": 5627
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/reporting.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "5ef20980179567be9b784e99d31a78c04081ae1d6a4a25098b11c0dcecedf2bc",
+      "bytes": 2962
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/socioeconomics.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c99c9af8253952e87d4162e37f3ddf596e611a438b2b6f12cccc1680353b061f",
+      "bytes": 2620
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/stockmanagement.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "dcf445a8fb6dbaa640cf0578183615b58fa89187f195983906f9a3e260e41b03",
+      "bytes": 6990
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/modules/surgery.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c7cefce2da562f01241282f6d0908f6196993f110277c32903cd01fa10b4c699",
+      "bytes": 6367
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/patientmanagement/index.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "be919c9489c2c77938bc10ba34e0efde9d763555528d338e681ef693b5af75c2",
+      "bytes": 226
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/patientmanagement/patientappointment.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "c2333fbe4e1e94b2ff9a3d891cd54f218d5c9dd62134c7505338a27c7b0e1841",
+      "bytes": 5352
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/patientmanagement/patientevaluations.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "8fa156b63cbd02bc6eb4931bf8335c7a9dc97c972cd4cdf6e38f7ce5cccaf045",
+      "bytes": 2986
+    },
+    {
+      "path": "docs/upstream/original/rst/userguide/patientmanagement/patientmanagement.rst",
+      "original_source": "https://codeberg.org/gnuhealth/documentation (HIS RST) / his release tree",
+      "upstream_version": "5.0.6",
+      "retrieval_date": "2026-07-14",
+      "copyright_owner": "GNU Solidario",
+      "licence": "CC-BY-SA-4.0 (docs) / GPL-3.0-or-later (software texts)",
+      "sha256": "6762a13cf145a037dd6fc38d5790ed1c1457d51015e369c268cebb4552d62105",
+      "bytes": 5139
+    }
+  ]
+}

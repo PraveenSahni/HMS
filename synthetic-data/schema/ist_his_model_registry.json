@@ -1,0 +1,2187 @@
+{
+  "schema_version": "1.0.0",
+  "upstream_version": "5.0.6",
+  "generated": "2026-07-14",
+  "synthetic_marker_fields": {
+    "synthetic_data": true,
+    "synthetic_batch_id_pattern": "ISTHIS-DEMO-YYYYMMDD",
+    "synthetic_seed": 20260714,
+    "storage": "external_registry_preferred",
+    "note": "Do not modify upstream GNU Health modules; use IST registry or future custom module"
+  },
+  "id_policy": {
+    "emirates_id": "SYN-AE-{seq:08d}",
+    "qatar_id": "SYN-QA-{seq:08d}",
+    "forbid_real_national_ids": true
+  },
+  "demo_group": {
+    "name": "IST Healthcare Group",
+    "children": {
+      "IST Healthcare UAE": [
+        "IST General Hospital Dubai",
+        "IST Medical Centre Dubai",
+        "IST Day Surgery Centre Dubai",
+        "IST General Hospital Abu Dhabi",
+        "Central Laboratory UAE",
+        "Central Pharmacy UAE"
+      ],
+      "IST Healthcare Qatar": [
+        "IST General Hospital Doha",
+        "IST Medical Centre Doha",
+        "IST Specialist Clinic Doha",
+        "Central Laboratory Qatar",
+        "Central Pharmacy Qatar"
+      ]
+    }
+  },
+  "models": [
+    {
+      "model": "country.subdivision",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment.report",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment.report.open",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment.report.open.start",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.birth_certificate",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.check_immunization_status",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.check_immunization_status.init",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.command",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.death_certificate",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.death_underlying_condition",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.diagnostic_hypothesis",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.directions",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.disease_group.members",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dose.unit",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.drug.form",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.drug.route",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.du",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ethnicity",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.family",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.family_member",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.federation.country.config",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.healthprofessional",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.help",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.bed",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.building",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.or",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.unit",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.ward",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hp_specialty",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.immunization_schedule",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.immunization_schedule_dose",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.immunization_schedule_line",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.immunization_status_report",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.institution",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.institution.operationalsector",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.institution.specialties",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.insurance",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.insurance.plan",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.medicament",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.medicament.category",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.medication.dosage",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.occupation",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.online_document",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.operational_area",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.operational_sector",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pathology",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pathology.category",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pathology.group",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.disease",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ecg",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.family.diseases",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.medication",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.procedure",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.person_alternative_identification",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.person_name",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pol",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.line",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.order",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.procedure",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.procedures.config",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.secondary_condition",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.appointment_sequence",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.patient_evaluation_sequence",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.patient_sequence",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.prescription_sequence",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.signs_and_symptoms",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.specialty",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.update_patient_disease_info",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.vaccination",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "ir.module",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.address",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.contact_mechanism",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.party",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "product.product",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "product.template",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "wizard.gnuhealth.appointment.evaluation",
+      "module": "health",
+      "ist_functional_area": "health",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.paper_archive",
+      "module": "health_archives",
+      "ist_functional_area": "health_archives",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.calendar",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.calendar-read-res.user",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.calendar-write-res.user",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.category",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event-calendar.category",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.alarm",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.attendee",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.exdate",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.exrule",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.rdate",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.event.rrule",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "calendar.location",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "res.user",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "webdav.collection",
+      "module": "health_caldav",
+      "ist_functional_area": "health_caldav",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment",
+      "module": "health_calendar",
+      "ist_functional_area": "health_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.calendar.create.appointment",
+      "module": "health_calendar",
+      "ist_functional_area": "health_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.calendar.create.appointment.start",
+      "module": "health_calendar",
+      "ist_functional_area": "health_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "res.user",
+      "module": "health_calendar",
+      "ist_functional_area": "health_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.contact_tracing",
+      "module": "health_contact_tracing",
+      "ist_functional_area": "health_contact_tracing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.birth_certificate",
+      "module": "health_crypto",
+      "ist_functional_area": "health_crypto",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.death_certificate",
+      "module": "health_crypto",
+      "ist_functional_area": "health_crypto",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health_crypto",
+      "ist_functional_area": "health_crypto",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.order",
+      "module": "health_crypto",
+      "ist_functional_area": "health_crypto",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab",
+      "module": "health_crypto_lab",
+      "ist_functional_area": "health_crypto_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.load.procedure",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.load.procedure.start",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.procedure",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.set.odontogram",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.set.odontogram.start",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.treatment",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dentistry.treatment.procedure",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "health_dentistry.odontogram.report",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "health_dentistry.procedure.report",
+      "module": "health_dentistry",
+      "ist_functional_area": "health_dentistry",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.activity.assessment",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.activity_and_participation",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.activity_and_participation.category",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_function",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_function.assessment",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_function.category",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_structure",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_structure.assessment",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.body_structure.category",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.environment.assessment",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.environmental_factor",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.environmental_factor.category",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.amputation",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.disability_assessment",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.prothesis",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "product.product",
+      "module": "health_disability",
+      "ist_functional_area": "health_disability",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ambulance",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ambulance.support",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ambulance_hp",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.support_request_code_sequence",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.support_request",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.support_request.log",
+      "module": "health_ems",
+      "ist_functional_area": "health_ems",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.federation.config",
+      "module": "health_federation",
+      "ist_functional_area": "health_federation",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.federation.object",
+      "module": "health_federation",
+      "ist_functional_area": "health_federation",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.federation.queue",
+      "module": "health_federation",
+      "ist_functional_area": "health_federation",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pol",
+      "module": "health_federation",
+      "ist_functional_area": "health_federation",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.party",
+      "module": "health_federation",
+      "ist_functional_area": "health_federation",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.gene",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.gene.variant",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.gene.variant.phenotype",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.genetic.risk",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.protein.disease",
+      "module": "health_genetics",
+      "ist_functional_area": "health_genetics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.colposcopy_history",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.mammography_history",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.menstrual_history",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.pap_history",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.pregnancy",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.prenatal.evaluation",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.perinatal",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.perinatal.monitor",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pregnancy.result",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.puerperium.monitor",
+      "module": "health_gyneco",
+      "ist_functional_area": "health_gyneco",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "patient.evaluation",
+      "module": "health_history",
+      "ist_functional_area": "health_history",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.icu.apache2",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.icu.chest_drainage",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.icu.glasgow",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.icu.ventilation",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.icu",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.registration",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.rounding",
+      "module": "health_icu",
+      "ist_functional_area": "health_icu",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.request",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.result",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.type",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.imaging.test.request",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.imaging.test.request.start",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.request-imaging-test",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.imaging_req_seq",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.imaging_test_sequence",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "wizard.generate.result",
+      "module": "health_imaging",
+      "ist_functional_area": "health_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test",
+      "module": "health_imaging_worklist",
+      "ist_functional_area": "health_imaging_worklist",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.request",
+      "module": "health_imaging_worklist",
+      "ist_functional_area": "health_imaging_worklist",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.result",
+      "module": "health_imaging_worklist",
+      "ist_functional_area": "health_imaging_worklist",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_worklist.worklist_template",
+      "module": "health_imaging_worklist",
+      "ist_functional_area": "health_imaging_worklist",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.bed.transfer",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.bed.transfer.create",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.bed.transfer.init",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.diet.therapeutic",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.diet",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.meal",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.meal.order",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.meal.order.item",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.medication",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.medication.admin_time",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.medication.log",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.registration",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ecg",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.procedure",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.rounding",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.rounding_procedure",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.inpatient_meal_order_sequence",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.inpatient_registration_sequence",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.patient_rounding_sequence",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "wizard.gnuhealth.inpatient.evaluation",
+      "module": "health_inpatient",
+      "ist_functional_area": "health_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.hospital.bed",
+      "module": "health_inpatient_calendar",
+      "ist_functional_area": "health_inpatient_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.inpatient.registration",
+      "module": "health_inpatient_calendar",
+      "ist_functional_area": "health_inpatient_calendar",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.health_service",
+      "module": "health_insurance",
+      "ist_functional_area": "health_insurance",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.insurance.plan",
+      "module": "health_insurance",
+      "ist_functional_area": "health_insurance",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.insurance.plan.product.policy",
+      "module": "health_insurance",
+      "ist_functional_area": "health_insurance",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.procedure",
+      "module": "health_insurance",
+      "ist_functional_area": "health_insurance",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.service.invoice.create",
+      "module": "health_insurance",
+      "ist_functional_area": "health_insurance",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.iss",
+      "module": "health_iss",
+      "ist_functional_area": "health_iss",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab.test.create",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab.test.create.init",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab.test.critearea",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab.test.units",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab.test_type",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.disease",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test.request",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test.request.start",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.request-test",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.lab_request_sequence",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.lab_test_sequence",
+      "module": "health_lab",
+      "ist_functional_area": "health_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.diet.belief",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.drugs_recreational",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.cage",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.recreational_drugs",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.vegetarian_types",
+      "module": "health_lifestyle",
+      "ist_functional_area": "health_lifestyle",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.chagas_du_survey",
+      "module": "health_ntd_chagas",
+      "ist_functional_area": "health_ntd_chagas",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_ntd_chagas",
+      "ist_functional_area": "health_ntd_chagas",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.chagas_du_survey_sequence",
+      "module": "health_ntd_chagas",
+      "ist_functional_area": "health_ntd_chagas",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.dengue_du_survey",
+      "module": "health_ntd_dengue",
+      "ist_functional_area": "health_ntd_dengue",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_ntd_dengue",
+      "ist_functional_area": "health_ntd_dengue",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.dengue_du_survey_sequence",
+      "module": "health_ntd_dengue",
+      "ist_functional_area": "health_ntd_dengue",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ambulatory_care_procedure",
+      "module": "health_nursing",
+      "ist_functional_area": "health_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ambulatory_care",
+      "module": "health_nursing",
+      "ist_functional_area": "health_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.procedure",
+      "module": "health_nursing",
+      "ist_functional_area": "health_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_nursing",
+      "ist_functional_area": "health_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.ambulatory_care_sequence",
+      "module": "health_nursing",
+      "ist_functional_area": "health_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ophthalmology.evaluation",
+      "module": "health_ophthalmology",
+      "ist_functional_area": "health_ophthalmology",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ophthalmology.findings",
+      "module": "health_ophthalmology",
+      "ist_functional_area": "health_ophthalmology",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.result",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.full_synchronize",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.full_synchronize.start",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.get_new_studies",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.get_new_studies.start",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.orthanc_add_init_data",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.series_instances",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.study",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.study_series",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.upload_image_data",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.upload_image_data.start",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging_orthanc.wizard.orthanc_new_connect",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.orthanc.config",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.orthanc.patient",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.orthanc.study",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "ir.ui.view",
+      "module": "health_orthanc",
+      "ist_functional_area": "health_orthanc",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.neonatal.apgar",
+      "module": "health_pediatrics",
+      "ist_functional_area": "health_pediatrics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.newborn",
+      "module": "health_pediatrics",
+      "ist_functional_area": "health_pediatrics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.disease",
+      "module": "health_pediatrics",
+      "ist_functional_area": "health_pediatrics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.medication",
+      "module": "health_pediatrics",
+      "ist_functional_area": "health_pediatrics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.psc",
+      "module": "health_pediatrics",
+      "ist_functional_area": "health_pediatrics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health_pediatrics_growth_charts",
+      "ist_functional_area": "health_pediatrics_growth_charts",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.bmifa.report",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.lhfa.report",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.report",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.report.open",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.report.open.start",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.pediatrics.growth.charts.who.wfa.report",
+      "module": "health_pediatrics_growth_charts_who",
+      "ist_functional_area": "health_pediatrics_growth_charts_who",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.appointment",
+      "module": "health_qrcodes",
+      "ist_functional_area": "health_qrcodes",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.lab",
+      "module": "health_qrcodes",
+      "ist_functional_area": "health_qrcodes",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.newborn",
+      "module": "health_qrcodes",
+      "ist_functional_area": "health_qrcodes",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_qrcodes",
+      "ist_functional_area": "health_qrcodes",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.party",
+      "module": "health_qrcodes",
+      "ist_functional_area": "health_qrcodes",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.epidemics.report",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.epidemics.report.open",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.epidemics.report.open.start",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.evaluations.open",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.evaluations.open.start",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.evaluations_doctor",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.evaluations_sector",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.evaluations_specialty",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.summary.report",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.summary.report.open",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.summary.report.open.start",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.top_diseases",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.top_diseases.open",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.top_diseases.open.start",
+      "module": "health_reporting",
+      "ist_functional_area": "health_reporting",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "account.invoice",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "account.invoice.line",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.health_service",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.health_service.line",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.order",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.health_service_sequence",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.service.invoice.create",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.service.invoice.init",
+      "module": "health_services",
+      "ist_functional_area": "health_services",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.imaging.test.request",
+      "module": "health_services_imaging",
+      "ist_functional_area": "health_services_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.imaging.test.request",
+      "module": "health_services_imaging",
+      "ist_functional_area": "health_services_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.imaging.test.request.start",
+      "module": "health_services_imaging",
+      "ist_functional_area": "health_services_imaging",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test",
+      "module": "health_services_lab",
+      "ist_functional_area": "health_services_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test.request",
+      "module": "health_services_lab",
+      "ist_functional_area": "health_services_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.lab.test.request.start",
+      "module": "health_services_lab",
+      "ist_functional_area": "health_services_lab",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_socioeconomics",
+      "ist_functional_area": "health_socioeconomics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.ses.assessment",
+      "module": "health_socioeconomics",
+      "ist_functional_area": "health_socioeconomics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.party",
+      "module": "health_socioeconomics",
+      "ist_functional_area": "health_socioeconomics",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.order",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.stock.move.create",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.prescription.stock.move.init",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.vaccination",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.vaccination.stock.move.create",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.vaccination.stock.move.init",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "party.party",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "stock.lot",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "stock.move",
+      "module": "health_stock",
+      "ist_functional_area": "health_stock",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.rounding",
+      "module": "health_stock_inpatient",
+      "ist_functional_area": "health_stock_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.rounding.medical_supply",
+      "module": "health_stock_inpatient",
+      "ist_functional_area": "health_stock_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.rounding.medicament",
+      "module": "health_stock_inpatient",
+      "ist_functional_area": "health_stock_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "stock.move",
+      "module": "health_stock_inpatient",
+      "ist_functional_area": "health_stock_inpatient",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ambulatory_care",
+      "module": "health_stock_nursing",
+      "ist_functional_area": "health_stock_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ambulatory_care.medical_supply",
+      "module": "health_stock_nursing",
+      "ist_functional_area": "health_stock_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.ambulatory_care.medicament",
+      "module": "health_stock_nursing",
+      "ist_functional_area": "health_stock_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "stock.move",
+      "module": "health_stock_nursing",
+      "ist_functional_area": "health_stock_nursing",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery",
+      "module": "health_stock_surgery",
+      "ist_functional_area": "health_stock_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery.stock.move.create",
+      "module": "health_stock_surgery",
+      "ist_functional_area": "health_stock_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery.stock.move.init",
+      "module": "health_stock_surgery",
+      "ist_functional_area": "health_stock_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "stock.move",
+      "module": "health_stock_surgery",
+      "ist_functional_area": "health_stock_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.operation",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.or.schedule",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.evaluation",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.patient.procedure",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.preoperative_assessment",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.rcri",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.sequences.surgery_code_sequence",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery.complication",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery.drain",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery.protocol",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery_supply",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "gnuhealth.surgery_team",
+      "module": "health_surgery",
+      "ist_functional_area": "health_surgery",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "ir.attachment",
+      "module": "health_webdav3_server",
+      "ist_functional_area": "health_webdav3_server",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "webdav.collection",
+      "module": "health_webdav3_server",
+      "ist_functional_area": "health_webdav3_server",
+      "confidence": "medium-source-scrape"
+    },
+    {
+      "model": "webdav.share",
+      "module": "health_webdav3_server",
+      "ist_functional_area": "health_webdav3_server",
+      "confidence": "medium-source-scrape"
+    }
+  ]
+}

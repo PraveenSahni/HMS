@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "IST Health",
+    "name": "IST HIS",
     "subtitle": "نظام إدارة المستشفى",
     "company": "IST Technologies LLC",
     "location": "الدوحة، قطر"
@@ -138,13 +138,13 @@
     "database": "قاعدة البيانات",
     "databaseSelected": "قاعدة البيانات المحددة",
     "signingIn": "جاري تسجيل الدخول…",
-    "loginTitle": "IST Health — تسجيل الدخول",
-    "loginSubtitle": "GNU Health · Tryton 7 · IST Technologies LLC",
-    "loginHeaderBrand": "تسجيل الدخول إلى IST Health",
+    "loginTitle": "IST HIS — تسجيل الدخول",
+    "loginSubtitle": "Iris Star Hospital Information System · Tryton 7",
+    "loginHeaderBrand": "تسجيل الدخول إلى IST HIS",
     "loginContinue": "للمتابعة إلى",
     "loginTagline": "محرك الصحة الرقمي للشرق الأوسط وأفريقيا",
     "loginTaglineShort": "محرك الصحة الرقمي لـ MEA",
-    "loginInspireTitle": "تسجيل الدخول إلى IST Health",
+    "loginInspireTitle": "تسجيل الدخول إلى IST HIS",
     "loginFeature1": "إدارة المرضى",
     "loginFeature2": "المواعيد والجدولة",
     "loginFeature3": "المختبر والصيدلية",

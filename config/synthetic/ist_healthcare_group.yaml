@@ -1,0 +1,40 @@
+# IST Healthcare Group — synthetic org structure (baseline 2026-07-14)
+synthetic_data: true
+synthetic_batch_id: ISTHIS-DEMO-20260714
+synthetic_seed: 20260714
+environment: test
+
+group:
+  name: IST Healthcare Group
+  code: IST-HC-GRP
+
+entities:
+  - code: IST-HC-AE
+    name: IST Healthcare UAE
+    country: AE
+    parent: IST-HC-GRP
+  - code: IST-HC-QA
+    name: IST Healthcare Qatar
+    country: QA
+    parent: IST-HC-GRP
+
+facilities:
+  - { code: FAC-DXB-GH, name: IST General Hospital Dubai, country: AE, entity: IST-HC-AE }
+  - { code: FAC-DXB-MC, name: IST Medical Centre Dubai, country: AE, entity: IST-HC-AE }
+  - { code: FAC-DXB-DS, name: IST Day Surgery Centre Dubai, country: AE, entity: IST-HC-AE }
+  - { code: FAC-AUH-GH, name: IST General Hospital Abu Dhabi, country: AE, entity: IST-HC-AE }
+  - { code: FAC-AE-LAB, name: Central Laboratory UAE, country: AE, entity: IST-HC-AE }
+  - { code: FAC-AE-PH, name: Central Pharmacy UAE, country: AE, entity: IST-HC-AE }
+  - { code: FAC-DOH-GH, name: IST General Hospital Doha, country: QA, entity: IST-HC-QA }
+  - { code: FAC-DOH-MC, name: IST Medical Centre Doha, country: QA, entity: IST-HC-QA }
+  - { code: FAC-DOH-SC, name: IST Specialist Clinic Doha, country: QA, entity: IST-HC-QA }
+  - { code: FAC-QA-LAB, name: Central Laboratory Qatar, country: QA, entity: IST-HC-QA }
+  - { code: FAC-QA-PH, name: Central Pharmacy Qatar, country: QA, entity: IST-HC-QA }
+
+id_formats:
+  national_id_ae: "SYN-AE-{seq:08d}"
+  national_id_qa: "SYN-QA-{seq:08d}"
+  note: "Synthetic only — never real Emirates/Qatar ID values"
+
+options:
+  refuse_production_without_override: true

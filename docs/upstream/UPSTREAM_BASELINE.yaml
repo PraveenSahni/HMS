@@ -1,0 +1,32 @@
+product:
+  name: IST HIS
+  full_name: IST HIS — Iris Star Hospital Information System
+  vendor: IRIS STAR Technologies
+  upstream_product: GNU Health HIS
+  upstream_server_version: "5.0.6"
+  upstream_client_version: "sao-7.0.53"
+  tryton_version: "7.0.53"
+  tryton_client_version: "sao-7.0.53 (no desktop tryton client installed)"
+  gnuhealth_control_version: "5.0.3"
+  postgresql_version: "15.18"
+  python_version: "3.11.2"
+  baseline_date: "2026-07-14"
+  source_release: "codeberg.org/gnuhealth/his tag v5.0.6"
+  source_commit: "f50972fee0d4e001133a09af8d9ea7dbfe67f7a8"
+  latest_official_stable_not_adopted: "5.0.7"
+  upgrade_performed: false
+  notes: |
+    Installed core PyPI package gnuhealth==5.0.6 on VM gnuhealth-his-01.
+    Latest Codeberg tag is 5.0.7; deliberately NOT upgraded.
+    Module package versions vary (mostly 5.0.4); core health is 5.0.6.
+    Database: isthealth — 53 health* modules activated.
+    Custom IST Tryton modules: none detected in ir.module.
+ist_his_product_version: "1.0.0"
+documentation_version: "1.0.0"
+synthetic_data_schema_version: "1.0.0"
+implementation_template_version: "1.0.0"
+evidence:
+  vm: gnuhealth-his-01
+  project: isthealth
+  zone: me-central1-a
+  install_path: /opt/gnuhealth/his-50
