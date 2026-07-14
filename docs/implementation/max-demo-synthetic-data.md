@@ -9,7 +9,7 @@ Largest **validated** IST HIS demo profile for the IST Healthcare Group org tree
 | Batch ID | `ISTHIS-MAXDEMO-20260714` |
 | Ceiling | **4000 patients / 300 staff** |
 | Why this ceiling | Matches proven `run_synthetic_data.py` / `config.yaml` scale; CLI `validate` refuses `>5000` in `environment: test`; optional master-brief 50k deferred (sized VM; OOM/timeout risk on laptop) |
-| DB import this run | **No** — `server.password: CHANGE_ME`; files + dry-run only |
+| DB import this run | **Yes** — live load to `isthealth` on `gnuhealth-his-01` via Proteus/trytond (2026-07-14T19:27:36Z → 19:32:28Z UTC, **4.8 min**) |
 
 ## Org tree
 
@@ -67,6 +67,43 @@ Deterministic local connected dataset (`docs/testing/evidence/max-demo-summary.j
 
 All IDs use `IST-P-*` / `IST-ST-*` / `SYN-AE-*` / `SYN-QA-*`. Phones/emails use `synthetic.isthealth.example` / `+971 50 000 ####` / `+974 5000 ####` only.
 
+## Live DB import result (`isthealth` @ gnuhealth-his-01)
+
+| Field | Value |
+|-------|-------|
+| Timestamp (UTC) | **2026-07-14T19:27:36Z → 19:32:28Z** (COMPLETE) |
+| Duration | **4.8 minutes** |
+| Path | On-VM Proteus/`trytond` (`GNUHEALTH_TRYTOND_CONF=/opt/gnuhealth/his-50/etc/trytond.conf`) |
+| Config used | Merged max-demo runtime (`max_demo_runtime.yaml` on VM; password from local gitignored `config.yaml`) |
+| Laptop HTTP import | Failed first: JSON-RPC login HTTP 500 (`'str' object has no attribute 'copy'`) — used VM socket path instead |
+| SQL verify | Matched engine summary below |
+
+### Engine-live counts in DB (actual)
+
+| Entity | Loaded |
+|--------|-------:|
+| Patients (`gnuhealth.patient`) | **4000** |
+| Health professionals | **299** (target 300; idempotent reuse) |
+| Appointments | **12000** |
+| Lab orders | **2184** |
+| Lab results | **873** |
+| Prescriptions | **1820** |
+| Evaluations | **2184** |
+| Beds | **72** |
+| Admissions | **216** |
+
+Note: engine ratios vs local JSON generators differ slightly (e.g. admissions/evaluations), so live counts are not identical to the connected-JSON table above.
+
+### Still local-JSON / stub only (not written by engine)
+
+| Pack | Status |
+|------|--------|
+| 00 foundation, 02 multi-facility institutions, 03 users/access | Local connected JSON only |
+| 09 nursing, 10 ICU, 12 imaging, 14 stock, 15 surgery | Local connected JSON only |
+| 16 insurance, 17 accounting, 18 services/billing | Local connected JSON only |
+| 19 reporting, 20 federation | Marker stubs only |
+| `gnuhealth.institution.unit` departments | Skipped on this VM (`Model … not available`) |
+
 ## Commands
 
 ```bash
@@ -91,21 +128,22 @@ python run_synthetic_data.py --config docs/testing/evidence/_runtime_synthetic_c
 python run_synthetic_data.py --config docs/testing/evidence/_runtime_synthetic_config.yaml
 ```
 
-On the demo VM (historical pattern):
+On the demo VM (successful path for this load):
 
 ```bash
 cd /opt/gnuhealth/synthetic-data
+export GNUHEALTH_TRYTOND_CONF=/opt/gnuhealth/his-50/etc/trytond.conf
 nohup /opt/gnuhealth/his-50/venv/bin/python run_synthetic_data.py \
-  --config /path/to/merged_max_demo.yaml > synthetic_max_demo.log 2>&1 &
+  --config max_demo_runtime.yaml > synthetic_max_demo.log 2>&1 &
 ```
 
-Expect **30–90 minutes** for full 4000-patient engine load.
+Expect **5–90 minutes** depending on whether parties already exist (this run: **4.8 min** after prior party seed).
 
 ## Engine vs pack coverage
 
 | Pack | Local generate | Live `run_synthetic_data.py` |
 |------|----------------|------------------------------|
-| 01 company, 04 HP, 05 patients, 06 appointments, 07 evaluations, 08 inpatient, 11 lab, 13 pharmacy | Yes (connected JSON) | **Yes** (engine steps) |
+| 01 company, 04 HP, 05 patients, 06 appointments, 07 evaluations, 08 inpatient, 11 lab, 13 pharmacy | Yes (connected JSON) | **Yes** (engine steps) — loaded 2026-07-14 |
 | 00 foundation, 02 institutions, 03 users, 09 nursing, 10 ICU, 12 imaging, 14 stock, 15 surgery, 16 insurance, 17 accounting, 18 services | Yes (connected JSON) | **Not yet** — local files / future pack importers |
 | 19 reporting, 20 federation | Marker stubs only | No |
 
@@ -118,6 +156,7 @@ Pack folders under `synthetic-data/00_*` … `20_*` remain stub modules; orchest
 - Prefer dry-run first
 - Do **not** upgrade GNU Health as part of this load
 - Do not invent fields outside the model registry / existing generators
+- Prefer on-VM Proteus when laptop JSON-RPC auth fails against nginx
 
 ## Evidence artefacts
 
@@ -127,13 +166,14 @@ Pack folders under `synthetic-data/00_*` … `20_*` remain stub modules; orchest
 | `docs/testing/evidence/max-demo-summary.json` | Counts + samples (commit-friendly) |
 | `docs/testing/evidence/generate-max-demo-report.json` | Generate report |
 | `docs/testing/evidence/import-*-dry-run.json` | Dry-run plans |
+| `docs/testing/evidence/max-demo-import-report.json` | Import status (updated after live load) |
 | `docs/testing/evidence/generated/uae_qatar_max_demo_full.json` | Full dataset (**gitignored**, ~14 MB) |
 | `synthetic-data/generated/` | Mirror of full/summary (**gitignored**) |
+| VM `/opt/gnuhealth/synthetic-data/synthetic_max_demo.log` | Live engine log for this load |
 
-## Next steps for DB load
+## Next steps
 
-1. Confirm target is demo/UAT `isthealth` (not production CAB-restricted).  
-2. Supply credentials via local gitignored config (never commit).  
-3. `import_synthetic --dry-run` then `import_synthetic --allow-production` if host is listed.  
-4. Re-run validate counts in Tryton UI / engine summary.  
-5. Explicit user approval required before any production load.
+1. Optional: pack importers for nursing / ICU / imaging / surgery / insurance / services.  
+2. Optional: wire multi-facility institution tree + departments when `gnuhealth.institution.unit` is available.  
+3. Keep passwords in gitignored local config only.  
+4. Explicit user approval required before any further production load.

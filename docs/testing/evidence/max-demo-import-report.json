@@ -4,16 +4,37 @@
   "config": "config/synthetic/uae_qatar_max_demo.yaml",
   "seed": 20260714,
   "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
-  "timestamp": "2026-07-14T16:15:19+00:00",
+  "timestamp": "2026-07-14T19:32:28+00:00",
   "phases": {
     "validate": "PASS",
     "generate_local": "PASS",
     "import_data_dry_run": "PASS",
     "import_synthetic_dry_run": "PASS",
-    "live_db_import": "SKIPPED"
+    "live_db_import": "PASS"
   },
-  "live_db_import_reason": "server.password is CHANGE_ME; production_hosts match health.irisstar.tech — require local credentials + explicit --allow-production after demo/CAB approval",
-  "counts": {
+  "live_db_import": {
+    "status": "PASS",
+    "host": "gnuhealth-his-01",
+    "database": "isthealth",
+    "path": "proteus/trytond on-VM",
+    "started_utc": "2026-07-14T19:27:36+00:00",
+    "completed_utc": "2026-07-14T19:32:28+00:00",
+    "duration_minutes": 4.8,
+    "laptop_http_rpc": "FAIL — Authentication failed: HTTP 500 'str' object has no attribute 'copy'; retried on VM",
+    "sql_verified": true
+  },
+  "engine_loaded_counts": {
+    "patients": 4000,
+    "health_professionals": 299,
+    "appointments": 12000,
+    "lab_orders": 2184,
+    "lab_results": 873,
+    "prescriptions": 1820,
+    "evaluations": 2184,
+    "beds": 72,
+    "admissions": 216
+  },
+  "counts_local_json": {
     "entities": 3,
     "facilities_institutions": 13,
     "departments": 10,
@@ -72,12 +93,11 @@
     "docs/testing/evidence/generate-max-demo-report.json",
     "docs/testing/evidence/import-data-dry-run.json",
     "docs/testing/evidence/import-synthetic-dry-run.json",
-    "docs/implementation/max-demo-synthetic-data.md"
+    "docs/implementation/max-demo-synthetic-data.md",
+    "VM:/opt/gnuhealth/synthetic-data/synthetic_max_demo.log"
   ],
   "next_steps": [
-    "Supply password via local gitignored override",
-    "Re-run import_synthetic --dry-run against live host",
-    "On approved demo VM: import_synthetic --allow-production (or run_synthetic_data.py with merged config)",
-    "Do not load production without explicit user CAB approval"
+    "Optional pack importers for nursing/ICU/imaging/surgery/insurance/services",
+    "Do not load further production targets without explicit user CAB approval"
   ]
 }
