@@ -375,4 +375,12 @@ Sheets: `Product_Layer`, `Modules_53`, `Capabilities`, `Summary_Counts`.
 
 ---
 
+## H. Document content parity (substance, not names)
+
+**Exactly the same docs content/context as GNU Health?** **NO.**
+
+IST `docs/ist-his/` maps the same module/topics (traceability: **63** rows, all marked Adapted, none Same) but module guides and overviews are **stubs** vs upstream RST how-tos. Full substance lives in `docs/upstream/original/`. Detail: [`DOCUMENT_CONTENT_PARITY.md`](DOCUMENT_CONTENT_PARITY.md).
+
+---
+
 *Comparison compiled 2026-07-14. Product-layer: Same 10 / Partial 9 / Different 8. Capabilities: Same 2 / Partial 16 / Different 18. Modules: 53 activated. Do not claim “exactly the same” without re-verifying against a fresh VM module dump and UI checklist.*
