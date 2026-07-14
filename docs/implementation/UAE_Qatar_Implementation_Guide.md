@@ -68,6 +68,12 @@ Environment strategy (dev/test/uat/prod) and synthetic-data gates.
 ### Phase 5
 Tryton company/institution/units configuration (no GH upgrade).
 
+### Phase 5b — Financial setup (per legal company)
+CoA from template, fiscal year/periods, journals, party receivable/payable, AED/QAR currency.  
+Taxes and healthcare exemptions: **needs confirmation** — do not invent rates.  
+Runbook: `docs/implementation/financial-setup.md`. React `/financial` is invoice stub; deep accounting is SAO.  
+Help guided workflow: `wf-finance-setup`.
+
 ### Phase 6
 Master data collection via Excel template + questionnaire.
 
@@ -157,7 +163,8 @@ Demo config: `config/synthetic/uae_qatar_demo.yaml`.
 ## 9. Help & training
 
 React Help Centre loads Markdown/JSON from `frontend/help-content/{en|ar}/`.  
-Role guides: `docs/user-guides/`.
+Role guides: `docs/user-guides/`.  
+Finance setup: Help topic `wf-finance-setup` + runbook `docs/implementation/financial-setup.md`.
 
 ## 10. Exit criteria (go-live)
 
@@ -167,3 +174,4 @@ Role guides: `docs/user-guides/`.
 - [ ] UAT sign-off by role
 - [ ] Backup/restore drill evidenced
 - [ ] No unapproved GH/Tryton upgrade
+- [ ] Financial setup complete per company (CoA, open period, journals) or deferred with risk acceptance; tax rules confirmed or explicitly marked needs confirmation

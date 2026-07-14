@@ -684,6 +684,38 @@
     "published": true
   },
   {
+    "id": "wf-finance-setup",
+    "title": "Workflow: Company financial setup",
+    "roles": [
+      "Finance",
+      "SystemAdmin",
+      "GroupAdmin",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial",
+      "/companies",
+      "/currency"
+    ],
+    "keywords": [
+      "finance",
+      "setup",
+      "CoA",
+      "fiscal",
+      "journal",
+      "tax",
+      "AED",
+      "QAR"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
     "id": "admin-users",
     "title": "Administer users and groups",
     "roles": [

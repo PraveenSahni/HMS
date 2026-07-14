@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   contextualHelp,
@@ -72,6 +72,8 @@ export function HelpCentrePage() {
   const [feedback, setFeedbackState] = useState<'yes' | 'no' | null>(null)
   const [onboarding, setOnboarding] = useState<Record<string, boolean>>(() => getOnboardingState())
   const location = useLocation()
+  const [searchParams] = useSearchParams()
+  const topicParam = searchParams.get('topic')
 
   useEffect(() => {
     let cancelled = false
@@ -109,6 +111,27 @@ export function HelpCentrePage() {
       setError(String(e))
     }
   }
+
+  useEffect(() => {
+    if (!topicParam || !index.length) return
+    const exists = index.some((e) => e.id === topicParam && e.published !== false)
+    if (!exists) return
+    let cancelled = false
+    setError(null)
+    loadHelpArticle(topicParam, lang)
+      .then((article) => {
+        if (!cancelled) {
+          setSelected(article)
+          setFeedbackState(getFeedback(topicParam))
+        }
+      })
+      .catch((e) => {
+        if (!cancelled) setError(String(e))
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [topicParam, index, lang])
 
   const onFeedback = (value: 'yes' | 'no') => {
     if (!selected) return

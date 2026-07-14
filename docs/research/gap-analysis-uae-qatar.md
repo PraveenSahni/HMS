@@ -60,14 +60,16 @@ flowchart LR
 | G-13 | Audit logging for clinical access | Both | Privacy laws | Likely expected — **confirm** | Tryton history partial | No dedicated privacy audit UI | Enhance logging |
 | G-14 | Claims / insurance e-submission | UAE | eClaim / DHA schemes | **Needs confirmation** | `health_insurance` local only | No e-claim connector | Partner integration |
 | G-15 | DICOM / PACS | Both | Clinical ops | Optional unless imaging | Orthanc package exists | Not wired in IST React | Optional Orthanc deploy |
+| G-16 | Financial / GL setup per legal entity | Both | Finance / ops | Required for posting invoices | Tryton `account_*` + `health_accounting` | React `/financial` is stub; CoA/FY/journals/taxes SAO-only; tax rates **needs confirmation** | Follow `docs/implementation/financial-setup.md`; Help `wf-finance-setup` |
 
 ## Priority remediation
 
-1. **Governance:** Legal confirmation of G-01…G-09, G-14.  
+1. **Governance:** Legal confirmation of G-01…G-09, G-14 (and tax items under G-16).  
 2. **Tenancy:** Implement group → UAE/QA → facility model (implementation guide).  
 3. **Integration service:** External HL7/FHIR adapter (do not upgrade GH core).  
 4. **Data controls:** Enforce synthetic-only demos; production import gates.  
-5. **Evidence:** VM module activation report.
+5. **Evidence:** VM module activation report.  
+6. **Finance:** Complete CoA / fiscal / journals per company via SAO before UAT billing.
 
 ## What is already strong
 

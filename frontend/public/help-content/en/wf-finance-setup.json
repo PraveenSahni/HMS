@@ -1,0 +1,42 @@
+{
+  "id": "wf-finance-setup",
+  "title": "Workflow: Company financial setup",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial",
+    "/companies",
+    "/currency"
+  ],
+  "keywords": [
+    "finance",
+    "setup",
+    "CoA",
+    "fiscal",
+    "journal",
+    "tax",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Financial Setup is SAO-first for CoA, fiscal years, journals, and taxes. React /financial lists invoices and can create a draft stub only. See docs/implementation/financial-setup.md. Tax rates and healthcare exemptions need confirmation — do not assume zero-rated treatment.",
+  "steps": [
+    "Create/select company for UAE (AED) or Qatar (QAR) on /companies.",
+    "Confirm currency list includes AED and/or QAR on /currency.",
+    "In SAO: create Chart of Accounts from template for that company.",
+    "In SAO: create fiscal year + periods, then journals (sales, purchase, cash/bank).",
+    "In SAO: configure taxes only after counsel confirms rates/exemptions — do not invent VAT rules.",
+    "Set party receivable/payable accounts; map insurance payers if used.",
+    "Smoke-test: create draft invoice from React /financial, then post/pay in SAO."
+  ]
+}

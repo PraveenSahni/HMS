@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { ErrorState, LoadingState, Select } from '../components/ui'
@@ -1310,13 +1311,42 @@ export function FinancialPage() {
         </button>
       </div>
 
+      <div
+        className="ist-card ist-card--bordered"
+        style={{ padding: 'var(--space-6)', marginBottom: 'var(--space-6)' }}
+        data-testid="financial-setup-checklist"
+      >
+        <h3 style={{ marginBottom: 'var(--space-2)' }}>{t('ops.financial.setupTitle')}</h3>
+        <p className="ist-subtitle" style={{ marginBottom: 'var(--space-4)' }}>
+          {t('ops.financial.setupHint')}
+        </p>
+        <ol className="ist-subtitle" style={{ paddingLeft: '1.25rem', marginBottom: 'var(--space-4)' }}>
+          <li style={{ marginBottom: '0.35rem' }}>
+            <Link to="/companies">{t('ops.financial.setupStepCompany')}</Link>
+          </li>
+          <li style={{ marginBottom: '0.35rem' }}>
+            <Link to="/currency">{t('ops.financial.setupStepCurrency')}</Link>
+          </li>
+          <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepCoa')}</li>
+          <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepFiscal')}</li>
+          <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepTax')}</li>
+          <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepParty')}</li>
+          <li style={{ marginBottom: '0.35rem' }}>{t('ops.financial.setupStepSmoke')}</li>
+        </ol>
+        <p className="ist-subtitle" style={{ marginBottom: 0 }}>
+          <Link to="/help?topic=wf-finance-setup">{t('ops.financial.setupHelpLink')}</Link>
+          {' · '}
+          <Link to="/help?topic=wf-close-period">{t('ops.financial.setupCloseLink')}</Link>
+        </p>
+      </div>
+
       <SaoPanel
         title={t('ops.financial.saoTitle')}
         description={t('ops.financial.saoDesc')}
         instructions={[
-          'Create chart of accounts from template',
-          'Post / pay / cancel invoice workflows',
-          'Journals, fiscal years, taxes, payment terms',
+          t('ops.financial.saoInstrCoa'),
+          t('ops.financial.saoInstrPost'),
+          t('ops.financial.saoInstrJournals'),
         ]}
       />
 

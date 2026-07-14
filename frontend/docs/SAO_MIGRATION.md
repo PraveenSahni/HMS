@@ -118,5 +118,5 @@ Use SAO at `http://34.18.116.146/sao/` or `http://34.18.116.146:8000/` for those
 6. `/sequences` — edit next number / prefix if writable.
 7. `/languages`, `/countries` — lists load.
 8. `/companies` — if empty, setup wizard creates IST Technologies LLC + party.
-9. `/financial` — list + draft stub (may fail without CoA — use SAO panel).
+9. `/financial` — setup checklist + invoice list + draft stub (may fail without CoA — use SAO panel). Help: `wf-finance-setup`. Runbook: `docs/implementation/financial-setup.md`.
 10. Wizard menu leaf → Open in SAO panel links to `/sao/`.

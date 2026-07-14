@@ -1,0 +1,42 @@
+{
+  "id": "wf-finance-setup",
+  "title": "سير العمل: إعداد المالية للشركة",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "GroupAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial",
+    "/companies",
+    "/currency"
+  ],
+  "keywords": [
+    "finance",
+    "setup",
+    "CoA",
+    "fiscal",
+    "journal",
+    "tax",
+    "AED",
+    "QAR"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "إعداد المالية يعتمد على SAO لدليل الحسابات والسنة المالية والدفاتر والضرائب. واجهة React تعرض الفواتير ومسودة فقط. انظر docs/implementation/financial-setup.md. معدلات الضرائب والإعفاءات تحتاج تأكيداً قانونياً.",
+  "steps": [
+    "أنشئ/اختر شركة للإمارات (AED) أو قطر (QAR) من /companies.",
+    "أكد وجود عملتي AED و/أو QAR في /currency.",
+    "في SAO: أنشئ دليل الحسابات من قالب لتلك الشركة.",
+    "في SAO: أنشئ السنة المالية والفترات ثم الدفاتر (مبيعات، مشتريات، نقد/بنك).",
+    "في SAO: اضبط الضرائب فقط بعد تأكيد المستشار القانوني — لا تخترع قواعد ضريبية.",
+    "عيّن حسابات القبض/الدفع للأطراف؛ اربط شركات التأمين إن وُجدت.",
+    "اختبر: أنشئ مسودة فاتورة من /financial ثم رحّل/ادفع في SAO."
+  ]
+}
