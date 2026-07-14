@@ -1,0 +1,31 @@
+{
+  "id": "wf-claim-rejection",
+  "title": "Workflow: Processing claim rejection",
+  "roles": [
+    "InsuranceClaims",
+    "Billing",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "claim",
+    "rejection",
+    "appeal"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Manual process until HIE/claims adapter exists.",
+  "steps": [
+    "Log rejection reason from payer (synthetic sample in UAT).",
+    "Correct coding/billing data.",
+    "Resubmit or write-off per finance policy.",
+    "Keep audit trail for compliance."
+  ]
+}

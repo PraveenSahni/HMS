@@ -1,5 +1,7 @@
 /**
  * Help content loader — reads JSON from /help-content/{lang}/ (not hardcoded bodies).
+ *
+ * Layout adaptation: flat JSON + roles[] metadata (equivalent to en/common, en/admin folders).
  */
 
 export type HelpCountry = 'AE' | 'QA' | '*'
@@ -14,6 +16,7 @@ export interface HelpIndexEntry {
   keywords: string[]
   version: string
   guided?: boolean
+  published?: boolean
 }
 
 export interface HelpArticle extends HelpIndexEntry {
@@ -26,13 +29,46 @@ export interface HelpContext {
   country?: string
   route?: string
   lang?: 'en' | 'ar'
+  includeUnpublished?: boolean
 }
+
+const PUBLISH_OVERRIDE_KEY = 'ist-help-publish-overrides'
 
 const cache = new Map<string, HelpIndexEntry[]>()
 const articleCache = new Map<string, HelpArticle>()
 
 function basePath(lang: string): string {
   return `/help-content/${lang}`
+}
+
+export function getPublishOverrides(): Record<string, boolean> {
+  try {
+    return JSON.parse(localStorage.getItem(PUBLISH_OVERRIDE_KEY) || '{}') as Record<string, boolean>
+  } catch {
+    return {}
+  }
+}
+
+export function setPublishOverride(id: string, published: boolean): void {
+  const map = getPublishOverrides()
+  map[id] = published
+  localStorage.setItem(PUBLISH_OVERRIDE_KEY, JSON.stringify(map))
+  cache.clear()
+  articleCache.clear()
+}
+
+export function clearPublishOverrides(): void {
+  localStorage.removeItem(PUBLISH_OVERRIDE_KEY)
+  cache.clear()
+  articleCache.clear()
+}
+
+export function isPublished(entry: HelpIndexEntry): boolean {
+  const overrides = getPublishOverrides()
+  if (Object.prototype.hasOwnProperty.call(overrides, entry.id)) {
+    return overrides[entry.id]
+  }
+  return entry.published !== false
 }
 
 export async function loadHelpIndex(lang: 'en' | 'ar' = 'en'): Promise<HelpIndexEntry[]> {
@@ -62,6 +98,8 @@ export function matchesContext(entry: HelpIndexEntry, ctx: HelpContext): boolean
   const role = ctx.role || '*'
   const country = (ctx.country || '*').toUpperCase()
   const route = ctx.route || ''
+
+  if (!ctx.includeUnpublished && !isPublished(entry)) return false
 
   const roleOk =
     entry.roles.includes('*') ||
@@ -106,9 +144,49 @@ export function contextualHelp(
   })
 }
 
+export const ONBOARDING_ITEMS = [
+  { id: 'login-lang', label_en: 'Sign in and set language EN/AR', label_ar: 'تسجيل الدخول وتعيين اللغة' },
+  { id: 'help-filters', label_en: 'Set Help role and country filters', label_ar: 'تعيين دور ودولة المساعدة' },
+  { id: 'find-patient', label_en: 'Find a synthetic IST-P-* patient', label_ar: 'العثور على مريض اصطناعي' },
+  { id: 'appointments', label_en: 'Open Appointments day list', label_ar: 'فتح قائمة المواعيد' },
+  { id: 'guided-wf', label_en: 'Complete one guided workflow for your role', label_ar: 'إكمال سير عمل إرشادي' },
+  { id: 'synthetic-policy', label_en: 'Read synthetic data policy', label_ar: 'قراءة سياسة البيانات الاصطناعية' },
+] as const
+
+export function getOnboardingState(): Record<string, boolean> {
+  try {
+    return JSON.parse(localStorage.getItem('ist-help-onboarding') || '{}') as Record<string, boolean>
+  } catch {
+    return {}
+  }
+}
+
+export function setOnboardingItem(id: string, done: boolean): void {
+  const state = getOnboardingState()
+  state[id] = done
+  localStorage.setItem('ist-help-onboarding', JSON.stringify(state))
+}
+
+export function getFeedback(id: string): 'yes' | 'no' | null {
+  try {
+    const map = JSON.parse(localStorage.getItem('ist-help-feedback') || '{}') as Record<string, string>
+    const v = map[id]
+    return v === 'yes' || v === 'no' ? v : null
+  } catch {
+    return null
+  }
+}
+
+export function setFeedback(id: string, value: 'yes' | 'no'): void {
+  const map = JSON.parse(localStorage.getItem('ist-help-feedback') || '{}') as Record<string, string>
+  map[id] = value
+  localStorage.setItem('ist-help-feedback', JSON.stringify(map))
+}
+
 /** Pure helpers exported for unit tests without fetch */
 export const helpTestUtils = {
   matchesContext,
   searchHelp,
   contextualHelp,
+  isPublished,
 }

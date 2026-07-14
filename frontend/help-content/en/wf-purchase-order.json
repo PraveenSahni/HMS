@@ -1,0 +1,32 @@
+{
+  "id": "wf-purchase-order",
+  "title": "Workflow: Completing a purchase order",
+  "roles": [
+    "Procurement",
+    "Warehouse",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock",
+    "/products"
+  ],
+  "keywords": [
+    "purchase",
+    "PO",
+    "supplier"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Purchase modules via Tryton purchase/stock; React may open SAO.",
+  "steps": [
+    "Create/select supplier party (synthetic).",
+    "Create purchase order for products.",
+    "Obtain approval per facility threshold.",
+    "Confirm PO ready for receiving."
+  ]
+}

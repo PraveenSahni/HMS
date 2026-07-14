@@ -1,8 +1,9 @@
 {
   "id": "wf-prescribe",
-  "title": "Workflow: Prescribe medication",
+  "title": "Workflow: Prescribing medicine",
   "roles": [
     "Physician",
+    "Surgeon",
     "Pharmacist"
   ],
   "countries": [
@@ -18,12 +19,14 @@
     "prescription",
     "medication"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": true,
+  "published": true,
   "body": "Uses gnuhealth.prescription.order.",
   "steps": [
-    "Open Pharmacy or patient chart.",
+    "Open Pharmacy or patient medications.",
     "Create prescription order for patient.",
-    "Pharmacist reviews and dispenses via stock processes as configured."
+    "Select products from formulary; avoid real PII notes.",
+    "Pharmacist reviews before dispense."
   ]
 }

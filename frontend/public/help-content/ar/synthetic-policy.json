@@ -4,7 +4,8 @@
   "roles": [
     "*",
     "Compliance",
-    "ITSupport"
+    "ITSupport",
+    "Auditor"
   ],
   "countries": [
     "AE",
@@ -19,7 +20,8 @@
     "demo",
     "IST-P"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
+  "published": true,
   "body": "يجب استخدام علامات اصطناعية فقط خارج الإنتاج. الاستيراد للإنتاج يتطلب موافقة و--allow-production."
 }

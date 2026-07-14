@@ -1,0 +1,31 @@
+{
+  "id": "wf-transfer-bed",
+  "title": "Workflow: Transferring a bed",
+  "roles": [
+    "Nurse",
+    "FacilityAdmin",
+    "DeptManager"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds"
+  ],
+  "keywords": [
+    "transfer",
+    "bed",
+    "ward"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Bed transfer may require SAO inpatient wizard.",
+  "steps": [
+    "Open current inpatient bed assignment.",
+    "Select target free bed in destination ward.",
+    "Confirm transfer; update nursing location.",
+    "Verify history retained on patient chart."
+  ]
+}

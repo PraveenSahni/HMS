@@ -1,0 +1,33 @@
+{
+  "id": "wf-triage",
+  "title": "Workflow: Recording triage",
+  "roles": [
+    "TriageNurse",
+    "Nurse",
+    "Physician"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/nursing",
+    "/evaluations"
+  ],
+  "keywords": [
+    "triage",
+    "acuity",
+    "ED",
+    "vitals"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Triage documentation uses nursing/evaluation models; ED protocol is facility-specific.",
+  "steps": [
+    "Open Nursing or Evaluations.",
+    "Select patient encounter; record acuity and vitals.",
+    "Route to doctor/surgeon queue as per facility protocol.",
+    "Document synthetic-only patients in non-prod."
+  ]
+}

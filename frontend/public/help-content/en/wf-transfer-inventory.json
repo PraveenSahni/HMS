@@ -1,0 +1,31 @@
+{
+  "id": "wf-transfer-inventory",
+  "title": "Workflow: Transferring inventory",
+  "roles": [
+    "Warehouse",
+    "Pharmacist",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock"
+  ],
+  "keywords": [
+    "transfer",
+    "inventory",
+    "internal move"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Internal moves must respect company isolation.",
+  "steps": [
+    "Create internal stock move between locations in same facility/company.",
+    "Do not transfer across AE/QA entities without legal approval.",
+    "Validate quantities.",
+    "Confirm destination on-hand updated."
+  ]
+}

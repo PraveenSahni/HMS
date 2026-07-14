@@ -4,7 +4,8 @@
   "roles": [
     "Compliance",
     "SystemAdmin",
-    "Executive"
+    "Executive",
+    "Auditor"
   ],
   "countries": [
     "AE"
@@ -20,7 +21,8 @@
     "HL7",
     "FHIR"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
+  "published": true,
   "body": "موصلات تبادل المعلومات غير منفذة بعد. أكد الالتزامات مع الجهات المختصة قبل الإطلاق."
 }

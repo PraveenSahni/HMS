@@ -1,0 +1,32 @@
+{
+  "id": "wf-consultation",
+  "title": "سير العمل: إجراء استشارة",
+  "roles": [
+    "Physician",
+    "Surgeon",
+    "Nurse"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/evaluations",
+    "/patients"
+  ],
+  "keywords": [
+    "consultation",
+    "evaluation",
+    "SOAP"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يستخدم gnuhealth.patient.evaluation.",
+  "steps": [
+    "افتح ملف المريض أو التقييمات.",
+    "أنشئ تقييم مريض بالشكوى والنتائج.",
+    "اطلب مختبر/تصوير أو صف دواء حسب الحاجة.",
+    "احفظ وأكمل المتابعة."
+  ]
+}

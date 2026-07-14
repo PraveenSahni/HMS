@@ -1,6 +1,6 @@
-# Receptionist
+# Registration and Reception
 
-**Focus:** Patients create, appointments, check-in
+**Focus:** Patients create, appointments, check-in, demographics
 
 ## Access
 

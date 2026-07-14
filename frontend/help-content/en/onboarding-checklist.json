@@ -1,0 +1,24 @@
+{
+  "id": "onboarding-checklist",
+  "title": "Onboarding checklist",
+  "roles": [
+    "*"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "onboarding",
+    "checklist",
+    "training",
+    "new user"
+  ],
+  "version": "1.1.0",
+  "guided": false,
+  "published": true,
+  "body": "Complete: (1) Sign in and set language EN/AR. (2) Set Help role + country filters. (3) Open Patients and find a synthetic IST-P-* record. (4) Open Appointments day list. (5) Run one guided workflow for your role. (6) Review synthetic-data policy. Track progress in the Help Centre onboarding panel."
+}

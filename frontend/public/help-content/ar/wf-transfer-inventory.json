@@ -1,0 +1,31 @@
+{
+  "id": "wf-transfer-inventory",
+  "title": "سير العمل: نقل مخزون",
+  "roles": [
+    "Warehouse",
+    "Pharmacist",
+    "FacilityAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock"
+  ],
+  "keywords": [
+    "transfer",
+    "inventory",
+    "internal move"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يجب أن تحترم الحركات الداخلية عزل الشركة.",
+  "steps": [
+    "أنشئ حركة مخزون داخلية بين مواقع نفس المنشأة/الشركة.",
+    "لا تنقل عبر كيانات الإمارات/قطر دون موافقة.",
+    "تحقق من الكميات.",
+    "أكد تحديث الرصيد."
+  ]
+}

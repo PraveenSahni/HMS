@@ -1,0 +1,31 @@
+{
+  "id": "wf-receive-stock",
+  "title": "سير العمل: استلام مخزون",
+  "roles": [
+    "Warehouse",
+    "Procurement",
+    "Pharmacist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock"
+  ],
+  "keywords": [
+    "receiving",
+    "stock",
+    "goods receipt"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يستخدم أنماط استلام المخزون.",
+  "steps": [
+    "افتح المخزون واختر الشحنة الواردة.",
+    "أدخل الكميات والدفعات.",
+    "تحقق من الحركة إلى الموقع الهدف.",
+    "أبلغ الصيدلية/المختبر إن لزم."
+  ]
+}

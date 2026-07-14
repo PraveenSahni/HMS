@@ -1,0 +1,30 @@
+{
+  "id": "wf-create-clinic",
+  "title": "Workflow: Creating a clinic",
+  "roles": [
+    "FacilityAdmin",
+    "CountryAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings"
+  ],
+  "keywords": [
+    "clinic",
+    "outpatient",
+    "institution"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Clinic is an institution subtype; keep under correct legal entity.",
+  "steps": [
+    "Open Settings.",
+    "Create institution with type Clinic under the country company.",
+    "Link operating hours and specialties as configured.",
+    "Save and verify facility isolation (AE vs QA entity)."
+  ]
+}

@@ -14,9 +14,11 @@
   "keywords": [
     "help",
     "start",
-    "overview"
+    "overview",
+    "onboarding"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
-  "body": "Use search, filters by role and country, and guided workflows. Content is loaded from help-content files — not hardcoded in UI components."
+  "published": true,
+  "body": "Use search, role/country filters, guided workflows, onboarding checklist, and feedback. Content loads from help-content JSON — not hardcoded in UI."
 }

@@ -146,9 +146,10 @@ Company: **IST Technologies LLC** (Doha primary; UAE Dubai office in config). Sy
 1. No HIE connectors (NABIDH / Malaffi / Riayati / Qatar HIE).  
 2. No FHIR/HL7 interface layer in repo.  
 3. No formal org hierarchy (group → country entity → facility) beyond single institution.  
-4. Help centre / guided workflows absent (to be added in this delivery).  
-5. Live activated-module inventory needs VM query.  
-6. Regulatory obligations need legal confirmation (see research matrix).
+4. Help Centre delivered (`/help`, `/help/admin`) with EN/AR content, 26 guided workflows, feedback, onboarding, publish flag — redeploy frontend to refresh production static assets when content changes.  
+5. Live activated-module inventory still needs VM query (section 4.3) — local evidence lists intended activation set + official catalog extras, not a live `ir.module` dump.  
+6. Regulatory obligations need legal confirmation (see research matrix).  
+7. Tenant record rules for UAE↔Qatar isolation are designed in config/docs but **not deployed** to Tryton.
 
 ---
 

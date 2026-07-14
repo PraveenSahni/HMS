@@ -1,0 +1,33 @@
+{
+  "id": "wf-triage",
+  "title": "سير العمل: تسجيل الفرز",
+  "roles": [
+    "TriageNurse",
+    "Nurse",
+    "Physician"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/nursing",
+    "/evaluations"
+  ],
+  "keywords": [
+    "triage",
+    "acuity",
+    "ED",
+    "vitals"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "توثيق الفرز عبر نماذج التمريض/التقييم.",
+  "steps": [
+    "افتح التمريض أو التقييمات.",
+    "سجّل درجة الفرز والعلامات الحيوية.",
+    "وجّه إلى قائمة الطبيب وفق البروتوكول.",
+    "استخدم مرضى اصطناعيين خارج الإنتاج."
+  ]
+}

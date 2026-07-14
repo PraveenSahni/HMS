@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-invoice",
+  "title": "سير العمل: إنشاء فاتورة",
+  "roles": [
+    "Billing",
+    "Finance",
+    "Cashier"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "invoice",
+    "billing",
+    "account"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يستخدم أنماط الفوترة؛ الترحيل العميق في SAO.",
+  "steps": [
+    "افتح المالية.",
+    "أنشئ فاتورة مريض من الخدمات/المنتجات.",
+    "حدد جهة الدفع.",
+    "رحّل المسودة بعد التحقق."
+  ]
+}

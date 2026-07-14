@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-company",
+  "title": "Workflow: Creating a company",
+  "roles": [
+    "GroupAdmin",
+    "CountryAdmin",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/companies"
+  ],
+  "keywords": [
+    "company",
+    "legal entity",
+    "multi-company"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Maps to Tryton company.company. Group/Country admins own entity creation.",
+  "steps": [
+    "Open Companies (/companies).",
+    "Create company for UAE (AED) or Qatar (QAR) legal entity.",
+    "Set currency and party address (synthetic for non-prod).",
+    "Confirm company appears in list; do not mix AE/QA charts without legal basis."
+  ]
+}

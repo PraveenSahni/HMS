@@ -4,7 +4,8 @@
   "roles": [
     "SystemAdmin",
     "FacilityAdmin",
-    "ITSupport"
+    "ITSupport",
+    "GroupAdmin"
   ],
   "countries": [
     "AE",
@@ -20,7 +21,8 @@
     "acl",
     "rbac"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
-  "body": "Create users, assign groups, review model access summaries. Deep record-rule editing remains in SAO."
+  "published": true,
+  "body": "Create users, assign groups, review model access. Deep record-rule editing remains in SAO. See guided workflow wf-create-users-roles."
 }

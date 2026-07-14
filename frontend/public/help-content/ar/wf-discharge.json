@@ -1,0 +1,33 @@
+{
+  "id": "wf-discharge",
+  "title": "سير العمل: تخريج مريض",
+  "roles": [
+    "Physician",
+    "Nurse",
+    "Billing",
+    "Cashier"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds",
+    "/financial"
+  ],
+  "keywords": [
+    "discharge",
+    "inpatient",
+    "exit"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "نسّق التخريج السريري مع المخالصة المالية.",
+  "steps": [
+    "يكمل الطبيب ملخص التخريج.",
+    "يمسح التمريض المهام ويحرر السرير.",
+    "يُنهي الفوترة الفاتورة إن لزم.",
+    "أكد حالة السرير متاح."
+  ]
+}

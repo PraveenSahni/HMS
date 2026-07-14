@@ -1,0 +1,31 @@
+{
+  "id": "wf-insurance-claim",
+  "title": "سير العمل: إعداد مطالبة تأمين",
+  "roles": [
+    "InsuranceClaims",
+    "Billing",
+    "Compliance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "insurance",
+    "claim",
+    "eClaim"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "واجهات المطالبات غير منفذة؛ يلزم تأكيد قانوني.",
+  "steps": [
+    "أكد بيانات عقد الجهة الدافعة.",
+    "اختر الفاتورة/الزيارة المؤهلة.",
+    "أنشئ حزمة المطالبة.",
+    "لا تفترض وجود موصلات eClaim — وثّق الفجوة."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-pharmacy",
+  "title": "Workflow: Creating a pharmacy",
+  "roles": [
+    "FacilityAdmin",
+    "Pharmacist",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/pharmacy",
+    "/stock"
+  ],
+  "keywords": [
+    "pharmacy",
+    "dispensary",
+    "stock location"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Pharmacy uses health_stock / stock.location patterns.",
+  "steps": [
+    "Create pharmacy institution or stock location under facility.",
+    "Link formulary products and warehouse parent.",
+    "Assign pharmacist group users.",
+    "Verify dispense workflow can select the location."
+  ]
+}

@@ -1,6 +1,6 @@
 # Pharmacist
 
-**Focus:** Pharmacy, medications, stock
+**Focus:** Prescription review, dispensing, controlled drugs
 
 ## Access
 

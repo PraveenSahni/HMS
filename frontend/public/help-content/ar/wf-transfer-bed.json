@@ -1,0 +1,31 @@
+{
+  "id": "wf-transfer-bed",
+  "title": "سير العمل: نقل سرير",
+  "roles": [
+    "Nurse",
+    "FacilityAdmin",
+    "DeptManager"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds"
+  ],
+  "keywords": [
+    "transfer",
+    "bed",
+    "ward"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "قد يتطلب النقل معالج SAO.",
+  "steps": [
+    "افتح تعيين السرير الحالي.",
+    "اختر سريراً فارغاً في الجناح الهدف.",
+    "أكد النقل.",
+    "تحقق من سجل المريض."
+  ]
+}

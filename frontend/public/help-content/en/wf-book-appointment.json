@@ -1,8 +1,9 @@
 {
   "id": "wf-book-appointment",
-  "title": "Workflow: Book an appointment",
+  "title": "Workflow: Booking an appointment",
   "roles": [
     "Receptionist",
+    "CallCentre",
     "Physician"
   ],
   "countries": [
@@ -17,9 +18,10 @@
     "schedule",
     "booking"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": true,
-  "body": "Appointments map to gnuhealth.appointment.",
+  "published": true,
+  "body": "Maps to gnuhealth.appointment.",
   "steps": [
     "Open Appointments.",
     "Create appointment; select patient and health professional.",

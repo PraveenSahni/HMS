@@ -1,0 +1,32 @@
+{
+  "id": "wf-close-period",
+  "title": "سير العمل: إغلاق فترة محاسبية",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "Auditor"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "period",
+    "close",
+    "accounting",
+    "fiscal"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "إغلاق الفترة عبر SAO أولاً.",
+  "steps": [
+    "طابق الفواتير والمخزون.",
+    "شغّل معالج إغلاق الفترة في SAO.",
+    "اقفل الفترة ووثّق التوقيع.",
+    "احتفظ بالأدلة لدور المدقق."
+  ]
+}

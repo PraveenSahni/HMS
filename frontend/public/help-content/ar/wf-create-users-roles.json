@@ -1,0 +1,34 @@
+{
+  "id": "wf-create-users-roles",
+  "title": "سير العمل: إنشاء مستخدمين وتعيين أدوار",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "ITSupport",
+    "GroupAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "roles",
+    "ACL"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "تحرير قواعد السجلات المتقدم يبقى في SAO.",
+  "steps": [
+    "افتح المستخدمين وأنشئ مستخدماً ببريد اصطناعي.",
+    "عيّن مجموعات Tryton المطابقة لأدوار IST.",
+    "أكد صلاحيات الشركة/المنشأة.",
+    "تحقق من القوائم بعد تسجيل الدخول."
+  ]
+}

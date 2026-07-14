@@ -1,6 +1,6 @@
-# Executive / Management
+# Hospital Management
 
-**Focus:** Dashboard KPIs, reporting (SAO)
+**Focus:** Dashboard KPIs, executive reporting (SAO)
 
 ## Access
 

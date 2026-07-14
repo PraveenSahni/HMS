@@ -1,0 +1,23 @@
+{
+  "id": "draft-unpublished-example",
+  "title": "موضوع مسودة (مثال غير منشور)",
+  "roles": [
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/help"
+  ],
+  "keywords": [
+    "draft",
+    "unpublished",
+    "admin"
+  ],
+  "version": "1.1.0",
+  "guided": false,
+  "published": false,
+  "body": "هذا الموضوع غير منشور ويظهر فقط في إدارة المساعدة حتى يتم نشره."
+}

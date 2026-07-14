@@ -4,7 +4,8 @@
   "roles": [
     "Compliance",
     "FacilityAdmin",
-    "Executive"
+    "Executive",
+    "Auditor"
   ],
   "countries": [
     "QA"
@@ -18,7 +19,8 @@
     "consent",
     "Qatar"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
+  "published": true,
   "body": "بيانات الصحة ذات طبيعة خاصة — احصل على تأكيد قانوني قبل معالجة بيانات حقيقية."
 }

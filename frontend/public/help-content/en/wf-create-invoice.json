@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-invoice",
+  "title": "Workflow: Creating an invoice",
+  "roles": [
+    "Billing",
+    "Finance",
+    "Cashier"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "invoice",
+    "billing",
+    "account"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Uses account_invoice / health_services patterns; deep posting in SAO.",
+  "steps": [
+    "Open Financial.",
+    "Create patient invoice from services/products.",
+    "Set payer (self-pay or insurance) — confirm schemes with counsel.",
+    "Post draft when amounts verified (SAO for complex posting)."
+  ]
+}

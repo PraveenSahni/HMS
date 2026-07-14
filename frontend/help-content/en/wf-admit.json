@@ -1,6 +1,6 @@
 {
   "id": "wf-admit",
-  "title": "Workflow: Inpatient admission",
+  "title": "Workflow: Admitting a patient",
   "roles": [
     "Physician",
     "Nurse",
@@ -18,13 +18,14 @@
     "bed",
     "inpatient"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": true,
-  "body": "health_inpatient models.",
+  "published": true,
+  "body": "Uses health_inpatient models.",
   "steps": [
-    "Open Beds.",
-    "Confirm free bed.",
+    "Open Beds; confirm free bed under correct facility.",
     "Create inpatient registration (SAO wizard if React limited).",
-    "Nurse documents rounding under Nursing."
+    "Assign ward/bed; nurse starts rounding.",
+    "Keep AE/QA facilities isolated."
   ]
 }

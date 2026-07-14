@@ -1,6 +1,6 @@
-# Imaging Technician
+# Radiology Technician
 
-**Focus:** Imaging requests/results
+**Focus:** Imaging requests, acquisition, worklist
 
 ## Access
 

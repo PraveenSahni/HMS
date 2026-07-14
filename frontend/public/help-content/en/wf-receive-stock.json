@@ -1,0 +1,31 @@
+{
+  "id": "wf-receive-stock",
+  "title": "Workflow: Receiving stock",
+  "roles": [
+    "Warehouse",
+    "Procurement",
+    "Pharmacist"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock"
+  ],
+  "keywords": [
+    "receiving",
+    "stock",
+    "goods receipt"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Uses stock.shipment.in / stock.move patterns.",
+  "steps": [
+    "Open Stock; select incoming shipment against PO.",
+    "Enter quantities and lots.",
+    "Validate move into destination location.",
+    "Notify pharmacy/lab if destination is specialty store."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "wf-claim-rejection",
+  "title": "سير العمل: معالجة رفض مطالبة",
+  "roles": [
+    "InsuranceClaims",
+    "Billing",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "claim",
+    "rejection",
+    "appeal"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "عملية يدوية حتى يوجد محول مطالبات.",
+  "steps": [
+    "سجّل سبب الرفض.",
+    "صحّح بيانات الفوترة/الترميز.",
+    "أعد الإرسال أو اشطب وفق السياسة.",
+    "احتفظ بمسار التدقيق."
+  ]
+}

@@ -4,7 +4,8 @@
   "roles": [
     "Compliance",
     "SystemAdmin",
-    "Executive"
+    "Executive",
+    "Auditor"
   ],
   "countries": [
     "AE"
@@ -20,7 +21,8 @@
     "HL7",
     "FHIR"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
+  "published": true,
   "body": "HIE connectors are not implemented in IST yet. Confirm facility obligations with DHA/DoH/MOHAP before go-live. See docs/integration/interoperability-assessment.md."
 }

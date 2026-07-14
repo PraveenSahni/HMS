@@ -1,0 +1,33 @@
+{
+  "id": "wf-discharge",
+  "title": "Workflow: Discharging a patient",
+  "roles": [
+    "Physician",
+    "Nurse",
+    "Billing",
+    "Cashier"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/beds",
+    "/financial"
+  ],
+  "keywords": [
+    "discharge",
+    "inpatient",
+    "exit"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Coordinate clinical discharge with finance clearance per facility policy.",
+  "steps": [
+    "Physician completes discharge summary / evaluation.",
+    "Nurse clears pending tasks and frees bed.",
+    "Billing finalizes invoice if applicable.",
+    "Confirm bed state Free."
+  ]
+}

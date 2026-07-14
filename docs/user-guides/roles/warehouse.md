@@ -1,6 +1,6 @@
-# Warehouse / Inventory Clerk
+# Inventory Employee
 
-**Focus:** Stock locations and moves
+**Focus:** Stock locations, moves, inventory counts
 
 ## Access
 

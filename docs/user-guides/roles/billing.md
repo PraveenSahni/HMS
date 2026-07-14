@@ -1,6 +1,6 @@
-# Billing / Finance Officer
+# Billing Employee
 
-**Focus:** Financial, products, insurance (SAO deep)
+**Focus:** Invoices, products, patient billing queues
 
 ## Access
 

@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-pharmacy",
+  "title": "سير العمل: إنشاء صيدلية",
+  "roles": [
+    "FacilityAdmin",
+    "Pharmacist",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/pharmacy",
+    "/stock"
+  ],
+  "keywords": [
+    "pharmacy",
+    "dispensary",
+    "stock location"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "تستخدم الصيدلية نماذج المخزون.",
+  "steps": [
+    "أنشئ صيدلية أو موقع مخزون تحت المنشأة.",
+    "اربط قائمة الأدوية والمخزن الأب.",
+    "عيّن مستخدمي مجموعة الصيدلي.",
+    "تحقق من إمكانية الصرف من الموقع."
+  ]
+}

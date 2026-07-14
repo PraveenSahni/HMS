@@ -3,25 +3,48 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   contextualHelp,
+  getFeedback,
+  getOnboardingState,
   loadHelpArticle,
   loadHelpIndex,
+  ONBOARDING_ITEMS,
   searchHelp,
+  setFeedback,
+  setOnboardingItem,
   type HelpArticle,
   type HelpIndexEntry,
 } from '../../help/helpService'
 
 const ROLES = [
   '*',
-  'SystemAdmin',
+  'GroupAdmin',
+  'CountryAdmin',
   'FacilityAdmin',
-  'Physician',
-  'Nurse',
+  'SystemAdmin',
   'Receptionist',
+  'CallCentre',
+  'Nurse',
+  'TriageNurse',
+  'Physician',
+  'Surgeon',
   'LabTech',
+  'LabSupervisor',
+  'ImagingTech',
+  'Radiologist',
   'Pharmacist',
+  'PharmacyAssistant',
+  'Cashier',
   'Billing',
-  'Compliance',
+  'InsuranceClaims',
+  'Finance',
+  'Procurement',
+  'Warehouse',
+  'HR',
+  'DeptManager',
   'Executive',
+  'ITSupport',
+  'Auditor',
+  'Compliance',
 ]
 
 const COUNTRIES = ['*', 'AE', 'QA']
@@ -46,6 +69,8 @@ export function HelpCentrePage() {
   const [query, setQuery] = useState('')
   const [selected, setSelected] = useState<HelpArticle | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [feedback, setFeedbackState] = useState<'yes' | 'no' | null>(null)
+  const [onboarding, setOnboarding] = useState<Record<string, boolean>>(() => getOnboardingState())
   const location = useLocation()
 
   useEffect(() => {
@@ -72,15 +97,32 @@ export function HelpCentrePage() {
     [index, role, country, location.pathname],
   )
 
+  const guidedCount = useMemo(() => results.filter((e) => e.guided).length, [results])
+
   const openArticle = async (id: string) => {
     setError(null)
     try {
       const article = await loadHelpArticle(id, lang)
       setSelected(article)
+      setFeedbackState(getFeedback(id))
     } catch (e) {
       setError(String(e))
     }
   }
+
+  const onFeedback = (value: 'yes' | 'no') => {
+    if (!selected) return
+    setFeedback(selected.id, value)
+    setFeedbackState(value)
+  }
+
+  const toggleOnboarding = (id: string) => {
+    const next = !onboarding[id]
+    setOnboardingItem(id, next)
+    setOnboarding({ ...onboarding, [id]: next })
+  }
+
+  const onboardingDone = ONBOARDING_ITEMS.filter((i) => onboarding[i.id]).length
 
   return (
     <div className="ist-page" data-testid="help-centre">
@@ -91,7 +133,39 @@ export function HelpCentrePage() {
             defaultValue: 'Search topics, filter by role and country, follow guided workflows.',
           })}
         </p>
+        <p className="ist-muted" data-testid="help-guided-count">
+          {t('help.guidedAvailable', {
+            defaultValue: '{{count}} guided workflows in view',
+            count: guidedCount,
+          })}
+          {' · '}
+          <Link to="/help/admin">{t('help.adminLink', { defaultValue: 'Help admin' })}</Link>
+        </p>
       </header>
+
+      <section className="ist-help-section" data-testid="help-onboarding">
+        <h2>
+          {t('help.onboarding', { defaultValue: 'Onboarding checklist' })} ({onboardingDone}/
+          {ONBOARDING_ITEMS.length})
+        </h2>
+        <ul className="ist-help-topics">
+          {ONBOARDING_ITEMS.map((item) => (
+            <li key={item.id} className="ist-help-topics__item">
+              <label className="ist-help-topic" style={{ cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={!!onboarding[item.id]}
+                  onChange={() => toggleOnboarding(item.id)}
+                  data-testid={`onboarding-${item.id}`}
+                />
+                <span className="ist-help-topic__label">
+                  {lang === 'ar' ? item.label_ar : item.label_en}
+                </span>
+              </label>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <div className="ist-help-toolbar" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
         <input
@@ -199,6 +273,32 @@ export function HelpCentrePage() {
                   </Link>
                 </p>
               )}
+              <div className="ist-help-feedback" data-testid="help-feedback" style={{ marginTop: '1.25rem' }}>
+                <p>{t('help.wasHelpful', { defaultValue: 'Was this helpful?' })}</p>
+                <button
+                  type="button"
+                  className="ist-btn ist-btn--outline ist-btn--sm"
+                  aria-pressed={feedback === 'yes'}
+                  onClick={() => onFeedback('yes')}
+                  data-testid="help-feedback-yes"
+                >
+                  {t('help.yes', { defaultValue: 'Yes' })}
+                </button>{' '}
+                <button
+                  type="button"
+                  className="ist-btn ist-btn--outline ist-btn--sm"
+                  aria-pressed={feedback === 'no'}
+                  onClick={() => onFeedback('no')}
+                  data-testid="help-feedback-no"
+                >
+                  {t('help.no', { defaultValue: 'No' })}
+                </button>
+                {feedback && (
+                  <span className="ist-muted" style={{ marginInlineStart: '0.5rem' }}>
+                    {t('help.thanksFeedback', { defaultValue: 'Thanks for your feedback.' })}
+                  </span>
+                )}
+              </div>
             </>
           ) : (
             <p>{t('help.selectTopic', { defaultValue: 'Select a topic to read.' })}</p>

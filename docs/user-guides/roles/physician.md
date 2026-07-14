@@ -1,4 +1,4 @@
-# Physician
+# Doctor
 
 **Focus:** Patients, evaluations, prescriptions, appointments, procedures
 

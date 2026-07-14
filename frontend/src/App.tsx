@@ -36,6 +36,7 @@ import {
 } from './pages/OpsPages'
 import { ModelBrowserPage } from './pages/ModelBrowserPage'
 import { HelpCentrePage } from './pages/help/HelpCentrePage'
+import { HelpAdminPage } from './pages/help/HelpAdminPage'
 
 export default function App() {
   return (
@@ -79,6 +80,7 @@ export default function App() {
             <Route path="languages" element={<LanguagesPage />} />
             <Route path="settings" element={<SettingsPage />} />
             <Route path="help" element={<HelpCentrePage />} />
+            <Route path="help/admin" element={<HelpAdminPage />} />
             <Route path="menu/:menuId" element={<ModelBrowserPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

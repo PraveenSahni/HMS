@@ -1,0 +1,32 @@
+{
+  "id": "wf-lab-results",
+  "title": "Workflow: Entering and approving laboratory results",
+  "roles": [
+    "LabTech",
+    "LabSupervisor",
+    "Physician"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/laboratory"
+  ],
+  "keywords": [
+    "lab",
+    "results",
+    "approve",
+    "QC"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Approval step may use SAO wizards if React is limited.",
+  "steps": [
+    "Open pending lab requests.",
+    "LabTech enters numeric/text results.",
+    "LabSupervisor reviews and approves (QC).",
+    "Physician views results on patient chart / laboratory list."
+  ]
+}

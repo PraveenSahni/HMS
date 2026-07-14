@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-hospital",
+  "title": "Workflow: Creating a hospital",
+  "roles": [
+    "FacilityAdmin",
+    "CountryAdmin",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings"
+  ],
+  "keywords": [
+    "hospital",
+    "institution",
+    "facility"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Uses gnuhealth.institution. Confirm MoPH/DHA facility codes with authority.",
+  "steps": [
+    "Open Settings / institution.",
+    "Create gnuhealth.institution linked to the correct country company.",
+    "Set facility type Hospital and codes (synthetic in non-prod).",
+    "Verify in institution list before adding departments."
+  ]
+}

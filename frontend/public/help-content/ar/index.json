@@ -15,16 +15,215 @@
     "keywords": [
       "help",
       "start",
-      "overview"
+      "overview",
+      "onboarding"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "onboarding-checklist",
+    "title": "قائمة التحقق للتأهيل",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "onboarding",
+      "checklist",
+      "training",
+      "new user"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "wf-create-company",
+    "title": "سير العمل: إنشاء شركة",
+    "roles": [
+      "GroupAdmin",
+      "CountryAdmin",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/companies"
+    ],
+    "keywords": [
+      "company",
+      "legal entity",
+      "multi-company"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-hospital",
+    "title": "سير العمل: إنشاء مستشفى",
+    "roles": [
+      "FacilityAdmin",
+      "CountryAdmin",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings"
+    ],
+    "keywords": [
+      "hospital",
+      "institution",
+      "facility"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-clinic",
+    "title": "سير العمل: إنشاء عيادة",
+    "roles": [
+      "FacilityAdmin",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings"
+    ],
+    "keywords": [
+      "clinic",
+      "outpatient",
+      "institution"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-department",
+    "title": "سير العمل: إنشاء قسم",
+    "roles": [
+      "FacilityAdmin",
+      "DeptManager",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings",
+      "/menu"
+    ],
+    "keywords": [
+      "department",
+      "unit",
+      "ward"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-pharmacy",
+    "title": "سير العمل: إنشاء صيدلية",
+    "roles": [
+      "FacilityAdmin",
+      "Pharmacist",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/stock"
+    ],
+    "keywords": [
+      "pharmacy",
+      "dispensary",
+      "stock location"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-laboratory",
+    "title": "سير العمل: إنشاء مختبر",
+    "roles": [
+      "FacilityAdmin",
+      "LabSupervisor",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory",
+      "/settings"
+    ],
+    "keywords": [
+      "laboratory",
+      "LIMS",
+      "lab"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-users-roles",
+    "title": "سير العمل: إنشاء مستخدمين وتعيين أدوار",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "ITSupport",
+      "GroupAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/users",
+      "/groups"
+    ],
+    "keywords": [
+      "users",
+      "groups",
+      "roles",
+      "ACL"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-register-patient",
     "title": "سير العمل: تسجيل مريض",
     "roles": [
       "Receptionist",
+      "CallCentre",
       "Physician",
       "FacilityAdmin"
     ],
@@ -38,17 +237,18 @@
     "keywords": [
       "patient",
       "register",
-      "create",
       "demographics"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-book-appointment",
     "title": "سير العمل: حجز موعد",
     "roles": [
       "Receptionist",
+      "CallCentre",
       "Physician"
     ],
     "countries": [
@@ -63,15 +263,68 @@
       "schedule",
       "booking"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-triage",
+    "title": "سير العمل: تسجيل الفرز",
+    "roles": [
+      "TriageNurse",
+      "Nurse",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/nursing",
+      "/evaluations"
+    ],
+    "keywords": [
+      "triage",
+      "acuity",
+      "ED",
+      "vitals"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-consultation",
+    "title": "سير العمل: إجراء استشارة",
+    "roles": [
+      "Physician",
+      "Surgeon",
+      "Nurse"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/evaluations",
+      "/patients"
+    ],
+    "keywords": [
+      "consultation",
+      "evaluation",
+      "SOAP"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-lab-order",
-    "title": "سير العمل: طلب مختبر",
+    "title": "سير العمل: طلب فحوصات مختبر",
     "roles": [
       "Physician",
-      "LabTech"
+      "LabTech",
+      "LabSupervisor"
     ],
     "countries": [
       "AE",
@@ -85,14 +338,41 @@
       "order",
       "LIMS"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-lab-results",
+    "title": "سير العمل: إدخال واعتماد نتائج المختبر",
+    "roles": [
+      "LabTech",
+      "LabSupervisor",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory"
+    ],
+    "keywords": [
+      "lab",
+      "results",
+      "approve",
+      "QC"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-prescribe",
     "title": "سير العمل: وصف دواء",
     "roles": [
       "Physician",
+      "Surgeon",
       "Pharmacist"
     ],
     "countries": [
@@ -108,12 +388,37 @@
       "prescription",
       "medication"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-dispense",
+    "title": "سير العمل: صرف دواء",
+    "roles": [
+      "Pharmacist",
+      "PharmacyAssistant"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/stock"
+    ],
+    "keywords": [
+      "dispense",
+      "pharmacy",
+      "stock"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-admit",
-    "title": "سير العمل: إدخال للتنويم",
+    "title": "سير العمل: إدخال مريض للتنويم",
     "roles": [
       "Physician",
       "Nurse",
@@ -131,8 +436,252 @@
       "bed",
       "inpatient"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-transfer-bed",
+    "title": "سير العمل: نقل سرير",
+    "roles": [
+      "Nurse",
+      "FacilityAdmin",
+      "DeptManager"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds"
+    ],
+    "keywords": [
+      "transfer",
+      "bed",
+      "ward"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-discharge",
+    "title": "سير العمل: تخريج مريض",
+    "roles": [
+      "Physician",
+      "Nurse",
+      "Billing",
+      "Cashier"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds",
+      "/financial"
+    ],
+    "keywords": [
+      "discharge",
+      "inpatient",
+      "exit"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-invoice",
+    "title": "سير العمل: إنشاء فاتورة",
+    "roles": [
+      "Billing",
+      "Finance",
+      "Cashier"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "invoice",
+      "billing",
+      "account"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-receive-payment",
+    "title": "سير العمل: استلام دفعة مريض",
+    "roles": [
+      "Cashier",
+      "Billing"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "payment",
+      "cashier",
+      "receipt"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-insurance-claim",
+    "title": "سير العمل: إعداد مطالبة تأمين",
+    "roles": [
+      "InsuranceClaims",
+      "Billing",
+      "Compliance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "insurance",
+      "claim",
+      "eClaim"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-claim-rejection",
+    "title": "سير العمل: معالجة رفض مطالبة",
+    "roles": [
+      "InsuranceClaims",
+      "Billing",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "claim",
+      "rejection",
+      "appeal"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-purchase-order",
+    "title": "سير العمل: إكمال أمر شراء",
+    "roles": [
+      "Procurement",
+      "Warehouse",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock",
+      "/products"
+    ],
+    "keywords": [
+      "purchase",
+      "PO",
+      "supplier"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-receive-stock",
+    "title": "سير العمل: استلام مخزون",
+    "roles": [
+      "Warehouse",
+      "Procurement",
+      "Pharmacist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock"
+    ],
+    "keywords": [
+      "receiving",
+      "stock",
+      "goods receipt"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-transfer-inventory",
+    "title": "سير العمل: نقل مخزون",
+    "roles": [
+      "Warehouse",
+      "Pharmacist",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock"
+    ],
+    "keywords": [
+      "transfer",
+      "inventory",
+      "internal move"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-close-period",
+    "title": "سير العمل: إغلاق فترة محاسبية",
+    "roles": [
+      "Finance",
+      "SystemAdmin",
+      "Auditor"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "period",
+      "close",
+      "accounting",
+      "fiscal"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "admin-users",
@@ -140,7 +689,8 @@
     "roles": [
       "SystemAdmin",
       "FacilityAdmin",
-      "ITSupport"
+      "ITSupport",
+      "GroupAdmin"
     ],
     "countries": [
       "AE",
@@ -156,8 +706,32 @@
       "acl",
       "rbac"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "field-help-guide",
+    "title": "استخدام مساعدة الحقول",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "field",
+      "tooltip",
+      "contextual",
+      "hint"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "uae-hie-readiness",
@@ -165,7 +739,8 @@
     "roles": [
       "Compliance",
       "SystemAdmin",
-      "Executive"
+      "Executive",
+      "Auditor"
     ],
     "countries": [
       "AE"
@@ -181,8 +756,9 @@
       "HL7",
       "FHIR"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "qatar-privacy",
@@ -190,7 +766,8 @@
     "roles": [
       "Compliance",
       "FacilityAdmin",
-      "Executive"
+      "Executive",
+      "Auditor"
     ],
     "countries": [
       "QA"
@@ -204,8 +781,9 @@
       "consent",
       "Qatar"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "synthetic-policy",
@@ -213,7 +791,8 @@
     "roles": [
       "*",
       "Compliance",
-      "ITSupport"
+      "ITSupport",
+      "Auditor"
     ],
     "countries": [
       "AE",
@@ -228,7 +807,30 @@
       "demo",
       "IST-P"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "draft-unpublished-example",
+    "title": "موضوع مسودة (مثال غير منشور)",
+    "roles": [
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "draft",
+      "unpublished",
+      "admin"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": false
   }
 ]

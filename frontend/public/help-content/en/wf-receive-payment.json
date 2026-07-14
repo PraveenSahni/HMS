@@ -1,0 +1,30 @@
+{
+  "id": "wf-receive-payment",
+  "title": "Workflow: Receiving patient payment",
+  "roles": [
+    "Cashier",
+    "Billing"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "payment",
+    "cashier",
+    "receipt"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Cashier workflows may rely on SAO account wizards.",
+  "steps": [
+    "Open open invoice for synthetic patient.",
+    "Record payment method and amount.",
+    "Issue receipt; close cash line.",
+    "Reconcile end-of-day cash session (SAO if needed)."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "wf-consultation",
+  "title": "Workflow: Conducting a consultation",
+  "roles": [
+    "Physician",
+    "Surgeon",
+    "Nurse"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/evaluations",
+    "/patients"
+  ],
+  "keywords": [
+    "consultation",
+    "evaluation",
+    "SOAP"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Uses gnuhealth.patient.evaluation.",
+  "steps": [
+    "Open patient chart or Evaluations.",
+    "Create patient evaluation with chief complaint and findings.",
+    "Order labs/imaging or prescribe as needed.",
+    "Save evaluation; continue to discharge/follow-up."
+  ]
+}

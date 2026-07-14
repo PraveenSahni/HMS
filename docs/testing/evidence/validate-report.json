@@ -1,10 +1,10 @@
 {
   "command": "validate",
-  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
+  "config": "C:\\HMS\\docs\\testing\\evidence\\_prod_cfg.yaml",
   "ok": true,
   "errors": [],
   "patients": 50,
   "seed": 42,
   "synthetic_data": true,
-  "timestamp": "2026-07-14T10:27:58.730221+00:00"
+  "timestamp": "2026-07-14T11:21:22.190333+00:00"
 }

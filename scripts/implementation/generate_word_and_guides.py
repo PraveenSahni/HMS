@@ -396,21 +396,35 @@ Deterministic, idempotent, bilingual-capable demo data for UAE + Qatar **without
     )
 
 
+# Section 10 — all roles required by the master brief
 ROLES = [
-    ("system-admin", "System Administrator", "Users, groups, modules, sequences, companies, settings"),
+    ("group-admin", "Group Administrator", "Group-level companies, multi-country entities, cross-facility governance"),
+    ("country-admin", "Country Administrator", "UAE or Qatar legal entity settings, currency, country-scoped users"),
     ("facility-admin", "Facility Administrator", "Institution settings, departments, local users"),
-    ("physician", "Physician", "Patients, evaluations, prescriptions, appointments, procedures"),
+    ("system-admin", "System Administrator", "Users, groups, modules, sequences, companies, settings"),
+    ("receptionist", "Registration and Reception", "Patients create, appointments, check-in, demographics"),
+    ("call-centre", "Call Centre", "Phone booking, appointment reminders, patient inquiries"),
     ("nurse", "Nurse", "Nursing, beds, ambulatory care, vitals support workflows"),
-    ("receptionist", "Receptionist", "Patients create, appointments, check-in"),
-    ("lab-tech", "Laboratory Technician", "Laboratory orders/results"),
-    ("pharmacist", "Pharmacist", "Pharmacy, medications, stock"),
-    ("billing", "Billing / Finance Officer", "Financial, products, insurance (SAO deep)"),
-    ("warehouse", "Warehouse / Inventory Clerk", "Stock locations and moves"),
-    ("imaging-tech", "Imaging Technician", "Imaging requests/results"),
-    ("compliance", "Compliance / Privacy Officer", "Audit expectations, synthetic policy, access reviews"),
-    ("executive", "Executive / Management", "Dashboard KPIs, reporting (SAO)"),
+    ("triage-nurse", "Triage Nurse", "ED/OPD triage acuity, initial vitals, routing to clinician"),
+    ("physician", "Doctor", "Patients, evaluations, prescriptions, appointments, procedures"),
+    ("surgeon", "Surgeon", "Surgery requests, OR scheduling, operative notes (SAO deep)"),
+    ("lab-tech", "Laboratory Technician", "Laboratory sample processing and results entry"),
+    ("lab-supervisor", "Laboratory Supervisor", "Lab result approval, QC, analyzer configuration"),
+    ("imaging-tech", "Radiology Technician", "Imaging requests, acquisition, worklist"),
+    ("radiologist", "Radiologist", "Imaging report interpretation and approval"),
+    ("pharmacist", "Pharmacist", "Prescription review, dispensing, controlled drugs"),
+    ("pharmacy-assistant", "Pharmacy Assistant", "Dispense support, stock picks, labelling under pharmacist oversight"),
+    ("cashier", "Cashier", "Patient payments, receipts, cash session close"),
+    ("billing", "Billing Employee", "Invoices, products, patient billing queues"),
+    ("insurance-claims", "Insurance and Claims Employee", "Payer claims, eClaim preparation, rejection handling"),
+    ("finance", "Finance Employee", "Chart of accounts, periods, journals (primarily SAO)"),
+    ("procurement", "Procurement Employee", "Purchase orders, supplier parties, receiving coordination"),
+    ("warehouse", "Inventory Employee", "Stock locations, moves, inventory counts"),
+    ("hr", "HR Employee", "Health professionals, party employment attributes, scheduling support"),
+    ("dept-manager", "Department Manager", "Department KPIs, staff roster awareness, local approvals"),
+    ("executive", "Hospital Management", "Dashboard KPIs, executive reporting (SAO)"),
     ("it-support", "IT Support", "Login troubleshooting, HTTPS, module activation ops"),
-    ("medical-records", "Medical Records Officer", "Parties, patient chart completeness, archives"),
+    ("auditor", "Auditor", "Read-only audit of access, synthetic policy, compliance evidence packs"),
 ]
 
 

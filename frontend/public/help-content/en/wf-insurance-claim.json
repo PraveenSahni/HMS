@@ -1,0 +1,31 @@
+{
+  "id": "wf-insurance-claim",
+  "title": "Workflow: Preparing an insurance claim",
+  "roles": [
+    "InsuranceClaims",
+    "Billing",
+    "Compliance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "insurance",
+    "claim",
+    "eClaim"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Claims interfaces are not implemented; legal/format confirmation required.",
+  "steps": [
+    "Confirm payer contract data is configured (needs confirmation).",
+    "Select invoice/encounter eligible for claim.",
+    "Generate claim package (format TBD per UAE/QA scheme).",
+    "Do not assume NABIDH/eClaim connectors exist — document gap."
+  ]
+}

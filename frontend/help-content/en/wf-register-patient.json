@@ -1,8 +1,9 @@
 {
   "id": "wf-register-patient",
-  "title": "Workflow: Register a patient",
+  "title": "Workflow: Registering a patient",
   "roles": [
     "Receptionist",
+    "CallCentre",
     "Physician",
     "FacilityAdmin"
   ],
@@ -16,16 +17,16 @@
   "keywords": [
     "patient",
     "register",
-    "create",
     "demographics"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": true,
-  "body": "Reception creates the party + patient record via the React form backed by gnuhealth.patient.",
+  "published": true,
+  "body": "Reception creates party + gnuhealth.patient via React.",
   "steps": [
     "Open Patients (/patients).",
-    "Choose Create and enter demographics.",
-    "Use synthetic IDs only in non-prod (IST-P-##### / SYN-QA- / SYN-AE-).",
-    "Save and verify the patient appears in the list."
+    "Create demographics; use synthetic IDs only in non-prod (IST-P-##### / SYN-AE- / SYN-QA-).",
+    "Save and verify the patient appears in the list.",
+    "Never enter real Emirates ID / Qatar ID in training DBs."
   ]
 }

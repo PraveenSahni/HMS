@@ -1,0 +1,34 @@
+{
+  "id": "wf-create-users-roles",
+  "title": "Workflow: Creating users and assigning roles",
+  "roles": [
+    "SystemAdmin",
+    "FacilityAdmin",
+    "ITSupport",
+    "GroupAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/users",
+    "/groups"
+  ],
+  "keywords": [
+    "users",
+    "groups",
+    "roles",
+    "ACL"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Deep record-rule editing remains in SAO until React admin covers it.",
+  "steps": [
+    "Open Users (/users); create user with synthetic email.",
+    "Open Groups (/groups); assign Tryton groups matching IST role packs.",
+    "Confirm company/institution access (record rules when deployed).",
+    "Have user sign in and verify menu ACL."
+  ]
+}

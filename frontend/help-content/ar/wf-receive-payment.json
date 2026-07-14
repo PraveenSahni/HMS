@@ -1,0 +1,30 @@
+{
+  "id": "wf-receive-payment",
+  "title": "سير العمل: استلام دفعة مريض",
+  "roles": [
+    "Cashier",
+    "Billing"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "payment",
+    "cashier",
+    "receipt"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "قد تعتمد عمليات الصندوق على SAO.",
+  "steps": [
+    "افتح فاتورة مفتوحة.",
+    "سجّل طريقة ومبلغ الدفع.",
+    "أصدر إيصالاً.",
+    "طابق جلسة النقد اليومية."
+  ]
+}

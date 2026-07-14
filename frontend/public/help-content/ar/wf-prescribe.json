@@ -3,6 +3,7 @@
   "title": "سير العمل: وصف دواء",
   "roles": [
     "Physician",
+    "Surgeon",
     "Pharmacist"
   ],
   "countries": [
@@ -18,12 +19,14 @@
     "prescription",
     "medication"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": true,
+  "published": true,
   "body": "يستخدم gnuhealth.prescription.order.",
   "steps": [
-    "افتح الصيدلية أو ملف المريض.",
-    "أنشئ وصفة للمريض.",
-    "يراجع الصيدلي ويصرف وفق إعدادات المخزون."
+    "افتح الصيدلية أو أدوية المريض.",
+    "أنشئ وصفة.",
+    "اختر من القائمة.",
+    "يراجع الصيدلي قبل الصرف."
   ]
 }

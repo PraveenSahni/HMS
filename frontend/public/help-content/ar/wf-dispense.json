@@ -1,0 +1,31 @@
+{
+  "id": "wf-dispense",
+  "title": "سير العمل: صرف دواء",
+  "roles": [
+    "Pharmacist",
+    "PharmacyAssistant"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/pharmacy",
+    "/stock"
+  ],
+  "keywords": [
+    "dispense",
+    "pharmacy",
+    "stock"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يربط الصرف الوصفة بحركات المخزون.",
+  "steps": [
+    "افتح الوصفات المعلقة.",
+    "تحقق من هوية المريض.",
+    "اصرف من موقع الصيدلية.",
+    "أكد حركة المخزون وأغلق الوصفة."
+  ]
+}

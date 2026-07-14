@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-hospital",
+  "title": "سير العمل: إنشاء مستشفى",
+  "roles": [
+    "FacilityAdmin",
+    "CountryAdmin",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings"
+  ],
+  "keywords": [
+    "hospital",
+    "institution",
+    "facility"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يستخدم gnuhealth.institution. أكد رموز المنشأة مع الجهة المختصة.",
+  "steps": [
+    "افتح الإعدادات / المؤسسة.",
+    "أنشئ مؤسسة مرتبطة بشركة الدولة الصحيحة.",
+    "حدد النوع مستشفى والرموز.",
+    "تحقق قبل إضافة الأقسام."
+  ]
+}

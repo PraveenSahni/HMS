@@ -1,0 +1,32 @@
+{
+  "id": "wf-close-period",
+  "title": "Workflow: Closing an accounting period",
+  "roles": [
+    "Finance",
+    "SystemAdmin",
+    "Auditor"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/financial"
+  ],
+  "keywords": [
+    "period",
+    "close",
+    "accounting",
+    "fiscal"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Period close is SAO-first; React Financial is a stub for deep wizards.",
+  "steps": [
+    "Reconcile open invoices and stock valuation (SAO).",
+    "Run period close wizard in SAO account module.",
+    "Lock period; document sign-off.",
+    "Retain evidence for auditor role pack."
+  ]
+}

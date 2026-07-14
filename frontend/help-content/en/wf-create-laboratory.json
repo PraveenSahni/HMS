@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-laboratory",
+  "title": "Workflow: Creating a laboratory",
+  "roles": [
+    "FacilityAdmin",
+    "LabSupervisor",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/laboratory",
+    "/settings"
+  ],
+  "keywords": [
+    "laboratory",
+    "LIMS",
+    "lab"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Requires health_lab. UI shows module-missing if absent.",
+  "steps": [
+    "Ensure health_lab module is activated.",
+    "Configure lab institution/unit and test catalog.",
+    "Assign LabTech / LabSupervisor groups.",
+    "Place a test order to validate end-to-end."
+  ]
+}

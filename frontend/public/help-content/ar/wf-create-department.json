@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-department",
+  "title": "سير العمل: إنشاء قسم",
+  "roles": [
+    "FacilityAdmin",
+    "DeptManager",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings",
+    "/menu"
+  ],
+  "keywords": [
+    "department",
+    "unit",
+    "ward"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "ترتبط الأقسام بوحدات المؤسسة.",
+  "steps": [
+    "افتح وحدات المؤسسة (SAO عند الحاجة).",
+    "أنشئ قسماً تحت المنشأة.",
+    "عيّن المدير والتخصص.",
+    "أكد ربط الأسرّة/المخزون بالوحدة."
+  ]
+}

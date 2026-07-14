@@ -1,6 +1,6 @@
 # Laboratory Technician
 
-**Focus:** Laboratory orders/results
+**Focus:** Laboratory sample processing and results entry
 
 ## Access
 

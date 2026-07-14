@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-department",
+  "title": "Workflow: Creating a department",
+  "roles": [
+    "FacilityAdmin",
+    "DeptManager",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/settings",
+    "/menu"
+  ],
+  "keywords": [
+    "department",
+    "unit",
+    "ward"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Departments map to gnuhealth.institution.unit (or equivalent).",
+  "steps": [
+    "Open institution / units (SAO if React limited).",
+    "Create department or operational unit under the facility.",
+    "Assign manager and specialty as needed.",
+    "Confirm beds/stock locations can reference the unit."
+  ]
+}

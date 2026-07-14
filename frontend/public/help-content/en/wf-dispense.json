@@ -1,0 +1,31 @@
+{
+  "id": "wf-dispense",
+  "title": "Workflow: Dispensing medicine",
+  "roles": [
+    "Pharmacist",
+    "PharmacyAssistant"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/pharmacy",
+    "/stock"
+  ],
+  "keywords": [
+    "dispense",
+    "pharmacy",
+    "stock"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "Dispense ties prescription to stock moves (health_stock).",
+  "steps": [
+    "Open pending prescriptions.",
+    "Verify patient identity (synthetic codes in non-prod).",
+    "Dispense from pharmacy stock location; update lot if required.",
+    "Confirm stock move and mark prescription done."
+  ]
+}

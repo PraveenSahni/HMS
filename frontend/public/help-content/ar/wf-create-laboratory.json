@@ -1,0 +1,32 @@
+{
+  "id": "wf-create-laboratory",
+  "title": "سير العمل: إنشاء مختبر",
+  "roles": [
+    "FacilityAdmin",
+    "LabSupervisor",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/laboratory",
+    "/settings"
+  ],
+  "keywords": [
+    "laboratory",
+    "LIMS",
+    "lab"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يتطلب health_lab.",
+  "steps": [
+    "تأكد من تفعيل health_lab.",
+    "اضبط وحدة المختبر وكتالوج الفحوصات.",
+    "عيّن مجموعات فني/مشرف المختبر.",
+    "أنشئ طلباً تجريبياً للتحقق."
+  ]
+}

@@ -15,16 +15,215 @@
     "keywords": [
       "help",
       "start",
-      "overview"
+      "overview",
+      "onboarding"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "onboarding-checklist",
+    "title": "Onboarding checklist",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "onboarding",
+      "checklist",
+      "training",
+      "new user"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "wf-create-company",
+    "title": "Workflow: Creating a company",
+    "roles": [
+      "GroupAdmin",
+      "CountryAdmin",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/companies"
+    ],
+    "keywords": [
+      "company",
+      "legal entity",
+      "multi-company"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-hospital",
+    "title": "Workflow: Creating a hospital",
+    "roles": [
+      "FacilityAdmin",
+      "CountryAdmin",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings"
+    ],
+    "keywords": [
+      "hospital",
+      "institution",
+      "facility"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-clinic",
+    "title": "Workflow: Creating a clinic",
+    "roles": [
+      "FacilityAdmin",
+      "CountryAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings"
+    ],
+    "keywords": [
+      "clinic",
+      "outpatient",
+      "institution"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-department",
+    "title": "Workflow: Creating a department",
+    "roles": [
+      "FacilityAdmin",
+      "DeptManager",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/settings",
+      "/menu"
+    ],
+    "keywords": [
+      "department",
+      "unit",
+      "ward"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-pharmacy",
+    "title": "Workflow: Creating a pharmacy",
+    "roles": [
+      "FacilityAdmin",
+      "Pharmacist",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/stock"
+    ],
+    "keywords": [
+      "pharmacy",
+      "dispensary",
+      "stock location"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-laboratory",
+    "title": "Workflow: Creating a laboratory",
+    "roles": [
+      "FacilityAdmin",
+      "LabSupervisor",
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory",
+      "/settings"
+    ],
+    "keywords": [
+      "laboratory",
+      "LIMS",
+      "lab"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-users-roles",
+    "title": "Workflow: Creating users and assigning roles",
+    "roles": [
+      "SystemAdmin",
+      "FacilityAdmin",
+      "ITSupport",
+      "GroupAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/users",
+      "/groups"
+    ],
+    "keywords": [
+      "users",
+      "groups",
+      "roles",
+      "ACL"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-register-patient",
-    "title": "Workflow: Register a patient",
+    "title": "Workflow: Registering a patient",
     "roles": [
       "Receptionist",
+      "CallCentre",
       "Physician",
       "FacilityAdmin"
     ],
@@ -38,17 +237,18 @@
     "keywords": [
       "patient",
       "register",
-      "create",
       "demographics"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-book-appointment",
-    "title": "Workflow: Book an appointment",
+    "title": "Workflow: Booking an appointment",
     "roles": [
       "Receptionist",
+      "CallCentre",
       "Physician"
     ],
     "countries": [
@@ -63,15 +263,68 @@
       "schedule",
       "booking"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-triage",
+    "title": "Workflow: Recording triage",
+    "roles": [
+      "TriageNurse",
+      "Nurse",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/nursing",
+      "/evaluations"
+    ],
+    "keywords": [
+      "triage",
+      "acuity",
+      "ED",
+      "vitals"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-consultation",
+    "title": "Workflow: Conducting a consultation",
+    "roles": [
+      "Physician",
+      "Surgeon",
+      "Nurse"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/evaluations",
+      "/patients"
+    ],
+    "keywords": [
+      "consultation",
+      "evaluation",
+      "SOAP"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-lab-order",
-    "title": "Workflow: Place a lab order",
+    "title": "Workflow: Ordering laboratory tests",
     "roles": [
       "Physician",
-      "LabTech"
+      "LabTech",
+      "LabSupervisor"
     ],
     "countries": [
       "AE",
@@ -85,14 +338,41 @@
       "order",
       "LIMS"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-lab-results",
+    "title": "Workflow: Entering and approving laboratory results",
+    "roles": [
+      "LabTech",
+      "LabSupervisor",
+      "Physician"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/laboratory"
+    ],
+    "keywords": [
+      "lab",
+      "results",
+      "approve",
+      "QC"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-prescribe",
-    "title": "Workflow: Prescribe medication",
+    "title": "Workflow: Prescribing medicine",
     "roles": [
       "Physician",
+      "Surgeon",
       "Pharmacist"
     ],
     "countries": [
@@ -108,12 +388,37 @@
       "prescription",
       "medication"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-dispense",
+    "title": "Workflow: Dispensing medicine",
+    "roles": [
+      "Pharmacist",
+      "PharmacyAssistant"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/pharmacy",
+      "/stock"
+    ],
+    "keywords": [
+      "dispense",
+      "pharmacy",
+      "stock"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "wf-admit",
-    "title": "Workflow: Inpatient admission",
+    "title": "Workflow: Admitting a patient",
     "roles": [
       "Physician",
       "Nurse",
@@ -131,8 +436,252 @@
       "bed",
       "inpatient"
     ],
-    "version": "1.0.0",
-    "guided": true
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-transfer-bed",
+    "title": "Workflow: Transferring a bed",
+    "roles": [
+      "Nurse",
+      "FacilityAdmin",
+      "DeptManager"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds"
+    ],
+    "keywords": [
+      "transfer",
+      "bed",
+      "ward"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-discharge",
+    "title": "Workflow: Discharging a patient",
+    "roles": [
+      "Physician",
+      "Nurse",
+      "Billing",
+      "Cashier"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/beds",
+      "/financial"
+    ],
+    "keywords": [
+      "discharge",
+      "inpatient",
+      "exit"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-create-invoice",
+    "title": "Workflow: Creating an invoice",
+    "roles": [
+      "Billing",
+      "Finance",
+      "Cashier"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "invoice",
+      "billing",
+      "account"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-receive-payment",
+    "title": "Workflow: Receiving patient payment",
+    "roles": [
+      "Cashier",
+      "Billing"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "payment",
+      "cashier",
+      "receipt"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-insurance-claim",
+    "title": "Workflow: Preparing an insurance claim",
+    "roles": [
+      "InsuranceClaims",
+      "Billing",
+      "Compliance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "insurance",
+      "claim",
+      "eClaim"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-claim-rejection",
+    "title": "Workflow: Processing claim rejection",
+    "roles": [
+      "InsuranceClaims",
+      "Billing",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "claim",
+      "rejection",
+      "appeal"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-purchase-order",
+    "title": "Workflow: Completing a purchase order",
+    "roles": [
+      "Procurement",
+      "Warehouse",
+      "Finance"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock",
+      "/products"
+    ],
+    "keywords": [
+      "purchase",
+      "PO",
+      "supplier"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-receive-stock",
+    "title": "Workflow: Receiving stock",
+    "roles": [
+      "Warehouse",
+      "Procurement",
+      "Pharmacist"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock"
+    ],
+    "keywords": [
+      "receiving",
+      "stock",
+      "goods receipt"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-transfer-inventory",
+    "title": "Workflow: Transferring inventory",
+    "roles": [
+      "Warehouse",
+      "Pharmacist",
+      "FacilityAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/stock"
+    ],
+    "keywords": [
+      "transfer",
+      "inventory",
+      "internal move"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
+  },
+  {
+    "id": "wf-close-period",
+    "title": "Workflow: Closing an accounting period",
+    "roles": [
+      "Finance",
+      "SystemAdmin",
+      "Auditor"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/financial"
+    ],
+    "keywords": [
+      "period",
+      "close",
+      "accounting",
+      "fiscal"
+    ],
+    "version": "1.1.0",
+    "guided": true,
+    "published": true
   },
   {
     "id": "admin-users",
@@ -140,7 +689,8 @@
     "roles": [
       "SystemAdmin",
       "FacilityAdmin",
-      "ITSupport"
+      "ITSupport",
+      "GroupAdmin"
     ],
     "countries": [
       "AE",
@@ -156,8 +706,32 @@
       "acl",
       "rbac"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "field-help-guide",
+    "title": "Using field-level help",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "field",
+      "tooltip",
+      "contextual",
+      "hint"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "uae-hie-readiness",
@@ -165,7 +739,8 @@
     "roles": [
       "Compliance",
       "SystemAdmin",
-      "Executive"
+      "Executive",
+      "Auditor"
     ],
     "countries": [
       "AE"
@@ -181,8 +756,9 @@
       "HL7",
       "FHIR"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "qatar-privacy",
@@ -190,7 +766,8 @@
     "roles": [
       "Compliance",
       "FacilityAdmin",
-      "Executive"
+      "Executive",
+      "Auditor"
     ],
     "countries": [
       "QA"
@@ -204,8 +781,9 @@
       "consent",
       "Qatar"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
   },
   {
     "id": "synthetic-policy",
@@ -213,7 +791,8 @@
     "roles": [
       "*",
       "Compliance",
-      "ITSupport"
+      "ITSupport",
+      "Auditor"
     ],
     "countries": [
       "AE",
@@ -228,7 +807,30 @@
       "demo",
       "IST-P"
     ],
-    "version": "1.0.0",
-    "guided": false
+    "version": "1.1.0",
+    "guided": false,
+    "published": true
+  },
+  {
+    "id": "draft-unpublished-example",
+    "title": "Draft topic (unpublished example)",
+    "roles": [
+      "SystemAdmin"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/help"
+    ],
+    "keywords": [
+      "draft",
+      "unpublished",
+      "admin"
+    ],
+    "version": "1.1.0",
+    "guided": false,
+    "published": false
   }
 ]

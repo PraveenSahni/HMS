@@ -4,7 +4,8 @@
   "roles": [
     "Compliance",
     "FacilityAdmin",
-    "Executive"
+    "Executive",
+    "Auditor"
   ],
   "countries": [
     "QA"
@@ -18,7 +19,8 @@
     "consent",
     "Qatar"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "guided": false,
+  "published": true,
   "body": "Health data is special-nature under Law 13/2016 summaries — obtain legal confirmation for permits, DPIA, and retention before processing real PHI."
 }

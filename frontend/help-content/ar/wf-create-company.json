@@ -1,0 +1,31 @@
+{
+  "id": "wf-create-company",
+  "title": "سير العمل: إنشاء شركة",
+  "roles": [
+    "GroupAdmin",
+    "CountryAdmin",
+    "SystemAdmin"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/companies"
+  ],
+  "keywords": [
+    "company",
+    "legal entity",
+    "multi-company"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "يرتبط بنموذج company.company.",
+  "steps": [
+    "افتح الشركات (/companies).",
+    "أنشئ شركة لكيان قانوني في الإمارات أو قطر.",
+    "عيّن العملة والعنوان (اصطناعي خارج الإنتاج).",
+    "تحقق من الظهور؛ لا تخلط بيانات الدول دون أساس قانوني."
+  ]
+}

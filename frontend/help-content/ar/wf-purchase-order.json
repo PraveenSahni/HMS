@@ -1,0 +1,32 @@
+{
+  "id": "wf-purchase-order",
+  "title": "سير العمل: إكمال أمر شراء",
+  "roles": [
+    "Procurement",
+    "Warehouse",
+    "Finance"
+  ],
+  "countries": [
+    "AE",
+    "QA"
+  ],
+  "routes": [
+    "/stock",
+    "/products"
+  ],
+  "keywords": [
+    "purchase",
+    "PO",
+    "supplier"
+  ],
+  "version": "1.1.0",
+  "guided": true,
+  "published": true,
+  "body": "أوامر الشراء عبر Tryton؛ قد تُفتح في SAO.",
+  "steps": [
+    "أنشئ/اختر مورّداً اصطناعياً.",
+    "أنشئ أمر شراء للمنتجات.",
+    "احصل على الموافقة.",
+    "أكد جاهزية الاستلام."
+  ]
+}
