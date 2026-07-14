@@ -23,5 +23,5 @@
   "version": "1.1.0",
   "guided": false,
   "published": true,
-  "body": "Non-production must use synthetic markers only. Production imports require CAB and --allow-production."
+  "body": "Non-production must use synthetic markers only (IST-P-*, SYN-AE-*, SYN-QA-*, batch ISTHIS-*-*). Small demo: config/synthetic/uae_qatar_demo.yaml. Largest validated demo: config/synthetic/uae_qatar_max_demo.yaml (4000 patients, UAE+Qatar group) — see docs/implementation/max-demo-synthetic-data.md. Prefer dry-run before import. Production imports require CAB and --allow-production."
 }

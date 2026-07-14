@@ -1,7 +1,43 @@
 {
   "command": "import_synthetic",
   "dry_run": true,
-  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
-  "timestamp": "2026-07-14T11:21:21.949254+00:00",
-  "status": "dry-run-ok"
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_max_demo.yaml",
+  "timestamp": "2026-07-14T16:15:19.461650+00:00",
+  "seed": 20260714,
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+  "status": "dry-run-ok",
+  "would_call": "run_synthetic_data.py",
+  "engine_steps": [
+    "company",
+    "staff",
+    "patients",
+    "appointments",
+    "laboratory",
+    "pharmacy",
+    "inpatient",
+    "evaluations"
+  ],
+  "local_only_packs": [
+    "00_foundation",
+    "02_health_institutions",
+    "03_users_and_access",
+    "09_nursing",
+    "10_icu",
+    "12_imaging",
+    "14_stock",
+    "15_surgery",
+    "16_insurance",
+    "17_accounting",
+    "18_services_and_billing",
+    "19_reporting",
+    "20_federation_and_integration"
+  ],
+  "plan_counts": {
+    "patients": 4000,
+    "staff": 300,
+    "entities": 3,
+    "facilities": 13
+  },
+  "password_configured": false,
+  "production_host_match": true
 }

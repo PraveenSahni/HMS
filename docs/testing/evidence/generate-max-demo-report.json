@@ -1,0 +1,142 @@
+{
+  "command": "generate_synthetic",
+  "profile": "uae_qatar_max_demo",
+  "counts": {
+    "entities": 3,
+    "facilities_institutions": 13,
+    "departments": 10,
+    "users": 300,
+    "health_professionals": 300,
+    "patients": 4000,
+    "appointments": 12000,
+    "evaluations": 2419,
+    "lab_orders": 1587,
+    "lab_results": 952,
+    "prescriptions": 2012,
+    "beds": 72,
+    "admissions": 1065,
+    "nursing_roundings": 843,
+    "icu_scores": 95,
+    "imaging_requests": 790,
+    "surgeries": 205,
+    "insurance_companies": 2,
+    "insurance_plans": 2,
+    "patient_insurance": 2784,
+    "stock_locations": 9,
+    "stock_moves": 72,
+    "health_services": 2016,
+    "invoices_draft": 2016,
+    "reporting_markers": 1,
+    "federation_markers": 1
+  },
+  "seed": 20260714,
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+  "packs": {
+    "00_foundation": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "01_company": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "02_health_institutions": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "03_users_and_access": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "04_health_professionals": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "05_patients": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "06_appointments": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "07_evaluations": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "08_inpatient": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "09_nursing": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "10_icu": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "11_laboratory": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "12_imaging": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "13_pharmacy": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "14_stock": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "15_surgery": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "16_insurance": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "17_accounting": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "18_services_and_billing": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "19_reporting": {
+      "mode": "stub_marker",
+      "live_engine": false,
+      "local_records": true
+    },
+    "20_federation_and_integration": {
+      "mode": "stub_marker",
+      "live_engine": false,
+      "local_records": true
+    }
+  },
+  "timestamp": "2026-07-14T16:14:55.207027+00:00"
+}

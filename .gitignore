@@ -43,6 +43,9 @@ Desktop.ini
 
 # Local evidence / probe dumps
 docs/testing/evidence/_prod_cfg.yaml
+docs/testing/evidence/_runtime_synthetic_config.yaml
+docs/testing/evidence/generated/
+synthetic-data/generated/
 frontend/db-login.json
 frontend/db-list.json
 

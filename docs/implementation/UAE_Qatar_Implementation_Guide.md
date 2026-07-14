@@ -163,7 +163,8 @@ Optimization & reporting handover.
 ## 8. Synthetic data
 
 See `docs/implementation/synthetic-data-guide.md` and `data-import-runbook.md`.  
-Demo config: `config/synthetic/uae_qatar_demo.yaml`.
+Small demo: `config/synthetic/uae_qatar_demo.yaml`.  
+**Max demo (recommended for full group showcase):** `config/synthetic/uae_qatar_max_demo.yaml` — see `docs/implementation/max-demo-synthetic-data.md`.
 
 ## 9. Help & training
 

@@ -1,0 +1,225 @@
+# IST HIS — UAE + Qatar MAX demo profile
+# Largest volume this tooling validates locally and can import via run_synthetic_data.py.
+#
+# Ceiling chosen: 4000 patients / 300 staff (matches proven config.yaml engine path).
+# Validate hard-stop for environment=test is >5000 patients.
+# Master-brief optional 50k is deferred — needs sized VM; expect OOM/timeout on laptop.
+#
+# Credentials intentionally CHANGE_ME — generate + dry-run locally first.
+# Live import: copy server block from a local (gitignored) config.yaml or env, then
+#   python scripts/synthetic_data/cli.py import_synthetic --config … [--allow-production]
+# Only use --allow-production after explicit CAB/demo approval for the target host.
+
+synthetic_data: true
+synthetic_batch_id: ISTHIS-MAXDEMO-20260714
+seed: 20260714
+idempotent: true
+environment: test  # dev | test | uat | demo | production
+
+company:
+  name: "IST Healthcare Group"
+  legal_name: "IRISSTAR Technologies"
+  name_ar: "مجموعة آي إس تي للرعاية الصحية"
+  code: "IST"
+  city: "Doha"
+  country: "Qatar"
+  country_code: "QA"
+  phone_prefix: "+974"
+  facility_type: "Multi-specialty Hospital Group"
+  address_en: "Office 214/215, 2nd Floor, Regus D-Ring Building no 65, D-Ring Road, Old Airport, Doha, Qatar"
+  address_ar: "مكتب 214/215، الطابق الثاني، مبنى ريجس D-Ring رقم 65، طريق D-Ring، المطار القديم، الدوحة، قطر"
+  email: "demo.synthetic@isthealth.example"
+  website: "https://www.isttechnologies.qa"
+  offices:
+    qatar:
+      primary: true
+      address_lines:
+        - "Office 214/215"
+        - "2nd Floor, Regus D-Ring Building no 65, D-Ring Road"
+        - "Old Airport"
+      po_box: "32522"
+      city: "Doha"
+      country: "Qatar"
+    uae:
+      phones:
+        - "+971 50 000 0001"
+      address_lines:
+        - "Level 20, 48, Burj Gate Tower, Downtown Dubai"
+      po_box: "22061"
+      city: "Dubai"
+      country: "U.A.E"
+
+group:
+  name: IST Healthcare Group
+  code: IST-HC-GRP
+
+entities:
+  - code: IST-HC-GRP
+    name: IST Healthcare Group
+    country: AE
+    type: Group
+  - code: IST-HC-AE
+    name: IST Healthcare UAE
+    country: AE
+    type: LegalEntity
+    parent: IST-HC-GRP
+  - code: IST-HC-QA
+    name: IST Healthcare Qatar
+    country: QA
+    type: LegalEntity
+    parent: IST-HC-GRP
+
+facilities:
+  # UAE
+  - { code: FAC-DXB-GH, name: IST General Hospital Dubai, country: AE, entity: IST-HC-AE, type: hospital }
+  - { code: FAC-DXB-MC, name: IST Medical Centre Dubai, country: AE, entity: IST-HC-AE, type: medical_centre }
+  - { code: FAC-DXB-DS, name: IST Day Surgery Centre Dubai, country: AE, entity: IST-HC-AE, type: day_surgery }
+  - { code: FAC-AUH-GH, name: IST General Hospital Abu Dhabi, country: AE, entity: IST-HC-AE, type: hospital }
+  - { code: FAC-AE-LAB, name: Central Laboratory UAE, country: AE, entity: IST-HC-AE, type: laboratory }
+  - { code: FAC-AE-PH, name: Central Pharmacy UAE, country: AE, entity: IST-HC-AE, type: pharmacy }
+  - { code: FAC-AE-ST, name: Central Store UAE, country: AE, entity: IST-HC-AE, type: store }
+  # Qatar
+  - { code: FAC-DOH-GH, name: IST General Hospital Doha, country: QA, entity: IST-HC-QA, type: hospital }
+  - { code: FAC-DOH-MC, name: IST Medical Centre Doha, country: QA, entity: IST-HC-QA, type: medical_centre }
+  - { code: FAC-DOH-SC, name: IST Specialist Clinic Doha, country: QA, entity: IST-HC-QA, type: medical_centre }
+  - { code: FAC-QA-LAB, name: Central Laboratory Qatar, country: QA, entity: IST-HC-QA, type: laboratory }
+  - { code: FAC-QA-PH, name: Central Pharmacy Qatar, country: QA, entity: IST-HC-QA, type: pharmacy }
+  - { code: FAC-QA-ST, name: Central Store Qatar, country: QA, entity: IST-HC-QA, type: store }
+
+server:
+  # Prefer local dry-run; override password from local gitignored config for VM import
+  url: "https://health.irisstar.tech"
+  database: "isthealth"
+  username: "admin"
+  password: "CHANGE_ME"
+  language: "en"
+  production_hosts:
+    - "health.irisstar.tech"
+    - "34.18.116.146"
+
+data:
+  patients: 4000
+  staff: 300
+  appointment_months: 6
+  languages: ["en", "ar"]
+  batch_size: 100
+  staff_mix:
+    doctors: 80
+    nurses: 100
+    admin: 40
+    reception: 30
+    lab: 25
+    pharmacy: 25
+  modules:
+    outpatient: true
+    laboratory: true
+    pharmacy: true
+    inpatient: true
+    evaluations: true
+    imaging: true
+    surgery: true
+    nursing: true
+    icu: true
+    stock: true
+    insurance: true
+    accounting: true
+    services: true
+    reporting: true
+  departments:
+    - { name: "General Medicine", name_ar: "الطب العام" }
+    - { name: "Pediatrics", name_ar: "طب الأطفال" }
+    - { name: "Internal Medicine", name_ar: "الطب الباطني" }
+    - { name: "Laboratory", name_ar: "المختبر" }
+    - { name: "Pharmacy", name_ar: "الصيدلية" }
+    - { name: "Radiology", name_ar: "الأشعة" }
+    - { name: "Emergency", name_ar: "الطوارئ" }
+    - { name: "Surgery", name_ar: "الجراحة" }
+    - { name: "ICU", name_ar: "العناية المركزة" }
+    - { name: "Nursing", name_ar: "التمريض" }
+  specialties:
+    - "General Practice"
+    - "Pediatrics"
+    - "Internal Medicine"
+    - "Family Medicine"
+    - "Emergency Medicine"
+    - "General Surgery"
+    - "Radiology"
+    - "Anaesthesiology"
+  lab_tests:
+    - "Complete Blood Count"
+    - "Blood Glucose"
+    - "Lipid Panel"
+    - "Liver Function Test"
+    - "Kidney Function Test"
+    - "Thyroid Panel"
+    - "Urinalysis"
+    - "HbA1c"
+  medications:
+    - "Paracetamol 500mg"
+    - "Ibuprofen 400mg"
+    - "Amoxicillin 500mg"
+    - "Metformin 500mg"
+    - "Amlodipine 5mg"
+    - "Omeprazole 20mg"
+    - "Salbutamol Inhaler"
+    - "Cetirizine 10mg"
+  imaging_tests:
+    - "Chest X-Ray"
+    - "Abdominal Ultrasound"
+    - "CT Head"
+    - "MRI Knee"
+    - "Mammography"
+  surgery_procedures:
+    - "Appendectomy"
+    - "Cholecystectomy"
+    - "Hernia Repair"
+    - "Cataract Extraction"
+    - "Knee Arthroscopy"
+
+options:
+  create_appointments_per_patient: 3
+  lab_orders_ratio: 0.4
+  lab_results_ratio: 0.6
+  prescription_ratio: 0.5
+  evaluation_ratio: 0.6
+  inpatient_beds_per_hospital: 24
+  inpatient_ratio: 0.25
+  imaging_ratio: 0.2
+  surgery_ratio: 0.05
+  nursing_rounding_ratio: 0.8
+  icu_ratio: 0.08
+  insurance_ratio: 0.7
+  services_ratio: 0.5
+  refuse_production_without_override: true
+
+# Pack orchestration (00–20). engine_live = written by run_synthetic_data.py on import.
+# local_connected = full linked JSON from generate_synthetic. stub_marker = marker-only.
+packs:
+  "00_foundation": { mode: local_connected }
+  "01_company": { mode: engine_live }
+  "02_health_institutions": { mode: local_connected }
+  "03_users_and_access": { mode: local_connected }
+  "04_health_professionals": { mode: engine_live }
+  "05_patients": { mode: engine_live }
+  "06_appointments": { mode: engine_live }
+  "07_evaluations": { mode: engine_live }
+  "08_inpatient": { mode: engine_live }
+  "09_nursing": { mode: local_connected }
+  "10_icu": { mode: local_connected }
+  "11_laboratory": { mode: engine_live }
+  "12_imaging": { mode: local_connected }
+  "13_pharmacy": { mode: engine_live }
+  "14_stock": { mode: local_connected }
+  "15_surgery": { mode: local_connected }
+  "16_insurance": { mode: local_connected }
+  "17_accounting": { mode: local_connected }
+  "18_services_and_billing": { mode: local_connected }
+  "19_reporting": { mode: stub_marker }
+  "20_federation_and_integration": { mode: stub_marker }
+
+id_formats:
+  patient: "IST-P-{seq:05d}"
+  staff: "IST-ST-{role}-{seq:04d}"
+  national_id_qa: "SYN-QA-{seq:08d}"
+  national_id_ae: "SYN-AE-{seq:08d}"
+  note: "Synthetic only — never real Emirates/Qatar ID, passport, phone, or email values"

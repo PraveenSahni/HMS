@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,8 +25,21 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+# Load sibling module without requiring scripts/ to be a package
+import importlib.util
+
+_gen_path = Path(__file__).resolve().parent / "max_demo_generator.py"
+_spec = importlib.util.spec_from_file_location("max_demo_generator", _gen_path)
+assert _spec and _spec.loader
+_mod = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+build_max_demo_dataset = _mod.build_max_demo_dataset
+write_dataset = _mod.write_dataset
+
 REPORT_DIR = ROOT / "docs" / "testing" / "evidence"
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+CHANGE_ME = frozenset({"", "CHANGE_ME", "CHANGEME", "TODO", "XXX"})
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -59,16 +73,32 @@ def refuse_production(cfg: dict[str, Any], allow: bool, *, dry_run: bool = False
             "REFUSED: production target detected. "
             "Re-run with --allow-production after CAB approval."
         )
+    # Also refuse when options flag set and URL matches production_hosts
+    opts = cfg.get("options") or {}
+    if opts.get("refuse_production_without_override") and not allow:
+        server = cfg.get("server") or {}
+        url = str(server.get("url", "")).lower()
+        for h in server.get("production_hosts") or []:
+            if h and h.lower() in url and not dry_run:
+                # environment may be test/demo but host is listed prod — require override
+                raise SystemExit(
+                    "REFUSED: server URL matches production_hosts. "
+                    "Use --dry-run, or --allow-production after explicit demo/CAB approval."
+                )
+
+
+def password_configured(cfg: dict[str, Any]) -> bool:
+    pwd = str((cfg.get("server") or {}).get("password", "")).strip()
+    return pwd.upper() not in {p.upper() for p in CHANGE_ME} and bool(pwd)
 
 
 def cmd_validate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
     errors: list[str] = []
     if not cfg.get("synthetic_data", False):
         errors.append("synthetic_data must be true")
-    if "seed" not in cfg and "seed" not in (cfg.get("data") or {}):
-        # allow seed at top or nested via company configs
-        if cfg.get("seed") is None:
-            errors.append("seed is required for determinism")
+    seed = cfg.get("seed")
+    if seed is None and "seed" not in (cfg.get("data") or {}):
+        errors.append("seed is required for determinism")
     data = cfg.get("data") or {}
     patients = int(data.get("patients", 0))
     if patients <= 0:
@@ -80,14 +110,24 @@ def cmd_validate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
         val = str(idf.get(key, ""))
         if val and not val.startswith("SYN-"):
             errors.append(f"{key} must use SYN- prefix")
+    facilities = cfg.get("facilities") or []
+    entities = cfg.get("entities") or []
+    if not entities:
+        errors.append("entities org tree required")
+    if not facilities:
+        errors.append("facilities list required")
     report = {
         "command": "validate",
         "config": str(config_path),
         "ok": not errors,
         "errors": errors,
         "patients": patients,
-        "seed": cfg.get("seed"),
+        "staff": int(data.get("staff", 0)),
+        "entities": len(entities),
+        "facilities": len(facilities),
+        "seed": seed if seed is not None else (data.get("seed")),
         "synthetic_data": cfg.get("synthetic_data"),
+        "synthetic_batch_id": cfg.get("synthetic_batch_id"),
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
     out = REPORT_DIR / "validate-report.json"
@@ -102,11 +142,49 @@ def cmd_validate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
     return report
 
 
+def _is_max_profile(cfg: dict[str, Any], config_path: Path) -> bool:
+    name = config_path.name.lower()
+    if "max_demo" in name or "max-demo" in name:
+        return True
+    return bool(cfg.get("packs")) and int((cfg.get("data") or {}).get("patients", 0)) >= 500
+
+
 def cmd_generate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
-    seed = int(cfg.get("seed", 42))
+    seed = int(cfg.get("seed") or (cfg.get("data") or {}).get("seed") or 42)
     data = cfg.get("data") or {}
     n_patients = int(data.get("patients", 50))
     n_staff = int(data.get("staff", 10))
+
+    if _is_max_profile(cfg, config_path):
+        dataset = build_max_demo_dataset(cfg)
+        paths = write_dataset(dataset, REPORT_DIR, write_full=True)
+        # Also mirror under synthetic-data/generated for pack consumers
+        mirror = ROOT / "synthetic-data" / "generated"
+        write_dataset(dataset, mirror, write_full=True)
+        payload = {
+            "command": "generate_synthetic",
+            "profile": "max_demo",
+            "config": str(config_path),
+            "seed": seed,
+            "synthetic_batch_id": cfg.get("synthetic_batch_id"),
+            "counts": dataset["counts"],
+            "paths": {k: str(v) for k, v in paths.items()},
+            "packs": dataset["meta"].get("packs"),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
+        (REPORT_DIR / "generate-synthetic-report.json").write_text(
+            json.dumps(payload, indent=2), encoding="utf-8"
+        )
+        print(
+            f"GENERATE OK (max demo) patients={dataset['counts']['patients']} "
+            f"staff={dataset['counts']['health_professionals']} "
+            f"appointments={dataset['counts']['appointments']} seed={seed}"
+        )
+        print(f"Summary: {paths['summary']}")
+        print(f"Full dataset: {paths.get('full')}")
+        return payload
+
+    # Small demo path (uae_qatar_demo.yaml)
     code = (cfg.get("company") or {}).get("code", "IST")
     patients = [
         {
@@ -134,7 +212,6 @@ def cmd_generate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
     }
     out = REPORT_DIR / "generate-synthetic-report.json"
     out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    # also write a small dataset file for tests
     dataset = REPORT_DIR / "synthetic-demo-dataset.json"
     dataset.write_text(
         json.dumps({"patients": patients, "staff": staff, "seed": seed}, indent=2),
@@ -145,13 +222,16 @@ def cmd_generate(cfg: dict[str, Any], config_path: Path) -> dict[str, Any]:
     return payload
 
 
-def cmd_import_data(cfg: dict[str, Any], config_path: Path, dry_run: bool, allow_prod: bool) -> dict[str, Any]:
+def cmd_import_data(
+    cfg: dict[str, Any], config_path: Path, dry_run: bool, allow_prod: bool
+) -> dict[str, Any]:
     refuse_production(cfg, allow_prod, dry_run=dry_run)
     plan = {
         "entities": len(cfg.get("entities") or []),
         "facilities": len(cfg.get("facilities") or []),
         "patients": int((cfg.get("data") or {}).get("patients", 0)),
         "staff": int((cfg.get("data") or {}).get("staff", 0)),
+        "packs": list((cfg.get("packs") or {}).keys()),
     }
     report = {
         "command": "import_data",
@@ -169,12 +249,37 @@ def cmd_import_data(cfg: dict[str, Any], config_path: Path, dry_run: bool, allow
         )
         return report
 
-    # Non-dry-run master-data import is a stub that records intent; live GH write uses import_synthetic
     (REPORT_DIR / "import-data-report.json").write_text(
         json.dumps(report, indent=2), encoding="utf-8"
     )
     print("import_data recorded (master-data apply uses Excel + GH tools).")
     return report
+
+
+def _merge_engine_config(cfg: dict[str, Any]) -> dict[str, Any]:
+    """Map demo/max yaml into run_synthetic_data.py shape."""
+    data = dict(cfg.get("data") or {})
+    if "seed" not in data:
+        data["seed"] = cfg.get("seed", 42)
+    options = {
+        "idempotent": cfg.get("idempotent", True),
+        **(cfg.get("options") or {}),
+    }
+    # Engine uses inpatient_beds (total), not per-hospital
+    if "inpatient_beds" not in options and "inpatient_beds_per_hospital" in options:
+        hospitals = [
+            f
+            for f in (cfg.get("facilities") or [])
+            if f.get("type") == "hospital"
+        ]
+        n_h = max(len(hospitals), 1)
+        options["inpatient_beds"] = int(options["inpatient_beds_per_hospital"]) * n_h
+    return {
+        "company": cfg.get("company"),
+        "server": cfg.get("server"),
+        "data": data,
+        "options": options,
+    }
 
 
 def cmd_import_synthetic(
@@ -184,74 +289,93 @@ def cmd_import_synthetic(
     allow_prod: bool,
     force: bool,
 ) -> dict[str, Any]:
-    refuse_production(cfg, allow_prod, dry_run=dry_run)
     report: dict[str, Any] = {
         "command": "import_synthetic",
         "dry_run": dry_run,
         "config": str(config_path),
         "timestamp": datetime.now(timezone.utc).isoformat(),
+        "seed": cfg.get("seed"),
+        "synthetic_batch_id": cfg.get("synthetic_batch_id"),
     }
+
     if dry_run:
+        # Dry-run never writes; skip prod refuse
         report["status"] = "dry-run-ok"
+        report["would_call"] = "run_synthetic_data.py"
+        report["engine_steps"] = [
+            "company",
+            "staff",
+            "patients",
+            "appointments",
+            "laboratory",
+            "pharmacy",
+            "inpatient",
+            "evaluations",
+        ]
+        report["local_only_packs"] = [
+            k
+            for k, v in (cfg.get("packs") or {}).items()
+            if (v or {}).get("mode") in {"local_connected", "stub_marker"}
+        ]
+        report["plan_counts"] = {
+            "patients": int((cfg.get("data") or {}).get("patients", 0)),
+            "staff": int((cfg.get("data") or {}).get("staff", 0)),
+            "entities": len(cfg.get("entities") or []),
+            "facilities": len(cfg.get("facilities") or []),
+        }
+        report["password_configured"] = password_configured(cfg)
+        report["production_host_match"] = is_production(cfg) or any(
+            h and h.lower() in str((cfg.get("server") or {}).get("url", "")).lower()
+            for h in ((cfg.get("server") or {}).get("production_hosts") or [])
+        )
         print("DRY-RUN import_synthetic — would call run_synthetic_data engine")
+        print(json.dumps(report, indent=2))
         (REPORT_DIR / "import-synthetic-dry-run.json").write_text(
             json.dumps(report, indent=2), encoding="utf-8"
         )
         return report
 
-    # Bridge to existing engine when server password is real
-    server = cfg.get("server") or {}
-    if str(server.get("password", "")).upper() in {"", "CHANGE_ME"}:
+    if not password_configured(cfg):
         report["status"] = "skipped-no-credentials"
-        report["reason"] = "server.password not configured; generated local dataset only"
+        report["reason"] = (
+            "server.password is CHANGE_ME / empty; generated local dataset only"
+        )
         cmd_generate(cfg, config_path)
         (REPORT_DIR / "import-synthetic-report.json").write_text(
             json.dumps(report, indent=2), encoding="utf-8"
         )
         print("SKIP live import (no credentials); local generate completed.")
+        print(
+            "Next: set server.password in a local override (never commit), then:\n"
+            f"  python scripts/synthetic_data/cli.py import_synthetic "
+            f"--config {config_path} --allow-production\n"
+            "Or: python run_synthetic_data.py --config <merged.yaml> --dry-run"
+        )
         return report
 
-    # Map demo yaml into temporary config for run_synthetic_data
-    from run_synthetic_data import load_config, run  # type: ignore
+    # Live write path — enforce prod gates
+    refuse_production(cfg, allow_prod, dry_run=False)
 
-    # Build merged config compatible with existing engine
-    merged = {
-        "company": cfg.get("company"),
-        "server": server,
-        "data": cfg.get("data"),
-        "options": {
-            "idempotent": cfg.get("idempotent", True) and not force,
-            **(cfg.get("options") or {}),
-        },
-    }
+    merged = _merge_engine_config(cfg)
+    if force:
+        merged.setdefault("options", {})["idempotent"] = False
     tmp = REPORT_DIR / "_runtime_synthetic_config.yaml"
     tmp.write_text(yaml.safe_dump(merged, sort_keys=False), encoding="utf-8")
-    # Use argparse-like namespace
-    class NS:
-        pass
 
-    args = NS()
-    args.config = str(tmp)
-    args.force = force
-    args.dry_run = False
-    args.only = ""
-    args.verbose = False
-    # run() expects parsed args — call underlying carefully
-    import run_synthetic_data as engine
-
-    engine.setup_logging(False)
-    config = load_config(tmp)
-    # Manual step execution via engine.main pattern — invoke CLI subprocess-like
-    sys.argv = ["run_synthetic_data.py", "--config", str(tmp)]
+    cmd = [sys.executable, str(ROOT / "run_synthetic_data.py"), "--config", str(tmp)]
     if force:
-        sys.argv.append("--force")
-    rc = engine.main() if hasattr(engine, "main") else None
+        cmd.append("--force")
+    print(f"Delegating to engine: {' '.join(cmd)}")
+    proc = subprocess.run(cmd, cwd=str(ROOT), check=False)
     report["status"] = "delegated-to-run_synthetic_data"
-    report["engine_rc"] = rc
+    report["engine_rc"] = proc.returncode
+    report["runtime_config"] = str(tmp)
     (REPORT_DIR / "import-synthetic-report.json").write_text(
         json.dumps(report, indent=2), encoding="utf-8"
     )
     print(json.dumps(report, indent=2))
+    if proc.returncode != 0:
+        raise SystemExit(proc.returncode)
     return report
 
 

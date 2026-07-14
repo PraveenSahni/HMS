@@ -22,8 +22,11 @@ Deterministic, idempotent, bilingual-capable demo data for UAE + Qatar **without
 | Profile | Patients | Staff | Use |
 |---------|----------|-------|-----|
 | Demo (`uae_qatar_demo.yaml`) | 50 | 12 | CI / evidence |
-| Default `config.yaml` | 4000 | 300 | VM load test |
+| **Max demo** (`uae_qatar_max_demo.yaml`) | **4000** | **300** | Full UAE+Qatar org + connected packs (see `max-demo-synthetic-data.md`) |
+| Default `config.yaml` | 4000 | 300 | VM load test (engine-only steps) |
 | Full brief optional | 50000 | — | Only on sized VM; document runtime |
+
+Max demo guide: [`docs/implementation/max-demo-synthetic-data.md`](max-demo-synthetic-data.md).
 
 ## Safety
 

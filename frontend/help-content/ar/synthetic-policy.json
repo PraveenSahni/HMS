@@ -23,5 +23,5 @@
   "version": "1.1.0",
   "guided": false,
   "published": true,
-  "body": "يجب استخدام علامات اصطناعية فقط خارج الإنتاج. الاستيراد للإنتاج يتطلب موافقة و--allow-production."
+  "body": "يجب استخدام علامات اصطناعية فقط خارج الإنتاج (IST-P-* / SYN-AE-* / SYN-QA-*). العرض التجريبي الأقصى: config/synthetic/uae_qatar_max_demo.yaml — انظر docs/implementation/max-demo-synthetic-data.md. يُفضّل --dry-run أولاً. الاستيراد للإنتاج يتطلب موافقة و--allow-production."
 }

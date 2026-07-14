@@ -1,10 +1,14 @@
 {
   "command": "validate",
-  "config": "C:\\HMS\\docs\\testing\\evidence\\_prod_cfg.yaml",
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_max_demo.yaml",
   "ok": true,
   "errors": [],
-  "patients": 50,
-  "seed": 42,
+  "patients": 4000,
+  "staff": 300,
+  "entities": 3,
+  "facilities": 13,
+  "seed": 20260714,
   "synthetic_data": true,
-  "timestamp": "2026-07-14T11:21:22.190333+00:00"
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+  "timestamp": "2026-07-14T16:15:19.461650+00:00"
 }

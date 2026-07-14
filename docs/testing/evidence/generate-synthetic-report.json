@@ -1,100 +1,148 @@
 {
   "command": "generate_synthetic",
-  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
-  "seed": 42,
+  "profile": "max_demo",
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_max_demo.yaml",
+  "seed": 20260714,
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
   "counts": {
-    "patients": 50,
-    "staff": 12
+    "entities": 3,
+    "facilities_institutions": 13,
+    "departments": 10,
+    "users": 300,
+    "health_professionals": 300,
+    "patients": 4000,
+    "appointments": 12000,
+    "evaluations": 2419,
+    "lab_orders": 1587,
+    "lab_results": 952,
+    "prescriptions": 2012,
+    "beds": 72,
+    "admissions": 1065,
+    "nursing_roundings": 843,
+    "icu_scores": 95,
+    "imaging_requests": 790,
+    "surgeries": 205,
+    "insurance_companies": 2,
+    "insurance_plans": 2,
+    "patient_insurance": 2784,
+    "stock_locations": 9,
+    "stock_moves": 72,
+    "health_services": 2016,
+    "invoices_draft": 2016,
+    "reporting_markers": 1,
+    "federation_markers": 1
   },
-  "sample_patients": [
-    {
-      "code": "IST-P-00001",
-      "national_id_synthetic": "SYN-QA-00000001",
-      "synthetic_data": true,
-      "country": "QA"
+  "paths": {
+    "summary": "C:\\HMS\\docs\\testing\\evidence\\max-demo-summary.json",
+    "report": "C:\\HMS\\docs\\testing\\evidence\\generate-max-demo-report.json",
+    "full": "C:\\HMS\\docs\\testing\\evidence\\generated\\uae_qatar_max_demo_full.json"
+  },
+  "packs": {
+    "00_foundation": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
     },
-    {
-      "code": "IST-P-00002",
-      "national_id_synthetic": "SYN-AE-00000002",
-      "synthetic_data": true,
-      "country": "AE"
+    "01_company": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
     },
-    {
-      "code": "IST-P-00003",
-      "national_id_synthetic": "SYN-QA-00000003",
-      "synthetic_data": true,
-      "country": "QA"
+    "02_health_institutions": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
     },
-    {
-      "code": "IST-P-00004",
-      "national_id_synthetic": "SYN-AE-00000004",
-      "synthetic_data": true,
-      "country": "AE"
+    "03_users_and_access": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
     },
-    {
-      "code": "IST-P-00005",
-      "national_id_synthetic": "SYN-QA-00000005",
-      "synthetic_data": true,
-      "country": "QA"
+    "04_health_professionals": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "05_patients": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "06_appointments": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "07_evaluations": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "08_inpatient": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "09_nursing": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "10_icu": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "11_laboratory": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "12_imaging": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "13_pharmacy": {
+      "mode": "engine_live",
+      "live_engine": true,
+      "local_records": true
+    },
+    "14_stock": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "15_surgery": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "16_insurance": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "17_accounting": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "18_services_and_billing": {
+      "mode": "local_connected",
+      "live_engine": false,
+      "local_records": true
+    },
+    "19_reporting": {
+      "mode": "stub_marker",
+      "live_engine": false,
+      "local_records": true
+    },
+    "20_federation_and_integration": {
+      "mode": "stub_marker",
+      "live_engine": false,
+      "local_records": true
     }
-  ],
-  "sample_staff": [
-    {
-      "code": "IST-ST-0001",
-      "synthetic_data": true
-    },
-    {
-      "code": "IST-ST-0002",
-      "synthetic_data": true
-    },
-    {
-      "code": "IST-ST-0003",
-      "synthetic_data": true
-    },
-    {
-      "code": "IST-ST-0004",
-      "synthetic_data": true
-    },
-    {
-      "code": "IST-ST-0005",
-      "synthetic_data": true
-    }
-  ],
-  "entities": [
-    {
-      "code": "IST-GRP",
-      "name": "IST Health Group",
-      "country": "AE",
-      "type": "Group"
-    },
-    {
-      "code": "IST-AE",
-      "name": "IST Health UAE LLC",
-      "country": "AE",
-      "type": "LegalEntity",
-      "parent": "IST-GRP"
-    },
-    {
-      "code": "IST-QA",
-      "name": "IST Health Qatar LLC",
-      "country": "QA",
-      "type": "LegalEntity",
-      "parent": "IST-GRP"
-    }
-  ],
-  "facilities": [
-    {
-      "code": "FAC-DXB-01",
-      "name": "IST Dubai Clinic",
-      "country": "AE",
-      "entity": "IST-AE"
-    },
-    {
-      "code": "FAC-DOH-01",
-      "name": "IST Doha Clinic",
-      "country": "QA",
-      "entity": "IST-QA"
-    }
-  ],
-  "timestamp": "2026-07-14T11:21:21.065545+00:00"
+  },
+  "timestamp": "2026-07-14T16:14:55.890355+00:00"
 }

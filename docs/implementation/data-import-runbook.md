@@ -13,8 +13,15 @@
 # Validate master data Excel
 python scripts/implementation/validate_master_data.py templates/Healthcare_Implementation_Master_Data.xlsx
 
-# Validate synthetic config
+# Validate synthetic config (small demo)
 python scripts/synthetic_data/cli.py validate --config config/synthetic/uae_qatar_demo.yaml
+
+# Max demo (4000 patients, full org tree) — preferred for biggest demo
+python scripts/synthetic_data/cli.py validate --config config/synthetic/uae_qatar_max_demo.yaml
+python scripts/synthetic_data/cli.py generate_synthetic --config config/synthetic/uae_qatar_max_demo.yaml
+python scripts/synthetic_data/cli.py import_synthetic --config config/synthetic/uae_qatar_max_demo.yaml --dry-run
+# Live import only with local password + explicit approval if prod host listed:
+# python scripts/synthetic_data/cli.py import_synthetic --config config/synthetic/uae_qatar_max_demo.yaml --allow-production
 
 # Dry-run import (no writes)
 python scripts/synthetic_data/cli.py import_data --config config/synthetic/uae_qatar_demo.yaml --dry-run
@@ -28,6 +35,8 @@ python scripts/synthetic_data/cli.py import_synthetic --config config/synthetic/
 # Legacy engine (existing)
 python run_synthetic_data.py --config config.yaml --dry-run
 ```
+
+See also: [`max-demo-synthetic-data.md`](max-demo-synthetic-data.md).
 
 ## Rollback
 

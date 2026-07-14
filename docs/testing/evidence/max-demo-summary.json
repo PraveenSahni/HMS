@@ -1,0 +1,1021 @@
+{
+  "meta": {
+    "synthetic_data": true,
+    "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+    "seed": 20260714,
+    "generated_at": "2026-07-14T16:14:55.207027+00:00",
+    "group": {
+      "name": "IST Healthcare Group",
+      "code": "IST-HC-GRP"
+    },
+    "company": {
+      "name": "IST Healthcare Group",
+      "legal_name": "IRISSTAR Technologies",
+      "name_ar": "\u0645\u062c\u0645\u0648\u0639\u0629 \u0622\u064a \u0625\u0633 \u062a\u064a \u0644\u0644\u0631\u0639\u0627\u064a\u0629 \u0627\u0644\u0635\u062d\u064a\u0629",
+      "code": "IST",
+      "city": "Doha",
+      "country": "Qatar",
+      "country_code": "QA",
+      "phone_prefix": "+974",
+      "facility_type": "Multi-specialty Hospital Group",
+      "address_en": "Office 214/215, 2nd Floor, Regus D-Ring Building no 65, D-Ring Road, Old Airport, Doha, Qatar",
+      "address_ar": "\u0645\u0643\u062a\u0628 214/215\u060c \u0627\u0644\u0637\u0627\u0628\u0642 \u0627\u0644\u062b\u0627\u0646\u064a\u060c \u0645\u0628\u0646\u0649 \u0631\u064a\u062c\u0633 D-Ring \u0631\u0642\u0645 65\u060c \u0637\u0631\u064a\u0642 D-Ring\u060c \u0627\u0644\u0645\u0637\u0627\u0631 \u0627\u0644\u0642\u062f\u064a\u0645\u060c \u0627\u0644\u062f\u0648\u062d\u0629\u060c \u0642\u0637\u0631",
+      "email": "demo.synthetic@isthealth.example",
+      "website": "https://www.isttechnologies.qa",
+      "offices": {
+        "qatar": {
+          "primary": true,
+          "address_lines": [
+            "Office 214/215",
+            "2nd Floor, Regus D-Ring Building no 65, D-Ring Road",
+            "Old Airport"
+          ],
+          "po_box": "32522",
+          "city": "Doha",
+          "country": "Qatar"
+        },
+        "uae": {
+          "phones": [
+            "+971 50 000 0001"
+          ],
+          "address_lines": [
+            "Level 20, 48, Burj Gate Tower, Downtown Dubai"
+          ],
+          "po_box": "22061",
+          "city": "Dubai",
+          "country": "U.A.E"
+        }
+      }
+    },
+    "ceiling_note": "4000 patients / 300 staff \u2014 proven run_synthetic_data.py scale; test validate refuses >5000; 50k deferred to sized VM",
+    "packs": {
+      "00_foundation": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "01_company": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "02_health_institutions": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "03_users_and_access": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "04_health_professionals": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "05_patients": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "06_appointments": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "07_evaluations": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "08_inpatient": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "09_nursing": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "10_icu": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "11_laboratory": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "12_imaging": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "13_pharmacy": {
+        "mode": "engine_live",
+        "live_engine": true,
+        "local_records": true
+      },
+      "14_stock": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "15_surgery": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "16_insurance": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "17_accounting": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "18_services_and_billing": {
+        "mode": "local_connected",
+        "live_engine": false,
+        "local_records": true
+      },
+      "19_reporting": {
+        "mode": "stub_marker",
+        "live_engine": false,
+        "local_records": true
+      },
+      "20_federation_and_integration": {
+        "mode": "stub_marker",
+        "live_engine": false,
+        "local_records": true
+      }
+    },
+    "id_policy": {
+      "patient": "IST-P-{seq:05d}",
+      "staff": "IST-ST-{role}-{seq:04d}",
+      "national_id_qa": "SYN-QA-{seq:08d}",
+      "national_id_ae": "SYN-AE-{seq:08d}",
+      "note": "Synthetic only \u2014 never real Emirates/Qatar ID, passport, phone, or email values"
+    }
+  },
+  "counts": {
+    "entities": 3,
+    "facilities_institutions": 13,
+    "departments": 10,
+    "users": 300,
+    "health_professionals": 300,
+    "patients": 4000,
+    "appointments": 12000,
+    "evaluations": 2419,
+    "lab_orders": 1587,
+    "lab_results": 952,
+    "prescriptions": 2012,
+    "beds": 72,
+    "admissions": 1065,
+    "nursing_roundings": 843,
+    "icu_scores": 95,
+    "imaging_requests": 790,
+    "surgeries": 205,
+    "insurance_companies": 2,
+    "insurance_plans": 2,
+    "patient_insurance": 2784,
+    "stock_locations": 9,
+    "stock_moves": 72,
+    "health_services": 2016,
+    "invoices_draft": 2016,
+    "reporting_markers": 1,
+    "federation_markers": 1
+  },
+  "samples": {
+    "companies_entities": [
+      {
+        "model": "party.party",
+        "code": "IST-HC-GRP",
+        "name": "IST Healthcare Group",
+        "country": "AE",
+        "parent": null,
+        "type": "Group",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "company.company",
+        "code": "IST-HC-AE",
+        "name": "IST Healthcare UAE",
+        "country": "AE",
+        "parent": "IST-HC-GRP",
+        "type": "LegalEntity",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "company.company",
+        "code": "IST-HC-QA",
+        "name": "IST Healthcare Qatar",
+        "country": "QA",
+        "parent": "IST-HC-GRP",
+        "type": "LegalEntity",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "institutions": [
+      {
+        "model": "gnuhealth.institution",
+        "code": "FAC-DXB-GH",
+        "name": "IST General Hospital Dubai",
+        "country": "AE",
+        "entity": "IST-HC-AE",
+        "facility_type": "hospital",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.institution",
+        "code": "FAC-DXB-MC",
+        "name": "IST Medical Centre Dubai",
+        "country": "AE",
+        "entity": "IST-HC-AE",
+        "facility_type": "medical_centre",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.institution",
+        "code": "FAC-DXB-DS",
+        "name": "IST Day Surgery Centre Dubai",
+        "country": "AE",
+        "entity": "IST-HC-AE",
+        "facility_type": "day_surgery",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "departments": [
+      {
+        "model": "gnuhealth.institution.unit",
+        "code": "IST-DEPT-01",
+        "name": "General Medicine",
+        "name_ar": "\u0627\u0644\u0637\u0628 \u0627\u0644\u0639\u0627\u0645",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.institution.unit",
+        "code": "IST-DEPT-02",
+        "name": "Pediatrics",
+        "name_ar": "\u0637\u0628 \u0627\u0644\u0623\u0637\u0641\u0627\u0644",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.institution.unit",
+        "code": "IST-DEPT-03",
+        "name": "Internal Medicine",
+        "name_ar": "\u0627\u0644\u0637\u0628 \u0627\u0644\u0628\u0627\u0637\u0646\u064a",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "users": [
+      {
+        "model": "res.user",
+        "login": "ist-st-doc-0001",
+        "name": "Ahmed Al-Mansouri",
+        "email": "ist-st-doc-0001@synthetic.isthealth.example",
+        "healthprofessional_code": "IST-ST-DOC-0001",
+        "active": true,
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "res.user",
+        "login": "ist-st-doc-0002",
+        "name": "Mariam Al-Hajri",
+        "email": "ist-st-doc-0002@synthetic.isthealth.example",
+        "healthprofessional_code": "IST-ST-DOC-0002",
+        "active": true,
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "res.user",
+        "login": "ist-st-doc-0003",
+        "name": "Abdullah Al-Attiyah",
+        "email": "ist-st-doc-0003@synthetic.isthealth.example",
+        "healthprofessional_code": "IST-ST-DOC-0003",
+        "active": true,
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "health_professionals": [
+      {
+        "model": "gnuhealth.healthprofessional",
+        "code": "IST-ST-DOC-0001",
+        "name": "Ahmed Al-Mansouri",
+        "role": "doctors",
+        "specialty": "General Practice",
+        "facility_code": "FAC-DXB-GH",
+        "country": "QA",
+        "phone": "+974 5000 0001",
+        "email": "ist-st-doc-0001@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.healthprofessional",
+        "code": "IST-ST-DOC-0002",
+        "name": "Mariam Al-Hajri",
+        "role": "doctors",
+        "specialty": "General Practice",
+        "facility_code": "FAC-DXB-MC",
+        "country": "AE",
+        "phone": "+971 50 000 0002",
+        "email": "ist-st-doc-0002@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.healthprofessional",
+        "code": "IST-ST-DOC-0003",
+        "name": "Abdullah Al-Attiyah",
+        "role": "doctors",
+        "specialty": "General Surgery",
+        "facility_code": "FAC-DXB-DS",
+        "country": "QA",
+        "phone": "+974 5000 0003",
+        "email": "ist-st-doc-0003@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "patients": [
+      {
+        "model": "gnuhealth.patient",
+        "party_model": "party.party",
+        "code": "IST-P-00001",
+        "name": "Ahmed Al-Suwaidi",
+        "gender": "m",
+        "dob": "2014-01-14",
+        "country": "QA",
+        "national_id_synthetic": "SYN-QA-00000001",
+        "facility_code": "FAC-DXB-GH",
+        "phone": "+974 5000 0001",
+        "email": "ist-p-00001@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient",
+        "party_model": "party.party",
+        "code": "IST-P-00002",
+        "name": "Mohammed Al-Kuwari",
+        "gender": "m",
+        "dob": "1998-12-09",
+        "country": "AE",
+        "national_id_synthetic": "SYN-AE-00000002",
+        "facility_code": "FAC-DXB-MC",
+        "phone": "+971 50 000 0002",
+        "email": "ist-p-00002@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient",
+        "party_model": "party.party",
+        "code": "IST-P-00003",
+        "name": "Ahmed Al-Naimi",
+        "gender": "m",
+        "dob": "1980-03-17",
+        "country": "QA",
+        "national_id_synthetic": "SYN-QA-00000003",
+        "facility_code": "FAC-DXB-DS",
+        "phone": "+974 5000 0003",
+        "email": "ist-p-00003@synthetic.isthealth.example",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "appointments": [
+      {
+        "model": "gnuhealth.appointment",
+        "code": "IST-APT-000001",
+        "patient_code": "IST-P-00001",
+        "hp_code": "IST-ST-DOC-0071",
+        "facility_code": "FAC-DXB-GH",
+        "appointment_date": "2026-07-05",
+        "comments": "IST synthetic: IST-APT-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.appointment",
+        "code": "IST-APT-000002",
+        "patient_code": "IST-P-00001",
+        "hp_code": "IST-ST-DOC-0033",
+        "facility_code": "FAC-DXB-GH",
+        "appointment_date": "2026-06-05",
+        "comments": "IST synthetic: IST-APT-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.appointment",
+        "code": "IST-APT-000003",
+        "patient_code": "IST-P-00001",
+        "hp_code": "IST-ST-DOC-0037",
+        "facility_code": "FAC-DXB-GH",
+        "appointment_date": "2026-05-25",
+        "comments": "IST synthetic: IST-APT-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "evaluations": [
+      {
+        "model": "gnuhealth.patient.evaluation",
+        "code": "IST-EVAL-000001",
+        "patient_code": "IST-P-00001",
+        "hp_code": "IST-ST-DOC-0005",
+        "chief_complaint": "IST synthetic: routine evaluation 1",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.evaluation",
+        "code": "IST-EVAL-000002",
+        "patient_code": "IST-P-00007",
+        "hp_code": "IST-ST-DOC-0039",
+        "chief_complaint": "IST synthetic: routine evaluation 2",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.evaluation",
+        "code": "IST-EVAL-000003",
+        "patient_code": "IST-P-00008",
+        "hp_code": "IST-ST-DOC-0025",
+        "chief_complaint": "IST synthetic: routine evaluation 3",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "lab_orders": [
+      {
+        "model": "gnuhealth.patient.lab.test",
+        "code": "IST-LABORD-000001",
+        "patient_code": "IST-P-00001",
+        "test_name": "Blood Glucose",
+        "comment": "IST synthetic: IST-LABORD-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.lab.test",
+        "code": "IST-LABORD-000002",
+        "patient_code": "IST-P-00003",
+        "test_name": "Kidney Function Test",
+        "comment": "IST synthetic: IST-LABORD-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.lab.test",
+        "code": "IST-LABORD-000003",
+        "patient_code": "IST-P-00006",
+        "test_name": "HbA1c",
+        "comment": "IST synthetic: IST-LABORD-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "lab_results": [
+      {
+        "model": "gnuhealth.lab",
+        "code": "IST-LABRES-000001",
+        "patient_code": "IST-P-00001",
+        "test_name": "Blood Glucose",
+        "results": "IST synthetic: IST-LABRES-000001 within reference",
+        "order_code": "IST-LABORD-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.lab",
+        "code": "IST-LABRES-000002",
+        "patient_code": "IST-P-00003",
+        "test_name": "Kidney Function Test",
+        "results": "IST synthetic: IST-LABRES-000002 within reference",
+        "order_code": "IST-LABORD-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.lab",
+        "code": "IST-LABRES-000003",
+        "patient_code": "IST-P-00006",
+        "test_name": "HbA1c",
+        "results": "IST synthetic: IST-LABRES-000003 within reference",
+        "order_code": "IST-LABORD-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "prescriptions": [
+      {
+        "model": "gnuhealth.prescription.order",
+        "code": "IST-RX-000001",
+        "patient_code": "IST-P-00001",
+        "hp_code": "IST-ST-DOC-0009",
+        "medication": "Paracetamol 500mg",
+        "notes": "IST synthetic: IST-RX-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.prescription.order",
+        "code": "IST-RX-000002",
+        "patient_code": "IST-P-00002",
+        "hp_code": "IST-ST-DOC-0050",
+        "medication": "Omeprazole 20mg",
+        "notes": "IST synthetic: IST-RX-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.prescription.order",
+        "code": "IST-RX-000003",
+        "patient_code": "IST-P-00005",
+        "hp_code": "IST-ST-DOC-0061",
+        "medication": "Cetirizine 10mg",
+        "notes": "IST synthetic: IST-RX-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "beds": [
+      {
+        "model": "gnuhealth.hospital.bed",
+        "code": "FAC-DXB-GH-BED-001",
+        "facility_code": "FAC-DXB-GH",
+        "name": "Bed 1",
+        "state": "free",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.hospital.bed",
+        "code": "FAC-DXB-GH-BED-002",
+        "facility_code": "FAC-DXB-GH",
+        "name": "Bed 2",
+        "state": "free",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.hospital.bed",
+        "code": "FAC-DXB-GH-BED-003",
+        "facility_code": "FAC-DXB-GH",
+        "name": "Bed 3",
+        "state": "free",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "admissions": [
+      {
+        "model": "gnuhealth.inpatient.registration",
+        "code": "IST-ADM-000001",
+        "patient_code": "IST-P-00003",
+        "facility_code": "FAC-DXB-GH",
+        "bed_code": "FAC-DXB-GH-BED-001",
+        "info": "IST synthetic: IST-ADM-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.inpatient.registration",
+        "code": "IST-ADM-000002",
+        "patient_code": "IST-P-00005",
+        "facility_code": "FAC-AUH-GH",
+        "bed_code": "FAC-DXB-GH-BED-002",
+        "info": "IST synthetic: IST-ADM-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.inpatient.registration",
+        "code": "IST-ADM-000003",
+        "patient_code": "IST-P-00007",
+        "facility_code": "FAC-DOH-GH",
+        "bed_code": "FAC-DXB-GH-BED-003",
+        "info": "IST synthetic: IST-ADM-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "nursing_roundings": [
+      {
+        "model": "gnuhealth.patient.rounding",
+        "code": "IST-NUR-000001",
+        "admission_code": "IST-ADM-000001",
+        "patient_code": "IST-P-00003",
+        "hp_code": "IST-ST-NUR-0090",
+        "notes": "IST synthetic: nursing round 1",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.rounding",
+        "code": "IST-NUR-000002",
+        "admission_code": "IST-ADM-000002",
+        "patient_code": "IST-P-00005",
+        "hp_code": "IST-ST-NUR-0133",
+        "notes": "IST synthetic: nursing round 2",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.patient.rounding",
+        "code": "IST-NUR-000003",
+        "admission_code": "IST-ADM-000003",
+        "patient_code": "IST-P-00007",
+        "hp_code": "IST-ST-NUR-0138",
+        "notes": "IST synthetic: nursing round 3",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "icu_scores": [
+      {
+        "model": "gnuhealth.icu.glasgow",
+        "code": "IST-ICU-00001",
+        "admission_code": "IST-ADM-000027",
+        "patient_code": "IST-P-00094",
+        "notes": "IST synthetic: ICU score stub 1",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.icu.glasgow",
+        "code": "IST-ICU-00002",
+        "admission_code": "IST-ADM-000038",
+        "patient_code": "IST-P-00133",
+        "notes": "IST synthetic: ICU score stub 2",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.icu.glasgow",
+        "code": "IST-ICU-00003",
+        "admission_code": "IST-ADM-000056",
+        "patient_code": "IST-P-00216",
+        "notes": "IST synthetic: ICU score stub 3",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "imaging_requests": [
+      {
+        "model": "gnuhealth.imaging.test.request",
+        "code": "IST-IMG-000001",
+        "patient_code": "IST-P-00001",
+        "test_name": "Abdominal Ultrasound",
+        "comment": "IST synthetic: IST-IMG-000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.imaging.test.request",
+        "code": "IST-IMG-000002",
+        "patient_code": "IST-P-00006",
+        "test_name": "Abdominal Ultrasound",
+        "comment": "IST synthetic: IST-IMG-000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.imaging.test.request",
+        "code": "IST-IMG-000003",
+        "patient_code": "IST-P-00022",
+        "test_name": "CT Head",
+        "comment": "IST synthetic: IST-IMG-000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "surgeries": [
+      {
+        "model": "gnuhealth.surgery",
+        "code": "IST-SURG-00001",
+        "patient_code": "IST-P-00013",
+        "hp_code": "IST-ST-DOC-0074",
+        "procedure": "Cholecystectomy",
+        "notes": "IST synthetic: IST-SURG-00001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.surgery",
+        "code": "IST-SURG-00002",
+        "patient_code": "IST-P-00030",
+        "hp_code": "IST-ST-DOC-0040",
+        "procedure": "Cataract Extraction",
+        "notes": "IST synthetic: IST-SURG-00002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.surgery",
+        "code": "IST-SURG-00003",
+        "patient_code": "IST-P-00048",
+        "hp_code": "IST-ST-DOC-0063",
+        "procedure": "Hernia Repair",
+        "notes": "IST synthetic: IST-SURG-00003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "insurance_companies": [
+      {
+        "model": "party.party",
+        "code": "IST-INS-AE-01",
+        "name": "SYN UAE Demo Payer",
+        "is_insurance_company": true,
+        "country": "AE",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "party.party",
+        "code": "IST-INS-QA-01",
+        "name": "SYN Qatar Demo Payer",
+        "is_insurance_company": true,
+        "country": "QA",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "insurance_plans": [
+      {
+        "model": "gnuhealth.insurance.plan",
+        "code": "IST-INS-AE-01-PLAN",
+        "name": "SYN UAE Demo Payer Standard",
+        "insurer_code": "IST-INS-AE-01",
+        "country": "AE",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.insurance.plan",
+        "code": "IST-INS-QA-01-PLAN",
+        "name": "SYN Qatar Demo Payer Standard",
+        "insurer_code": "IST-INS-QA-01",
+        "country": "QA",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "patient_insurance": [
+      {
+        "model": "gnuhealth.insurance",
+        "code": "IST-PIN-000001",
+        "patient_code": "IST-P-00001",
+        "plan_code": "IST-INS-QA-01-PLAN",
+        "number": "SYN-POL-00000001",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.insurance",
+        "code": "IST-PIN-000002",
+        "patient_code": "IST-P-00002",
+        "plan_code": "IST-INS-AE-01-PLAN",
+        "number": "SYN-POL-00000002",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.insurance",
+        "code": "IST-PIN-000003",
+        "patient_code": "IST-P-00003",
+        "plan_code": "IST-INS-QA-01-PLAN",
+        "number": "SYN-POL-00000003",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "stock_locations": [
+      {
+        "model": "stock.location",
+        "code": "FAC-DXB-GH-LOC",
+        "name": "IST General Hospital Dubai Stock",
+        "facility_code": "FAC-DXB-GH",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "stock.location",
+        "code": "FAC-AUH-GH-LOC",
+        "name": "IST General Hospital Abu Dhabi Stock",
+        "facility_code": "FAC-AUH-GH",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "stock.location",
+        "code": "FAC-AE-LAB-LOC",
+        "name": "Central Laboratory UAE Stock",
+        "facility_code": "FAC-AE-LAB",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "stock_moves": [
+      {
+        "model": "stock.move",
+        "code": "FAC-DXB-GH-LOC-MV-001",
+        "location_code": "FAC-DXB-GH-LOC",
+        "product_name": "Paracetamol 500mg",
+        "quantity": 60,
+        "notes": "IST synthetic stock",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "stock.move",
+        "code": "FAC-DXB-GH-LOC-MV-002",
+        "location_code": "FAC-DXB-GH-LOC",
+        "product_name": "Ibuprofen 400mg",
+        "quantity": 70,
+        "notes": "IST synthetic stock",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "stock.move",
+        "code": "FAC-DXB-GH-LOC-MV-003",
+        "location_code": "FAC-DXB-GH-LOC",
+        "product_name": "Amoxicillin 500mg",
+        "quantity": 80,
+        "notes": "IST synthetic stock",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "health_services": [
+      {
+        "model": "gnuhealth.health_service",
+        "code": "IST-SVC-000001",
+        "patient_code": "IST-P-00001",
+        "description": "IST synthetic: outpatient service",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.health_service",
+        "code": "IST-SVC-000002",
+        "patient_code": "IST-P-00002",
+        "description": "IST synthetic: outpatient service",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "gnuhealth.health_service",
+        "code": "IST-SVC-000003",
+        "patient_code": "IST-P-00004",
+        "description": "IST synthetic: outpatient service",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "invoices_draft": [
+      {
+        "model": "account.invoice",
+        "code": "IST-INV-000001",
+        "party_code": "IST-P-00001",
+        "service_code": "IST-SVC-000001",
+        "state": "draft",
+        "notes": "IST synthetic invoice draft",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "account.invoice",
+        "code": "IST-INV-000002",
+        "party_code": "IST-P-00002",
+        "service_code": "IST-SVC-000002",
+        "state": "draft",
+        "notes": "IST synthetic invoice draft",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      },
+      {
+        "model": "account.invoice",
+        "code": "IST-INV-000003",
+        "party_code": "IST-P-00004",
+        "service_code": "IST-SVC-000003",
+        "state": "draft",
+        "notes": "IST synthetic invoice draft",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "reporting_markers": [
+      {
+        "model": "gnuhealth.top_diseases",
+        "code": "IST-RPT-TOPDIS",
+        "notes": "IST synthetic: reporting pack marker \u2014 use live evaluations for disease mix",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ],
+    "federation_markers": [
+      {
+        "model": "gnuhealth.federation",
+        "code": "IST-FED-MARKER",
+        "notes": "IST synthetic: federation pack stub \u2014 no live federation writes",
+        "synthetic_data": true,
+        "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+        "synthetic_seed": 20260714
+      }
+    ]
+  }
+}

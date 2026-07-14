@@ -1,13 +1,36 @@
 {
   "command": "import_data",
   "dry_run": true,
-  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_demo.yaml",
+  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_max_demo.yaml",
   "plan": {
     "entities": 3,
-    "facilities": 2,
-    "patients": 50,
-    "staff": 12
+    "facilities": 13,
+    "patients": 4000,
+    "staff": 300,
+    "packs": [
+      "00_foundation",
+      "01_company",
+      "02_health_institutions",
+      "03_users_and_access",
+      "04_health_professionals",
+      "05_patients",
+      "06_appointments",
+      "07_evaluations",
+      "08_inpatient",
+      "09_nursing",
+      "10_icu",
+      "11_laboratory",
+      "12_imaging",
+      "13_pharmacy",
+      "14_stock",
+      "15_surgery",
+      "16_insurance",
+      "17_accounting",
+      "18_services_and_billing",
+      "19_reporting",
+      "20_federation_and_integration"
+    ]
   },
   "writes": 0,
-  "timestamp": "2026-07-14T11:21:21.775269+00:00"
+  "timestamp": "2026-07-14T16:15:19.327463+00:00"
 }

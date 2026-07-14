@@ -1,0 +1,83 @@
+{
+  "title": "Max demo synthetic import report",
+  "profile": "uae_qatar_max_demo",
+  "config": "config/synthetic/uae_qatar_max_demo.yaml",
+  "seed": 20260714,
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+  "timestamp": "2026-07-14T16:15:19+00:00",
+  "phases": {
+    "validate": "PASS",
+    "generate_local": "PASS",
+    "import_data_dry_run": "PASS",
+    "import_synthetic_dry_run": "PASS",
+    "live_db_import": "SKIPPED"
+  },
+  "live_db_import_reason": "server.password is CHANGE_ME; production_hosts match health.irisstar.tech — require local credentials + explicit --allow-production after demo/CAB approval",
+  "counts": {
+    "entities": 3,
+    "facilities_institutions": 13,
+    "departments": 10,
+    "users": 300,
+    "health_professionals": 300,
+    "patients": 4000,
+    "appointments": 12000,
+    "evaluations": 2419,
+    "lab_orders": 1587,
+    "lab_results": 952,
+    "prescriptions": 2012,
+    "beds": 72,
+    "admissions": 1065,
+    "nursing_roundings": 843,
+    "icu_scores": 95,
+    "imaging_requests": 790,
+    "surgeries": 205,
+    "insurance_companies": 2,
+    "insurance_plans": 2,
+    "patient_insurance": 2784,
+    "stock_locations": 9,
+    "stock_moves": 72,
+    "health_services": 2016,
+    "invoices_draft": 2016,
+    "reporting_markers": 1,
+    "federation_markers": 1
+  },
+  "engine_live_steps": [
+    "company",
+    "staff",
+    "patients",
+    "appointments",
+    "laboratory",
+    "pharmacy",
+    "inpatient",
+    "evaluations"
+  ],
+  "still_local_or_stub": [
+    "00_foundation",
+    "02_health_institutions (multi-facility tree)",
+    "03_users_and_access",
+    "09_nursing",
+    "10_icu",
+    "12_imaging",
+    "14_stock",
+    "15_surgery",
+    "16_insurance",
+    "17_accounting",
+    "18_services_and_billing",
+    "19_reporting (marker)",
+    "20_federation_and_integration (marker)"
+  ],
+  "artefacts": [
+    "docs/testing/evidence/validate-report.json",
+    "docs/testing/evidence/max-demo-summary.json",
+    "docs/testing/evidence/generate-max-demo-report.json",
+    "docs/testing/evidence/import-data-dry-run.json",
+    "docs/testing/evidence/import-synthetic-dry-run.json",
+    "docs/implementation/max-demo-synthetic-data.md"
+  ],
+  "next_steps": [
+    "Supply password via local gitignored override",
+    "Re-run import_synthetic --dry-run against live host",
+    "On approved demo VM: import_synthetic --allow-production (or run_synthetic_data.py with merged config)",
+    "Do not load production without explicit user CAB approval"
+  ]
+}
