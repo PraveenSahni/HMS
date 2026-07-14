@@ -230,6 +230,7 @@ Do **not** share one CoA or warehouse across UAE and Qatar entities without an e
 
 ## 7. Related artefacts
 
+- Validation vs GH HIS docs (2026-07-14): `docs/implementation/setup-sequence-validation.md` — verdict **MOSTLY CORRECT**; no reorder of 1–9  
 - Runbook: `docs/implementation/financial-setup.md`  
 - Guide: `docs/implementation/UAE_Qatar_Implementation_Guide.md`  
 - Gaps: `docs/research/gap-analysis-uae-qatar.md` (G-12 tenancy, G-16 finance)  
