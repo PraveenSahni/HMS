@@ -36,36 +36,50 @@ export function AppLayout() {
 
   return (
     <div className={appClass}>
-      <div className="ist-watermark" aria-hidden="true">
-        <span className="ist-watermark__text">IST</span>
-      </div>
-
-      <header className="ist-header">
-        <div className="ist-header__start">
-          <Logo variant="compact" to="/" />
+      {!isWorkspace && (
+        <div className="ist-watermark" aria-hidden="true">
+          <span className="ist-watermark__text">IST</span>
         </div>
-        <div className="ist-header__end">
-          {!isWorkspace && (
-            <>
-              <span className="ist-header__user">{username}</span>
-              <div className="ist-header__divider" />
-              <LangSwitch />
-              <div className="ist-header__divider" />
-              <ThemeSwitch />
-              <div className="ist-header__divider" />
-              <ContextualHelpButton />
-            </>
-          )}
-          <button type="button" className="ist-btn ist-btn--outline ist-btn--sm" onClick={handleLogout}>
+      )}
+
+      {/* Full IST chrome only outside /workspace — SAO wrapper is the primary post-login app. */}
+      {!isWorkspace && (
+        <header className="ist-header">
+          <div className="ist-header__start">
+            <Logo variant="compact" to="/workspace" />
+          </div>
+          <div className="ist-header__end">
+            <span className="ist-header__user">{username}</span>
+            <div className="ist-header__divider" />
+            <LangSwitch />
+            <div className="ist-header__divider" />
+            <ThemeSwitch />
+            <div className="ist-header__divider" />
+            <ContextualHelpButton />
+            <button type="button" className="ist-btn ist-btn--outline ist-btn--sm" onClick={handleLogout}>
+              {t('auth.logout')}
+            </button>
+          </div>
+        </header>
+      )}
+
+      {/* Tiny Sign out only — clears IST session and returns to React login. */}
+      {isWorkspace && (
+        <div className="ist-workspace-escape" role="navigation" aria-label={t('workspace.escapeLabel')}>
+          <button
+            type="button"
+            className="ist-btn ist-btn--outline ist-btn--sm ist-workspace-escape__logout"
+            onClick={handleLogout}
+          >
             {t('auth.logout')}
           </button>
         </div>
-      </header>
+      )}
 
       <div className="ist-app__body">
         {showSidebar && (
           <aside className="ist-sidebar" aria-label={t('nav.menuTree')}>
-            <Logo variant="compact" to="/" className="ist-sidebar__logo" />
+            <Logo variant="compact" to="/workspace" className="ist-sidebar__logo" />
             <MenuTree />
           </aside>
         )}

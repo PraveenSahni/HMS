@@ -162,9 +162,9 @@ function MenuTreeNode({
 }
 
 const QUICK_LINKS: Array<{ to: string; key: string; end?: boolean }> = [
-  { to: '/', key: 'dashboard', end: true },
-  { to: '/setup', key: 'setup' },
   { to: '/workspace', key: 'workspace' },
+  { to: '/dashboard', key: 'dashboard', end: true },
+  { to: '/setup', key: 'setup' },
   { to: '/patients', key: 'patients' },
   { to: '/appointments', key: 'appointments' },
   { to: '/laboratory', key: 'laboratory' },

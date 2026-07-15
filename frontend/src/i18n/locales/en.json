@@ -46,9 +46,10 @@
   },
   "workspace": {
     "iframeTitle": "GNU Health SAO workspace",
+    "escapeLabel": "Sign out of IST",
     "openInWorkspace": "Open in Workspace",
-    "openNewTab": "Open SAO in new tab",
-    "panelDefaultDesc": "This action uses a Tryton wizard or deep configuration screen. Open it in Workspace (IST chrome + SAO) or in a new tab.",
+    "openNewTab": "Open SAO in a new tab",
+    "panelDefaultDesc": "This action uses a Tryton wizard or deep configuration screen. Open it in Workspace or in a new tab.",
     "moduleActivateTitle": "Module activate / upgrade",
     "moduleActivateDesc": "Marking modules in React (when available) only queues state changes. Applying upgrades usually requires trytond-admin or Workspace (SAO)."
   },

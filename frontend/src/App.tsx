@@ -53,8 +53,10 @@ export default function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<DashboardPage />} />
+            {/* One-app UX: post-login home is SAO-in-shell Workspace. */}
+            <Route index element={<Navigate to="/workspace" replace />} />
             <Route path="workspace" element={<WorkspacePage />} />
+            <Route path="dashboard" element={<DashboardPage />} />
             <Route path="patients" element={<PatientsPage />} />
             <Route path="patients/:id" element={<PatientDetailPage />} />
             <Route path="appointments" element={<AppointmentsPage />} />
@@ -87,7 +89,7 @@ export default function App() {
             <Route path="help/admin" element={<HelpAdminPage />} />
             <Route path="menu/:menuId" element={<ModelBrowserPage />} />
           </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/workspace" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

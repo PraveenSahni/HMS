@@ -48,7 +48,7 @@ export function LoginPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listDatabases])
 
-  if (isAuthenticated) return <Navigate to="/" replace />
+  if (isAuthenticated) return <Navigate to="/workspace" replace />
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()

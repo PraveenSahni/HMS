@@ -144,19 +144,30 @@
   padding: var(--space-9) var(--space-8);
 }
 
-/* SAO Workspace — edge-to-edge iframe under single IST header */
+/* SAO Workspace — full-viewport primary app (no IST header chrome) */
+.ist-app--workspace {
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.ist-app--workspace .ist-app__body {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .ist-main--workspace {
   display: flex;
   flex-direction: column;
   padding: 0;
   min-height: 0;
+  height: 100%;
   overflow: hidden;
   width: 100%;
-}
-
-.ist-app--workspace .ist-app__body {
-  min-height: 0;
-  overflow: hidden;
 }
 
 .ist-workspace {
@@ -164,13 +175,15 @@
   flex-direction: column;
   flex: 1;
   min-height: 0;
-  height: calc(100vh - var(--layout-header-height, 3.5rem));
+  height: 100%;
+  width: 100%;
 }
 
 .ist-workspace__frame-wrap {
   flex: 1;
   min-height: 0;
   position: relative;
+  height: 100%;
 }
 
 .ist-workspace__frame {
@@ -180,6 +193,26 @@
   height: 100%;
   border: 0;
   background: #fff;
+}
+
+/* Tiny floating escape hatch — does not recreate the IST header */
+.ist-workspace-escape {
+  position: fixed;
+  top: var(--space-3);
+  inset-inline-end: var(--space-3);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  border: var(--hairline-width) solid var(--color-divider);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px color-mix(in srgb, #000 12%, transparent);
+}
+
+.ist-workspace-escape__logout {
+  white-space: nowrap;
 }
 
 /* Hero (login / landing) — legacy centered layout */

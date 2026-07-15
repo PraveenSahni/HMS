@@ -4,9 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { saoUrl } from '../lib/sao'
 
 /**
- * Embeds GNU Health SAO under the IST header only (no Workspace toolbar).
- * Same-origin iframe — loads /sao/ via saoUrl(). SAO top bar is hidden via custom.css
- * when embedded; SAO left menu remains for navigation.
+ * Primary IST app surface: GNU Health SAO full-viewport (no IST header chrome).
+ * Same-origin iframe — loads /sao/ via saoUrl(). Escape hatch lives in AppLayout.
  * Optional ?path= is reserved for future deep-links; currently ignored (SAO root).
  */
 export function WorkspacePage() {

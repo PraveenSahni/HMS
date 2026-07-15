@@ -157,7 +157,7 @@ body > .navbar,
 
 /*
  * Embedded in IST Workspace — hide SAO top bar entirely.
- * Outer IST React header is the only chrome (Help / Sign out / lang / theme).
+ * IST React header is also hidden on /workspace; floating Sign out clears IST session.
  * SAO left menu (#menu / treeview) stays for in-iframe navigation.
  */
 html.ist-embedded body > .navbar,
