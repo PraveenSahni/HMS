@@ -5,7 +5,8 @@ import { useAuth } from '../contexts/AuthContext'
 import { handoffSaoSession, saoUrl } from '../lib/sao'
 
 /**
- * Primary IST app surface: GNU Health SAO full-viewport (no IST header chrome).
+ * Primary IST app surface: GNU Health SAO inside login-aligned IST chrome
+ * (header + footer from AppLayout; SAO top bar stays hidden via custom.css).
  * Same-origin iframe — loads /sao/#{database} after handoff of ist-health-session
  * into sao_session_{db} so SAO skips its own login dialog.
  * Optional ?path= is reserved for future deep-links; currently ignored (SAO root).

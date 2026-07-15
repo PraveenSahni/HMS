@@ -144,7 +144,7 @@
   padding: var(--space-9) var(--space-8);
 }
 
-/* SAO Workspace — full-viewport primary app (no IST header chrome) */
+/* SAO Workspace — header + iframe + compact footer (login-aligned chrome) */
 .ist-app--workspace {
   min-height: 100vh;
   min-height: 100dvh;
@@ -156,8 +156,36 @@
 .ist-app--workspace .ist-app__body {
   flex: 1;
   min-height: 0;
-  height: 100%;
+  height: auto;
   overflow: hidden;
+}
+
+.ist-header--workspace {
+  flex-shrink: 0;
+}
+
+/* Product label carries "IST HIS"; hide Logo's compact "IST" to avoid IST IST HIS */
+.ist-header--workspace .ist-logo__compact-text {
+  display: none;
+}
+
+.ist-header__product {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.ist-header__session {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 28ch;
+  margin-inline-start: var(--space-2);
+  opacity: 0.85;
 }
 
 .ist-main--workspace {
@@ -183,7 +211,6 @@
   flex: 1;
   min-height: 0;
   position: relative;
-  height: 100%;
 }
 
 .ist-workspace__frame {
@@ -193,26 +220,6 @@
   height: 100%;
   border: 0;
   background: #fff;
-}
-
-/* Tiny floating escape hatch — does not recreate the IST header */
-.ist-workspace-escape {
-  position: fixed;
-  top: var(--space-3);
-  inset-inline-end: var(--space-3);
-  z-index: var(--z-modal);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-1) var(--space-2);
-  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
-  border: var(--hairline-width) solid var(--color-divider);
-  border-radius: 4px;
-  box-shadow: 0 1px 4px color-mix(in srgb, #000 12%, transparent);
-}
-
-.ist-workspace-escape__logout {
-  white-space: nowrap;
 }
 
 /* Hero (login / landing) — legacy centered layout */

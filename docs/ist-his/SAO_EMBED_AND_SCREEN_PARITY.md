@@ -34,16 +34,15 @@ Favorites → **Workspace**. Setup Hub / Financial / Companies / Model browser S
 ## How embedding works
 
 ```
-AppLayout (single IST header; IST sidebar always hidden on /workspace)
-  └── /workspace → WorkspacePage (no title/toolbar chrome)
-        └── iframe src = same-origin /sao/  (saoUrl())  — edge-to-edge under header
+AppLayout (login-aligned IST header + compact footer; IST sidebar always hidden on /workspace)
+  └── /workspace → WorkspacePage
+        └── iframe src = same-origin /sao/  (saoUrl())  — flex-grow between header and footer
 ```
 
 - Route: `frontend/src/pages/WorkspacePage.tsx` registered in `App.tsx` under `AppLayout`.
-- On `/workspace`: **one** IST top header only (Help / Sign out / lang / theme). Username text hidden. IST sidebar always hidden. No Workspace title block, no “Show IST menu”, no “Open SAO in new tab” page toolbar.
+- On `/workspace`: **one** minimal IST header (logo + IST HIS left; optional db/user hint; Sign out right — no lang/theme/Help). IST sidebar always hidden. Compact IRISSTAR footer under the iframe.
 - When SAO is embedded (`html.ist-embedded` via `custom.js`), the **SAO top navbar is fully hidden** (wordmark, Action, Administrator, SAO logout). SAO **left menu** remains for in-iframe navigation.
 - `?path=` is reserved for future deep-links; currently loads SAO root.
-- Footer hidden on Workspace so the iframe can use full remaining height.
 - SaoPanel primary button is a React Router `Link` to `/workspace`.
 
 ## How theming works

@@ -14,7 +14,7 @@ export type AppLayoutOutletContext = {
 
 export function AppLayout() {
   const { t } = useTranslation()
-  const { username, logout } = useAuth()
+  const { username, database, logout } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const isWorkspace =
@@ -33,6 +33,7 @@ export function AppLayout() {
   }
 
   const appClass = ['ist-app', isWorkspace ? 'ist-app--workspace' : ''].filter(Boolean).join(' ')
+  const sessionHint = [database, username].filter(Boolean).join(' · ')
 
   return (
     <div className={appClass}>
@@ -42,7 +43,7 @@ export function AppLayout() {
         </div>
       )}
 
-      {/* Full IST chrome only outside /workspace — SAO wrapper is the primary post-login app. */}
+      {/* Full IST chrome outside /workspace (lang / theme / help). */}
       {!isWorkspace && (
         <header className="ist-header">
           <div className="ist-header__start">
@@ -63,17 +64,28 @@ export function AppLayout() {
         </header>
       )}
 
-      {/* Tiny Sign out — clears IST + SAO sessions, returns to React /login. */}
+      {/* Workspace: single login-aligned chrome — logo + product name left, Sign out right. */}
       {isWorkspace && (
-        <div className="ist-workspace-escape" role="navigation" aria-label={t('workspace.escapeLabel')}>
-          <button
-            type="button"
-            className="ist-btn ist-btn--outline ist-btn--sm ist-workspace-escape__logout"
-            onClick={handleLogout}
-          >
-            {t('auth.logout')}
-          </button>
-        </div>
+        <header className="ist-header ist-header--workspace">
+          <div className="ist-header__start">
+            <Logo variant="compact" to="/workspace" />
+            <span className="ist-header__product">{t('app.name')}</span>
+            {sessionHint ? (
+              <span className="ist-header__session" title={sessionHint}>
+                {sessionHint}
+              </span>
+            ) : null}
+          </div>
+          <div className="ist-header__end">
+            <button
+              type="button"
+              className="ist-btn ist-btn--outline ist-btn--sm"
+              onClick={handleLogout}
+            >
+              {t('auth.logout')}
+            </button>
+          </div>
+        </header>
       )}
 
       <div className="ist-app__body">
@@ -86,7 +98,11 @@ export function AppLayout() {
 
         <main className={`ist-main${isWorkspace ? ' ist-main--workspace' : ''}`}>
           <Outlet context={outletContext} />
-          {!isWorkspace && <AppFooter />}
+          {isWorkspace ? (
+            <AppFooter compact />
+          ) : (
+            <AppFooter />
+          )}
         </main>
       </div>
     </div>
