@@ -49,13 +49,13 @@ export function AppLayout() {
             <>
               <span className="ist-header__user">{username}</span>
               <div className="ist-header__divider" />
+              <LangSwitch />
+              <div className="ist-header__divider" />
+              <ThemeSwitch />
+              <div className="ist-header__divider" />
+              <ContextualHelpButton />
             </>
           )}
-          <LangSwitch />
-          <div className="ist-header__divider" />
-          <ThemeSwitch />
-          <div className="ist-header__divider" />
-          <ContextualHelpButton />
           <button type="button" className="ist-btn ist-btn--outline ist-btn--sm" onClick={handleLogout}>
             {t('auth.logout')}
           </button>
