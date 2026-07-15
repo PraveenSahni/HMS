@@ -259,6 +259,98 @@ html.ist-embedded .navbar-brand::after {
   border-top: 3px solid var(--ist-gold);
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+ * SAO login dialog (.login-dialog) — kill teal #267f82 modal-header
+ * (tryton-sao.css: .modal-header { background-color: #267f82 })
+ * Title "Login" + optional "IST HIS" small; navy form labels; Inter stack.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.login-dialog,
+.login-dialog .modal-content,
+.login-dialog .modal-body,
+.login-dialog .modal-footer,
+.modal,
+.modal .modal-content,
+.modal .modal-body {
+  font-family: var(--ist-font-sans) !important;
+  color: var(--ist-text) !important;
+}
+
+/* Header: navy + gold top accent (all modals, especially login) */
+.modal-header,
+.login-dialog .modal-header,
+.modal .modal-header {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: var(--ist-navy-dark) !important;
+  border-top: 3px solid var(--ist-gold) !important;
+  border-bottom: 1px solid var(--ist-navy-dark) !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.modal-header .modal-title,
+.login-dialog .modal-header .modal-title,
+.modal .modal-title {
+  color: #ffffff !important;
+  font-family: var(--ist-font-sans) !important;
+  font-weight: 600 !important;
+}
+
+.modal-header .modal-title small,
+.login-dialog .modal-header .modal-title small,
+.modal .modal-title small {
+  color: var(--ist-gold-muted) !important;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.modal-header .close,
+.login-dialog .modal-header .close {
+  color: #ffffff !important;
+  opacity: 0.85;
+  text-shadow: none !important;
+}
+
+/* Login form labels / body text — IST navy */
+.login-dialog .modal-body,
+.login-dialog .control-label,
+.login-dialog label,
+.login-dialog .form-group,
+.modal .control-label,
+.modal label {
+  color: var(--ist-navy) !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.login-dialog .form-control,
+.modal .form-control {
+  color: var(--ist-text) !important;
+  border-color: var(--ist-sidebar-border) !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.login-dialog .btn-primary,
+.login-dialog .btn-primary:focus,
+.login-dialog .btn-primary:hover,
+.login-dialog .btn-primary:active {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+  border-color: var(--ist-navy-dark) !important;
+  color: #fff !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+/* Explicit kill: compiled teal on modal / panel chrome */
+.modal-header,
+.panel-heading,
+.panel-primary > .panel-heading,
+.panel-default > .panel-heading,
+.bg-primary {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+}
+
 /* Tables / lists */
 .table {
   color: var(--ist-text) !important;

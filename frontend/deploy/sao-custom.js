@@ -74,9 +74,31 @@
     }
   }
 
+  /** Login modal small subtitle: version → "IST HIS" (keep title "Login"). */
+  function themeLoginDialogHeader(root) {
+    try {
+      var scope = root || document;
+      var smalls = scope.querySelectorAll(
+        '.login-dialog .modal-header .modal-title small'
+      );
+      for (var i = 0; i < smalls.length; i++) {
+        var el = smalls[i];
+        if (el.getAttribute('data-ist-login-sub') === '1') {
+          continue;
+        }
+        el.setAttribute('data-ist-login-sub', '1');
+        el.setAttribute('title', el.textContent || '');
+        el.textContent = 'IST HIS';
+      }
+    } catch (eLogin) {
+      /* ignore */
+    }
+  }
+
   try {
     document.documentElement.setAttribute('data-ist-theme', 'navy-gold');
     applyIstSaoTheme();
+    themeLoginDialogHeader();
 
     // Soften document title / brand when embedded (IST Workspace iframe)
     if (window.self !== window.top) {
@@ -88,6 +110,28 @@
       } catch (e2) {
         /* ignore */
       }
+    }
+
+    // Login dialog is created async — watch for .login-dialog
+    if (typeof MutationObserver !== 'undefined') {
+      var obs = new MutationObserver(function (mutations) {
+        for (var m = 0; m < mutations.length; m++) {
+          var nodes = mutations[m].addedNodes;
+          for (var n = 0; n < nodes.length; n++) {
+            var node = nodes[n];
+            if (!node || node.nodeType !== 1) {
+              continue;
+            }
+            if (
+              (node.classList && node.classList.contains('login-dialog')) ||
+              (node.querySelector && node.querySelector('.login-dialog'))
+            ) {
+              themeLoginDialogHeader(node);
+            }
+          }
+        }
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
     }
   } catch (e) {
     /* ignore */
