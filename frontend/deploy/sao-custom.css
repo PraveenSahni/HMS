@@ -573,3 +573,249 @@ a.text-success:hover,
 .navbar-inverse .navbar-toggle {
   border-color: var(--ist-gold) !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * Tab action chrome — Sao.Tab.create_toolbar / set_menu (src/tab.js)
+ *
+ * Structure:
+ *   nav.toolbar.panel-heading[role=toolbar]
+ *     .container-fluid.navbar-inverse
+ *       .navbar-header.dropdown
+ *         a.navbar-brand.dropdown-toggle → span.title (“Heal…”) + .caret
+ *         ul.dropdown-menu[role=menu]   → Switch / Previous / Next / … / Close Tab
+ *       .btn-toolbar.navbar-right       → horizontal icon buttons (.btn.navbar-btn)
+ *   #tablist > li > a                   → tab strip headers
+ *
+ * Fonts: same Inter stack as IST login (frontend/src/styles/variables.css --font-sans).
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Sticky tab toolbar bar — IST navy (panel-heading already navy; refine chrome) */
+.tab-form nav.toolbar.panel-heading,
+.tab-board nav.toolbar.panel-heading,
+nav.toolbar.panel-heading {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+  border-color: var(--ist-navy-dark) !important;
+  border-top: 2px solid var(--ist-gold) !important;
+  border-bottom: 1px solid var(--ist-navy-dark) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 8px rgba(10, 31, 68, 0.18) !important;
+  font-family: var(--ist-font-sans) !important;
+  color: #f5f7fa !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.toolbar .container-fluid.navbar-inverse,
+nav.toolbar .navbar-inverse {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+/* Title in brand dropdown (“Health…”, model name) */
+.toolbar .navbar-brand,
+.toolbar .navbar-brand.dropdown-toggle,
+.toolbar .navbar-header .navbar-brand,
+nav.toolbar a.navbar-brand {
+  color: #ffffff !important;
+  font-family: var(--ist-font-sans) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.01em;
+  opacity: 1 !important;
+  max-width: none !important;
+  text-shadow: none !important;
+}
+
+.toolbar .navbar-brand:hover,
+.toolbar .navbar-brand:focus,
+.toolbar .navbar-header.open > .navbar-brand,
+.toolbar .navbar-header.open > .dropdown-toggle {
+  color: var(--ist-gold) !important;
+  background-color: var(--ist-navy-light) !important;
+}
+
+.toolbar .title,
+nav.toolbar span.title {
+  color: inherit !important;
+  font-family: var(--ist-font-sans) !important;
+  font-weight: 600 !important;
+}
+
+.toolbar .caret {
+  border-top-color: var(--ist-gold) !important;
+  color: var(--ist-gold) !important;
+}
+
+.toolbar .navbar-text,
+.toolbar .navbar-text .badge {
+  color: #f5f7fa !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.toolbar .badge {
+  background-color: var(--ist-gold) !important;
+  color: var(--ist-navy-dark) !important;
+  font-weight: 600 !important;
+}
+
+/* Horizontal icon buttons on navy bar */
+.toolbar .btn-toolbar .btn,
+.toolbar .btn.btn-default.navbar-btn,
+nav.toolbar .navbar-btn {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  color: var(--ist-gold) !important;
+  box-shadow: none !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.toolbar .btn-toolbar .btn:hover,
+.toolbar .btn-toolbar .btn:focus,
+.toolbar .btn.btn-default.navbar-btn:hover,
+.toolbar .btn.btn-default.navbar-btn:focus,
+.toolbar .btn.btn-default.navbar-btn:active,
+.toolbar .open > .btn.dropdown-toggle {
+  background-color: var(--ist-navy-light) !important;
+  border-color: rgba(201, 166, 107, 0.45) !important;
+  color: var(--ist-gold-light) !important;
+}
+
+.toolbar .btn-toolbar .btn.disabled,
+.toolbar .btn-toolbar .btn[disabled],
+.toolbar .btn.navbar-btn.disabled,
+.toolbar .btn.navbar-btn[disabled] {
+  opacity: 0.35 !important;
+  background-color: transparent !important;
+}
+
+/* Inline SVG / currentColor icons on the dark toolbar */
+.toolbar .btn-toolbar .icon,
+.toolbar .btn-toolbar .icon svg,
+.toolbar .navbar-btn .icon,
+.toolbar .navbar-btn .icon svg {
+  color: var(--ist-gold) !important;
+  fill: currentColor !important;
+}
+
+/* Vertical action menu (Switch → Close Tab) — light IST panel, no Bootstrap teal */
+.toolbar .dropdown-menu,
+.toolbar .navbar-header .dropdown-menu,
+.tab-form .toolbar .dropdown-menu,
+.tab-board .toolbar .dropdown-menu,
+.btn-group.dropdown > .dropdown-menu {
+  background-color: var(--ist-bg-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--ist-sidebar-border) !important;
+  border-top: 3px solid var(--ist-gold) !important;
+  border-radius: 0 0 4px 4px !important;
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.16), 0 2px 6px rgba(10, 31, 68, 0.08) !important;
+  font-family: var(--ist-font-sans) !important;
+  padding: 6px 0 !important;
+  min-width: 14em;
+}
+
+.toolbar .dropdown-menu > li > a,
+.toolbar .dropdown-menu > li > a:visited,
+.btn-group.dropdown > .dropdown-menu > li > a {
+  color: var(--ist-navy) !important;
+  font-family: var(--ist-font-sans) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+  background-image: none !important;
+}
+
+.toolbar .dropdown-menu > li > a:hover,
+.toolbar .dropdown-menu > li > a:focus,
+.toolbar .dropdown-menu > .active > a,
+.toolbar .dropdown-menu > .active > a:hover,
+.toolbar .dropdown-menu > .active > a:focus,
+.btn-group.dropdown > .dropdown-menu > li > a:hover,
+.btn-group.dropdown > .dropdown-menu > .active > a {
+  background-color: var(--ist-gold-muted) !important;
+  background-image: none !important;
+  color: var(--ist-navy-dark) !important;
+}
+
+.toolbar .dropdown-menu > .disabled > a,
+.toolbar .dropdown-menu > .disabled > a:hover,
+.toolbar .dropdown-menu > .disabled > a:focus {
+  color: var(--ist-text-muted) !important;
+  background-color: transparent !important;
+}
+
+.toolbar .dropdown-menu .divider {
+  background-color: var(--ist-sidebar-border) !important;
+  margin: 6px 0 !important;
+}
+
+/* Kill compiled Bootstrap/SAO teal (#267f82) on all dropdowns */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: var(--ist-gold-muted) !important;
+  background-image: none !important;
+  color: var(--ist-navy) !important;
+  border-color: transparent !important;
+}
+
+.dropdown-menu {
+  border: 1px solid var(--ist-sidebar-border) !important;
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.14) !important;
+  font-family: var(--ist-font-sans) !important;
+}
+
+.dropdown-menu > li > a {
+  font-family: var(--ist-font-sans) !important;
+  color: var(--ist-text) !important;
+}
+
+/* Tab strip headers (#tablist — “Heal…”, close ×) */
+#tablist {
+  font-family: var(--ist-font-sans) !important;
+}
+
+#tablist > li > a {
+  color: var(--ist-navy-muted) !important;
+  font-family: var(--ist-font-sans) !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  background-image: none !important;
+}
+
+#tablist > li > a:hover,
+#tablist > li > a:focus {
+  color: var(--ist-navy) !important;
+  background-color: var(--ist-gold-muted) !important;
+}
+
+#tablist > li.active > a,
+#tablist > li.active > a:hover,
+#tablist > li.active > a:focus {
+  color: var(--ist-navy) !important;
+  font-weight: 600 !important;
+  background-color: var(--ist-bg-white) !important;
+  border-color: var(--ist-sidebar-border) !important;
+  box-shadow: inset 0 -2px 0 var(--ist-gold) !important;
+}
+
+#tablist > li > a > span {
+  font-family: var(--ist-font-sans) !important;
+}
+
+#tablist .close {
+  color: var(--ist-navy-muted) !important;
+  opacity: 0.7;
+  text-shadow: none !important;
+}
+
+#tablist .close:hover {
+  color: var(--ist-navy) !important;
+  opacity: 1;
+}

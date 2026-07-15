@@ -17,6 +17,8 @@
  *   fills (e.g. Party heads). Setting only the root <svg fill> does NOT
  *   recolor those. We patch _convert to rewrite teal + beige hexes to IST
  *   navy, then walk menu <img> blobs as a safety net (MutationObserver).
+ * - Tab toolbar horizontal buttons sit on navy chrome → gold blob fills;
+ *   dropdown / tree icons stay navy on light panels.
  */
 (function () {
   'use strict';
@@ -178,6 +180,10 @@
     }
     if (isNearNavyHex(hex) && (!fillColor || fillColor === IST_NAVY)) {
       return false;
+    }
+    // Toolbar chrome / favorites gold path: navy → gold so icons read on navy bar
+    if (fillColor === IST_GOLD && isNearNavyHex(hex)) {
+      return true;
     }
     // Favorites / gold path: keep warm gold accents
     if (
@@ -345,16 +351,47 @@
     return !!cell;
   }
 
+  /**
+   * Horizontal tab toolbar buttons sit on IST navy — use gold fills.
+   * Vertical dropdown items / menu tree stay navy on light panels.
+   */
+  function isToolbarChromeIcon(img) {
+    if (!img || !img.closest) {
+      return false;
+    }
+    if (img.closest('.dropdown-menu')) {
+      return false;
+    }
+    return !!img.closest('nav.toolbar .btn-toolbar, .toolbar .btn-toolbar');
+  }
+
+  function iconTargetForImg(img) {
+    if (isFavoriteImg(img)) {
+      return IST_GOLD;
+    }
+    if (isToolbarChromeIcon(img)) {
+      return IST_GOLD;
+    }
+    return IST_NAVY;
+  }
+
   function recolorBlobImg(img) {
-    if (!img || img.getAttribute('data-ist-recolored') === '1') {
+    if (!img) {
+      return;
+    }
+    var target = iconTargetForImg(img);
+    if (
+      img.getAttribute('data-ist-recolored') === '1' &&
+      img.getAttribute('data-ist-fill') === target
+    ) {
       return;
     }
     var src = img.getAttribute('src') || '';
     if (!src || (src.indexOf('blob:') !== 0 && src.indexOf('data:image/svg') !== 0)) {
       return;
     }
-    var favor = isFavoriteImg(img);
     img.setAttribute('data-ist-recolored', '1');
+    img.setAttribute('data-ist-fill', target);
     fetch(src)
       .then(function (r) {
         return r.text();
@@ -363,16 +400,22 @@
         if (!svgText || svgText.indexOf('<svg') === -1) {
           return;
         }
-        var target = favor ? IST_GOLD : IST_NAVY;
         // Recolor teal leftovers AND beige/flesh heads (Party, etc.)
-        if (!svgNeedsIstRecolor(svgText, target)) {
+        // Always rewrite when target differs from prior fill (navy→gold on toolbar).
+        if (
+          img.getAttribute('data-ist-fill') === target &&
+          !svgNeedsIstRecolor(svgText, target) &&
+          svgText.toLowerCase().indexOf(target.toLowerCase()) !== -1
+        ) {
           return;
         }
         var url = convertSvgToBlobUrl(svgText, target);
         img.setAttribute('src', url);
+        img.setAttribute('data-ist-fill', target);
       })
       .catch(function () {
         img.removeAttribute('data-ist-recolored');
+        img.removeAttribute('data-ist-fill');
       });
   }
 
@@ -381,7 +424,7 @@
       var scope = root && root.querySelectorAll ? root : document;
       var nodes = scope.querySelectorAll
         ? scope.querySelectorAll(
-            '#menu img, .treeview img, img.icon, img.column-affix, img.favorite-icon, img.global_search-icon, #global-search img, .toolbar img.icon'
+            '#menu img, .treeview img, img.icon, img.column-affix, img.favorite-icon, img.global_search-icon, #global-search img, .toolbar img.icon, .toolbar .dropdown-menu img, #tablist img'
           )
         : [];
       for (var i = 0; i < nodes.length; i++) {
