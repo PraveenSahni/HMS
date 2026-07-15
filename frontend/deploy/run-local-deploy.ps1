@@ -6,7 +6,7 @@ function L($m) { Add-Content $log $m; Write-Host $m }
 L "START $(Get-Date -Format o)"
 $tar = "c:\HMS\frontend\dist-deploy.tgz"
 if (Test-Path $tar) { Remove-Item $tar -Force }
-if (-not (Test-Path "c:\HMS\frontend\dist\index.html")) { throw "dist missing — run npm run build first" }
+if (-not (Test-Path "c:\HMS\frontend\dist\index.html")) { throw "dist missing - run npm run build first" }
 
 tar -czf $tar -C c:\HMS\frontend\dist .
 L "TAR_SIZE=$((Get-Item $tar).Length)"
