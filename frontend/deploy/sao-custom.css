@@ -111,6 +111,35 @@ body > .navbar,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-inline-end: 12px !important;
+}
+
+/*
+ * Navbar spacing: IST/hamburger brand must not crowd the Action search.
+ * Bootstrap packs .navbar-header flush against #global-search — add ~16px gap.
+ */
+.navbar.navbar-inverse .navbar-header,
+.navbar.navbar-static-top .navbar-header {
+  margin-inline-end: 16px !important;
+  padding-inline-end: 8px !important;
+}
+
+.navbar.navbar-inverse .navbar-form.navbar-left,
+.navbar.navbar-inverse #global-search,
+.navbar.navbar-static-top #global-search,
+.navbar.navbar-inverse #main_navbar > .navbar-form {
+  margin-inline-start: 12px !important;
+  padding-inline-start: 4px !important;
+}
+
+.navbar.navbar-inverse .navbar-toggle {
+  margin-inline-end: 8px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar.navbar-inverse #main_navbar.navbar-collapse {
+    padding-inline-start: 8px !important;
+  }
 }
 
 .navbar-brand:hover,
@@ -128,6 +157,8 @@ html.ist-embedded .navbar-inverse .navbar-brand {
   max-width: 2.75rem;
   overflow: hidden;
   pointer-events: none;
+  margin-inline-end: 16px !important;
+  padding-inline-end: 4px !important;
 }
 
 html.ist-embedded .navbar-brand::after {
@@ -466,9 +497,10 @@ html.ist-embedded #title {
 }
 
 /*
- * Menu/action/chevron/search img.icon colors come from Sao.config.icon_colors
- * (custom.js). Favorite stars use gold via get_icon_url patch.
- * CSS below covers glyphicons / currentColor leftovers only.
+ * Menu/action/chevron/search img.icon colors: GNU Health multi-color SVGs bake
+ * teal hexes into paths/gradients — custom.js rewrites those to navy and
+ * observes newly inserted menu <img> blobs. CSS cannot recolor blob SVGs.
+ * Favorite stars stay gold via get_icon_url patch. Glyphicons below only.
  */
 
 /* Glyphicon leftovers (rare in modern SAO, but kill green) */
