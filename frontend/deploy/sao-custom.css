@@ -316,3 +316,126 @@ label,
   background-color: var(--ist-gold-muted) !important;
   color: var(--ist-navy) !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * Kill SAO teal/green accent (#267f82 brand-primary, #32ad52 success).
+ * Menu/action icons are SVG <img> blobs filled via Sao.config.icon_colors
+ * (see custom.js). CSS below covers currentColor / glyphicons / leftovers.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Override any leftover SAO/Bootstrap accent vars if present */
+  --brand-primary: #0a1f44;
+  --brand-success: #0a1f44;
+}
+
+/* Bootstrap text / link accents that still use compiled teal */
+.text-primary,
+a.text-primary:hover,
+a.text-primary:focus,
+.text-success,
+a.text-success:hover,
+.btn-link,
+.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: var(--ist-navy) !important;
+}
+
+/* Navbar inline SVG icons (hamburger / logout use fill="currentColor") */
+.navbar-inverse .icon,
+.navbar-inverse .icon svg,
+.navbar-inverse .navbar-brand .icon,
+.navbar-inverse .navbar-brand .icon svg,
+.navbar-inverse .navbar-nav .icon,
+.navbar-inverse .navbar-nav .icon svg {
+  color: var(--ist-gold) !important;
+  fill: currentColor !important;
+}
+
+.navbar-inverse .icon svg [fill="currentColor"],
+.navbar-inverse .icon svg path:not([fill="none"]) {
+  fill: currentColor !important;
+}
+
+/* Hide / replace prominent Tryton wordmark */
+.navbar-brand #title,
+#title {
+  color: var(--ist-gold) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html.ist-embedded .navbar-brand #title,
+html.ist-embedded #title {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+/*
+ * Menu/action/chevron/search img.icon colors come from Sao.config.icon_colors
+ * (custom.js). Favorite stars use gold via get_icon_url patch.
+ * CSS below covers glyphicons / currentColor leftovers only.
+ */
+
+/* Glyphicon leftovers (rare in modern SAO, but kill green) */
+.glyphicon,
+.treeview .glyphicon,
+.glyphicon-star,
+.glyphicon-star-empty,
+.glyphicon-chevron-right,
+.glyphicon-chevron-down,
+.glyphicon-chevron-left {
+  color: var(--ist-navy) !important;
+}
+
+.glyphicon-star,
+.list-group-item.active .glyphicon,
+.active > .glyphicon {
+  color: var(--ist-gold) !important;
+}
+
+/* Panel / modal headers already navy; ensure icon glyphs there stay light */
+.panel-heading .glyphicon,
+.modal-header .glyphicon,
+.panel-heading .icon,
+.modal-header .icon,
+.modal-header .icon svg {
+  color: #f5f7fa !important;
+  fill: currentColor !important;
+}
+
+/* Explicit kill for compiled SAO teal in borders/focus that still show green */
+.btn-success,
+.btn-success:hover,
+.btn-success:focus,
+.label-success,
+.progress-bar-success,
+.bg-success {
+  background-color: var(--ist-navy) !important;
+  border-color: var(--ist-navy-dark) !important;
+  color: #fff !important;
+}
+
+.has-success .form-control,
+.has-success .form-control:focus {
+  border-color: var(--ist-navy) !important;
+  box-shadow: none !important;
+}
+
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+  color: var(--ist-navy) !important;
+}
+
+/* Offcanvas / menu toggle caret */
+.navbar-toggle .icon-bar,
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: var(--ist-gold) !important;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: var(--ist-gold) !important;
+}
