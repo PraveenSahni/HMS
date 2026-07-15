@@ -63,7 +63,7 @@ export function AppLayout() {
         </header>
       )}
 
-      {/* Tiny Sign out only — clears IST session and returns to React login. */}
+      {/* Tiny Sign out — clears IST + SAO sessions, returns to React /login. */}
       {isWorkspace && (
         <div className="ist-workspace-escape" role="navigation" aria-label={t('workspace.escapeLabel')}>
           <button

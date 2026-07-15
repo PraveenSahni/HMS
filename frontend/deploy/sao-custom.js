@@ -3,6 +3,12 @@
  * Deploy to SAO web root as custom.js (auto-loaded by SAO after tryton-sao.js).
  * Keep minimal — do not break wizards or JSON-RPC.
  *
+ * Session handoff (same-origin):
+ *   React stores ist-health-session { uid, username, database, sessionToken }.
+ *   SAO restores from sao_session_{db} { login, user_id, session }.
+ *   This file copies IST → SAO before Sao.login() on DOMContentLoaded, and
+ *   ensures #database is in the hash so get_credentials skips the login dialog.
+ *
  * Icon colors:
  * - Tryton monochrome SVGs inherit fill from Sao.config.icon_colors[0] via
  *   ICONFACTORY._convert (default teal #267f82).
@@ -14,6 +20,44 @@
  */
 (function () {
   'use strict';
+
+  var IST_SESSION_KEY = 'ist-health-session';
+
+  /**
+   * Bridge React Tryton session into SAO localStorage before Sao.login runs.
+   * Must run at parse time (before document.ready handlers from tryton-sao.js).
+   */
+  function handoffIstSessionToSao() {
+    try {
+      var raw = localStorage.getItem(IST_SESSION_KEY);
+      if (!raw) return null;
+      var ist = JSON.parse(raw);
+      if (!ist || !ist.database || !ist.username || !ist.sessionToken || !ist.uid) {
+        return null;
+      }
+      var key = 'sao_session_' + ist.database;
+      localStorage.setItem(
+        key,
+        JSON.stringify({
+          login: ist.username,
+          user_id: ist.uid,
+          session: ist.sessionToken,
+        })
+      );
+      // Sao.Session.get_credentials only restores when hash has the database name.
+      var hashDb = (window.location.hash || '')
+        .replace(/^(#(!|))/, '')
+        .split('/', 1)[0];
+      if (!hashDb) {
+        window.location.hash = ist.database;
+      }
+      return ist;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  handoffIstSessionToSao();
 
   var IST_NAVY = '#0a1f44';
   var IST_MUTED = '#3d4f6a';
@@ -425,6 +469,14 @@
         }
       } catch (e2) {
         /* ignore */
+      }
+      // Parent React app owns auth; if IST session vanished, bounce top to /login.
+      try {
+        if (!localStorage.getItem(IST_SESSION_KEY) && window.top) {
+          window.top.location.href = '/login';
+        }
+      } catch (e3) {
+        /* cross-origin — ignore */
       }
     }
   } catch (e) {

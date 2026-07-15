@@ -7,8 +7,9 @@ import {
   type ReactNode,
 } from 'react'
 import { createClient, TrytonClient, TrytonError } from '../lib/tryton/client'
+import { clearSaoSession, handoffSaoSession, IST_SESSION_KEY } from '../lib/sao'
 
-const SESSION_KEY = 'ist-health-session'
+const SESSION_KEY = IST_SESSION_KEY
 
 interface AuthContextValue {
   client: TrytonClient
@@ -30,8 +31,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const client = useMemo(() => createClient(), [])
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     const restored = client.restoreSession(localStorage.getItem(SESSION_KEY))
-    if (!restored) localStorage.removeItem(SESSION_KEY)
-    return restored
+    if (!restored) {
+      localStorage.removeItem(SESSION_KEY)
+      return false
+    }
+    // Bridge Tryton token into SAO localStorage before /workspace iframe loads.
+    if (client.currentSession) handoffSaoSession(client.currentSession)
+    return true
   })
   const [username, setUsername] = useState<string | null>(
     () => client.currentSession?.username ?? null,
@@ -62,6 +68,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
         const session = await client.authenticate(user, password)
         localStorage.setItem(SESSION_KEY, client.serializeSession()!)
+        handoffSaoSession(session)
         setIsAuthenticated(true)
         setUsername(session.username)
         setUid(session.uid)
@@ -90,8 +97,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   )
 
   const logout = useCallback(() => {
+    const db = client.currentSession?.database ?? client.database
     client.logout()
     localStorage.removeItem(SESSION_KEY)
+    clearSaoSession(db)
+    clearSaoSession() // belt: any leftover sao_session_* keys
     try {
       sessionStorage.removeItem('ist-health-menu-tree')
     } catch {
