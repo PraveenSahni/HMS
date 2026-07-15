@@ -3,22 +3,75 @@
  * Deploy to SAO web root as custom.css (auto-loaded by SAO).
  * Mirror of: frontend/deploy/sao-custom.css → VM SAO root custom.css
  *
- * Colors: IST navy #0a1f44 / gold #c9a66b — Bootstrap 3 / SAO selectors.
+ * Aligned with frontend/src/styles/variables.css:
+ *   Navy #0a1f44 / #071428 / #1a3056 · Gold #c9a66b / #f0e6d4
+ *   Fonts: Inter + Segoe UI (+ Noto Sans Arabic)
  * Keep functional chrome intact — do not break menus, wizards, or JSON-RPC.
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
 
 :root {
   --ist-navy: #0a1f44;
   --ist-navy-dark: #071428;
   --ist-navy-light: #1a3056;
+  --ist-navy-muted: #3d4f6a;
   --ist-gold: #c9a66b;
+  --ist-gold-light: #d4b87a;
   --ist-gold-muted: #f0e6d4;
   --ist-bg: #f7f8fa;
-  --ist-sidebar-bg: #f3f5f8;
-  --ist-sidebar-border: #e2e6ec;
+  --ist-bg-white: #ffffff;
+  --ist-sidebar-bg: #ffffff;
+  --ist-sidebar-border: #d8dce2;
+  --ist-text: #0a1f44;
+  --ist-text-secondary: #4a5568;
+  --ist-text-muted: #7a8494;
+  --ist-font-sans: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --ist-font-ar: "Noto Sans Arabic", "Segoe UI", "Traditional Arabic", Tahoma, sans-serif;
 }
 
-/* Top navbar — replace Tryton/GH green with IST navy */
+/* ── Global typography + text color (match IST React shell) ── */
+html,
+body {
+  font-family: var(--ist-font-sans) !important;
+  color: var(--ist-text) !important;
+  background: var(--ist-bg) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang^="ar"] body,
+html[dir="rtl"] body,
+body.rtl {
+  font-family: var(--ist-font-ar) !important;
+}
+
+input,
+select,
+textarea,
+button,
+.btn,
+.form-control,
+.navbar,
+.dropdown-menu,
+.table,
+.modal,
+.panel,
+.nav,
+.list-group,
+.treeview {
+  font-family: inherit !important;
+}
+
+a {
+  color: var(--ist-navy);
+}
+
+a:hover,
+a:focus {
+  color: var(--ist-navy-dark);
+}
+
+/* Top navbar — IST navy (replace Tryton/GH green) */
 .navbar-inverse,
 .navbar-default.navbar-inverse,
 body > .navbar,
@@ -27,6 +80,7 @@ body > .navbar,
   background-color: var(--ist-navy) !important;
   background-image: none !important;
   border-color: var(--ist-navy-dark) !important;
+  font-family: var(--ist-font-sans) !important;
 }
 
 .navbar-inverse .navbar-brand,
@@ -34,6 +88,8 @@ body > .navbar,
 .navbar-inverse .navbar-text,
 .navbar-inverse .btn-link {
   color: #f5f7fa !important;
+  font-family: inherit !important;
+  font-weight: 500;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -44,13 +100,13 @@ body > .navbar,
   color: var(--ist-gold) !important;
 }
 
-/* Soften Tryton wordmark — keep link/area for layout, reduce brand noise */
+/* Soften Tryton wordmark */
 .navbar-brand,
 .navbar-inverse .navbar-brand {
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 13px !important;
-  opacity: 0.55;
+  opacity: 0.45;
   max-width: 7.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,30 +119,36 @@ body > .navbar,
   color: var(--ist-gold) !important;
 }
 
-/* When embedded in IST Workspace iframe — further soften brand */
+/* Embedded in IST Workspace — quiet brand (outer header already says IST) */
 html.ist-embedded .navbar-brand,
 html.ist-embedded .navbar-inverse .navbar-brand {
-  font-size: 0 !important;
-  opacity: 0;
-  width: 0.5rem;
-  max-width: 0.5rem;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  position: relative;
+  color: transparent !important;
+  opacity: 1;
+  max-width: 2.75rem;
   overflow: hidden;
   pointer-events: none;
 }
 
 html.ist-embedded .navbar-brand::after {
   content: "IST";
-  font-size: 12px;
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--ist-font-sans);
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--ist-gold);
   opacity: 0.9;
-  pointer-events: none;
 }
 
 /* Primary buttons / accents */
+.btn {
+  font-weight: 600 !important;
+}
+
 .btn-primary,
 .btn-primary:focus {
   background-color: var(--ist-navy) !important;
@@ -102,41 +164,41 @@ html.ist-embedded .navbar-brand::after {
   border-color: var(--ist-navy-dark) !important;
 }
 
+.btn-default {
+  color: var(--ist-navy) !important;
+  border-color: var(--ist-sidebar-border) !important;
+}
+
 .bg-primary,
 .label-primary,
 .progress-bar,
 .panel-primary > .panel-heading {
   background-color: var(--ist-navy) !important;
   border-color: var(--ist-navy) !important;
+  color: #fff !important;
 }
 
-a,
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: var(--ist-navy);
-}
-
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover {
   background-color: var(--ist-navy) !important;
   color: #fff !important;
 }
 
-/* Tabs / tree selection accents */
+/* Tabs — gold active accent */
+.nav-tabs > li > a {
+  color: var(--ist-navy-muted) !important;
+}
+
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   border-top-color: var(--ist-gold) !important;
   color: var(--ist-navy) !important;
+  font-weight: 600;
 }
 
-/* Soften busy chrome when embedded in IST Workspace iframe */
-body {
-  background: var(--ist-bg) !important;
-}
-
-/* ── SAO menu tree / left panel — closer to IST sidebar ── */
+/* ── SAO menu tree / left panel — IST sidebar feel ── */
 #menu,
 .treeview,
 .menu-tree,
@@ -145,15 +207,18 @@ body {
 .ui-tabs-panel .treeview,
 .contentbox .treeview {
   background: var(--ist-sidebar-bg) !important;
+  font-family: var(--ist-font-sans) !important;
+  color: var(--ist-text) !important;
 }
 
-/* Common SAO / Bootstrap tree nodes */
 .treeview .list-group-item,
 .treeview li > a,
 #menu a,
 .menu a {
-  color: var(--ist-navy) !important;
+  color: var(--ist-text) !important;
   border-color: transparent !important;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .treeview .list-group-item:hover,
@@ -174,24 +239,37 @@ body {
   border-inline-start: 3px solid var(--ist-gold) !important;
 }
 
-/* Panel / splitter chrome near menu */
-.panel-default > .panel-heading {
+/* Panel / splitter chrome — navy headers */
+.panel-default > .panel-heading,
+.panel-heading {
   background: var(--ist-navy) !important;
   color: #f5f7fa !important;
   border-color: var(--ist-navy-dark) !important;
+  font-family: var(--ist-font-sans) !important;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .panel-default {
   border-color: var(--ist-sidebar-border) !important;
 }
 
-/* Reduce visual weight of secondary toolbars where safe */
-.navbar .badge {
-  background-color: var(--ist-gold) !important;
-  color: var(--ist-navy-dark) !important;
+.modal-header,
+.panel-heading {
+  border-top: 3px solid var(--ist-gold);
 }
 
-/* Focus / selection hint */
+/* Tables / lists */
+.table {
+  color: var(--ist-text) !important;
+}
+
+.table > thead > tr > th {
+  color: var(--ist-navy) !important;
+  font-weight: 600;
+  border-bottom-color: var(--ist-sidebar-border) !important;
+}
+
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th,
 .list-group-item.active,
@@ -201,8 +279,40 @@ body {
   color: var(--ist-navy) !important;
 }
 
-/* Login panel inside SAO (if shown) */
-.modal-header,
-.panel-heading {
-  border-top: 3px solid var(--ist-gold);
+.navbar .badge {
+  background-color: var(--ist-gold) !important;
+  color: var(--ist-navy-dark) !important;
+}
+
+/* Form controls */
+.form-control {
+  color: var(--ist-text) !important;
+  border-color: var(--ist-sidebar-border) !important;
+}
+
+.form-control:focus {
+  border-color: var(--ist-navy) !important;
+  box-shadow: 0 0 0 2px var(--ist-bg-white), 0 0 0 3px var(--ist-navy) !important;
+}
+
+label,
+.control-label {
+  color: var(--ist-navy-muted) !important;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  border-color: var(--ist-sidebar-border) !important;
+}
+
+.dropdown-menu > li > a {
+  color: var(--ist-text) !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > .active > a {
+  background-color: var(--ist-gold-muted) !important;
+  color: var(--ist-navy) !important;
 }
