@@ -100,7 +100,8 @@ Note: engine ratios vs local JSON generators differ slightly (e.g. admissions/ev
 |------|--------|
 | 00 foundation, 02 multi-facility institutions, 03 users/access | Local connected JSON only |
 | 09 nursing, 10 ICU, 12 imaging, 14 stock, 15 surgery | Local connected JSON only |
-| 16 insurance, 17 accounting, 18 services/billing | Local connected JSON only |
+| 16 insurance, 18 services/billing | Local connected JSON only |
+| **17 accounting** | **Master data uploaded 2026-07-15** via `scripts/accounting/upload_ist_health_accounting.py` — see `docs/implementation/ist-health-accounting-upload.md` (CoA/FY/journals/companies; invoices still 0) |
 | 19 reporting, 20 federation | Marker stubs only |
 | `gnuhealth.institution.unit` departments | Skipped on this VM (`Model … not available`) |
 

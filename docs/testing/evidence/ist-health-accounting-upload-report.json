@@ -1,0 +1,168 @@
+{
+  "database": "isthealth",
+  "batch_id": "ISTHIS-ACCT-20260715",
+  "companies": [
+    {
+      "id": 1,
+      "party_code": "IST-HC-QA",
+      "party_name": "IST Healthcare Qatar",
+      "currency": "QAR",
+      "account_count": 7,
+      "accounts": [
+        {
+          "id": 2,
+          "name": "Main Cash (IST Health demo)",
+          "type": "Cash"
+        },
+        {
+          "id": 3,
+          "name": "Main Expense (IST Health demo)",
+          "type": "Expense"
+        },
+        {
+          "id": 4,
+          "name": "Main Payable (IST Health demo)",
+          "type": "Payable"
+        },
+        {
+          "id": 5,
+          "name": "Main Receivable (IST Health demo)",
+          "type": "Receivable"
+        },
+        {
+          "id": 6,
+          "name": "Main Revenue (IST Health demo)",
+          "type": "Revenue"
+        },
+        {
+          "id": 7,
+          "name": "Main Tax (IST Health demo)",
+          "type": "Tax"
+        },
+        {
+          "id": 1,
+          "name": "Minimal Account Chart (IST Health demo)",
+          "type": "Minimal Account Type Chart"
+        }
+      ],
+      "fiscalyears": [
+        {
+          "id": 3,
+          "name": "2026",
+          "state": "open",
+          "periods": 12
+        }
+      ],
+      "account_receivable": "Main Receivable (IST Health demo)",
+      "account_payable": "Main Payable (IST Health demo)"
+    },
+    {
+      "id": 2,
+      "party_code": "IST-HC-AE",
+      "party_name": "IST Healthcare UAE",
+      "currency": "AED",
+      "account_count": 7,
+      "accounts": [
+        {
+          "id": 9,
+          "name": "Main Cash (IST Health demo)",
+          "type": "Cash"
+        },
+        {
+          "id": 10,
+          "name": "Main Expense (IST Health demo)",
+          "type": "Expense"
+        },
+        {
+          "id": 11,
+          "name": "Main Payable (IST Health demo)",
+          "type": "Payable"
+        },
+        {
+          "id": 12,
+          "name": "Main Receivable (IST Health demo)",
+          "type": "Receivable"
+        },
+        {
+          "id": 13,
+          "name": "Main Revenue (IST Health demo)",
+          "type": "Revenue"
+        },
+        {
+          "id": 14,
+          "name": "Main Tax (IST Health demo)",
+          "type": "Tax"
+        },
+        {
+          "id": 8,
+          "name": "Minimal Account Chart (IST Health demo)",
+          "type": "Minimal Account Type Chart"
+        }
+      ],
+      "fiscalyears": [
+        {
+          "id": 6,
+          "name": "2026 - IST Healthcare UAE (ISTHIS-ACCT-20260715)",
+          "state": "open",
+          "periods": 12
+        }
+      ],
+      "account_receivable": null,
+      "account_payable": null
+    }
+  ],
+  "journals": [
+    {
+      "code": "CASH",
+      "name": "Cash",
+      "type": "cash"
+    },
+    {
+      "code": "EXC",
+      "name": "Currency Exchange",
+      "type": "write-off"
+    },
+    {
+      "code": "EXP",
+      "name": "Expense",
+      "type": "expense"
+    },
+    {
+      "code": "MISC",
+      "name": "Miscellaneous",
+      "type": "general"
+    },
+    {
+      "code": "REV",
+      "name": "Revenue",
+      "type": "revenue"
+    },
+    {
+      "code": "STO",
+      "name": "Stock",
+      "type": "general"
+    }
+  ],
+  "currencies": [
+    {
+      "code": "AED",
+      "name": "UAE Dirham",
+      "symbol": "AED"
+    },
+    {
+      "code": "QAR",
+      "name": "Qatari Rial",
+      "symbol": "QR"
+    }
+  ],
+  "totals": {
+    "companies": 2,
+    "accounts": 14,
+    "fiscalyears": 2,
+    "periods": 24,
+    "journals": 6,
+    "invoices": 0,
+    "posted_moves": 0,
+    "taxes": 0
+  }
+}

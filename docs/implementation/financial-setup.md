@@ -138,7 +138,21 @@ For patients, insurers, and suppliers (party):
 
 Extending React with full CoA wizards is **out of scope** unless product prioritizes Gap 4+ accounting parity.
 
-## 8. Related artefacts
+## 8. Automated demo bootstrap (non-prod)
+
+For **`isthealth`** on `gnuhealth-his-01`, Proteus can create companies (Qatar QAR + UAE AED), Minimal CoA, fiscal year/periods, and party AR/AP defaults without inventing tax rates:
+
+| Artefact | Path |
+|----------|------|
+| Assessor | `scripts/accounting/assess_accounting.py` |
+| Uploader | `scripts/accounting/upload_ist_health_accounting.py` |
+| Deploy | `scripts/accounting/deploy-and-run-accounting.sh` |
+| Pack | `synthetic-data/17_accounting/` |
+| Upload report | `docs/implementation/ist-health-accounting-upload.md` |
+
+SAO remains required for tax sign-off, payment terms, period-close policy, and posting/paying invoices.
+
+## 9. Related artefacts
 
 - Help: `wf-finance-setup`, `wf-create-invoice`, `wf-receive-payment`, `wf-close-period`  
 - Full module order: `docs/implementation/module-setup-dependencies.md` · Setup Hub `/setup` · `wf-system-setup`  
@@ -147,9 +161,10 @@ Extending React with full CoA wizards is **out of scope** unless product priorit
 - SAO map: `frontend/docs/SAO_MIGRATION.md`  
 - Gaps: `docs/research/gap-analysis-uae-qatar.md` (claims G-14; finance config G-16; setup order G-17)
 
-## 9. Exit criteria
+## 10. Exit criteria
 
 - [ ] AED and/or QAR companies have CoA + open fiscal period + journals  
 - [ ] Draft invoice creates from React; post/pay works in SAO  
 - [ ] Tax configuration either confirmed by counsel or explicitly deferred with risk acceptance  
 - [ ] Finance role can find Help workflow and SAO panel without training guesswork  
+ 
