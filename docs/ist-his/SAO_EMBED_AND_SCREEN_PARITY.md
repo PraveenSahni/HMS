@@ -17,7 +17,7 @@ related:
 
 ## Strategy (locked)
 
-1. **Embed SAO now** inside the IST React shell (`/workspace`) with IST header + sidebar and IST navy/gold theming on SAO.
+1. **Embed SAO now** inside the IST React shell (`/workspace`) with IST header (sidebar **collapsed by default**) and IST navy/gold theming on SAO.
 2. **Build React screen-by-screen** using the parity tracker — progressive parity, not a big-bang rewrite.
 3. **Do not upgrade** GNU Health / Tryton. Keep nginx split: SPA **GET /** vs trytond **POST /** (JSON-RPC).
 4. Iframe is **same-origin only** (`/sao/` via nginx). Never point the Workspace iframe at a third-party host.
@@ -34,12 +34,14 @@ Favorites → **Workspace**. Setup Hub / Financial / Companies / Model browser S
 ## How embedding works
 
 ```
-AppLayout (IST header + sidebar)
+AppLayout (IST header; sidebar hidden by default on /workspace)
   └── /workspace → WorkspacePage
         └── iframe src = same-origin /sao/  (saoUrl())
 ```
 
 - Route: `frontend/src/pages/WorkspacePage.tsx` registered in `App.tsx` under `AppLayout`.
+- On `/workspace`, the IST left sidebar is **hidden by default** so only the IST top header + SAO iframe show (full width). This avoids a double-menu (IST nav + SAO menu).
+- **Toggle IST menu:** Workspace toolbar button **Show IST menu** / **Hide IST menu** (also a header control when the sidebar is hidden). Preference is stored in `sessionStorage` (`ist-workspace-nav-visible`).
 - `?path=` is reserved for future deep-links; currently loads SAO root.
 - Footer hidden on Workspace so the iframe can use full remaining height.
 - SaoPanel primary button is a React Router `Link` to `/workspace`.
@@ -53,7 +55,7 @@ Tryton SAO auto-loads `custom.css` and `custom.js` from the **SAO web root** (tr
 | `frontend/deploy/sao-custom.css` | `<SAO_ROOT>/custom.css` (e.g. `/opt/gnuhealth/his-50/sao/custom.css`) |
 | `frontend/deploy/sao-custom.js` | `<SAO_ROOT>/custom.js` |
 
-Theme: IST navy `#0a1f44`, gold `#c9a66b` on navbar, primary buttons, tabs, and selection highlights. Safe reductions only — do not strip functional chrome.
+Theme: IST navy `#0a1f44`, gold `#c9a66b` on navbar, primary buttons, tabs, menu tree, and selection highlights. When embedded (`html.ist-embedded`), the Tryton wordmark is softened/replaced with a quiet “IST” mark. Safe reductions only — do not strip functional chrome or break JSON-RPC.
 
 After copying CSS/JS, hard-refresh `/sao/` (or Workspace). No trytond restart required for static CSS.
 

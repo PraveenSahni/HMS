@@ -46,10 +46,12 @@
   },
   "workspace": {
     "title": "مساحة العمل",
-    "subtitle": "GNU Health SAO داخل واجهة IST — للمعالجات والشاشات غير المتوفرة بعد في React.",
+    "subtitle": "معالجات SAO والشاشات العميقة — واجهة IST.",
     "iframeTitle": "مساحة عمل GNU Health SAO",
     "openInWorkspace": "فتح في مساحة العمل",
     "openNewTab": "فتح SAO في تبويب جديد",
+    "showIstMenu": "إظهار قائمة IST",
+    "hideIstMenu": "إخفاء قائمة IST",
     "panelDefaultDesc": "يستخدم هذا الإجراء معالج Tryton أو شاشة إعداد عميقة. افتحه في مساحة العمل (واجهة IST + SAO) أو في تبويب جديد.",
     "moduleActivateTitle": "تفعيل / ترقية الوحدات",
     "moduleActivateDesc": "وضع علامة على الوحدات في React (إن وُجد) يضع التغييرات في قائمة الانتظار فقط. تطبيق الترقيات يتطلب عادة trytond-admin أو مساحة العمل (SAO)."

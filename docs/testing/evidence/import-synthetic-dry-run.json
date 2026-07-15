@@ -1,8 +1,8 @@
 {
   "command": "import_synthetic",
   "dry_run": true,
-  "config": "C:\\HMS\\config\\synthetic\\uae_qatar_max_demo.yaml",
-  "timestamp": "2026-07-14T16:15:19.461650+00:00",
+  "config": "C:\\HMS\\docs\\testing\\evidence\\generated\\_max_demo_live.yaml",
+  "timestamp": "2026-07-14T19:20:01.685174+00:00",
   "seed": 20260714,
   "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
   "status": "dry-run-ok",
@@ -38,6 +38,6 @@
     "entities": 3,
     "facilities": 13
   },
-  "password_configured": false,
+  "password_configured": true,
   "production_host_match": true
 }

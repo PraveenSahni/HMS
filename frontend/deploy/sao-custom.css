@@ -4,6 +4,7 @@
  * Mirror of: frontend/deploy/sao-custom.css → VM SAO root custom.css
  *
  * Colors: IST navy #0a1f44 / gold #c9a66b — Bootstrap 3 / SAO selectors.
+ * Keep functional chrome intact — do not break menus, wizards, or JSON-RPC.
  */
 
 :root {
@@ -13,6 +14,8 @@
   --ist-gold: #c9a66b;
   --ist-gold-muted: #f0e6d4;
   --ist-bg: #f7f8fa;
+  --ist-sidebar-bg: #f3f5f8;
+  --ist-sidebar-border: #e2e6ec;
 }
 
 /* Top navbar — replace Tryton/GH green with IST navy */
@@ -39,6 +42,48 @@ body > .navbar,
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: var(--ist-navy-light) !important;
   color: var(--ist-gold) !important;
+}
+
+/* Soften Tryton wordmark — keep link/area for layout, reduce brand noise */
+.navbar-brand,
+.navbar-inverse .navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 13px !important;
+  opacity: 0.55;
+  max-width: 7.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar-brand:hover,
+.navbar-inverse .navbar-brand:hover {
+  opacity: 0.85;
+  color: var(--ist-gold) !important;
+}
+
+/* When embedded in IST Workspace iframe — further soften brand */
+html.ist-embedded .navbar-brand,
+html.ist-embedded .navbar-inverse .navbar-brand {
+  font-size: 0 !important;
+  opacity: 0;
+  width: 0.5rem;
+  max-width: 0.5rem;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+html.ist-embedded .navbar-brand::after {
+  content: "IST";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ist-gold);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 /* Primary buttons / accents */
@@ -91,6 +136,55 @@ body {
   background: var(--ist-bg) !important;
 }
 
+/* ── SAO menu tree / left panel — closer to IST sidebar ── */
+#menu,
+.treeview,
+.menu-tree,
+.sao-menu,
+.panel-menu,
+.ui-tabs-panel .treeview,
+.contentbox .treeview {
+  background: var(--ist-sidebar-bg) !important;
+}
+
+/* Common SAO / Bootstrap tree nodes */
+.treeview .list-group-item,
+.treeview li > a,
+#menu a,
+.menu a {
+  color: var(--ist-navy) !important;
+  border-color: transparent !important;
+}
+
+.treeview .list-group-item:hover,
+.treeview li > a:hover,
+#menu a:hover,
+.menu a:hover {
+  background: var(--ist-gold-muted) !important;
+  color: var(--ist-navy-dark) !important;
+}
+
+.treeview .list-group-item.active,
+.treeview li.active > a,
+#menu .active > a,
+.menu .active > a {
+  background: transparent !important;
+  color: var(--ist-gold) !important;
+  font-weight: 600;
+  border-inline-start: 3px solid var(--ist-gold) !important;
+}
+
+/* Panel / splitter chrome near menu */
+.panel-default > .panel-heading {
+  background: var(--ist-navy) !important;
+  color: #f5f7fa !important;
+  border-color: var(--ist-navy-dark) !important;
+}
+
+.panel-default {
+  border-color: var(--ist-sidebar-border) !important;
+}
+
 /* Reduce visual weight of secondary toolbars where safe */
 .navbar .badge {
   background-color: var(--ist-gold) !important;
@@ -111,10 +205,4 @@ body {
 .modal-header,
 .panel-heading {
   border-top: 3px solid var(--ist-gold);
-}
-
-/* Hide or soften Tryton brand text if present — keep functional chrome */
-.navbar-brand {
-  font-weight: 600;
-  letter-spacing: 0.02em;
 }

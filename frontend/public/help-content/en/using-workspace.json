@@ -8,10 +8,11 @@
   "version": "1.0.0",
   "guided": false,
   "published": true,
-  "body": "Workspace embeds GNU Health SAO inside the IST shell (header + sidebar) at /workspace. Use it for Tryton wizards and deep screens not yet mirrored in React (CoA, fiscal years, lab create-test, invoice post/pay, module upgrade apply). Open from Favorites → Workspace, or any “Open in Workspace” button (Setup Hub, Financial, Companies, Model browser). Same-origin only: SAO loads from /sao/ on this host — do not use external SAO URLs in the iframe. Optional: “Open SAO in new tab” if you need a full browser tab. Sign-in: use IST login first; if SAO asks for credentials again inside the frame, sign in with the same Tryton user. Theming: SAO uses IST navy/gold via custom.css on the server. See also Setup Hub order and financial checklist. Related: SAO_EMBED_AND_SCREEN_PARITY.md.",
+  "body": "Workspace embeds GNU Health SAO inside the IST shell at /workspace. The IST left sidebar is hidden by default so you only see the IST top header plus SAO (avoids two menus). Use Show IST menu / Hide IST menu in the Workspace toolbar (or header) if you need React navigation. Use Workspace for Tryton wizards and deep screens not yet mirrored in React (CoA, fiscal years, lab create-test, invoice post/pay, module upgrade apply). Open from Favorites → Workspace, or any “Open in Workspace” button (Setup Hub, Financial, Companies, Model browser). Same-origin only: SAO loads from /sao/ on this host — do not use external SAO URLs in the iframe. Optional: “Open SAO in new tab” if you need a full browser tab. Sign-in: use IST login first; if SAO asks for credentials again inside the frame, sign in with the same Tryton user. Theming: SAO uses IST navy/gold via custom.css on the server. See also Setup Hub order and financial checklist. Related: SAO_EMBED_AND_SCREEN_PARITY.md.",
   "steps": [
     "Sign in to IST HIS (React).",
     "Open Favorites → Workspace, or click Open in Workspace on a stub page.",
+    "Use SAO’s own menu inside the iframe; optionally Show IST menu if you need React nav.",
     "Complete the SAO wizard or form inside the embedded client.",
     "Return to React routes (Patients, Appointments, …) for daily list/create screens."
   ]

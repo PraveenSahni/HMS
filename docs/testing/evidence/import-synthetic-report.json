@@ -1,0 +1,11 @@
+{
+  "command": "import_synthetic",
+  "dry_run": false,
+  "config": "C:\\HMS\\docs\\testing\\evidence\\generated\\_max_demo_live.yaml",
+  "timestamp": "2026-07-14T19:20:39.031132+00:00",
+  "seed": 20260714,
+  "synthetic_batch_id": "ISTHIS-MAXDEMO-20260714",
+  "status": "delegated-to-run_synthetic_data",
+  "engine_rc": 1,
+  "runtime_config": "C:\\HMS\\docs\\testing\\evidence\\_runtime_synthetic_config.yaml"
+}
