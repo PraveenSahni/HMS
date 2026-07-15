@@ -7,10 +7,10 @@
  * - Tryton monochrome SVGs inherit fill from Sao.config.icon_colors[0] via
  *   ICONFACTORY._convert (default teal #267f82).
  * - GNU Health module icons are multi-color SVGs with hardcoded teal/cyan
- *   fills/gradients (#08828B, #028189, #34A6AE, …). Setting only the root
- *   <svg fill> does NOT recolor those — they stay green. We patch _convert to
- *   rewrite teal/green hexes to IST navy, then walk menu <img> blobs as a
- *   safety net (MutationObserver) for anything already rendered.
+ *   fills/gradients (#08828B, #028189, #34A6AE, …) AND beige/peach “skin”
+ *   fills (e.g. Party heads). Setting only the root <svg fill> does NOT
+ *   recolor those. We patch _convert to rewrite teal + beige hexes to IST
+ *   navy, then walk menu <img> blobs as a safety net (MutationObserver).
  */
 (function () {
   'use strict';
@@ -39,13 +39,12 @@
   }
 
   /**
-   * True for saturated green / teal / cyan used by GNU Health icons.
-   * Skips near-white pale tints and near-gray neutrals.
+   * Hue/sat/lightness for a hex. Returns null if unparsable.
    */
-  function isTealOrGreenHex(hex) {
+  function hexHsl(hex) {
     var rgb = parseHex(hex);
     if (!rgb) {
-      return false;
+      return null;
     }
     var r = rgb.r / 255;
     var g = rgb.g / 255;
@@ -54,47 +53,122 @@
     var min = Math.min(r, g, b);
     var d = max - min;
     var lightness = (max + min) / 2;
-    if (lightness > 0.78 || lightness < 0.08 || d < 0.1) {
-      return false;
+    var hue = 0;
+    if (d > 0) {
+      if (max === r) {
+        hue = ((g - b) / d + (g < b ? 6 : 0)) * 60;
+      } else if (max === g) {
+        hue = ((b - r) / d + 2) * 60;
+      } else {
+        hue = ((r - g) / d + 4) * 60;
+      }
     }
-    var hue;
-    if (max === r) {
-      hue = ((g - b) / d + (g < b ? 6 : 0)) * 60;
-    } else if (max === g) {
-      hue = ((b - r) / d + 2) * 60;
-    } else {
-      hue = ((r - g) / d + 4) * 60;
-    }
-    var sat = lightness === 1 || lightness === 0 ? 0 : d / (1 - Math.abs(2 * lightness - 1));
-    return hue >= 140 && hue <= 200 && sat > 0.18;
+    var sat =
+      lightness === 1 || lightness === 0
+        ? 0
+        : d / (1 - Math.abs(2 * lightness - 1));
+    return { hue: hue, sat: sat, lightness: lightness };
   }
 
-  function shouldRecolorHex(hex) {
+  /**
+   * True for saturated green / teal / cyan used by GNU Health icons.
+   * Skips near-white pale tints and near-gray neutrals.
+   */
+  function isTealOrGreenHex(hex) {
+    var hsl = hexHsl(hex);
+    if (!hsl) {
+      return false;
+    }
+    if (hsl.lightness > 0.78 || hsl.lightness < 0.08 || hsl.sat < 0.1) {
+      return false;
+    }
+    return hsl.hue >= 140 && hsl.hue <= 200 && hsl.sat > 0.18;
+  }
+
+  /**
+   * Beige / tan / peach “skin” fills on multi-color GH icons (e.g. Party heads).
+   * These are not teal, so earlier passes left them — force navy monochrome.
+   */
+  function isBeigeOrFleshHex(hex) {
+    if (
+      /^#(?:e8d5b7|e6c9a8|d4c4a8|d2b48c|c8b89a|c9a66b|d4b87a|f0e6d4|f5d0b0|f5deb3|ffe4c4|ffdead|deb887|daa520|cd853f|d2b48c|e8c39e|e0c09a|f4e4c1|f7e7ce|f3e5ab|ead9c6|e5d3b3|dcc7a8|cbb994|b8a07a|a89070|c4a484|e6be8a|f0d9b5|f2e6d0|efe0c8|e9d5b5)$/i.test(
+        hex
+      )
+    ) {
+      return true;
+    }
+    var hsl = hexHsl(hex);
+    if (!hsl) {
+      return false;
+    }
+    // Warm beige / peach / tan heads (not saturated orange favorites)
+    if (hsl.lightness < 0.42 || hsl.lightness > 0.94 || hsl.sat < 0.08) {
+      return false;
+    }
+    if (hsl.hue >= 15 && hsl.hue <= 55 && hsl.sat <= 0.65) {
+      return true;
+    }
+    // Desaturated warm gray-beige used as faces
+    if (hsl.hue >= 20 && hsl.hue <= 50 && hsl.sat >= 0.05 && hsl.sat < 0.22 && hsl.lightness > 0.55) {
+      return true;
+    }
+    return false;
+  }
+
+  function isNearNavyHex(hex) {
+    return /^#(?:0a1f44|071428|1a3056|3d4f6a|0a1f44ff|001f3f|002147|0b1e3a|12253f)$/i.test(
+      hex
+    );
+  }
+
+  /**
+   * @param {string} hex
+   * @param {string} [fillColor] — when IST_GOLD (favorites), preserve gold accents
+   */
+  function shouldRecolorHex(hex, fillColor) {
     if (!hex) {
       return false;
     }
     if (/^#(fff|ffffff|000|000000)$/i.test(hex)) {
       return false;
     }
-    if (/^#(c9a66b|d4b87a|f0e6d4|f08701|f3a33b|f9b97a|fabf73|fbb579|fbd19e)$/i.test(hex)) {
-      // Keep gold / warm accents (favorites + GH orange highlights)
+    if (isNearNavyHex(hex) && (!fillColor || fillColor === IST_NAVY)) {
       return false;
     }
+    // Favorites / gold path: keep warm gold accents
+    if (
+      fillColor === IST_GOLD &&
+      /^#(c9a66b|d4b87a|f0e6d4|f08701|f3a33b|f9b97a|fabf73|fbb579|fbd19e)$/i.test(hex)
+    ) {
+      return false;
+    }
+    // Navy monochrome path: do NOT keep beige/gold-muted — Party heads must go navy
     TEAL_EXPLICIT_RE.lastIndex = 0;
     if (TEAL_EXPLICIT_RE.test(hex)) {
       return true;
     }
-    return isTealOrGreenHex(hex);
+    if (isTealOrGreenHex(hex)) {
+      return true;
+    }
+    if (fillColor !== IST_GOLD && isBeigeOrFleshHex(hex)) {
+      return true;
+    }
+    return false;
   }
 
-  function svgHasTeal(svgText) {
+  function svgNeedsIstRecolor(svgText, fillColor) {
     var hexes = svgText.match(/#[0-9a-fA-F]{3,8}/g) || [];
     for (var i = 0; i < hexes.length; i++) {
-      if (shouldRecolorHex(hexes[i])) {
+      if (shouldRecolorHex(hexes[i], fillColor)) {
         return true;
       }
     }
     return false;
+  }
+
+  /** @deprecated use svgNeedsIstRecolor — kept name for call-site clarity in walks */
+  function svgHasTeal(svgText) {
+    return svgNeedsIstRecolor(svgText, IST_NAVY);
   }
 
   function recolorSvgText(svgText, fillColor) {
@@ -103,7 +177,7 @@
     }
     var color = fillColor || IST_NAVY;
     var out = svgText.replace(/#([0-9a-fA-F]{3,8})\b/g, function (match) {
-      return shouldRecolorHex(match) ? color : match;
+      return shouldRecolorHex(match, color) ? color : match;
     });
 
     var open = out.match(/<svg\b[^>]*>/i);
@@ -245,10 +319,12 @@
         if (!svgText || svgText.indexOf('<svg') === -1) {
           return;
         }
-        if (!favor && !svgHasTeal(svgText)) {
+        var target = favor ? IST_GOLD : IST_NAVY;
+        // Recolor teal leftovers AND beige/flesh heads (Party, etc.)
+        if (!svgNeedsIstRecolor(svgText, target)) {
           return;
         }
-        var url = convertSvgToBlobUrl(svgText, favor ? IST_GOLD : IST_NAVY);
+        var url = convertSvgToBlobUrl(svgText, target);
         img.setAttribute('src', url);
       })
       .catch(function () {

@@ -115,30 +115,37 @@ body > .navbar,
 }
 
 /*
- * Navbar spacing: IST/hamburger brand must not crowd the Action search.
- * Bootstrap packs .navbar-header flush against #global-search — add ~16px gap.
+ * Navbar spacing (vision QA 2026-07-15):
+ * - Left edge was cramped (~8–10px) — pad bar ~14px.
+ * - Brand→Action gap read large (~40–60px+ stacked margins) — tighten to ~12–16px total.
  */
+.navbar.navbar-inverse,
+.navbar.navbar-static-top {
+  padding-inline-start: 14px !important;
+  padding-inline-end: 12px !important;
+}
+
 .navbar.navbar-inverse .navbar-header,
 .navbar.navbar-static-top .navbar-header {
-  margin-inline-end: 16px !important;
-  padding-inline-end: 8px !important;
+  margin-inline-end: 8px !important;
+  padding-inline-end: 0 !important;
 }
 
 .navbar.navbar-inverse .navbar-form.navbar-left,
 .navbar.navbar-inverse #global-search,
 .navbar.navbar-static-top #global-search,
 .navbar.navbar-inverse #main_navbar > .navbar-form {
-  margin-inline-start: 12px !important;
-  padding-inline-start: 4px !important;
+  margin-inline-start: 4px !important;
+  padding-inline-start: 0 !important;
 }
 
 .navbar.navbar-inverse .navbar-toggle {
-  margin-inline-end: 8px !important;
+  margin-inline-end: 4px !important;
 }
 
 @media (min-width: 768px) {
   .navbar.navbar-inverse #main_navbar.navbar-collapse {
-    padding-inline-start: 8px !important;
+    padding-inline-start: 4px !important;
   }
 }
 
@@ -148,31 +155,40 @@ body > .navbar,
   color: var(--ist-gold) !important;
 }
 
-/* Embedded in IST Workspace — quiet brand (outer header already says IST) */
-html.ist-embedded .navbar-brand,
-html.ist-embedded .navbar-inverse .navbar-brand {
-  position: relative;
-  color: transparent !important;
-  opacity: 1;
-  max-width: 2.75rem;
-  overflow: hidden;
-  pointer-events: none;
-  margin-inline-end: 16px !important;
-  padding-inline-end: 4px !important;
+/*
+ * Embedded in IST Workspace — hide SAO top bar entirely.
+ * Outer IST React header is the only chrome (Help / Sign out / lang / theme).
+ * SAO left menu (#menu / treeview) stays for in-iframe navigation.
+ */
+html.ist-embedded body > .navbar,
+html.ist-embedded .navbar.navbar-inverse,
+html.ist-embedded .navbar.navbar-static-top,
+html.ist-embedded .navbar-default.navbar-inverse,
+html.ist-embedded #sao-navbar {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
 }
 
-html.ist-embedded .navbar-brand::after {
-  content: "IST";
-  position: absolute;
-  inset-inline-start: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--ist-font-sans);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--ist-gold);
-  opacity: 0.9;
+html.ist-embedded body {
+  padding-top: 0 !important;
+}
+
+html.ist-embedded,
+html.ist-embedded body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.ist-embedded #application,
+html.ist-embedded .body {
+  height: 100% !important;
+  max-height: 100vh !important;
 }
 
 /* Primary buttons / accents */
@@ -488,12 +504,6 @@ a.text-success:hover,
   font-weight: 700 !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-html.ist-embedded .navbar-brand #title,
-html.ist-embedded #title {
-  font-size: 0 !important;
-  color: transparent !important;
 }
 
 /*
