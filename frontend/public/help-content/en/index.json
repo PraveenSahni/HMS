@@ -23,6 +23,34 @@
     "published": true
   },
   {
+    "id": "using-workspace",
+    "title": "Using Workspace (SAO inside IST)",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/workspace",
+      "/setup",
+      "/financial",
+      "/help"
+    ],
+    "keywords": [
+      "workspace",
+      "SAO",
+      "embed",
+      "iframe",
+      "wizard",
+      "Open in Workspace"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
     "id": "onboarding-checklist",
     "title": "Onboarding checklist",
     "roles": [

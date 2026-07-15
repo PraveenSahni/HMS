@@ -1,0 +1,120 @@
+/**
+ * IST HIS theme for GNU Health SAO (Tryton web client).
+ * Deploy to SAO web root as custom.css (auto-loaded by SAO).
+ * Mirror of: frontend/deploy/sao-custom.css → VM SAO root custom.css
+ *
+ * Colors: IST navy #0a1f44 / gold #c9a66b — Bootstrap 3 / SAO selectors.
+ */
+
+:root {
+  --ist-navy: #0a1f44;
+  --ist-navy-dark: #071428;
+  --ist-navy-light: #1a3056;
+  --ist-gold: #c9a66b;
+  --ist-gold-muted: #f0e6d4;
+  --ist-bg: #f7f8fa;
+}
+
+/* Top navbar — replace Tryton/GH green with IST navy */
+.navbar-inverse,
+.navbar-default.navbar-inverse,
+body > .navbar,
+#sao-navbar,
+.navbar.navbar-static-top {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+  border-color: var(--ist-navy-dark) !important;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-text,
+.navbar-inverse .btn-link {
+  color: #f5f7fa !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: var(--ist-navy-light) !important;
+  color: var(--ist-gold) !important;
+}
+
+/* Primary buttons / accents */
+.btn-primary,
+.btn-primary:focus {
+  background-color: var(--ist-navy) !important;
+  background-image: none !important;
+  border-color: var(--ist-navy-dark) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--ist-navy-dark) !important;
+  border-color: var(--ist-navy-dark) !important;
+}
+
+.bg-primary,
+.label-primary,
+.progress-bar,
+.panel-primary > .panel-heading {
+  background-color: var(--ist-navy) !important;
+  border-color: var(--ist-navy) !important;
+}
+
+a,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: var(--ist-navy);
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover {
+  background-color: var(--ist-navy) !important;
+  color: #fff !important;
+}
+
+/* Tabs / tree selection accents */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-top-color: var(--ist-gold) !important;
+  color: var(--ist-navy) !important;
+}
+
+/* Soften busy chrome when embedded in IST Workspace iframe */
+body {
+  background: var(--ist-bg) !important;
+}
+
+/* Reduce visual weight of secondary toolbars where safe */
+.navbar .badge {
+  background-color: var(--ist-gold) !important;
+  color: var(--ist-navy-dark) !important;
+}
+
+/* Focus / selection hint */
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th,
+.list-group-item.active,
+.list-group-item.active:hover {
+  background-color: var(--ist-gold-muted) !important;
+  border-color: var(--ist-gold) !important;
+  color: var(--ist-navy) !important;
+}
+
+/* Login panel inside SAO (if shown) */
+.modal-header,
+.panel-heading {
+  border-top: 3px solid var(--ist-gold);
+}
+
+/* Hide or soften Tryton brand text if present — keep functional chrome */
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

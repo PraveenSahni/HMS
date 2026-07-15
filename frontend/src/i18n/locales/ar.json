@@ -37,11 +37,22 @@
     "countries": "الدول",
     "favorites": "المفضلة",
     "setup": "الإعداد",
+    "workspace": "مساحة العمل",
     "menuTree": "القوائم",
     "menuLoading": "جاري تحميل القوائم…",
     "menuLoadError": "تعذر تحميل القوائم",
     "menuEmpty": "لا توجد قوائم",
     "help": "المساعدة"
+  },
+  "workspace": {
+    "title": "مساحة العمل",
+    "subtitle": "GNU Health SAO داخل واجهة IST — للمعالجات والشاشات غير المتوفرة بعد في React.",
+    "iframeTitle": "مساحة عمل GNU Health SAO",
+    "openInWorkspace": "فتح في مساحة العمل",
+    "openNewTab": "فتح SAO في تبويب جديد",
+    "panelDefaultDesc": "يستخدم هذا الإجراء معالج Tryton أو شاشة إعداد عميقة. افتحه في مساحة العمل (واجهة IST + SAO) أو في تبويب جديد.",
+    "moduleActivateTitle": "تفعيل / ترقية الوحدات",
+    "moduleActivateDesc": "وضع علامة على الوحدات في React (إن وُجد) يضع التغييرات في قائمة الانتظار فقط. تطبيق الترقيات يتطلب عادة trytond-admin أو مساحة العمل (SAO)."
   },
   "setup": {
     "title": "مركز الإعداد",
@@ -125,7 +136,7 @@
     "folderOnly": "هذه القائمة مجلد. وسّعها في الشريط الجانبي لفتح العناصر الفرعية.",
     "noAction": "هذه القائمة بلا إجراء نافذة.",
     "unsupportedAction": "نوع الإجراء «{{type}}» غير مدعوم في واجهة React بعد. استخدم SAO للمعالجات والتقارير وشاشات الإعداد.",
-    "openSao": "فتح GNU Health SAO",
+    "openSao": "فتح في مساحة العمل",
     "openDedicated": "فتح الصفحة المخصصة",
     "showing": "عرض {{count}}",
     "name": "الاسم"

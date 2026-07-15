@@ -23,6 +23,33 @@
     "published": true
   },
   {
+    "id": "using-workspace",
+    "title": "استخدام مساحة العمل (SAO داخل IST)",
+    "roles": [
+      "*"
+    ],
+    "countries": [
+      "AE",
+      "QA"
+    ],
+    "routes": [
+      "/workspace",
+      "/setup",
+      "/financial",
+      "/help"
+    ],
+    "keywords": [
+      "مساحة العمل",
+      "workspace",
+      "SAO",
+      "معالج",
+      "فتح في مساحة العمل"
+    ],
+    "version": "1.0.0",
+    "guided": false,
+    "published": true
+  },
+  {
     "id": "onboarding-checklist",
     "title": "قائمة التحقق للتأهيل",
     "roles": [

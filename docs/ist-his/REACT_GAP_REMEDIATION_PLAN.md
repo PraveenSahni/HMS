@@ -11,6 +11,8 @@ related:
   - docs/ist-his/GNU_Health_vs_IST_HIS_comparison.md
   - docs/ist-his/UPSTREAM_IMAGE_SYNC_REVIEW.md
   - docs/ist-his/DOCUMENT_CONTENT_PARITY.md
+  - docs/ist-his/SAO_EMBED_AND_SCREEN_PARITY.md
+  - docs/ist-his/SCREEN_BY_SCREEN_PARITY.md
   - frontend/docs/SAO_MIGRATION.md
   - docs/research/gap-analysis-uae-qatar.md
   - docs/implementation/financial-setup.md
@@ -25,14 +27,20 @@ IST HIS is a **thin React client** on an unmodified **GNU Health HIS 5.0.6** / *
 | Fact | Evidence |
 |------|----------|
 | **0 Full React module coverage** | Comparison matrix: no module rated **Full**; Partial ≈ 12 clinical/ops areas; rest **SAO-only** / data packs |
-| React routes exist for daily ops | `App.tsx`: patients, appointments, lab, Rx, evaluations, beds, nursing, procedures, imaging, parties, stock, financial stub, admin, Setup Hub, menu browser |
-| Depth gaps are wizards & specialty forms | Lab create-test/results, admit/transfer, invoice post/pay, Orthanc, ICU, genetics, OB, NTD, reporting — **SAO-only** |
+| React routes exist for daily ops | `App.tsx`: patients, appointments, lab, Rx, evaluations, beds, nursing, procedures, imaging, parties, stock, financial stub, admin, Setup Hub, **Workspace**, menu browser |
+| Depth gaps are wizards & specialty forms | Lab create-test/results, admit/transfer, invoice post/pay, Orthanc, ICU, genetics, OB, NTD, reporting — **SAO via Workspace** |
 | Docs/screenshots are not React-synced | Upstream images: ~15% aligned (feature), ~52% partial, ~33% gap/N/A; **0** IST docs match screenshot how-to fidelity |
 | UAE/QA product gaps are orthogonal | No HIE/e-claim connectors; multi-entity isolation designed, not fully deployed |
 
-**Honest scope for this plan:** Close the highest-value **ambulatory + inpatient + finance path** gaps in React; keep SAO as the deep client for wizards and specialties; run a **parallel Help/screenshot** track so operators are never shown GNU Solidario SAO chrome as “the IST app.” Do **not** upgrade GNU Health unless separately approved.
+### Locked product strategy (2026-07-15)
 
-**Credible product claim today:** “Ambulatory MVP via React, with SAO for deep fields/wizards.” Not: “Full React parity with GNU Health SAO.”
+1. **Embed SAO now** inside the IST shell at **`/workspace`** (same-origin iframe → `/sao/`, IST navy/gold `custom.css`).
+2. **Screen-by-screen React build** using [`SCREEN_BY_SCREEN_PARITY.md`](./SCREEN_BY_SCREEN_PARITY.md) / `.xlsx` — progressive parity, not big-bang rewrite.
+3. Details: [`SAO_EMBED_AND_SCREEN_PARITY.md`](./SAO_EMBED_AND_SCREEN_PARITY.md).
+
+**Honest scope for this plan:** Close the highest-value **ambulatory + inpatient + finance path** gaps in React; keep SAO (via Workspace) as the deep client for wizards and specialties; run a **parallel Help/screenshot** track so operators are never shown unlabeled GNU Solidario chrome as “the IST app.” Do **not** upgrade GNU Health unless separately approved.
+
+**Credible product claim today:** “Ambulatory MVP via React, with Workspace (embedded SAO) for deep fields/wizards.” Not: “Full React parity with GNU Health SAO.”
 
 ---
 
@@ -122,13 +130,14 @@ Legend — **Effort:** S ≤ 3d · M 1–2 w · L 3–6 w · XL multi-sprint · 
 
 ## 3. Strategy principles
 
-1. **Do not rebuild all of SAO in one go.** Backend already matches stock GH; chasing 53-module React Full coverage is an XL multi-year program with low ROI for specialties.
-2. **Prefer React for daily high-volume workflows** (register patient, book appointment, consult evaluation, lab order, Rx list, bed board, nursing list). **SAO deep-link** for wizards until parity is funded.
+1. **Embed SAO in IST Workspace first** (`/workspace`) so operators stay in IST chrome for wizards; then **build React screen-by-screen** per the parity tracker (P0 → P3). Do not rebuild all of SAO in one go.
+2. **Prefer React for daily high-volume workflows** (register patient, book appointment, consult evaluation, lab order, Rx list, bed board, nursing list). **Workspace (embedded SAO)** for wizards until parity is funded.
 3. **Model-driven generic forms where possible** — extend `ModelBrowserPage` / `menu/:menuId` for unmapped `act_window` before hand-building specialty pages.
 4. **Screenshot/doc track runs in parallel to code** — never paste unlabeled GNU Health SAO/GTK shots into IST Help as the primary UI.
-5. **No GNU Health / Tryton upgrade** unless separately CAB-approved. Close gaps with UI, config, Help, and SAO bridging on the current pin (5.0.6 / 7.0.53).
-6. **Hybrid is success.** A React page with a clear **Open in SAO** for the next wizard step is shippable; a half-built React wizard that cannot post is not.
+5. **No GNU Health / Tryton upgrade** unless separately CAB-approved. Close gaps with UI, config, Help, and Workspace bridging on the current pin (5.0.6 / 7.0.53).
+6. **Hybrid is success.** A React page with a clear **Open in Workspace** for the next wizard step is shippable; a half-built React wizard that cannot post is not.
 7. **UAE/QA demos** use Setup Hub order 1–9, synthetic data markers (`IST-*` / `SYN-*`), and separate legal companies (AED / QAR) — not federation-as-HIE.
+8. **Track every screen** in `SCREEN_BY_SCREEN_PARITY.xlsx` / `.md` before claiming Parity.
 
 ---
 
@@ -138,19 +147,21 @@ Legend — **Effort:** S ≤ 3d · M 1–2 w · L 3–6 w · XL multi-sprint · 
 
 **Goals**
 
-- Inventory every React stub/list page; ensure **Open in SAO** (or Help deep-link) for the next operator action.
-- Help Centre: “Open in SAO” callouts on thin workflows.
+- Inventory every React stub/list page; ensure **Open in Workspace** (or Help deep-link) for the next operator action.
+- Ship `/workspace` embed + SAO `custom.css` IST theme (done when this strategy is active).
+- Help Centre: “Using Workspace” + callouts on thin workflows.
 - Capture **React** screenshots for core flows (patient, appointment, lab order, Setup Hub 1–9).
-- Label any reused upstream images as **SAO (secondary client)**.
+- Label any reused upstream images as **SAO (secondary client / Workspace)**.
 
 **Exit criteria**
 
+- [x] Workspace route embeds same-origin `/sao/` under AppLayout.
 - [ ] SaoPanel (or equivalent) present on financial, lab, imaging, procedures, beds, modules, Setup Hub.
-- [ ] Help articles for P1 flows reference React routes first.
+- [ ] Help articles for P1 flows reference React routes first; `using-workspace` published.
 - [ ] Screenshot pack started: ≥ 8 React frames checked into Help/docs with IST branding.
-- [ ] Gap register (this doc §2) accepted by product owner.
+- [ ] Gap register (this doc §2) + screen tracker P0 accepted by product owner.
 
-**Demo milestone (UAE/QA):** Operator walks Setup Hub → companies/currency → registers synthetic patient in React → books appointment → opens SAO only when prompted.
+**Demo milestone (UAE/QA):** Operator walks Setup Hub → companies/currency → registers synthetic patient in React → books appointment → opens **Workspace** only when prompted.
 
 ---
 

@@ -37,11 +37,22 @@
     "countries": "Countries",
     "favorites": "Favorites",
     "setup": "Setup",
+    "workspace": "Workspace",
     "menuTree": "Menus",
     "menuLoading": "Loading menus…",
     "menuLoadError": "Could not load menus",
     "menuEmpty": "No menus available",
     "help": "Help"
+  },
+  "workspace": {
+    "title": "Workspace",
+    "subtitle": "GNU Health SAO inside the IST shell — use for wizards and screens not yet in React.",
+    "iframeTitle": "GNU Health SAO workspace",
+    "openInWorkspace": "Open in Workspace",
+    "openNewTab": "Open SAO in new tab",
+    "panelDefaultDesc": "This action uses a Tryton wizard or deep configuration screen. Open it in Workspace (IST chrome + SAO) or in a new tab.",
+    "moduleActivateTitle": "Module activate / upgrade",
+    "moduleActivateDesc": "Marking modules in React (when available) only queues state changes. Applying upgrades usually requires trytond-admin or Workspace (SAO)."
   },
   "setup": {
     "title": "Setup Hub",
@@ -125,7 +136,7 @@
     "folderOnly": "This menu is a folder. Expand it in the sidebar to open child items.",
     "noAction": "This menu has no window action.",
     "unsupportedAction": "Action type «{{type}}» is not supported in the React UI yet. Use SAO for wizards, reports, and configuration screens.",
-    "openSao": "Open GNU Health SAO",
+    "openSao": "Open in Workspace",
     "openDedicated": "Open dedicated page",
     "showing": "showing {{count}}",
     "name": "Name"

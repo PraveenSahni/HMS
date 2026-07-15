@@ -144,6 +144,73 @@
   padding: var(--space-9) var(--space-8);
 }
 
+/* SAO Workspace — full-height iframe under IST chrome */
+.ist-main--workspace {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ist-app--workspace .ist-app__body {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ist-app--workspace .ist-sidebar {
+  max-height: calc(100vh - var(--layout-header-height, 3.5rem));
+  overflow-y: auto;
+}
+
+.ist-workspace {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  height: calc(100vh - var(--layout-header-height, 3.5rem));
+}
+
+.ist-workspace__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: var(--hairline-width) solid var(--color-divider);
+  background: var(--color-bg-sidebar, var(--color-bg));
+  flex-shrink: 0;
+}
+
+.ist-workspace__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-bold, 600);
+  color: var(--color-heading, var(--color-navy));
+}
+
+.ist-workspace__subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.ist-workspace__frame-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.ist-workspace__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
 /* Hero (login / landing) — legacy centered layout */
 .ist-hero {
   display: flex;

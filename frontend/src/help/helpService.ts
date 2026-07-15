@@ -147,6 +147,11 @@ export function contextualHelp(
 export const ONBOARDING_ITEMS = [
   { id: 'login-lang', label_en: 'Sign in and set language EN/AR', label_ar: 'تسجيل الدخول وتعيين اللغة' },
   { id: 'help-filters', label_en: 'Set Help role and country filters', label_ar: 'تعيين دور ودولة المساعدة' },
+  {
+    id: 'using-workspace',
+    label_en: 'Open Workspace (/workspace) for SAO wizards inside IST',
+    label_ar: 'فتح مساحة العمل للمعالجات داخل IST',
+  },
   { id: 'setup-hub', label_en: 'Open Setup Hub (/setup) and review order', label_ar: 'فتح مركز الإعداد ومراجعة الترتيب' },
   {
     id: 'setup-companies',

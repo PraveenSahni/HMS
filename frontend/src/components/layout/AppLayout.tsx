@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../contexts/AuthContext'
 import { Logo } from '../common/Logo'
@@ -12,6 +12,9 @@ export function AppLayout() {
   const { t } = useTranslation()
   const { username, logout } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
+  const isWorkspace =
+    location.pathname === '/workspace' || location.pathname.startsWith('/workspace/')
 
   const handleLogout = () => {
     logout()
@@ -19,7 +22,7 @@ export function AppLayout() {
   }
 
   return (
-    <div className="ist-app">
+    <div className={`ist-app${isWorkspace ? ' ist-app--workspace' : ''}`}>
       <div className="ist-watermark" aria-hidden="true">
         <span className="ist-watermark__text">IST</span>
       </div>
@@ -48,9 +51,9 @@ export function AppLayout() {
           <MenuTree />
         </aside>
 
-        <main className="ist-main">
+        <main className={`ist-main${isWorkspace ? ' ist-main--workspace' : ''}`}>
           <Outlet />
-          <AppFooter />
+          {!isWorkspace && <AppFooter />}
         </main>
       </div>
     </div>

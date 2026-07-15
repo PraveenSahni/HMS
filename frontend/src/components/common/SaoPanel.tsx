@@ -1,4 +1,6 @@
-import { MODULE_SERVER_INSTRUCTIONS, SAO_DIRECT_URL, saoUrl } from '../../lib/sao'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { MODULE_SERVER_INSTRUCTIONS, saoUrl } from '../../lib/sao'
 
 type SaoPanelProps = {
   title?: string
@@ -8,39 +10,41 @@ type SaoPanelProps = {
   compact?: boolean
 }
 
-/** Panel for wizard-only / deep admin actions that remain SAO-only. */
+/** Panel for wizard-only / deep admin actions — prefer IST Workspace embed over bare /sao/. */
 export function SaoPanel({
-  title = 'Open in SAO',
-  description = 'This action uses a Tryton wizard or deep configuration screen that is not fully mirrored in React yet.',
+  title,
+  description,
   instructions,
   compact = false,
 }: SaoPanelProps) {
+  const { t } = useTranslation()
+  const panelTitle = title ?? t('workspace.openInWorkspace')
+  const panelDesc =
+    description ??
+    t('workspace.panelDefaultDesc')
   const primary = saoUrl()
-  const fallback = SAO_DIRECT_URL
 
   return (
     <div
       className="ist-notice"
       style={compact ? { marginTop: 'var(--space-4)' } : { marginBottom: 'var(--space-6)' }}
     >
-      <p style={{ fontWeight: 600, marginBottom: '0.35rem' }}>{title}</p>
+      <p style={{ fontWeight: 600, marginBottom: '0.35rem' }}>{panelTitle}</p>
       <p className="ist-subtitle" style={{ marginBottom: '0.75rem' }}>
-        {description}
+        {panelDesc}
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+        <Link className="ist-btn ist-btn--primary ist-btn--sm" to="/workspace">
+          {t('workspace.openInWorkspace')}
+        </Link>
         <a
-          className="ist-btn ist-btn--primary ist-btn--sm"
+          className="ist-subtitle"
           href={primary}
           target="_blank"
           rel="noreferrer"
         >
-          Open GNU Health SAO
+          {t('workspace.openNewTab')}
         </a>
-        {primary !== fallback && (
-          <a className="ist-subtitle" href={fallback} target="_blank" rel="noreferrer">
-            Direct :8000 fallback
-          </a>
-        )}
       </div>
       {instructions && instructions.length > 0 && (
         <ul className="ist-subtitle" style={{ marginTop: '0.75rem', paddingLeft: '1.25rem' }}>
@@ -56,10 +60,11 @@ export function SaoPanel({
 }
 
 export function ModuleServerInstructions() {
+  const { t } = useTranslation()
   return (
     <SaoPanel
-      title="Module activate / upgrade"
-      description="Marking modules in React (when available) only queues state changes. Applying upgrades usually requires trytond-admin or SAO."
+      title={t('workspace.moduleActivateTitle')}
+      description={t('workspace.moduleActivateDesc')}
       instructions={[...MODULE_SERVER_INSTRUCTIONS]}
     />
   )

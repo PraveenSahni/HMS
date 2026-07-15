@@ -38,6 +38,7 @@ import { ModelBrowserPage } from './pages/ModelBrowserPage'
 import { HelpCentrePage } from './pages/help/HelpCentrePage'
 import { HelpAdminPage } from './pages/help/HelpAdminPage'
 import { SetupHubPage } from './pages/SetupHubPage'
+import { WorkspacePage } from './pages/WorkspacePage'
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
             }
           >
             <Route index element={<DashboardPage />} />
+            <Route path="workspace" element={<WorkspacePage />} />
             <Route path="patients" element={<PatientsPage />} />
             <Route path="patients/:id" element={<PatientDetailPage />} />
             <Route path="appointments" element={<AppointmentsPage />} />
