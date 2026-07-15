@@ -51,12 +51,7 @@ html.ist-embedded .navbar-brand { margin-inline-end: 8px !important; }
 
 ## Deploy
 
-Copy mirrors to SAO web root on VM:
-
-- `frontend/deploy/sao-custom.css` → `<SAO_ROOT>/custom.css`
-- `frontend/deploy/sao-custom.js` → `<SAO_ROOT>/custom.js`
-
-Hard-refresh `/workspace` (and `/sao/`). No trytond restart required.
+**Done 2026-07-15:** copied to VM SAO root `/opt/gnuhealth/his-50/sao/custom.css` + `custom.js` (via `/tmp` + `sudo cp`). Hard-refresh `/workspace` (and `/sao/`). No trytond restart required.
 
 ## Retest after deploy
 
