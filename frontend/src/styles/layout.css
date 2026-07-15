@@ -205,16 +205,18 @@
 
 .ist-workspace__title {
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: var(--font-weight-bold, 600);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm, 0.8125rem);
+  font-weight: var(--font-weight-bold, 700);
   color: var(--color-heading, var(--color-navy));
   line-height: 1.25;
 }
 
 .ist-workspace__subtitle {
   margin: 0.1rem 0 0;
-  font-size: 0.72rem;
-  opacity: 0.65;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption, 0.6875rem);
+  color: var(--color-text-secondary, var(--color-navy-muted));
   line-height: 1.3;
 }
 

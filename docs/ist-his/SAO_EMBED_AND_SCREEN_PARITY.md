@@ -55,7 +55,7 @@ Tryton SAO auto-loads `custom.css` and `custom.js` from the **SAO web root** (tr
 | `frontend/deploy/sao-custom.css` | `<SAO_ROOT>/custom.css` (e.g. `/opt/gnuhealth/his-50/sao/custom.css`) |
 | `frontend/deploy/sao-custom.js` | `<SAO_ROOT>/custom.js` |
 
-Theme: IST navy `#0a1f44`, gold `#c9a66b` on navbar, primary buttons, tabs, menu tree, and selection highlights. When embedded (`html.ist-embedded`), the Tryton wordmark is softened/replaced with a quiet “IST” mark. Safe reductions only — do not strip functional chrome or break JSON-RPC.
+Theme: IST navy `#0a1f44`, gold `#c9a66b` on navbar, primary buttons, tabs, menu tree, and selection highlights. Typography matches the React shell (`Inter` / `Segoe UI`, `Noto Sans Arabic` for RTL). When embedded (`html.ist-embedded`), the Tryton wordmark is softened/replaced with a quiet “IST” mark. Safe reductions only — do not strip functional chrome or break JSON-RPC.
 
 After copying CSS/JS, hard-refresh `/sao/` (or Workspace). No trytond restart required for static CSS.
 
