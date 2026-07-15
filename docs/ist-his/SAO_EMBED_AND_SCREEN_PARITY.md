@@ -34,14 +34,14 @@ Favorites → **Workspace**. Setup Hub / Financial / Companies / Model browser S
 ## How embedding works
 
 ```
-AppLayout (IST header; sidebar hidden by default on /workspace)
-  └── /workspace → WorkspacePage
-        └── iframe src = same-origin /sao/  (saoUrl())
+AppLayout (single IST header; IST sidebar always hidden on /workspace)
+  └── /workspace → WorkspacePage (no title/toolbar chrome)
+        └── iframe src = same-origin /sao/  (saoUrl())  — edge-to-edge under header
 ```
 
 - Route: `frontend/src/pages/WorkspacePage.tsx` registered in `App.tsx` under `AppLayout`.
-- On `/workspace`, the IST left sidebar is **hidden by default** so only the IST top header + SAO iframe show (full width). This avoids a double-menu (IST nav + SAO menu).
-- **Toggle IST menu:** Workspace toolbar button **Show IST menu** / **Hide IST menu** (also a header control when the sidebar is hidden). Preference is stored in `sessionStorage` (`ist-workspace-nav-visible`).
+- On `/workspace`: **one** IST top header only (Help / Sign out / lang / theme). Username text hidden. IST sidebar always hidden. No Workspace title block, no “Show IST menu”, no “Open SAO in new tab” page toolbar.
+- When SAO is embedded (`html.ist-embedded` via `custom.js`), the **SAO top navbar is fully hidden** (wordmark, Action, Administrator, SAO logout). SAO **left menu** remains for in-iframe navigation.
 - `?path=` is reserved for future deep-links; currently loads SAO root.
 - Footer hidden on Workspace so the iframe can use full remaining height.
 - SaoPanel primary button is a React Router `Link` to `/workspace`.
@@ -55,7 +55,7 @@ Tryton SAO auto-loads `custom.css` and `custom.js` from the **SAO web root** (tr
 | `frontend/deploy/sao-custom.css` | `<SAO_ROOT>/custom.css` (e.g. `/opt/gnuhealth/his-50/sao/custom.css`) |
 | `frontend/deploy/sao-custom.js` | `<SAO_ROOT>/custom.js` |
 
-Theme: IST navy `#0a1f44`, gold `#c9a66b` on navbar, primary buttons, tabs, menu tree, and selection highlights. Typography matches the React shell (`Inter` / `Segoe UI`, `Noto Sans Arabic` for RTL). When embedded (`html.ist-embedded`), the Tryton wordmark is softened/replaced with a quiet “IST” mark. Safe reductions only — do not strip functional chrome or break JSON-RPC.
+Theme: IST navy `#0a1f44`, gold `#c9a66b` on primary buttons, tabs, menu tree, and selection highlights (standalone `/sao/` still uses the navy top bar). Typography matches the React shell (`Inter` / `Segoe UI`, `Noto Sans Arabic` for RTL). When embedded, hide the SAO top bar so the IST React header is the only chrome.
 
 After copying CSS/JS, hard-refresh `/sao/` (or Workspace). No trytond restart required for static CSS.
 
